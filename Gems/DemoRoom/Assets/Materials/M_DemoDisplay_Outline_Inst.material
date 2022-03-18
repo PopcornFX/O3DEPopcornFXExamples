@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "parentMaterial": "M_DemoDisplay_Outline.material",
+    "materialType": "Materials/Types/StandardPBR.materialtype",
+    "materialTypeVersion": 4,
+    "properties": {
+        "baseColor": {
+            "color": [
+                0.11700618267059326,
+                0.11700618267059326,
+                0.11700618267059326,
+                1.0
+            ]
+        },
+        "metallic": {
+            "factor": 1.0
+        },
+        "roughness": {
+            "factor": 0.25
+        }
+    }
+}

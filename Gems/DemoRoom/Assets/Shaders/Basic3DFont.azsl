@@ -1,0 +1,49 @@
+//----------------------------------------------------------------------------
+// Copyright Persistant Studios, SARL. All Rights Reserved.
+// https://www.popcornfx.com/terms-and-conditions/
+//----------------------------------------------------------------------------
+
+#include <scenesrg.srgi>
+#include <viewsrg.srgi>
+// Material:
+#include "MaterialSrg.azsli"
+
+struct VertexInput
+{
+    float3 m_position : POSITION;
+    float2 m_uv : UV0;
+    float3 m_color : UV1;
+};
+
+struct VSOutput
+{
+    precise float4 m_position : SV_Position;
+    float2 m_uv : UV0;
+    float3 m_color : UV1;
+};
+
+VSOutput FontVS(VertexInput input)
+{
+    VSOutput    output;
+    output.m_position = mul(ViewSrg::m_viewProjectionMatrix, float4(input.m_position, 1.0f));
+    output.m_uv = input.m_uv;
+    output.m_color = input.m_color;
+    return output;
+}
+
+struct PixelOutput
+{
+    float4 m_color : SV_Target0;
+};
+
+PixelOutput FontFS(VSOutput input)
+{
+    PixelOutput     output;
+    float4 fontColor = MaterialSrg::m_fontMap.Sample(MaterialSrg::m_sampler, input.m_uv);
+
+    if (fontColor.r < 0.5f)
+        discard;
+
+    output.m_color = float4(input.m_color, 1);
+    return output;
+}

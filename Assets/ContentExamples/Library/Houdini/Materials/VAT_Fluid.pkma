@@ -1,0 +1,70 @@
+Version = 2.12.0.12165;
+CParticleRendererFeatureSet	$6B70D015
+{
+	RendererFeatures = {
+		"$A8FC2215",
+		"$18565271",
+		"$D857A09F",
+		"$E363A6F4",
+		"$E1577A0A",
+		"$9154DFA0",
+		"$4B933A29",
+		"$8BF32864",
+		"$C4052FFA",
+	};
+}
+CParticleRendererFeatureDesc	$A8FC2215
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "GeometryMesh";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$18565271
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Opaque";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$8BF32864
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Lit";
+}
+CRHIMaterialShaders	$35A36C4E
+{
+	VertexShader = "Library/Houdini/Materials/VAT_Fluid.vert";
+	FragmentShader = "Library/PopcornFXCore/Shaders/Default_Mesh.frag";
+}
+CParticleRendererFeatureDesc	$4B933A29
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "MeshAtlas";
+}
+CParticleRendererFeatureDesc	$D857A09F
+{
+	RendererInterfacePath = "Library/Houdini/Materials/Interface/SideFXLabs.pkri";
+	RendererFeatureName = "VertexAnimation_Fluid";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$9154DFA0
+{
+	RendererInterfacePath = "Library/Houdini/Materials/Interface/SideFXLabs.pkri";
+	RendererFeatureName = "VertexAnimation_NormalizedData";
+}
+CParticleRendererFeatureDesc	$C4052FFA
+{
+	RendererInterfacePath = "Library/Houdini/Materials/Interface/SideFXLabs.pkri";
+	RendererFeatureName = "VertexAnimation_PadToPowerOf2";
+}
+CParticleRendererFeatureDesc	$E363A6F4
+{
+	RendererInterfacePath = "Library/Houdini/Materials/Interface/SideFXLabs.pkri";
+	RendererFeatureName = "Diffuse";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$E1577A0A
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "EnableRendering";
+	Mandatory = true;
+}

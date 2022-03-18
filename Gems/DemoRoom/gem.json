@@ -1,0 +1,22 @@
+{
+    "gem_name": "DemoRoom",
+    "display_name": "DemoRoom",
+    "license": "Community",
+    "license_url": "https://www.popcornfx.com/popcornfx-community-license",
+    "type": "Code",
+    "summary": "Tool to create demo rooms in the Editor.",
+    "canonical_tags": [
+        "Gem"
+    ],
+    "user_tags": [
+        "DemoRoom"
+    ],
+    "icon_path": "preview.png",
+    "requirements": "",
+    "restricted_name": "gems",
+    "dependencies": [
+        "AtomLyIntegration",
+        "PhysX",
+        "AtomFont"
+    ]
+}

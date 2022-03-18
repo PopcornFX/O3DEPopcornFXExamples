@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "parentMaterial": "M_DemoWall.material",
+    "materialType": "Materials/Types/StandardPBR.materialtype",
+    "materialTypeVersion": 4,
+    "properties": {
+        "baseColor": {
+            "color": [
+                0.12300297617912292,
+                0.12300297617912292,
+                0.12300297617912292,
+                1.0
+            ]
+        },
+        "roughness": {
+            "factor": 0.4099999964237213
+        }
+    }
+}

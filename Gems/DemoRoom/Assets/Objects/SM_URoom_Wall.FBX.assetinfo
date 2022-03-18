@@ -1,0 +1,47 @@
+{
+    "values": [
+        {
+            "$type": "{5B03C8E6-8CEE-4DA0-A7FA-CD88689DD45B} MeshGroup",
+            "id": "{04D238E9-419F-5670-99F6-5F99B419497C}",
+            "name": "SM_URoom_Wall",
+            "NodeSelectionList": {
+                "selectedNodes": [
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_1"
+                ],
+                "unselectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_URoom_Wall",
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_2"
+                ]
+            },
+            "MaterialSlots": [
+                "SM_URoom_Wall_Gray"
+            ],
+            "PhysicsMaterials": [
+                "<Default Physics Material>"
+            ]
+        },
+        {
+            "$type": "{07B356B7-3635-40B5-878A-FAC4EFD5AD86} MeshGroup",
+            "name": "SM_URoom_Wall",
+            "nodeSelectionList": {
+                "selectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_URoom_Wall",
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_1",
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_2"
+                ]
+            },
+            "rules": {
+                "rules": [
+                    {
+                        "$type": "MaterialRule"
+                    }
+                ]
+            },
+            "id": "{315AF8EA-ECEA-57D0-9EE2-08340B5B5BDD}"
+        }
+    ]
+}

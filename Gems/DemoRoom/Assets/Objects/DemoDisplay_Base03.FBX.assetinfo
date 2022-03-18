@@ -1,0 +1,47 @@
+{
+    "values": [
+        {
+            "$type": "{5B03C8E6-8CEE-4DA0-A7FA-CD88689DD45B} MeshGroup",
+            "id": "{CCA4EFA1-25E6-5152-9E4C-1196326DFCA6}",
+            "name": "DemoDisplay_Base03",
+            "NodeSelectionList": {
+                "selectedNodes": [
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_1"
+                ],
+                "unselectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_Base_FlatWall",
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_2"
+                ]
+            },
+            "MaterialSlots": [
+                "SM_Base_FlatWall"
+            ],
+            "PhysicsMaterials": [
+                "<Default Physics Material>"
+            ]
+        },
+        {
+            "$type": "{07B356B7-3635-40B5-878A-FAC4EFD5AD86} MeshGroup",
+            "name": "DemoDisplay_Base03",
+            "nodeSelectionList": {
+                "selectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_Base_FlatWall",
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_1",
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_2"
+                ]
+            },
+            "rules": {
+                "rules": [
+                    {
+                        "$type": "MaterialRule"
+                    }
+                ]
+            },
+            "id": "{C676A7AD-E28C-5000-9CCC-6A79804F6B81}"
+        }
+    ]
+}

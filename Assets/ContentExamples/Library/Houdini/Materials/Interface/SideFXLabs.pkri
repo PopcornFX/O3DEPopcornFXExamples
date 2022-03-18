@@ -1,0 +1,885 @@
+Version = 2.12.0.12165;
+CEngineRendererInterface	$6B70D015
+{
+	InterfaceName = "SideFXLabs features";
+	RendererFeatures = {
+		"$D857A09F",
+		"$1A05FF77",
+		"$BEDF8936",
+		"$2BBAE5F0",
+		"$9F70A051",
+		"$CCDBC2A9",
+	};
+}
+CRHIRenderingSettings	$6DF50834
+{
+	RenderingFeatures = {
+		"$215BA3BA",
+		"$225BA3BA",
+		"$255BA3BA",
+		"$235BA3BA",
+		"$FD48C78F",
+		"$9DFE9C8C",
+	};
+}
+CParticleRendererFeature	$BEDF8936
+{
+	FeatureName = "VertexAnimation_Rigid";
+	Feature = "$D6EEA348";
+	Properties = {
+		"$D03359D5",
+		"$AF0F155D",
+		"$C01E62BC",
+		"$55289D1E",
+		"$9D2B1A2F",
+	};
+}
+CParticleNodeTemplateExport	$D6EEA348
+{
+	InputPins = {
+		"$5F44DFAB",
+	};
+	OutputPins = {
+		"$D806D24A",
+	};
+	ExportedName = "VertexAnimation";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$5F44DFAB
+{
+	SelfName = "DefaultValue";
+	Owner = "$D6EEA348";
+}
+CParticleNodePinOut	$D806D24A
+{
+	SelfName = "Value";
+	Owner = "$D6EEA348";
+}
+CParticleNodeTemplateExport	$D03359D5
+{
+	InputPins = {
+		"$5A435152",
+	};
+	OutputPins = {
+		"$9C42C17D",
+	};
+	ExportedName = "VertexAnimation_Rigid.PositionMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Rigid",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodeTemplateExport	$C01E62BC
+{
+	Description = {
+		"@eng:Number of frames in the exported animation",
+	};
+	InputPins = {
+		"$A11A59A6",
+	};
+	OutputPins = {
+		"$DD2B8661",
+	};
+	ExportedName = "VertexAnimation_Rigid.NumFrames";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Rigid",
+	};
+}
+CParticleNodeTemplateExport	$9D2B1A2F
+{
+	Description = {
+		"@eng:Frame cursor in [0;1] range",
+	};
+	InputPins = {
+		"$ED0A18AC",
+	};
+	OutputPins = {
+		"$CF350EDF",
+	};
+	ExportedName = "VertexAnimation_Rigid.Cursor";
+	ExportedType = float;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:VertexAnimation_Rigid",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodeTemplateExport	$AF0F155D
+{
+	InputPins = {
+		"$AFB08F84",
+	};
+	OutputPins = {
+		"$E406E297",
+	};
+	ExportedName = "VertexAnimation_Rigid.RotationMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Rigid",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CRHIRenderingFeature	$215BA3BA
+{
+	FeatureName = "VertexAnimation_Fluid";
+	UseUV = true;
+	UseNormal = true;
+	PropertiesAsShaderConstants = {
+		"PositionMap",
+		"NormalMap",
+		"ColorMap",
+		"NumFrames",
+		"PackedData",
+		"NormalizedData",
+		"BoundsPosition",
+	};
+	TexturesUsedAsLookUp = {
+		"PositionMap",
+		"NormalMap",
+		"ColorMap",
+	};
+}
+CRHIRenderingFeature	$225BA3BA
+{
+	FeatureName = "VertexAnimation_Soft";
+	UseUV = true;
+	UseNormal = true;
+	UseMeshUV1 = true;
+	PropertiesAsShaderConstants = {
+		"PositionMap",
+		"NormalMap",
+		"ColorMap",
+		"NumFrames",
+		"PackedData",
+		"NormalizedData",
+	};
+	TexturesUsedAsLookUp = {
+		"PositionMap",
+		"NormalMap",
+		"ColorMap",
+	};
+}
+CRHIRenderingFeature	$255BA3BA
+{
+	FeatureName = "VertexAnimation_Rigid";
+	UseUV = true;
+	UseNormal = true;
+	UseMeshUV1 = true;
+	UseMeshVertexColor0 = true;
+	PropertiesAsShaderConstants = {
+		"PositionMap",
+		"RotationMap",
+		"NumFrames",
+		"PackedData",
+		"NormalizedData",
+		"BoundsPivot",
+	};
+	TexturesUsedAsLookUp = {
+		"PositionMap",
+		"RotationMap",
+	};
+}
+CRHIRenderingFeature	$235BA3BA
+{
+	FeatureName = "VertexAnimation_NormalizedData";
+	PropertiesAsShaderConstants = {
+		"BoundsPosition",
+	};
+}
+CParticleRendererFeature	$D857A09F
+{
+	FeatureName = "VertexAnimation_Fluid";
+	Feature = "$35A36C4E";
+	Properties = {
+		"$EAC726E3",
+		"$1BDBE0E0",
+		"$4ADE8DE2",
+		"$D279714D",
+		"$5F621394",
+		"$DBE780E4",
+	};
+}
+CParticleNodeTemplateExport	$35A36C4E
+{
+	InputPins = {
+		"$4B933A29",
+	};
+	OutputPins = {
+		"$9154DFA0",
+	};
+	ExportedName = "VertexAnimation_Fluid";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$4B933A29
+{
+	SelfName = "DefaultValue";
+	Owner = "$35A36C4E";
+}
+CParticleNodePinOut	$9154DFA0
+{
+	SelfName = "Value";
+	Owner = "$35A36C4E";
+}
+CParticleNodeTemplateExport	$EAC726E3
+{
+	InputPins = {
+		"$41E5AFE7",
+	};
+	OutputPins = {
+		"$2909A531",
+	};
+	ExportedName = "VertexAnimation_Fluid.PositionMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodeTemplateExport	$4ADE8DE2
+{
+	InputPins = {
+		"$14978373",
+	};
+	OutputPins = {
+		"$89E0DDB2",
+	};
+	ExportedName = "VertexAnimation_Fluid.ColorMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodeTemplateExport	$D279714D
+{
+	Description = {
+		"@eng:Number of frames in the exported animation",
+	};
+	InputPins = {
+		"$36207FBF",
+	};
+	OutputPins = {
+		"$E54029EE",
+	};
+	ExportedName = "VertexAnimation_Fluid.NumFrames";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+}
+CParticleNodeTemplateExport	$5F621394
+{
+	Description = {
+		"@eng:-True: Extract normals from the position texture\'s alpha channel\\n-False:Extract normals from specified normal map",
+	};
+	InputPins = {
+		"$96A2AA34",
+	};
+	OutputPins = {
+		"$D970BB07",
+	};
+	ExportedName = "VertexAnimation_Fluid.PackedData";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodeTemplateExport	$DBE780E4
+{
+	Description = {
+		"@eng:Frame cursor in [0;1] range",
+	};
+	InputPins = {
+		"$A913E2D6",
+	};
+	OutputPins = {
+		"$17E22F51",
+	};
+	ExportedName = "VertexAnimation_Fluid.Cursor";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleRendererFeature	$1A05FF77
+{
+	FeatureName = "VertexAnimation_Soft";
+	Feature = "$78A74806";
+	Properties = {
+		"$B4F3323B",
+		"$C072C98D",
+		"$7837C3E5",
+		"$2FB70E0C",
+		"$5209F849",
+	};
+}
+CParticleNodeTemplateExport	$78A74806
+{
+	InputPins = {
+		"$AF09E441",
+	};
+	OutputPins = {
+		"$0C954798",
+	};
+	ExportedName = "VertexAnimation_Soft";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$AF09E441
+{
+	SelfName = "DefaultValue";
+	Owner = "$78A74806";
+}
+CParticleNodePinOut	$0C954798
+{
+	SelfName = "Value";
+	Owner = "$78A74806";
+}
+CParticleNodeTemplateExport	$B4F3323B
+{
+	InputPins = {
+		"$8EAEE7E8",
+	};
+	OutputPins = {
+		"$125230CB",
+	};
+	ExportedName = "VertexAnimation_Soft.PositionMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Soft",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodeTemplateExport	$7837C3E5
+{
+	Description = {
+		"@eng:Number of frames in the exported animation",
+	};
+	InputPins = {
+		"$C45BF55C",
+	};
+	OutputPins = {
+		"$22B8D14F",
+	};
+	ExportedName = "VertexAnimation_Soft.NumFrames";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Soft",
+	};
+}
+CParticleNodeTemplateExport	$2FB70E0C
+{
+	Description = {
+		"@eng:-True: Extract normals from the position texture\'s alpha channel\\n-False:Extract normals from specified normal map",
+	};
+	InputPins = {
+		"$AAFF12BE",
+	};
+	OutputPins = {
+		"$6C5BA959",
+	};
+	ExportedName = "VertexAnimation_Soft.PackedData";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Soft",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodeTemplateExport	$5209F849
+{
+	Description = {
+		"@eng:Frame cursor in [0;1] range",
+	};
+	InputPins = {
+		"$09F16690",
+	};
+	OutputPins = {
+		"$23F9C093",
+	};
+	ExportedName = "VertexAnimation_Soft.Cursor";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Soft",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodeTemplateExport	$55289D1E
+{
+	Description = {
+		"@eng:Min and max pivot (in meters)",
+	};
+	InputPins = {
+		"$55F99FBA",
+	};
+	OutputPins = {
+		"$C73E7C05",
+	};
+	ExportedName = "VertexAnimation_Rigid.BoundsPivot";
+	ExportedType = float2;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_Rigid",
+	};
+	DefaultValueF4 = float4(0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleRendererFeature	$2BBAE5F0
+{
+	FeatureName = "VertexAnimation_NormalizedData";
+	Feature = "$F1356840";
+	Properties = {
+		"$0384856D",
+	};
+}
+CParticleNodeTemplateExport	$F1356840
+{
+	InputPins = {
+		"$D0980C03",
+	};
+	OutputPins = {
+		"$ED80C982",
+	};
+	ExportedName = "VertexAnimation_NormalizedData";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$D0980C03
+{
+	SelfName = "DefaultValue";
+	Owner = "$F1356840";
+}
+CParticleNodePinOut	$ED80C982
+{
+	SelfName = "Value";
+	Owner = "$F1356840";
+}
+CParticleNodeTemplateExport	$0384856D
+{
+	Description = {
+		"@eng:Min and max position (in meters)",
+	};
+	InputPins = {
+		"$773A578E",
+	};
+	OutputPins = {
+		"$4272E669",
+	};
+	ExportedName = "VertexAnimation_NormalizedData.BoundsPosition";
+	ExportedType = float2;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_NormalizedData",
+	};
+	DefaultValueF4 = float4(0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$41E5AFE7
+{
+	SelfName = "DefaultValue";
+	Owner = "$EAC726E3";
+}
+CParticleNodePinOut	$2909A531
+{
+	SelfName = "Value";
+	Owner = "$EAC726E3";
+}
+CParticleNodePinIn	$14978373
+{
+	SelfName = "DefaultValue";
+	Owner = "$4ADE8DE2";
+}
+CParticleNodePinOut	$89E0DDB2
+{
+	SelfName = "Value";
+	Owner = "$4ADE8DE2";
+}
+CParticleNodePinIn	$36207FBF
+{
+	SelfName = "DefaultValue";
+	Owner = "$D279714D";
+}
+CParticleNodePinOut	$E54029EE
+{
+	SelfName = "Value";
+	Owner = "$D279714D";
+}
+CParticleNodePinIn	$96A2AA34
+{
+	SelfName = "DefaultValue";
+	Owner = "$5F621394";
+}
+CParticleNodePinOut	$D970BB07
+{
+	SelfName = "Value";
+	Owner = "$5F621394";
+}
+CParticleNodePinIn	$A913E2D6
+{
+	SelfName = "DefaultValue";
+	Owner = "$DBE780E4";
+}
+CParticleNodePinOut	$17E22F51
+{
+	SelfName = "Value";
+	Owner = "$DBE780E4";
+}
+CParticleNodePinIn	$8EAEE7E8
+{
+	SelfName = "DefaultValue";
+	Owner = "$B4F3323B";
+}
+CParticleNodePinOut	$125230CB
+{
+	SelfName = "Value";
+	Owner = "$B4F3323B";
+}
+CParticleNodePinIn	$C45BF55C
+{
+	SelfName = "DefaultValue";
+	Owner = "$7837C3E5";
+}
+CParticleNodePinOut	$22B8D14F
+{
+	SelfName = "Value";
+	Owner = "$7837C3E5";
+}
+CParticleNodePinIn	$AAFF12BE
+{
+	SelfName = "DefaultValue";
+	Owner = "$2FB70E0C";
+}
+CParticleNodePinOut	$6C5BA959
+{
+	SelfName = "Value";
+	Owner = "$2FB70E0C";
+}
+CParticleNodePinIn	$09F16690
+{
+	SelfName = "DefaultValue";
+	Owner = "$5209F849";
+}
+CParticleNodePinOut	$23F9C093
+{
+	SelfName = "Value";
+	Owner = "$5209F849";
+}
+CParticleNodePinIn	$5A435152
+{
+	SelfName = "DefaultValue";
+	Owner = "$D03359D5";
+}
+CParticleNodePinOut	$9C42C17D
+{
+	SelfName = "Value";
+	Owner = "$D03359D5";
+}
+CParticleNodePinIn	$AFB08F84
+{
+	SelfName = "DefaultValue";
+	Owner = "$AF0F155D";
+}
+CParticleNodePinOut	$E406E297
+{
+	SelfName = "Value";
+	Owner = "$AF0F155D";
+}
+CParticleNodePinIn	$A11A59A6
+{
+	SelfName = "DefaultValue";
+	Owner = "$C01E62BC";
+}
+CParticleNodePinOut	$DD2B8661
+{
+	SelfName = "Value";
+	Owner = "$C01E62BC";
+}
+CParticleNodePinIn	$55F99FBA
+{
+	SelfName = "DefaultValue";
+	Owner = "$55289D1E";
+}
+CParticleNodePinOut	$C73E7C05
+{
+	SelfName = "Value";
+	Owner = "$55289D1E";
+}
+CParticleNodePinIn	$ED0A18AC
+{
+	SelfName = "DefaultValue";
+	Owner = "$9D2B1A2F";
+}
+CParticleNodePinOut	$CF350EDF
+{
+	SelfName = "Value";
+	Owner = "$9D2B1A2F";
+}
+CParticleNodePinIn	$773A578E
+{
+	SelfName = "DefaultValue";
+	Owner = "$0384856D";
+}
+CParticleNodePinOut	$4272E669
+{
+	SelfName = "Value";
+	Owner = "$0384856D";
+}
+CParticleNodeTemplateExport	$1BDBE0E0
+{
+	InputPins = {
+		"$84ADA123",
+	};
+	OutputPins = {
+		"$946D7522",
+	};
+	ExportedName = "VertexAnimation_Fluid.NormalMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Fluid",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/NMap_Flat.dds";
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "VertexAnimation_Fluid.PackedData";
+	RuleValue = "1";
+}
+CParticleNodePinIn	$84ADA123
+{
+	SelfName = "DefaultValue";
+	Owner = "$1BDBE0E0";
+}
+CParticleNodePinOut	$946D7522
+{
+	SelfName = "Value";
+	Owner = "$1BDBE0E0";
+}
+CParticleNodeTemplateExport	$C072C98D
+{
+	InputPins = {
+		"$F8EE30D4",
+	};
+	OutputPins = {
+		"$52697627",
+	};
+	ExportedName = "VertexAnimation_Soft.NormalMap";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:VertexAnimation_Soft",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/NMap_Flat.dds";
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "VertexAnimation_Soft.PackedData";
+	RuleValue = "1";
+}
+CParticleNodePinIn	$F8EE30D4
+{
+	SelfName = "DefaultValue";
+	Owner = "$C072C98D";
+}
+CParticleNodePinOut	$52697627
+{
+	SelfName = "Value";
+	Owner = "$C072C98D";
+}
+CParticleRendererFeature	$9F70A051
+{
+	FeatureName = "VertexAnimation_PadToPowerOf2";
+	Feature = "$2F050C18";
+	Properties = {
+		"$3D89B5AD",
+	};
+}
+CParticleNodeTemplateExport	$2F050C18
+{
+	InputPins = {
+		"$CB4FBE2F",
+	};
+	OutputPins = {
+		"$CC82F93B",
+	};
+	ExportedName = "VertexAnimation_PadToPowerOf2";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$CB4FBE2F
+{
+	SelfName = "DefaultValue";
+	Owner = "$2F050C18";
+}
+CParticleNodePinOut	$CC82F93B
+{
+	SelfName = "Value";
+	Owner = "$2F050C18";
+}
+CRHIRenderingFeature	$FD48C78F
+{
+	FeatureName = "VertexAnimation_PadToPowerOf2";
+	PropertiesAsShaderConstants = {
+		"PaddedRatio",
+	};
+}
+CParticleNodeTemplateExport	$3D89B5AD
+{
+	InputPins = {
+		"$D1BFB903",
+	};
+	OutputPins = {
+		"$90348D90",
+	};
+	ExportedName = "VertexAnimation_PadToPowerOf2.PaddedRatio";
+	ExportedType = float2;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:VertexAnimation_PadToPowerOf2",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$D1BFB903
+{
+	SelfName = "DefaultValue";
+	Owner = "$3D89B5AD";
+}
+CParticleNodePinOut	$90348D90
+{
+	SelfName = "Value";
+	Owner = "$3D89B5AD";
+}
+CParticleRendererFeature	$CCDBC2A9
+{
+	FeatureName = "Diffuse";
+	Feature = "$3C5D930C";
+	Properties = {
+		"$355DA3FE",
+		"$C5B81210",
+	};
+}
+CParticleNodeTemplateExport	$3C5D930C
+{
+	InputPins = {
+		"$4D47EBB4",
+	};
+	OutputPins = {
+		"$15D440CD",
+	};
+	ExportedName = "Diffuse";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$4D47EBB4
+{
+	SelfName = "DefaultValue";
+	Owner = "$3C5D930C";
+}
+CParticleNodePinOut	$15D440CD
+{
+	SelfName = "Value";
+	Owner = "$3C5D930C";
+}
+CRHIRenderingFeature	$9DFE9C8C
+{
+	FeatureName = "Diffuse";
+	UseUV = true;
+	PropertiesAsShaderConstants = {
+		"Color",
+		"DiffuseMap",
+	};
+}
+CParticleNodeTemplateExport	$355DA3FE
+{
+	CustomName = {
+		"@eng:Color",
+	};
+	InputPins = {
+		"$77A76BEB",
+	};
+	OutputPins = {
+		"$942FFAED",
+	};
+	ExportedName = "Diffuse.Color";
+	ExportedType = float4;
+	Semantic = Color;
+	Type = Input;
+	CategoryName = {
+		"@eng:Diffuse",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$77A76BEB
+{
+	SelfName = "DefaultValue";
+	Owner = "$355DA3FE";
+}
+CParticleNodePinOut	$942FFAED
+{
+	SelfName = "Value";
+	Owner = "$355DA3FE";
+}
+CParticleNodeTemplateExport	$C5B81210
+{
+	InputPins = {
+		"$20C02C42",
+	};
+	OutputPins = {
+		"$ABBD9D58",
+	};
+	ExportedName = "Diffuse.DiffuseMap";
+	ExportedType = dataImage;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Diffuse",
+	};
+	DefaultValueData = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodePinIn	$20C02C42
+{
+	SelfName = "DefaultValue";
+	Owner = "$C5B81210";
+}
+CParticleNodePinOut	$ABBD9D58
+{
+	SelfName = "Value";
+	Owner = "$C5B81210";
+}

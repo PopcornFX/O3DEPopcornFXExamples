@@ -1,0 +1,26 @@
+{
+    // Add the Assets folder of the gems in the project BEFORE AssetProcessorPlatformConfig.setreg adds them to have correct asset paths
+    // And exclues the files which are not in the Assets folder
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                "ScanFolder DemoRoom Assets": {
+                    "watch": "@PROJECTROOT@/Gems/DemoRoom/Assets",
+                    "recursive": 1,
+                    "order": -1
+                },
+                "Exclude DemoRoom Gem": {
+                    "pattern": "^Gems/DemoRoom(/.*)?$"
+                },
+                "ScanFolder PopcornFX Assets": {
+                    "watch": "@PROJECTROOT@/Gems/PopcornFX/Assets",
+                    "recursive": 1,
+                    "order": -1
+                },
+                "Exclude PopcornFX Gem": {
+                    "pattern": "^Gems/PopcornFX(/.*)?$"
+                }
+            }
+        }
+    }
+}

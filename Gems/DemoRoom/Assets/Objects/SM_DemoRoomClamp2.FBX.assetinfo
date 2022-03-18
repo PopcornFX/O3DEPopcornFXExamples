@@ -1,0 +1,49 @@
+{
+    "values": [
+        {
+            "$type": "{5B03C8E6-8CEE-4DA0-A7FA-CD88689DD45B} MeshGroup",
+            "id": "{CF489EE0-51A5-5B9B-91F4-F5E2E381D6FA}",
+            "name": "SM_DemoRoomClamp2",
+            "NodeSelectionList": {
+                "selectedNodes": [
+                    "RootNode.SM_DemoRoomClamp2.SM_DemoRoomClamp2_1"
+                ],
+                "unselectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_DemoRoomClamp2",
+                    "RootNode.SM_DemoRoomClamp2.SM_DemoRoomClamp2_2"
+                ]
+            },
+            "MaterialSlots": [
+                "Material #396",
+                "Material #394"
+            ],
+            "PhysicsMaterials": [
+                "<Default Physics Material>",
+                "<Default Physics Material>"
+            ]
+        },
+        {
+            "$type": "{07B356B7-3635-40B5-878A-FAC4EFD5AD86} MeshGroup",
+            "name": "SM_DemoRoomClamp2",
+            "nodeSelectionList": {
+                "selectedNodes": [
+                    {},
+                    "RootNode",
+                    "RootNode.SM_DemoRoomClamp2",
+                    "RootNode.SM_DemoRoomClamp2.SM_DemoRoomClamp2_1",
+                    "RootNode.SM_DemoRoomClamp2.SM_DemoRoomClamp2_2"
+                ]
+            },
+            "rules": {
+                "rules": [
+                    {
+                        "$type": "MaterialRule"
+                    }
+                ]
+            },
+            "id": "{3EB1358B-956D-5C41-9E74-C9992B4D1482}"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "project_name": "O3DEPopcornFXExamples",
+    "origin": "The primary repo for O3DEPopcornFXExamples goes here: i.e. http://www.mydomain.com",
+    "license": "What license O3DEPopcornFXExamples uses goes here: i.e. https://opensource.org/licenses/MIT",
+    "display_name": "O3DEPopcornFXExamples",
+    "summary": "A short description of O3DEPopcornFXExamples.",
+    "canonical_tags": [
+        "Project"
+    ],
+    "user_tags": [
+        "O3DEPopcornFXExamples"
+    ],
+    "icon_path": "preview.png",
+    "engine": "o3de-sdk",
+    "external_subdirectories": [
+        "Gems/DemoRoom",
+        "Gems/PopcornFX"
+    ]
+}

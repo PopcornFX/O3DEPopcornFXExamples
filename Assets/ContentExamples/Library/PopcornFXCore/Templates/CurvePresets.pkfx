@@ -1,0 +1,1286 @@
+Version = 2.12.0.12165;
+CParticleEffect	$D857A09F
+{
+	LayerGraph = "$9154DFA0";
+	Templates = {
+		"$98DC04C2",
+		"$41E5AFE7",
+		"$88D07F10",
+		"$BEDF8936",
+		"$0883077E",
+		"$EC84D339",
+		"$756743DA",
+		"$DBE780E4",
+		"$DB437CDE",
+		"$8E0C539E",
+		"$CFA014AD",
+		"$D806D24A",
+		"$55289D1E",
+		"$AF09E441",
+		"$1EA3501A",
+		"$36207FBF",
+		"$F1356840",
+		"$11CCD3F6",
+		"$2903F198",
+		"$4EF48BE2",
+		"$567B494B",
+		"$595DB5FC",
+	};
+	AttributeFlatList = "$35A36C4E";
+}
+CParticleAttributeList	$35A36C4E
+{
+}
+CEditorAssetEffect	$4B933A29
+{
+	StartCameraPosition = float3(3.0000000e+00, 2.5000000e+00, 3.0000000e+00);
+	StartCameraOrientation = float3(5.2359879e-01, -7.8539819e-01, 0.0000000e+00);
+	Backdrops_Scene = "$00269EC3";
+}
+CParticleNodeGraph	$9154DFA0
+{
+	CustomName = "Root";
+	Timeline = "$EAC726E3";
+	WorkspaceZoom = -4;
+	GraphType = Event;
+}
+CParticleTimeline	$EAC726E3
+{
+	Tracks = {
+		"$4ADE8DE2",
+	};
+}
+CParticleTimelineTrack	$4ADE8DE2
+{
+	CustomName = "Root";
+	EventStream = "$D279714D";
+}
+CResourceDescriptor_EventStream	$D279714D
+{
+	Times = {
+		0.0000000e+00,
+	};
+}
+CParticleNodeGraph	$41E5AFE7
+{
+	CustomName = "01 - Linear";
+	Description = {
+		"@eng:Linearly increasing curve, values increase from 0 to 1",
+	};
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$D6EEA348",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$D6EEA348
+{
+	OutputPins = {
+		"$5F44DFAB",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$0A554EB5";
+}
+CParticleNodePinOut	$5F44DFAB
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$D6EEA348";
+}
+CParticleNodeGraph	$BEDF8936
+{
+	CustomName = "03 - EaseIn";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$2909A531",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$2909A531
+{
+	OutputPins = {
+		"$C01E62BC",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$029B091C";
+}
+CParticleNodePinOut	$C01E62BC
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$2909A531";
+}
+CParticleNodeGraph	$EC84D339
+{
+	CustomName = "05 - EaseOut";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$2BBAE5F0",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$2BBAE5F0
+{
+	OutputPins = {
+		"$14978373",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$1057900F";
+}
+CParticleNodePinOut	$14978373
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$2BBAE5F0";
+}
+CParticleNodeGraph	$DBE780E4
+{
+	CustomName = "07 - EaseInOut";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$1A05FF77",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$1A05FF77
+{
+	OutputPins = {
+		"$78A74806",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$F551587E";
+}
+CParticleNodePinOut	$78A74806
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$1A05FF77";
+}
+CParticleNodeGraph	$D806D24A
+{
+	CustomName = "11 - EasyEase";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$D03359D5",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$D03359D5
+{
+	OutputPins = {
+		"$9D2B1A2F",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$0B148219";
+}
+CParticleNodePinOut	$9D2B1A2F
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$D03359D5";
+}
+CParticleNodeGraph	$55289D1E
+{
+	CustomName = "12 - EasyEaseIn";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$89E0DDB2",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$89E0DDB2
+{
+	OutputPins = {
+		"$AF0F155D",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$41FACE50";
+}
+CParticleNodePinOut	$AF0F155D
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$89E0DDB2";
+}
+CParticleNodeGraph	$AF09E441
+{
+	CustomName = "13 - EasyEaseOut";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$0C954798",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$0C954798
+{
+	OutputPins = {
+		"$B4F3323B",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$93476353";
+}
+CParticleNodePinOut	$B4F3323B
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$0C954798";
+}
+CParticleNodeGraph	$1EA3501A
+{
+	CustomName = "14 - Triangular";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$7837C3E5",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$7837C3E5
+{
+	OutputPins = {
+		"$2FB70E0C",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$F2BC4B12";
+}
+CParticleNodePinOut	$2FB70E0C
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$7837C3E5";
+}
+CParticleNodeGraph	$36207FBF
+{
+	CustomName = "15 - Pinch";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$E54029EE",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$E54029EE
+{
+	OutputPins = {
+		"$5209F849",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$200E5E3D";
+}
+CParticleNodePinOut	$5209F849
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$E54029EE";
+}
+CParticleNodeGraph	$F1356840
+{
+	CustomName = "16 - Bell";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$D0980C03",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$D0980C03
+{
+	OutputPins = {
+		"$ED80C982",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$49220B44";
+}
+CParticleNodePinOut	$ED80C982
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$D0980C03";
+}
+CParticleNodeGraph	$88D07F10
+{
+	CustomName = "02 - Linear (inv)";
+	Description = {
+		"@eng:Inverse-linearly increasing curve, values decrease from 1 to 0",
+	};
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$B5DEB2AA",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$B5DEB2AA
+{
+	OutputPins = {
+		"$E4D9B33E",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$22142957";
+}
+CParticleNodePinOut	$E4D9B33E
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$B5DEB2AA";
+}
+CParticleNodeGraph	$98DC04C2
+{
+	CustomName = "00 - Flat";
+	Description = {
+		"@eng:Flat curve, all values are zero",
+	};
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$4F479170",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$4F479170
+{
+	OutputPins = {
+		"$27A89A9B",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$1DB9C766";
+}
+CParticleNodePinOut	$27A89A9B
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$4F479170";
+}
+CParticleNodeGraph	$0883077E
+{
+	CustomName = "04 - EaseIn (inv)";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$5D36656B",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$5D36656B
+{
+	OutputPins = {
+		"$284C8ABF",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$5024A721";
+}
+CParticleNodePinOut	$284C8ABF
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$5D36656B";
+}
+CParticleNodeGraph	$756743DA
+{
+	CustomName = "06 - EaseOut (inv)";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$058C6E97",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$058C6E97
+{
+	OutputPins = {
+		"$F8230879",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$47F3D3F8";
+}
+CParticleNodePinOut	$F8230879
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$058C6E97";
+}
+CParticleNodeGraph	$DB437CDE
+{
+	CustomName = "08 - EaseInOut (inv)";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$FE313B74",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$FE313B74
+{
+	OutputPins = {
+		"$4520F6D4",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$EE14861B";
+}
+CParticleNodePinOut	$4520F6D4
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$FE313B74";
+}
+CParticleNodeGraph	$2903F198
+{
+	CustomName = "18 - Heatmap";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$82DA30DE",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeGraph	$595DB5FC
+{
+	CustomName = "21 - Blackbody Normalized";
+	Description = {
+		"@eng:Normalized blackbody curve, starts at 0 degrees celcius (273 K), ends at 6273 degrees celcius (6000K)",
+	};
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$4C71AADA",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$82DA30DE
+{
+	OutputPins = {
+		"$49DA137A",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$9553417A";
+}
+CParticleNodePinOut	$49DA137A
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$82DA30DE";
+}
+CParticleNodeGraph	$567B494B
+{
+	CustomName = "20 - Blackbody";
+	Description = {
+		"@eng:Blackbody curve, starts at 0 degrees celcius (273 K), ends at 6273 degrees celcius (6000K)",
+	};
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$69B13BBD",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$69B13BBD
+{
+	OutputPins = {
+		"$D966C2D9",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$1DA3E0C5";
+}
+CParticleNodePinOut	$D966C2D9
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$69B13BBD";
+}
+CParticleNodeSamplerData_Curve	$4C71AADA
+{
+	OutputPins = {
+		"$8D738724",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$44B4FC6C";
+}
+CParticleNodePinOut	$8D738724
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$4C71AADA";
+}
+CParticleNodeGraph	$4EF48BE2
+{
+	CustomName = "19 - Heatmap (inv)";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$AF03890D",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$AF03890D
+{
+	OutputPins = {
+		"$F6896EBE",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$69C3DD9F";
+}
+CParticleNodePinOut	$F6896EBE
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$AF03890D";
+}
+CEditorBackdropList	$00269EC3
+{
+	Children = {
+		"$69D57342",
+		"$F57D922D",
+		"$AA1655F4",
+		"$AB93F1C7",
+		"$CF880096",
+		"$C9F5C011",
+		"$DC06BEE2",
+		"$B34D67A8",
+		"$28CECB8B",
+		"$347F3BAA",
+		"$ABC653E3",
+	};
+}
+CEditorBackdropBackground	$69D57342
+{
+}
+CEditorBackdropEffect	$F57D922D
+{
+	Enabled = false;
+}
+CEditorBackdropAnimTrack	$AA1655F4
+{
+	Enabled = false;
+}
+CEditorBackdropGrid	$AB93F1C7
+{
+}
+CEditorBackdropMesh	$CF880096
+{
+	Enabled = false;
+}
+CEditorBackdropDirectionalLight	$C9F5C011
+{
+}
+CEditorBackdropSound	$B34D67A8
+{
+	Enabled = false;
+}
+CEditorBackdropOccluder	$28CECB8B
+{
+	Enabled = false;
+}
+CEditorBackdropWind	$347F3BAA
+{
+	Enabled = false;
+}
+CParticleNodeGraph	$11CCD3F6
+{
+	CustomName = "17 - TopHat";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$5E8C859C",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$5E8C859C
+{
+	OutputPins = {
+		"$F06A3D80",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$4A35ED4E";
+}
+CParticleNodePinOut	$F06A3D80
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$5E8C859C";
+}
+CParticleNodeGraph	$8E0C539E
+{
+	CustomName = "09 - EaseInOutDelay";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$43F33A91",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$43F33A91
+{
+	OutputPins = {
+		"$F3ACB3D0",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$67674F29";
+}
+CParticleNodePinOut	$F3ACB3D0
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$43F33A91";
+}
+CParticleNodeGraph	$CFA014AD
+{
+	CustomName = "10 - EaseInOutDelay (inv)";
+	Public = true;
+	AutoInline = true;
+	ClassType = Sampler;
+	SearchKeywords = "preset";
+	Nodes = {
+		"$1FE9485F",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSamplerData_Curve	$1FE9485F
+{
+	OutputPins = {
+		"$88B72C26",
+	};
+	WorkspacePosition = int2(-88, -44);
+	ResourceDesc = "$420018A0";
+}
+CParticleNodePinOut	$88B72C26
+{
+	SelfName = "Data";
+	Type = dataCurve;
+	Owner = "$1FE9485F";
+}
+CResourceDescriptor_Curve	$0A554EB5
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$029B091C
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		2.0000000e+00,
+		2.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$1057900F
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		2.0000000e+00,
+		2.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$F551587E
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$0B148219
+{
+	Times = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$41FACE50
+{
+	Times = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		2.0000000e+00,
+		0.0000000e+00,
+		-2.0000000e+00,
+		0.0000000e+00,
+		4.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$93476353
+{
+	Times = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		-4.0000000e+00,
+		0.0000000e+00,
+		2.0000000e+00,
+		0.0000000e+00,
+		-2.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$F2BC4B12
+{
+	Times = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		-2.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		-1.0000000e+00,
+		-1.0000000e+00,
+		2.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$200E5E3D
+{
+	Times = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		2.0000000e+00,
+		-2.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$49220B44
+{
+	Times = {
+		0.0000000e+00,
+		3.7500000e-01,
+		5.0000000e-01,
+		6.2500000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		5.0000000e-01,
+		1.0000000e+00,
+		5.0000000e-01,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		1.5000000e+00,
+		5.0000000e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		-5.0000000e-01,
+		-1.5000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$22142957
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		-1.0000000e+00,
+		-1.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$1DB9C766
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$5024A721
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		-2.0000000e+00,
+		-2.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$47F3D3F8
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		-2.0000000e+00,
+		-2.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$EE14861B
+{
+	Times = {
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$9553417A
+{
+	ValueType = Float4;
+	Interpolator = Linear;
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		5.0000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$1DA3E0C5
+{
+	ValueType = Float4;
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		5.0000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		5.1612902e-01,
+		9.4946712e-02,
+		0.0000000e+00,
+		1.0000000e+00,
+		8.1451613e-01,
+		4.1004902e-01,
+		1.4643490e-01,
+		1.0000000e+00,
+		9.5969999e-01,
+		7.0529467e-01,
+		4.9849632e-01,
+		1.0000000e+00,
+		1.0000000e+00,
+		8.9736336e-01,
+		8.7590063e-01,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		2.4510496e+00,
+		1.7861830e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		6.1276239e-01,
+		4.4654574e-02,
+		0.0000000e+00,
+		0.0000000e+00,
+		3.6947927e-01,
+		2.0472032e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		3.6947927e-01,
+		2.0472032e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		2.2752744e-01,
+		3.3442852e-01,
+		3.0449295e-01,
+		0.0000000e+00,
+		2.2752744e-01,
+		3.3442852e-01,
+		3.0449295e-01,
+		0.0000000e+00,
+		9.6857846e-02,
+		2.3406059e-01,
+		3.9266443e-01,
+		0.0000000e+00,
+		9.6857846e-02,
+		2.3406059e-01,
+		3.9266443e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.4317341e-01,
+		3.5377690e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		5.7269365e-01,
+		1.4151076e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$44B4FC6C
+{
+	ValueType = Float4;
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		5.0000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		5.7451442e-02,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		1.8395931e-01,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		5.0342655e-01,
+		1.7978142e-01,
+		1.0000000e+00,
+		1.0000000e+00,
+		7.3491162e-01,
+		5.1942933e-01,
+		1.0000000e+00,
+		1.0000000e+00,
+		8.9736336e-01,
+		8.7590063e-01,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		2.5935099e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		6.4837746e-02,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		2.4674214e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		2.4674214e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		2.7862880e-01,
+		3.0449295e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		2.7862880e-01,
+		3.0449295e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.8726312e-01,
+		3.2440916e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.8726312e-01,
+		3.2440916e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.1036609e-01,
+		2.4179462e-01,
+		0.0000000e+00,
+		0.0000000e+00,
+		4.4146436e-01,
+		9.6717846e-01,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$69C3DD9F
+{
+	ValueType = Float4;
+	Interpolator = Linear;
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		5.0000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$4A35ED4E
+{
+	Times = {
+		0.0000000e+00,
+		2.0000000e-01,
+		8.0000001e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$67674F29
+{
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		0.0000000e+00,
+		0.0000000e+00,
+		1.0000000e+00,
+		1.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CResourceDescriptor_Curve	$420018A0
+{
+	Times = {
+		0.0000000e+00,
+		2.5000000e-01,
+		7.5000000e-01,
+		1.0000000e+00,
+	};
+	FloatValues = {
+		1.0000000e+00,
+		1.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+	FloatTangents = {
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+		0.0000000e+00,
+	};
+}
+CEditorBackdropFrameExporter	$ABC653E3
+{
+}
+CEditorBackdropSpotLight	$DC06BEE2
+{
+	Enabled = false;
+}

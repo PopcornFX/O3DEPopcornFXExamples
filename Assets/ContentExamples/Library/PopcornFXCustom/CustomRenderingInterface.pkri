@@ -1,0 +1,869 @@
+Version = 2.12.0.12165;
+CEngineRendererInterface	$6B70D015
+{
+	InterfaceName = "Editor custom features";
+	RendererFeatures = {
+		"$48898133",
+		"$ABAEC991",
+		"$5566943F",
+	};
+}
+CRHIRenderingSettings	$6DF50834
+{
+	RenderingFeatures = {
+		"$E2D0E736",
+		"$FA085486",
+		"$A0C40194",
+	};
+}
+CRHIRenderingFeature	$EBBBBB52
+{
+	FeatureName = "SphereLight";
+	PropertiesAsShaderConstants = {
+		"SphereRadius",
+	};
+}
+CParticleNodePinOut	$F1356840
+{
+	SelfName = "Value";
+}
+CParticleNodePinOut	$D0980C03
+{
+	SelfName = "Value";
+}
+CParticleNodePinOut	$ED80C982
+{
+	SelfName = "Value";
+}
+CParticleNodePinOut	$0384856D
+{
+	SelfName = "Value";
+}
+CParticleNodePinOut	$96A2AA34
+{
+	SelfName = "Value";
+}
+CParticleNodePinOut	$D970BB07
+{
+	SelfName = "Value";
+}
+CParticleRendererFeature	$48898133
+{
+	FeatureName = "SixWayLightmap";
+	Feature = "$AC256C61";
+	Properties = {
+		"$0E688B33",
+		"$976A0524",
+		"$F78C1517",
+		"$2663EE3F",
+		"$4096A459",
+	};
+}
+CParticleNodeTemplateExport	$AC256C61
+{
+	InputPins = {
+		"$10B02955",
+	};
+	OutputPins = {
+		"$4910593E",
+	};
+	ExportedName = "SixWayLightmap";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$10B02955
+{
+	SelfName = "DefaultValue";
+	Owner = "$AC256C61";
+}
+CParticleNodePinOut	$4910593E
+{
+	SelfName = "Value";
+	Owner = "$AC256C61";
+}
+CRHIRenderingFeature	$E2D0E736
+{
+	FeatureName = "SixWayLightmap";
+	UseUV = true;
+	UseNormal = true;
+	UseTangent = true;
+	UseSceneLightingInfo = true;
+	PropertiesAsShaderConstants = {
+		"RightLeftTopSmoke",
+		"BottomBackFront",
+		"Color",
+		"EnvironmentMultiplier",
+		"DirectionalMultiplier",
+	};
+}
+CParticleNodeTemplateExport	$0E688B33
+{
+	Description = {
+		"@eng:Map containing 6-way in RGBA channels like:  Right, Left, Top, Smoke (= Albedo or density)",
+	};
+	InputPins = {
+		"$82A91919",
+	};
+	OutputPins = {
+		"$EDBE3CE8",
+	};
+	ExportedName = "SixWayLightmap.RightLeftTopSmoke";
+	ExportedType = dataImage;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:SixWayLightmap",
+	};
+}
+CParticleNodePinIn	$82A91919
+{
+	SelfName = "DefaultValue";
+	Owner = "$0E688B33";
+}
+CParticleNodePinOut	$EDBE3CE8
+{
+	SelfName = "Value";
+	Owner = "$0E688B33";
+}
+CParticleNodeTemplateExport	$976A0524
+{
+	Description = {
+		"@eng:Map containing 6-way in RGB channels like:  Bottom, Back, Front, Smoke (= Albedo or density)",
+	};
+	InputPins = {
+		"$11768F9C",
+	};
+	OutputPins = {
+		"$6B55AF7A",
+	};
+	ExportedName = "SixWayLightmap.BottomBackFront";
+	ExportedType = dataImage;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:SixWayLightmap",
+	};
+}
+CParticleNodePinIn	$11768F9C
+{
+	SelfName = "DefaultValue";
+	Owner = "$976A0524";
+}
+CParticleNodePinOut	$6B55AF7A
+{
+	SelfName = "Value";
+	Owner = "$976A0524";
+}
+CParticleNodeTemplateExport	$F78C1517
+{
+	Description = {
+		"@eng:Influence of the ambient lighting.",
+	};
+	InputPins = {
+		"$8C3983FA",
+	};
+	OutputPins = {
+		"$00DD12AC",
+	};
+	ExportedName = "SixWayLightmap.EnvironmentMultiplier";
+	ExportedType = float;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:SixWayLightmap",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$8C3983FA
+{
+	SelfName = "DefaultValue";
+	Owner = "$F78C1517";
+}
+CParticleNodeTemplateExport	$2663EE3F
+{
+	Description = {
+		"@eng:Influence of the directionnal light.",
+	};
+	InputPins = {
+		"$43E4F439",
+	};
+	OutputPins = {
+		"$BD1EB3C7",
+	};
+	ExportedName = "SixWayLightmap.DirectionalMultiplier";
+	ExportedType = float;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:SixWayLightmap",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$43E4F439
+{
+	SelfName = "DefaultValue";
+	Owner = "$2663EE3F";
+}
+CParticleNodePinOut	$BD1EB3C7
+{
+	SelfName = "Value";
+	Owner = "$2663EE3F";
+}
+CParticleNodePinOut	$00DD12AC
+{
+	SelfName = "Value";
+	Owner = "$F78C1517";
+}
+CParticleNodeTemplateExport	$4096A459
+{
+	Description = {
+		"@eng:Colro of the smoke.",
+	};
+	InputPins = {
+		"$E80EF5B4",
+	};
+	OutputPins = {
+		"$1D6A84AE",
+	};
+	ExportedName = "SixWayLightmap.Color";
+	ExportedType = float4;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:SixWayLightmap",
+	};
+	DefaultValueF4 = float4(2.1404114e-01, 2.1404114e-01, 2.1404114e-01, 1.0000000e+00);
+}
+CParticleNodePinIn	$E80EF5B4
+{
+	SelfName = "DefaultValue";
+	Owner = "$4096A459";
+}
+CParticleNodePinOut	$1D6A84AE
+{
+	SelfName = "Value";
+	Owner = "$4096A459";
+}
+CParticleRendererFeature	$ABAEC991
+{
+	FeatureName = "Raymarch";
+	Feature = "$C9C797F6";
+	Properties = {
+		"$781C47D6",
+		"$5AA65534",
+		"$7A6B6F48",
+		"$13F28F82",
+		"$8E7A07F2",
+		"$6526DCB4",
+		"$8928490C",
+		"$779FD659",
+		"$A804D709",
+	};
+}
+CParticleNodeTemplateExport	$C9C797F6
+{
+	InputPins = {
+		"$7114B818",
+	};
+	OutputPins = {
+		"$72617625",
+	};
+	ExportedName = "Raymarch";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$7114B818
+{
+	SelfName = "DefaultValue";
+	Owner = "$C9C797F6";
+}
+CParticleNodePinOut	$72617625
+{
+	SelfName = "Value";
+	Owner = "$C9C797F6";
+}
+CRHIRenderingFeature	$FA085486
+{
+	FeatureName = "Raymarch";
+	UseUV = true;
+	UseNormal = true;
+	UseTangent = true;
+	SampleDepth = true;
+	UseSceneLightingInfo = true;
+	PropertiesAsShaderConstants = {
+		"Position",
+		"Size",
+		"Orientation",
+		"Smoke",
+		"Steps",
+		"ShadowSteps",
+		"Mirror",
+		"Channel",
+	};
+}
+CParticleNodeTemplateExport	$781C47D6
+{
+	Description = {
+		"@eng:A texture containing smoke density to be used as a heightmap.",
+	};
+	InputPins = {
+		"$9F52E107",
+	};
+	OutputPins = {
+		"$7DC184D1",
+	};
+	ExportedName = "Raymarch.Smoke";
+	ExportedType = dataImage;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+}
+CParticleNodePinIn	$9F52E107
+{
+	SelfName = "DefaultValue";
+	Owner = "$781C47D6";
+}
+CParticleNodePinOut	$7DC184D1
+{
+	SelfName = "Value";
+	Owner = "$781C47D6";
+}
+CParticleNodeTemplateExport	$5AA65534
+{
+	Description = {
+		"@eng:Volumetric object position.",
+	};
+	InputPins = {
+		"$9A3046D2",
+	};
+	OutputPins = {
+		"$E8B3348A",
+	};
+	ExportedName = "Raymarch.Position";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+}
+CParticleNodePinIn	$9A3046D2
+{
+	SelfName = "DefaultValue";
+	Owner = "$5AA65534";
+}
+CParticleNodePinOut	$E8B3348A
+{
+	SelfName = "Value";
+	Owner = "$5AA65534";
+}
+CParticleNodeTemplateExport	$7A6B6F48
+{
+	Description = {
+		"@eng:Volumetric object size.",
+	};
+	InputPins = {
+		"$6AE44447",
+	};
+	OutputPins = {
+		"$107E2E3B",
+	};
+	ExportedName = "Raymarch.Size";
+	ExportedType = float3;
+	Type = Input;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 2.5000000e-01, 0.0000000e+00);
+}
+CParticleNodePinIn	$6AE44447
+{
+	SelfName = "DefaultValue";
+	Owner = "$7A6B6F48";
+}
+CParticleNodePinOut	$107E2E3B
+{
+	SelfName = "Value";
+	Owner = "$7A6B6F48";
+}
+CParticleNodeTemplateExport	$8E7A07F2
+{
+	Description = {
+		"@eng:Scattering coefficient. Can be seen as color * density of the volume.",
+	};
+	InputPins = {
+		"$CAB40132",
+	};
+	OutputPins = {
+		"$32959CD6",
+	};
+	ExportedName = "Raymarch.Scattering";
+	ExportedType = float3;
+	Type = Input;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$CAB40132
+{
+	SelfName = "DefaultValue";
+	Owner = "$8E7A07F2";
+}
+CParticleNodePinOut	$32959CD6
+{
+	SelfName = "Value";
+	Owner = "$8E7A07F2";
+}
+CParticleNodeTemplateExport	$13F28F82
+{
+	Description = {
+		"@eng:Volumetric object orientation.",
+	};
+	InputPins = {
+		"$B72BDBD6",
+	};
+	OutputPins = {
+		"$3522FB85",
+	};
+	ExportedName = "Raymarch.Orientation";
+	ExportedType = orientation;
+	Type = Input;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+}
+CParticleNodePinIn	$B72BDBD6
+{
+	SelfName = "DefaultValue";
+	Owner = "$13F28F82";
+}
+CParticleNodePinOut	$3522FB85
+{
+	SelfName = "Value";
+	Owner = "$13F28F82";
+}
+CParticleRendererFeature	$5566943F
+{
+	FeatureName = "ParallaxRaymarch";
+	Feature = "$A6AC841C";
+	Properties = {
+		"$62FFA6B3",
+		"$000DA91E",
+		"$3F661466",
+		"$2B00EDE3",
+		"$1AF5C17A",
+		"$18DCD622",
+		"$E2127C46",
+		"$FA75DDCB",
+	};
+}
+CParticleNodeTemplateExport	$A6AC841C
+{
+	InputPins = {
+		"$29A9C224",
+	};
+	OutputPins = {
+		"$2AC21EA5",
+	};
+	ExportedName = "ParallaxRaymarch";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+}
+CParticleNodePinIn	$29A9C224
+{
+	SelfName = "DefaultValue";
+	Owner = "$A6AC841C";
+}
+CParticleNodePinOut	$2AC21EA5
+{
+	SelfName = "Value";
+	Owner = "$A6AC841C";
+}
+CRHIRenderingFeature	$A0C40194
+{
+	FeatureName = "ParallaxRaymarch";
+	UseUV = true;
+	UseNormal = true;
+	UseTangent = true;
+	SampleDepth = true;
+	UseSceneLightingInfo = true;
+	PropertiesAsShaderConstants = {
+		"Smoke",
+		"Channel",
+		"ParallaxStepsMinMax",
+		"ShadowSteps",
+		"ShadowStrength",
+	};
+}
+CParticleNodeTemplateExport	$62FFA6B3
+{
+	Description = {
+		"@eng:A texture containing smoke density to be used as a heightmap.",
+	};
+	InputPins = {
+		"$8D002247",
+	};
+	OutputPins = {
+		"$6F3F26CC",
+	};
+	ExportedName = "ParallaxRaymarch.Smoke";
+	ExportedType = dataImage;
+	Type = Input;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+}
+CParticleNodePinIn	$8D002247
+{
+	SelfName = "DefaultValue";
+	Owner = "$62FFA6B3";
+}
+CParticleNodePinOut	$6F3F26CC
+{
+	SelfName = "Value";
+	Owner = "$62FFA6B3";
+}
+CParticleNodeTemplateExport	$000DA91E
+{
+	Description = {
+		"@eng:Which channel of the texture holds smoke data.",
+	};
+	InputPins = {
+		"$BF6DEA29",
+	};
+	OutputPins = {
+		"$261661B2",
+	};
+	ExportedName = "ParallaxRaymarch.Channel";
+	ExportedType = float4;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	DefaultValueF4 = float4(0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$BF6DEA29
+{
+	SelfName = "DefaultValue";
+	Owner = "$000DA91E";
+}
+CParticleNodePinOut	$261661B2
+{
+	SelfName = "Value";
+	Owner = "$000DA91E";
+}
+CParticleNodeTemplateExport	$18DCD622
+{
+	Description = {
+		"@eng:Color of the smoke.",
+	};
+	InputPins = {
+		"$8AE4604A",
+	};
+	OutputPins = {
+		"$CD89D2CE",
+	};
+	ExportedName = "ParallaxRaymarch.Color";
+	ExportedType = float4;
+	Type = Input;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$8AE4604A
+{
+	SelfName = "DefaultValue";
+	Owner = "$18DCD622";
+}
+CParticleNodePinOut	$CD89D2CE
+{
+	SelfName = "Value";
+	Owner = "$18DCD622";
+}
+CParticleNodeTemplateExport	$3F661466
+{
+	Description = {
+		"@eng:Number of raymarching steps for the shadow computation",
+	};
+	InputPins = {
+		"$DA65B17F",
+	};
+	OutputPins = {
+		"$AD67E1D1",
+	};
+	ExportedName = "ParallaxRaymarch.ShadowSteps";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	HasMin = true;
+	HasMax = true;
+	DefaultValueI4 = int4(10, 0, 0, 0);
+	MaxValueI4 = int4(32, 0, 0, 0);
+}
+CParticleNodePinIn	$DA65B17F
+{
+	SelfName = "DefaultValue";
+	Owner = "$3F661466";
+}
+CParticleNodePinOut	$AD67E1D1
+{
+	SelfName = "Value";
+	Owner = "$3F661466";
+}
+CParticleNodeTemplateExport	$2B00EDE3
+{
+	Description = {
+		"@eng:Minimum and maximum numbers of steps for the parallax UV computation.",
+	};
+	InputPins = {
+		"$06FE7C8A",
+	};
+	OutputPins = {
+		"$CA596EC6",
+	};
+	ExportedName = "ParallaxRaymarch.ParallaxStepsMinMax";
+	ExportedType = int2;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	HasMin = true;
+	HasMax = true;
+	DefaultValueI4 = int4(8, 16, 0, 0);
+	MaxValueI4 = int4(32, 64, 0, 0);
+}
+CParticleNodePinIn	$06FE7C8A
+{
+	SelfName = "DefaultValue";
+	Owner = "$2B00EDE3";
+}
+CParticleNodePinOut	$CA596EC6
+{
+	SelfName = "Value";
+	Owner = "$2B00EDE3";
+}
+CParticleNodeTemplateExport	$1AF5C17A
+{
+	Description = {
+		"@eng:Volume density multiplier for the shadows computation.",
+	};
+	InputPins = {
+		"$F031EE50",
+	};
+	OutputPins = {
+		"$47C9AEF4",
+	};
+	ExportedName = "ParallaxRaymarch.ShadowStrength";
+	ExportedType = float;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$F031EE50
+{
+	SelfName = "DefaultValue";
+	Owner = "$1AF5C17A";
+}
+CParticleNodePinOut	$47C9AEF4
+{
+	SelfName = "Value";
+	Owner = "$1AF5C17A";
+}
+CParticleNodeTemplateExport	$E2127C46
+{
+	Description = {
+		"@eng:Height multiplier.",
+	};
+	InputPins = {
+		"$D0AEC471",
+	};
+	OutputPins = {
+		"$92753472",
+	};
+	ExportedName = "ParallaxRaymarch.Height";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$D0AEC471
+{
+	SelfName = "DefaultValue";
+	Owner = "$E2127C46";
+}
+CParticleNodePinOut	$92753472
+{
+	SelfName = "Value";
+	Owner = "$E2127C46";
+}
+CParticleNodeTemplateExport	$6526DCB4
+{
+	Description = {
+		"@eng:Raymarching primary ray max step count",
+	};
+	InputPins = {
+		"$02EFB066",
+	};
+	OutputPins = {
+		"$96D06042",
+	};
+	ExportedName = "Raymarch.Steps";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+	HasMin = true;
+	HasMax = true;
+	DefaultValueI4 = int4(30, 0, 0, 0);
+	MaxValueI4 = int4(150, 0, 0, 0);
+}
+CParticleNodePinIn	$02EFB066
+{
+	SelfName = "DefaultValue";
+	Owner = "$6526DCB4";
+}
+CParticleNodePinOut	$96D06042
+{
+	SelfName = "Value";
+	Owner = "$6526DCB4";
+}
+CParticleNodeTemplateExport	$8928490C
+{
+	InputPins = {
+		"$F1062D8C",
+	};
+	OutputPins = {
+		"$91C0AC0E",
+	};
+	ExportedName = "Raymarch.ShadowSteps";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+	HasMin = true;
+	HasMax = true;
+	DefaultValueI4 = int4(8, 0, 0, 0);
+	MaxValueI4 = int4(50, 0, 0, 0);
+}
+CParticleNodePinIn	$F1062D8C
+{
+	SelfName = "DefaultValue";
+	Owner = "$8928490C";
+}
+CParticleNodePinOut	$91C0AC0E
+{
+	SelfName = "Value";
+	Owner = "$8928490C";
+}
+CParticleNodeTemplateExport	$779FD659
+{
+	InputPins = {
+		"$6F586D51",
+	};
+	OutputPins = {
+		"$2B574CB1",
+	};
+	ExportedName = "Raymarch.Mirror";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+}
+CParticleNodePinIn	$6F586D51
+{
+	SelfName = "DefaultValue";
+	Owner = "$779FD659";
+}
+CParticleNodePinOut	$2B574CB1
+{
+	SelfName = "Value";
+	Owner = "$779FD659";
+}
+CParticleNodeTemplateExport	$A804D709
+{
+	Description = {
+		"@eng:Which channel of the texture holds smoke data.",
+	};
+	InputPins = {
+		"$3287C90A",
+	};
+	OutputPins = {
+		"$9E89004B",
+	};
+	ExportedName = "Raymarch.Channel";
+	ExportedType = float4;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Raymarch",
+	};
+	DefaultValueF4 = float4(0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$3287C90A
+{
+	SelfName = "DefaultValue";
+	Owner = "$A804D709";
+}
+CParticleNodePinOut	$9E89004B
+{
+	SelfName = "Value";
+	Owner = "$A804D709";
+}
+CParticleNodeTemplateExport	$FA75DDCB
+{
+	Description = {
+		"@eng:Since parallax space is not coherent with world scale, billboard scale must be passed for proper depth intersection.",
+	};
+	InputPins = {
+		"$13319C05",
+	};
+	OutputPins = {
+		"$FB9D1C48",
+	};
+	ExportedName = "ParallaxRaymarch.BillboardScale";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:ParallaxRaymarch",
+	};
+	HasMin = true;
+}
+CParticleNodePinIn	$13319C05
+{
+	SelfName = "DefaultValue";
+	Owner = "$FA75DDCB";
+}
+CParticleNodePinOut	$FB9D1C48
+{
+	SelfName = "Value";
+	Owner = "$FA75DDCB";
+}

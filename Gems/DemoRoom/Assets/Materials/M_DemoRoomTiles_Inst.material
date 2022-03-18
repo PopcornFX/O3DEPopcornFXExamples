@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "parentMaterial": "M_DemoRoomTiles.material",
+    "materialType": "Materials/Types/StandardPBR.materialtype",
+    "materialTypeVersion": 4,
+    "properties": {
+        "baseColor": {
+            "color": [
+                0.4299992322921753,
+                0.4299992322921753,
+                0.4299992322921753,
+                1.0
+            ]
+        },
+        "occlusion": {
+            "diffuseTextureMap": "T_RoomTiles_M.TGA"
+        },
+        "roughness": {
+            "factor": 0.4000000059604645
+        }
+    }
+}
