@@ -1,4 +1,4 @@
-Version = 2.12.0.12165;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -11291,6 +11291,12 @@ CParticleNodeGraph	$D481D29F
 		"$6555F2E6",
 		"$457B2AA6",
 		"$7D490EDF",
+		"$D7E5E1A8",
+		"$285C33E6",
+		"$4E7B5456",
+		"$18540105",
+		"$1322134E",
+		"$43943B63",
 	};
 	WorkspacePosition = int2(-98, 65);
 	WorkspaceZoom = -9;
@@ -20618,7 +20624,7 @@ CParticleNodeTemplateExport	$6D6E1064
 	OutputPins = {
 		"$133EFB86",
 	};
-	WorkspacePosition = int2(-858, 660);
+	WorkspacePosition = int2(-858, 770);
 	ExportedName = "Shape";
 	ExportedType = dataGeometry;
 	Type = Input;
@@ -20676,7 +20682,7 @@ CParticleNodeTemplateExport	$DD369B0D
 	InputPins = {
 		"$1680DB3D",
 	};
-	WorkspacePosition = int2(0, 660);
+	WorkspacePosition = int2(0, 770);
 	ExportedName = "Shape";
 	ExportedType = dataGeometry;
 	Type = Output;
@@ -22031,7 +22037,7 @@ CParticleNodePassThrough	$189D4DFF
 	OutputPins = {
 		"$17B04980",
 	};
-	WorkspacePosition = int2(-308, 682);
+	WorkspacePosition = int2(-308, 792);
 }
 CParticleNodePinIn	$8139F52E
 {
@@ -22322,7 +22328,8 @@ HasCollided = isfinite(RawISecResult.w) && Mask;
 float	collisionDistance = select(infinity, RawISecResult.w, Mask);
 HitFrac = select(1, collisionDistance / RayLength, HasCollided);
 
-debug.assert(HitFrac >= 0 && HitFrac <= 1);
+// Enable this to detect output errors.
+// debug.assert(HitFrac >= 0 && HitFrac <= 1);
 ";
 }
 CParticleNodePinIn	$54E9C3B6
@@ -34543,7 +34550,7 @@ CParticleNodeTemplateExport	$97A3C25A
 	OutputPins = {
 		"$2D27C013",
 	};
-	WorkspacePosition = int2(-858, 792);
+	WorkspacePosition = int2(-858, 902);
 	ExportedName = "Localspace Shape";
 	ExportedType = bool;
 	Type = Input;
@@ -34579,7 +34586,7 @@ CParticleNodePassThrough	$32250C0B
 	OutputPins = {
 		"$F9EB628E",
 	};
-	WorkspacePosition = int2(-308, 814);
+	WorkspacePosition = int2(-308, 924);
 }
 CParticleNodePinIn	$BB70CE4B
 {
@@ -35387,10 +35394,10 @@ CParticleNodeTemplate	$2AF7951A
 		"$3B8BB6E4",
 		"$1001B9B2",
 		"$55362CF7",
+		"$6D7A83BE",
 		"$173C7B2B",
 		"$CCD96995",
 		"$6900C90E",
-		"$7363C391",
 		"$96397893",
 		"$18237B0A",
 		"$56E29F48",
@@ -37320,10 +37327,10 @@ CParticleNodeGraph	$9A2511BC
 		"$71425ECE",
 		"$627A5FEB",
 		"$6E5A7FBF",
-		"$8969EBEE",
-		"$61CFE502",
-		"$BC1F9A43",
-		"$35817E02",
+		"$4F7BEF98",
+		"$23200141",
+		"$901804C1",
+		"$6CDFE56A",
 	};
 	WorkspacePosition = int2(-74, -23);
 	WorkspaceZoom = -5;
@@ -38080,7 +38087,7 @@ CParticleNodePassThrough	$CB0E7512
 	OutputPins = {
 		"$F152992F",
 	};
-	WorkspacePosition = int2(-528, -44);
+	WorkspacePosition = int2(-528, 0);
 }
 CParticleNodePinIn	$739FD3F7
 {
@@ -38096,6 +38103,7 @@ CParticleNodePinOut	$F152992F
 	Owner = "$CB0E7512";
 	ConnectedPins = {
 		"$BFFE7541",
+		"$7F9AE2F5",
 	};
 }
 CParticleNodePassThrough	$F1EBC905
@@ -38158,7 +38166,7 @@ CParticleNodePassThrough	$7388B2C2
 	OutputPins = {
 		"$2819F61C",
 	};
-	WorkspacePosition = int2(638, 660);
+	WorkspacePosition = int2(616, 660);
 }
 CParticleNodePinIn	$631D844D
 {
@@ -38824,7 +38832,6 @@ CParticleNodeTemplate	$60260493
 		"$ADECD09C",
 		"$C46510B6",
 		"$C463E2BA",
-		"$CB5514D7",
 		"$F9461783",
 		"$6EF3BBC6",
 		"$724E5611",
@@ -38839,6 +38846,7 @@ CParticleNodeTemplate	$60260493
 		"$735D208C",
 		"$9B18BEE8",
 		"$FE5885C7",
+		"$707C5342",
 		"$4C637E7D",
 	};
 	WorkspacePosition = int2(594, 198);
@@ -40669,7 +40677,8 @@ HasCollided = isfinite(RawISecResult.w) && Mask;
 float	collisionDistance = select(infinity, RawISecResult.w, Mask);
 HitFrac = select(1, collisionDistance / RayLength, HasCollided);
 
-debug.assert(HitFrac >= 0 && HitFrac <= 1);
+// Enable this to detect output errors.
+// debug.assert(HitFrac >= 0 && HitFrac <= 1);
 ";
 }
 CParticleNodePinIn	$E760D4C9
@@ -42535,6 +42544,7 @@ CParticleNodePinOut	$560E8CDE
 	Owner = "$7D490EDF";
 	ConnectedPins = {
 		"$07C2DE10",
+		"$9E7AB0BE",
 	};
 }
 CParticleNodePinOut	$0DBBFEE5
@@ -43271,7 +43281,7 @@ CParticleNodePinOut	$EA6061B5
 	Owner = "$D538ABA2";
 	BaseType = bool;
 	ConnectedPins = {
-		"$45F226A0",
+		"$AC8A344F",
 	};
 }
 CParticleNodePassThrough	$FE5B6E30
@@ -43326,148 +43336,6 @@ CParticleNodePinOut	$3835698A
 		"$2C9EA94A",
 	};
 }
-CParticleNodeTemplateExport	$8969EBEE
-{
-	Description = {
-		"@eng:Kill the particle if a collision miss was detected",
-	};
-	InputPins = {
-		"$C9602470",
-	};
-	OutputPins = {
-		"$BC7E1D6A",
-	};
-	WorkspacePosition = int2(572, 198);
-	ExportedName = "KillIfBelowDepth";
-	ExportedType = bool;
-	Type = Input;
-	InputType = Property;
-	Order = 4;
-	VisibleByDefault = true;
-	CategoryName = {
-		"@eng:Collision",
-	};
-	DefaultValueB4 = bool4(true, false, false, false);
-	PinRules = Rule1;
-	BaseVisibility = Hidden;
-	RuleResult = Visible;
-	DependentProperty = "CollideWith";
-	RuleValue = "2";
-}
-CParticleNodePinIn	$C9602470
-{
-	SelfName = "DefaultValue";
-	Owner = "$8969EBEE";
-}
-CParticleNodePinOut	$BC7E1D6A
-{
-	SelfName = "Value";
-	Owner = "$8969EBEE";
-	ConnectedPins = {
-		"$FBF152F7",
-	};
-}
-CParticleNodeArithmetic	$61CFE502
-{
-	InputPins = {
-		"$2D2E2A14",
-		"$FBF152F7",
-	};
-	OutputPins = {
-		"$1B2E3847",
-	};
-	WorkspacePosition = int2(1034, 154);
-	Operation = And;
-}
-CParticleNodePinIn	$2D2E2A14
-{
-	SelfName = "Value";
-	Owner = "$61CFE502";
-	ConnectedPins = {
-		"$1A3E5937",
-	};
-}
-CParticleNodePinIn	$FBF152F7
-{
-	SelfName = "ValueB";
-	Owner = "$61CFE502";
-	ConnectedPins = {
-		"$BC7E1D6A",
-	};
-}
-CParticleNodePinOut	$1B2E3847
-{
-	SelfName = "Value";
-	Owner = "$61CFE502";
-	ConnectedPins = {
-		"$286BB718",
-	};
-}
-CParticleNodeTemplate	$BC1F9A43
-{
-	InputPins = {
-		"$286BB718",
-	};
-	WorkspacePosition = int2(1386, 154);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
-	SubGraphName = "self.kill";
-}
-CParticleNodePinIn	$286BB718
-{
-	SelfName = "Condition";
-	Type = bool;
-	Owner = "$BC1F9A43";
-	BaseType = bool;
-	ConnectedPins = {
-		"$1B2E3847",
-	};
-}
-CParticleNodePinIn	$CB5514D7
-{
-	SelfName = "KillIfBelowDepth";
-	Type = bool;
-	Visible = false;
-	ExportInParent = true;
-	Owner = "$60260493";
-	BaseType = bool;
-	ValueB = bool4(true, false, false, false);
-}
-CParticleNodePassThrough	$35817E02
-{
-	InputPins = {
-		"$45F226A0",
-	};
-	OutputPins = {
-		"$1A3E5937",
-	};
-	WorkspacePosition = int2(88, 176);
-}
-CParticleNodePinIn	$45F226A0
-{
-	SelfName = "Value";
-	Owner = "$35817E02";
-	ConnectedPins = {
-		"$EA6061B5",
-	};
-}
-CParticleNodePinOut	$1A3E5937
-{
-	SelfName = "Value";
-	Owner = "$35817E02";
-	ConnectedPins = {
-		"$2D2E2A14",
-	};
-}
-CParticleNodePinIn	$7363C391
-{
-	SelfName = "KillIfBelowDepth";
-	Type = bool;
-	Visible = false;
-	ExportInParent = true;
-	Owner = "$2AF7951A";
-	BaseType = bool;
-	ValueB = bool4(true, false, false, false);
-}
 CParticleNodePassThrough	$536DC370
 {
 	InputPins = {
@@ -43519,5 +43387,328 @@ CParticleNodePinOut	$E55E693A
 	Owner = "$C381FB7C";
 	ConnectedPins = {
 		"$CA5A70AF",
+	};
+}
+CParticleNodeTemplateExport	$4F7BEF98
+{
+	InputPins = {
+		"$E9515A04",
+	};
+	WorkspacePosition = int2(1034, 748);
+	ExportedName = "HasMiss";
+	ExportedType = bool;
+	Type = Output;
+	Order = 10;
+}
+CParticleNodePinIn	$E9515A04
+{
+	SelfName = "Value";
+	Type = bool;
+	Owner = "$4F7BEF98";
+	ConnectedPins = {
+		"$491F78C9",
+	};
+}
+CParticleNodePinOut	$707C5342
+{
+	SelfName = "HasMiss";
+	Type = bool;
+	Owner = "$60260493";
+	BaseType = bool;
+	ConnectedPins = {
+		"$A506D531",
+	};
+}
+CParticleNodePassThrough	$23200141
+{
+	InputPins = {
+		"$AC8A344F",
+	};
+	OutputPins = {
+		"$580F2268",
+	};
+	WorkspacePosition = int2(66, 44);
+}
+CParticleNodePinIn	$AC8A344F
+{
+	SelfName = "Value";
+	Owner = "$23200141";
+	ConnectedPins = {
+		"$EA6061B5",
+	};
+}
+CParticleNodePinOut	$580F2268
+{
+	SelfName = "Value";
+	Owner = "$23200141";
+	ConnectedPins = {
+		"$30DE0334",
+	};
+}
+CParticleNodeTemplate	$D7E5E1A8
+{
+	InputPins = {
+		"$083C9174",
+	};
+	WorkspacePosition = int2(1848, 572);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.kill";
+}
+CParticleNodePinIn	$083C9174
+{
+	SelfName = "Condition";
+	Type = bool;
+	Owner = "$D7E5E1A8";
+	BaseType = bool;
+	ConnectedPins = {
+		"$EFE1E773",
+	};
+}
+CParticleNodeArithmetic	$285C33E6
+{
+	InputPins = {
+		"$A506D531",
+		"$FC67F607",
+	};
+	OutputPins = {
+		"$E18CC731",
+	};
+	WorkspacePosition = int2(968, 616);
+	Operation = And;
+}
+CParticleNodePinIn	$A506D531
+{
+	SelfName = "Value";
+	Owner = "$285C33E6";
+	ConnectedPins = {
+		"$707C5342",
+	};
+}
+CParticleNodePinIn	$FC67F607
+{
+	SelfName = "ValueB";
+	Owner = "$285C33E6";
+	ConnectedPins = {
+		"$9333D9FF",
+	};
+}
+CParticleNodePinOut	$E18CC731
+{
+	SelfName = "Value";
+	Owner = "$285C33E6";
+	ConnectedPins = {
+		"$13802721",
+	};
+}
+CParticleNodeTemplateExport	$4E7B5456
+{
+	Description = {
+		"@eng:Kill the particle if a collision miss was detected",
+	};
+	InputPins = {
+		"$F4053848",
+	};
+	OutputPins = {
+		"$873372A3",
+	};
+	WorkspacePosition = int2(-858, 660);
+	ExportedName = "KillIfBelowDepth";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	Order = 3;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Collision",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "CollideWith";
+	RuleValue = "2";
+}
+CParticleNodePinIn	$F4053848
+{
+	SelfName = "DefaultValue";
+	Owner = "$4E7B5456";
+}
+CParticleNodePinOut	$873372A3
+{
+	SelfName = "Value";
+	Owner = "$4E7B5456";
+	ConnectedPins = {
+		"$F43B29FC",
+	};
+}
+CParticleNodePinIn	$6D7A83BE
+{
+	SelfName = "KillIfBelowDepth";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$2AF7951A";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeArithmetic	$18540105
+{
+	InputPins = {
+		"$5E48AC54",
+		"$13802721",
+	};
+	OutputPins = {
+		"$EFE1E773",
+	};
+	WorkspacePosition = int2(1496, 572);
+	Operation = And;
+}
+CParticleNodePinIn	$5E48AC54
+{
+	SelfName = "Value";
+	Owner = "$18540105";
+	ConnectedPins = {
+		"$6B54F6FE",
+	};
+}
+CParticleNodePinIn	$13802721
+{
+	SelfName = "ValueB";
+	Owner = "$18540105";
+	ConnectedPins = {
+		"$E18CC731",
+	};
+}
+CParticleNodePinOut	$EFE1E773
+{
+	SelfName = "Value";
+	Owner = "$18540105";
+	ConnectedPins = {
+		"$083C9174",
+	};
+}
+CParticleNodeCompare	$1322134E
+{
+	CustomName = {
+		"@eng:CollideWith = Depth",
+	};
+	InputPins = {
+		"$9E7AB0BE",
+		"$A8ECD570",
+	};
+	OutputPins = {
+		"$6B54F6FE",
+	};
+	WorkspacePosition = int2(1210, 528);
+}
+CParticleNodePinIn	$9E7AB0BE
+{
+	SelfName = "Value";
+	Owner = "$1322134E";
+	ConnectedPins = {
+		"$560E8CDE",
+	};
+}
+CParticleNodePinIn	$A8ECD570
+{
+	SelfName = "ValueB";
+	Type = int;
+	Owner = "$1322134E";
+	ValueI = int4(2, 0, 0, 0);
+}
+CParticleNodePinOut	$6B54F6FE
+{
+	SelfName = "Result";
+	Owner = "$1322134E";
+	ConnectedPins = {
+		"$5E48AC54",
+	};
+}
+CParticleNodePassThrough	$43943B63
+{
+	InputPins = {
+		"$F43B29FC",
+	};
+	OutputPins = {
+		"$9333D9FF",
+	};
+	WorkspacePosition = int2(858, 682);
+}
+CParticleNodePinIn	$F43B29FC
+{
+	SelfName = "Value";
+	Owner = "$43943B63";
+	ConnectedPins = {
+		"$873372A3",
+	};
+}
+CParticleNodePinOut	$9333D9FF
+{
+	SelfName = "Value";
+	Owner = "$43943B63";
+	ConnectedPins = {
+		"$FC67F607",
+	};
+}
+CParticleNodeArithmetic	$901804C1
+{
+	InputPins = {
+		"$30DE0334",
+		"$1F427C8E",
+	};
+	OutputPins = {
+		"$491F78C9",
+	};
+	WorkspacePosition = int2(616, 748);
+	Operation = And;
+}
+CParticleNodePinIn	$30DE0334
+{
+	SelfName = "Value";
+	Owner = "$901804C1";
+	ConnectedPins = {
+		"$580F2268",
+	};
+}
+CParticleNodePinIn	$1F427C8E
+{
+	SelfName = "ValueB";
+	Owner = "$901804C1";
+	ConnectedPins = {
+		"$767AD074",
+	};
+}
+CParticleNodePinOut	$491F78C9
+{
+	SelfName = "Value";
+	Owner = "$901804C1";
+	ConnectedPins = {
+		"$E9515A04",
+	};
+}
+CParticleNodePassThrough	$6CDFE56A
+{
+	InputPins = {
+		"$7F9AE2F5",
+	};
+	OutputPins = {
+		"$767AD074",
+	};
+	WorkspacePosition = int2(132, 814);
+}
+CParticleNodePinIn	$7F9AE2F5
+{
+	SelfName = "Value";
+	Owner = "$6CDFE56A";
+	ConnectedPins = {
+		"$F152992F",
+	};
+}
+CParticleNodePinOut	$767AD074
+{
+	SelfName = "Value";
+	Owner = "$6CDFE56A";
+	ConnectedPins = {
+		"$1F427C8E",
 	};
 }

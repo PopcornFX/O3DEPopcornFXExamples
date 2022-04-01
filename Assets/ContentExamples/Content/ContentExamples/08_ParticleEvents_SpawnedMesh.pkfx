@@ -1,4 +1,4 @@
-Version = 2.12.0.12427;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -11,8 +11,8 @@ CEditorAssetEffect	$41EED1A4
 	};
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(1.1092543e-02, 2.1749196e+00, 6.7589221e+00);
-	StartCameraOrientation = float3(3.4135154e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraPosition = float3(3.7333529e-02, 2.5975208e+00, 6.8432307e+00);
+	StartCameraOrientation = float3(3.8838816e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -164,6 +164,7 @@ CParticleNodeSetLife	$C8335AD0
 	InputPins = {
 		"$A67FF70F",
 	};
+	WorkspacePosition = int2(-396, 110);
 }
 CParticleNodePinIn	$A67FF70F
 {
@@ -202,7 +203,7 @@ CParticleNodeRendererMesh	$3743FC5A
 		"$A5B0E5E5",
 		"$AF085FD7",
 	};
-	WorkspacePosition = int2(44, 308);
+	WorkspacePosition = int2(264, 308);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",

@@ -1,4 +1,4 @@
-Version = 2.12.0.12444;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -34,8 +34,8 @@ CParticleNodeGraph	$81861AB7
 		"$0745241B",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-44, -26);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-572, -3);
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A

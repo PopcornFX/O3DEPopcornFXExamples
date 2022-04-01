@@ -1,4 +1,4 @@
-Version = 2.12.0.12165;
+Version = 2.12.0.12706;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Editor features";
@@ -3833,8 +3833,6 @@ CParticleNodePinOut	$E5A55B64
 CRHIRenderingFeature	$FDD3ABF7
 {
 	FeatureName = "NormalBend";
-	UseNormal = true;
-	UseTangent = true;
 }
 CParticleNodeTemplateExport	$DEF82E86
 {

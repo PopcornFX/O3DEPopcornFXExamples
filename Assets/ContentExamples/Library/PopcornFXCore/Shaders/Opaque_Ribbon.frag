@@ -35,7 +35,7 @@ void     FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS
 {
 	float   roughness = -1.0f;
 	float   metalness = -1.0f;
-    vec3    normal = fInput.fragNormal;
+    vec3    normal = vec3(1,0,0);
     vec4    color = vec4(0,0,0,0);
     vec4    emissive = vec4(0,0,0,0);
 

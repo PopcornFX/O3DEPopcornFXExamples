@@ -111,7 +111,6 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 {
 	float   roughness = 1.0f;
 	float   metalness = 1.0f;
-    vec3    normal = fInput.fragNormal;
     vec4    color = vec4(0,0,0,0);
     vec4    emissive = vec4(0,0,0,0);
 

@@ -1,4 +1,4 @@
-Version = 2.12.0.12444;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -30,8 +30,8 @@ CParticleNodeGraph	$81861AB7
 		"$2E03C3C8",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-44, -26);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-539, -27);
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -901,7 +901,8 @@ CParticleNodeGraph	$601179B2
 		"$E478842B",
 		"$4C1D9C2C",
 	};
-	WorkspaceZoom = -4;
+	WorkspacePosition = int2(-192, -175);
+	WorkspaceZoom = -2;
 }
 CParticleNodeLayer	$2E03C3C8
 {
@@ -929,6 +930,7 @@ CParticleNodeSetLife	$72680EFE
 	InputPins = {
 		"$E39FD2CC",
 	};
+	WorkspacePosition = int2(22, 0);
 }
 CParticleNodePinIn	$E39FD2CC
 {

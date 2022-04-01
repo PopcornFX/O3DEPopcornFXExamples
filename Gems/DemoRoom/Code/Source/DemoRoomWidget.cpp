@@ -383,7 +383,7 @@ namespace DemoRoom
 
     void DemoRoomWidget::AddColliders()
     {
-        auto actionCallback = [this](AZ::EntityId entityId, bool isStandMesh)
+        auto actionCallback = [](AZ::EntityId entityId, bool isStandMesh)
         {
             bool hasColliderComponent = false;
             EditorComponentAPIBus::BroadcastResult(hasColliderComponent, &EditorComponentAPIRequests::HasComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
@@ -453,7 +453,7 @@ namespace DemoRoom
         if (!FindMaterialAssetId("Materials/M_DemoWall_Inst", "SM_URoom_Wall_Gray", materialAssignmentMap))
             return;
 
-        auto actionCallback = [this, &materialAssignmentMap](AZ::EntityId entityId, [[maybe_unused]] bool isStandMesh)
+        auto actionCallback = [&materialAssignmentMap](AZ::EntityId entityId, [[maybe_unused]] bool isStandMesh)
         {
             bool hasMaterialComponent = false;
             EditorComponentAPIBus::BroadcastResult(hasMaterialComponent, &EditorComponentAPIRequests::HasComponentOfType, entityId, AZ::Render::EditorMaterialComponentTypeId);
