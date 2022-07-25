@@ -14,7 +14,8 @@
     "icon_path": "preview.png",
     "requirements": "",
     "restricted_name": "gems",
-    "dependencies": [
+    "dependencies": [],
+    "_comment_dependencies": [
         "AtomLyIntegration",
         "PhysX",
         "AtomFont"

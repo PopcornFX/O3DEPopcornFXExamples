@@ -1,4 +1,4 @@
-Version = 2.12.0.12706;
+Version = 2.13.0.13771;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -789,7 +789,7 @@ CParticleNodeTemplate	$66691374
 		"$3C9FA288",
 		"$6DE4B806",
 		"$FABFB0FE",
-		"$F1AAC612",
+		"$5B60A9B2",
 		"$A7AFC022",
 		"$5AE953AC",
 		"$61D8EE3A",
@@ -1612,7 +1612,7 @@ CParticleNodePinOut	$1952FD60
 	Owner = "$E2BBC553";
 	BaseType = float;
 }
-CParticleNodePinIn	$F1AAC612
+CParticleNodePinIn	$5B60A9B2
 {
 	SelfName = "KillIfBelowDepth";
 	Type = bool;

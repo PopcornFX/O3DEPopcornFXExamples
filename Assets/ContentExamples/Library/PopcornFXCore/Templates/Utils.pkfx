@@ -1,4 +1,4 @@
-Version = 2.12.0.12706;
+Version = 2.13.0.13771;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -9626,7 +9626,7 @@ CParticleNodeTemplate	$CC9ABDA2
 		"$516D9554",
 		"$7F3A8465",
 		"$F42DDD70",
-		"$0265C089",
+		"$F2EB1469",
 		"$F8E8AE36",
 		"$917FC9E8",
 		"$65F274A7",
@@ -12099,7 +12099,7 @@ CParticleNodeTemplate	$C681D376
 		"$FB614B88",
 		"$2E6BD96C",
 		"$32AB683C",
-		"$68132A98",
+		"$0F51E0ED",
 		"$C270FE72",
 		"$9DCB5357",
 		"$D91C8CEB",
@@ -12871,7 +12871,7 @@ CParticleNodeTemplate	$8E0E9FEF
 		"$36957009",
 		"$637812BB",
 		"$C4AF0E31",
-		"$E5E8E253",
+		"$9ABED406",
 		"$394A32D1",
 		"$EC4EE2FB",
 		"$37265B00",
@@ -27191,7 +27191,7 @@ CParticleNodePinOut	$1689AC4E
 		"$66B59225",
 	};
 }
-CParticleNodePinIn	$0265C089
+CParticleNodePinIn	$F2EB1469
 {
 	SelfName = "KillIfBelowDepth";
 	Type = bool;
@@ -27200,7 +27200,7 @@ CParticleNodePinIn	$0265C089
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
 }
-CParticleNodePinIn	$68132A98
+CParticleNodePinIn	$0F51E0ED
 {
 	SelfName = "KillIfBelowDepth";
 	Type = bool;
@@ -27209,7 +27209,7 @@ CParticleNodePinIn	$68132A98
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
 }
-CParticleNodePinIn	$E5E8E253
+CParticleNodePinIn	$9ABED406
 {
 	SelfName = "KillIfBelowDepth";
 	Type = bool;

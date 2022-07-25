@@ -3,7 +3,7 @@
 # https://www.popcornfx.com/terms-and-conditions/
 #----------------------------------------------------------------------------
 
-if (${O3DE_DEVELOPMENT})
+if (PK_O3DE_MAJOR_VERSION GREATER_EQUAL 2205)
     add_compile_definitions(O3DE_DEV)
     set(FREETYPE_3RDPARTY 3rdParty::Freetype)
     o3de_pal_dir(pal_dir ${CMAKE_CURRENT_LIST_DIR}/Platform/${PAL_PLATFORM_NAME} "${gem_restricted_path}" "${gem_path}" "${gem_name}")

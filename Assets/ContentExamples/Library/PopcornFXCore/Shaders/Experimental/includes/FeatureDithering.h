@@ -8,14 +8,14 @@ void	ApplyDithering(INOUT(SFragSurface) fSurf, IN(SFragGeometry) fGeom, IN(SFrag
 	ivec2	iTexDim;
 	TEXTURE_DIMENSIONS(DitheringPatterns, 0, iTexDim)
 	vec2	texDim = CAST(vec2, iTexDim);
-	
+
 	float	cellCount = 17.0;
 	vec2	cellStart = vec2(floor(fSurf.m_Diffuse.a * cellCount) / cellCount, 0);
 	vec2	cellDim = vec2(texDim.x / cellCount, texDim.y);
 
 	vec2 	viewportSize = GET_CONSTANT(SceneInfo, ViewportSize);
 	vec3 	clipPos = fInput.fragViewProjPosition.xyz / fInput.fragViewProjPosition.w;
-	
+
 	vec2	screenUV = clipPos.xy * vec2(0.5, 0.5) + 0.5;
 	screenUV = screenUV * viewportSize;
 	screenUV = mod(screenUV, cellDim);
@@ -32,6 +32,5 @@ void	ApplyDithering(INOUT(SFragSurface) fSurf, IN(SFragGeometry) fGeom, IN(SFrag
 		discard;
 	else if (ditheringMode == 1 && noise > 0.5) // InversedAlpha
 		discard;
-
 }
 #endif
