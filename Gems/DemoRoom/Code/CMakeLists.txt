@@ -12,6 +12,9 @@ else ()
     ly_get_list_relative_pal_filename(pal_dir ${CMAKE_CURRENT_LIST_DIR}/Platform/${PAL_PLATFORM_NAME} ${gem_restricted_path} ${gem_path} ${gem_name})
 endif ()
 
+add_compile_definitions(PK_O3DE_MAJOR_VERSION=${PK_O3DE_MAJOR_VERSION})
+add_compile_definitions(PK_O3DE_PATCH_VERSION=${PK_O3DE_PATCH_VERSION})
+
 # Now that we have the platform abstraction layer (PAL) folder for this folder, thats where we will find the
 # traits for this platform. Traits for a platform are defines for things like whether or not something in this gem
 # is supported by this platform.
