@@ -72,10 +72,3 @@ ly_create_alias(NAME O3DEPopcornFXExamples.Servers  NAMESPACE Gem TARGETS Gem::O
 
 # Enable the specified list of gems from GEM_FILE or GEMS list for this specific project:
 ly_enable_gems(PROJECT_NAME O3DEPopcornFXExamples GEM_FILE enabled_gems.cmake)
-
-if(PAL_TRAIT_BUILD_SERVER_SUPPORTED)
-    # this property causes it to actually make a ServerLauncher.
-    # if you don't want a Server application, you can remove this and the
-    # following ly_enable_gems lines.
-    set_property(GLOBAL APPEND PROPERTY LY_LAUNCHER_SERVER_PROJECTS O3DEPopcornFXExamples)
-endif()
