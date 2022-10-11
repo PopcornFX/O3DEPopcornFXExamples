@@ -1,4 +1,4 @@
-Version = 2.13.0.13771;
+Version = 2.14.0.14607;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -6,6 +6,7 @@ CParticleEffect	$6B70D015
 		"$C4870DE6",
 		"$D857A09F",
 		"$2BBAE5F0",
+		"$B16FCD4A",
 		"$AAFF12BE",
 		"$9C42C17D",
 		"$1A488438",
@@ -477,7 +478,7 @@ CParticleNodeGraph	$D857A09F
 {
 	CustomName = "RGBA Split";
 	Description = {
-		"@eng:Takes a float4 RGBA color as input, outputs the float3 RGB and float A components.",
+		"@eng:Takes a <c>float4 RGBA</c> color as input, outputs the <c>float3 RGB</c> and <c>float A</c> components.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -667,6 +668,9 @@ CParticleNodePinIn	$EC84D339
 CParticleNodeGraph	$2BBAE5F0
 {
 	CustomName = "RGBA Build";
+	Description = {
+		"@eng:Builds a <c>float4 RGBA</c> color from an input <c>float3 RGB</c> and <c>float A</c>.",
+	};
 	Public = true;
 	ClassType = Math;
 	IconKey = "Toolbar_PaintPalette";
@@ -4622,5 +4626,323 @@ CParticleNodePinOut	$4B3AD634
 	Owner = "$1DDF1DBC";
 	ConnectedPins = {
 		"$4D875A4C",
+	};
+}
+CParticleNodeGraph	$B16FCD4A
+{
+	CustomName = "Color lerp";
+	Description = {
+		"@eng:Interpolates between RGBA colors <c>ColorA</c> and <c>ColorB</c>, <b>in HSV space</b>, producing clean Hue gradients.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "color constructor assembler";
+	Nodes = {
+		"$6CD66C3E",
+		"$5AF6490E",
+		"$5C813A4F",
+		"$578D39D3",
+		"$C8853CEC",
+		"$E7BA871E",
+		"$62B7E542",
+		"$CA39022C",
+		"$A6A366F1",
+	};
+	WorkspacePosition = int2(-68, 34);
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$6CD66C3E
+{
+	Description = {
+		"@eng:First color",
+	};
+	InputPins = {
+		"$6EDB49DD",
+	};
+	OutputPins = {
+		"$A7DD3365",
+	};
+	WorkspacePosition = int2(-594, -176);
+	ExportedName = "ColorA";
+	ExportedType = float4;
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$6EDB49DD
+{
+	SelfName = "DefaultValue";
+	Owner = "$6CD66C3E";
+}
+CParticleNodePinOut	$A7DD3365
+{
+	SelfName = "Value";
+	Owner = "$6CD66C3E";
+	ConnectedPins = {
+		"$B75A8773",
+	};
+}
+CParticleNodeTemplateExport	$5AF6490E
+{
+	Description = {
+		"@eng:Output interpolated color",
+	};
+	InputPins = {
+		"$B00AAE76",
+	};
+	WorkspacePosition = int2(682, -176);
+	ExportedName = "Color";
+	ExportedType = float4;
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorA";
+}
+CParticleNodePinIn	$B00AAE76
+{
+	SelfName = "Value";
+	Owner = "$5AF6490E";
+	ConnectedPins = {
+		"$D4247077",
+	};
+}
+CParticleNodeTemplate	$5C813A4F
+{
+	InputPins = {
+		"$B75A8773",
+	};
+	OutputPins = {
+		"$776A0D76",
+	};
+	WorkspacePosition = int2(-264, -176);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "rgb to hsv";
+}
+CParticleNodePinIn	$B75A8773
+{
+	SelfName = "ColorRGB";
+	Type = float3;
+	Owner = "$5C813A4F";
+	ConnectedPins = {
+		"$A7DD3365",
+	};
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinOut	$776A0D76
+{
+	SelfName = "ColorHSV";
+	Owner = "$5C813A4F";
+	ConnectedPins = {
+		"$9B4859F8",
+	};
+}
+CParticleNodeMathFunction3	$578D39D3
+{
+	InputPins = {
+		"$9B4859F8",
+		"$BB60F81B",
+		"$7E7027D0",
+	};
+	OutputPins = {
+		"$17E8FF12",
+	};
+	WorkspacePosition = int2(66, -176);
+}
+CParticleNodePinIn	$9B4859F8
+{
+	SelfName = "Value";
+	Owner = "$578D39D3";
+	ConnectedPins = {
+		"$776A0D76",
+	};
+}
+CParticleNodePinIn	$BB60F81B
+{
+	SelfName = "ValueB";
+	Owner = "$578D39D3";
+	ConnectedPins = {
+		"$F8D2A011",
+	};
+}
+CParticleNodePinIn	$7E7027D0
+{
+	SelfName = "Cursor";
+	Owner = "$578D39D3";
+	ConnectedPins = {
+		"$BD4FFD63",
+	};
+}
+CParticleNodePinOut	$17E8FF12
+{
+	SelfName = "Value";
+	Owner = "$578D39D3";
+	ConnectedPins = {
+		"$00AD867D",
+	};
+}
+CParticleNodeTemplate	$C8853CEC
+{
+	InputPins = {
+		"$00AD867D",
+	};
+	OutputPins = {
+		"$D4247077",
+	};
+	WorkspacePosition = int2(330, -176);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "hsv to rgb";
+}
+CParticleNodePinIn	$00AD867D
+{
+	SelfName = "ColorHSV";
+	Type = float3;
+	Owner = "$C8853CEC";
+	ConnectedPins = {
+		"$17E8FF12",
+	};
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinOut	$D4247077
+{
+	SelfName = "ColorRGB";
+	Owner = "$C8853CEC";
+	ConnectedPins = {
+		"$B00AAE76",
+	};
+}
+CParticleNodeTemplateExport	$E7BA871E
+{
+	Description = {
+		"@eng:Second color",
+	};
+	InputPins = {
+		"$DAEFF95E",
+	};
+	OutputPins = {
+		"$AA7ACFEC",
+	};
+	WorkspacePosition = int2(-594, -44);
+	ExportedName = "ColorB";
+	ExportedType = float4;
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$DAEFF95E
+{
+	SelfName = "DefaultValue";
+	Owner = "$E7BA871E";
+}
+CParticleNodePinOut	$AA7ACFEC
+{
+	SelfName = "Value";
+	Owner = "$E7BA871E";
+	ConnectedPins = {
+		"$6914531A",
+	};
+}
+CParticleNodeTemplate	$62B7E542
+{
+	InputPins = {
+		"$6914531A",
+	};
+	OutputPins = {
+		"$F8D2A011",
+	};
+	WorkspacePosition = int2(-264, -44);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "rgb to hsv";
+}
+CParticleNodePinIn	$6914531A
+{
+	SelfName = "ColorRGB";
+	Type = float3;
+	Owner = "$62B7E542";
+	ConnectedPins = {
+		"$AA7ACFEC",
+	};
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinOut	$F8D2A011
+{
+	SelfName = "ColorHSV";
+	Owner = "$62B7E542";
+	ConnectedPins = {
+		"$BB60F81B",
+	};
+}
+CParticleNodeTemplateExport	$CA39022C
+{
+	Description = {
+		"@eng:Interpolation cursor in the <c>[0, 1]</c> range",
+	};
+	InputPins = {
+		"$C93DDD41",
+	};
+	OutputPins = {
+		"$FB14AB08",
+	};
+	WorkspacePosition = int2(-594, 88);
+	ExportedName = "Cursor";
+	ExportedType = float;
+	Type = Input;
+	VisibleByDefault = true;
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$C93DDD41
+{
+	SelfName = "DefaultValue";
+	Owner = "$CA39022C";
+}
+CParticleNodePinOut	$FB14AB08
+{
+	SelfName = "Value";
+	Owner = "$CA39022C";
+	ConnectedPins = {
+		"$D92412CC",
+	};
+}
+CParticleNodePassThrough	$A6A366F1
+{
+	InputPins = {
+		"$D92412CC",
+	};
+	OutputPins = {
+		"$BD4FFD63",
+	};
+	WorkspacePosition = int2(-132, 110);
+}
+CParticleNodePinIn	$D92412CC
+{
+	SelfName = "Value";
+	Owner = "$A6A366F1";
+	ConnectedPins = {
+		"$FB14AB08",
+	};
+}
+CParticleNodePinOut	$BD4FFD63
+{
+	SelfName = "Value";
+	Owner = "$A6A366F1";
+	ConnectedPins = {
+		"$7E7027D0",
 	};
 }

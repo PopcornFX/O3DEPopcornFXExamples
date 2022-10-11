@@ -1,4 +1,4 @@
-Version = 2.13.0.13771;
+Version = 2.14.0.14607;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -64,6 +64,7 @@ CParticleEffect	$6B70D015
 		"$E749E042",
 		"$7CFB103C",
 		"$95F4C2CB",
+		"$BDE2F7D9",
 		"$0798FEE6",
 		"$E191BFCB",
 		"$F415EE0A",
@@ -155,6 +156,7 @@ CParticleEffect	$6B70D015
 		"$85CFB238",
 		"$12D181D8",
 		"$28C33F18",
+		"$E7C91C42",
 	};
 	AttributeFlatList = "$C0425F45";
 }
@@ -8318,7 +8320,7 @@ CParticleNodeGraph	$7CFB103C
 {
 	CustomName = "Counter";
 	Description = {
-		"@eng:Simple counter, gets incremented each frame when the input \'Condition\' is \'true\'",
+		"@eng:This node will count how many times the input <c>Condition</c> has been <c>true</c>.\\n\\nEvery frame, <c>Condition</c> is evaluated, and if it is <c>true</c>, the value will be incremented by <c>1</c>.\\n\\nThe <c>Enabled</c> property allows to enable/disable the counter entirely.\\nWhen <c>Enabled</c> is <c>false</c>, it will ignore the <c>Condition</c> input and never increment the value.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -8329,14 +8331,26 @@ CParticleNodeGraph	$7CFB103C
 		"$CBCC97B2",
 		"$14DEB177",
 		"$2DA19198",
-		"$0023F1BF",
 		"$8B63DE03",
 		"$68BB9434",
 		"$F6E45151",
 		"$09E79FCF",
+		"$E15DB120",
+		"$BC6663A0",
+		"$A4B3D6A1",
+		"$A0D4CEF0",
+		"$E266209E",
+		"$0F79DC1B",
+		"$7642807C",
+		"$23FF8034",
+		"$9FF4A216",
+		"$9FE8B364",
+		"$156AE9E0",
+		"$17C4C411",
 	};
 	WorkspacePosition = int2(-108, -5);
 	WorkspaceZoom = -5;
+	Collapsed = true;
 }
 CParticleNodeGraph	$6818E968
 {
@@ -15460,7 +15474,7 @@ CParticleNodeAnnotation	$2C42D08B
 		"@eng:Counter",
 	};
 	Description = {
-		"@eng:This template will count how many times the input \'Condition\' has been \'true\'.\\n\\nEvery frame, \'Condition\' is evaluated, and if it is true, the value will be incremented by 1.\\n\\nThe \'Enabled\' property allows to enable/disable the counter entirely.\\nWhen \'Enabled is false, it will ignore the \'Condition\' input and never increment the value.",
+		"@eng:$(Graph.Description)",
 	};
 	WorkspacePosition = int2(-264, -616);
 	SelfSize = int2(1188, 484);
@@ -15486,12 +15500,14 @@ CParticleNodeArithmetic	$EAF86A1C
 	InputPins = {
 		"$2BD8B539",
 		"$6BCB6FF0",
+		"$C6E3948E",
 	};
 	OutputPins = {
 		"$584DD573",
 	};
 	WorkspacePosition = int2(-176, 154);
 	Operation = And;
+	InputCount = 3;
 }
 CParticleNodePinIn	$2BD8B539
 {
@@ -15540,7 +15556,7 @@ CParticleNodePinOut	$DF78EAE4
 	SelfName = "Value";
 	Owner = "$CBCC97B2";
 	ConnectedPins = {
-		"$76EF83EE",
+		"$2929D3AF",
 	};
 }
 CParticleNodeTemplateExport	$14DEB177
@@ -15613,45 +15629,7 @@ CParticleNodePinOut	$7618380C
 	SelfName = "Value";
 	Owner = "$2DA19198";
 	ConnectedPins = {
-		"$F55F5A49",
-	};
-}
-CParticleNodeArithmetic	$0023F1BF
-{
-	CustomName = {
-		"@eng:+=",
-	};
-	InputPins = {
-		"$76EF83EE",
-		"$F55F5A49",
-	};
-	OutputPins = {
-		"$FCA57240",
-	};
-	WorkspacePosition = int2(396, -22);
-}
-CParticleNodePinIn	$76EF83EE
-{
-	SelfName = "Value";
-	Owner = "$0023F1BF";
-	ConnectedPins = {
-		"$DF78EAE4",
-	};
-}
-CParticleNodePinIn	$F55F5A49
-{
-	SelfName = "ValueB";
-	Owner = "$0023F1BF";
-	ConnectedPins = {
-		"$7618380C",
-	};
-}
-CParticleNodePinOut	$FCA57240
-{
-	SelfName = "Value";
-	Owner = "$0023F1BF";
-	ConnectedPins = {
-		"$41700382",
+		"$5DEC3C1C",
 	};
 }
 CParticleNodeDiscretizationPoint	$8B63DE03
@@ -15662,14 +15640,14 @@ CParticleNodeDiscretizationPoint	$8B63DE03
 	OutputPins = {
 		"$D427476D",
 	};
-	WorkspacePosition = int2(682, -22);
+	WorkspacePosition = int2(770, -22);
 }
 CParticleNodePinIn	$41700382
 {
 	SelfName = "Value";
 	Owner = "$8B63DE03";
 	ConnectedPins = {
-		"$FCA57240",
+		"$07A46BFC",
 	};
 }
 CParticleNodePinOut	$D427476D
@@ -15718,7 +15696,7 @@ CParticleNodeTemplateExport	$F6E45151
 	InputPins = {
 		"$34EAB1E8",
 	};
-	WorkspacePosition = int2(968, -22);
+	WorkspacePosition = int2(1056, -22);
 	ExportedName = "Value";
 	ExportedType = int;
 	Type = Output;
@@ -15736,13 +15714,12 @@ CParticleNodeGraph	$95F4C2CB
 {
 	CustomName = "Timer";
 	Description = {
-		"@eng:This node tracks the time elapsed since a condition was \'true\'\\n\\nIt features classic \"stopwatch timer\" controls: Start & Stop.\\nIt can be auto-started when the particle is born using the \'Autostart\' input.\\n\\nIt outputs the tracked time, as well as whether or not the timer is currently running.",
+		"@eng:This node tracks the time elapsed since a condition was <c>true</c>\\n\\nIt features classic \"stopwatch timer\" controls: <c>Start</c>, <c>Pause</c>, <c>Stop</c>, <c>Restart</c> and <c>Reset</c>.\\nIt can be auto-started when the particle is born using the <c>Autostart</c> input.\\n\\nIt outputs the tracked time, as well as whether or not the timer is currently running.",
 	};
 	Public = true;
 	ClassType = Math;
 	IconKey = "Toolbar_Timer";
 	Nodes = {
-		"$8354E3EA",
 		"$94E9ECBE",
 		"$4260F090",
 		"$CCD60B52",
@@ -15751,69 +15728,28 @@ CParticleNodeGraph	$95F4C2CB
 		"$DDBA42AC",
 		"$5F2B4869",
 		"$DC047323",
-		"$ADBAA827",
-		"$F3A9E688",
-		"$E0F94C15",
-		"$0CC8D25E",
-		"$C5BDEEF2",
-		"$E2847546",
-		"$B7D0467B",
 		"$30B53D4C",
-		"$5B974F2E",
 		"$32316689",
-		"$50DE5380",
-		"$CB94FFAD",
-		"$21020016",
-		"$84C1750B",
 		"$D6C4949C",
 		"$0D8D77D6",
 		"$0D1B2004",
+		"$9A3E6840",
+		"$E083B119",
+		"$C3E9A228",
+		"$F47FE335",
+		"$997DC1A0",
+		"$934531A8",
 	};
-	WorkspacePosition = int2(157, -83);
-	WorkspaceZoom = -6;
+	WorkspacePosition = int2(69, 122);
+	WorkspaceZoom = -5;
 	Collapsed = true;
-}
-CParticleNodeArithmetic	$8354E3EA
-{
-	InputPins = {
-		"$FCCBFBF5",
-		"$E2149F5C",
-	};
-	OutputPins = {
-		"$E329C34F",
-	};
-	WorkspacePosition = int2(264, -352);
-}
-CParticleNodePinIn	$FCCBFBF5
-{
-	SelfName = "Value";
-	Owner = "$8354E3EA";
-	ConnectedPins = {
-		"$A34B7E05",
-	};
-}
-CParticleNodePinIn	$E2149F5C
-{
-	SelfName = "ValueB";
-	Owner = "$8354E3EA";
-	ConnectedPins = {
-		"$71BA9497",
-	};
-}
-CParticleNodePinOut	$E329C34F
-{
-	SelfName = "Value";
-	Owner = "$8354E3EA";
-	ConnectedPins = {
-		"$5DDF2861",
-	};
 }
 CParticleNodeConstant	$94E9ECBE
 {
 	OutputPins = {
 		"$66D28B59",
 	};
-	WorkspacePosition = int2(-242, -352);
+	WorkspacePosition = int2(-242, -616);
 }
 CParticleNodePinOut	$66D28B59
 {
@@ -15828,7 +15764,7 @@ CParticleNodeTemplate	$4260F090
 	OutputPins = {
 		"$87FB1293",
 	};
-	WorkspacePosition = int2(-242, -198);
+	WorkspacePosition = int2(-242, -506);
 	SubGraphName = "scene.dt";
 }
 CParticleNodePinOut	$87FB1293
@@ -15850,7 +15786,7 @@ CParticleNodeArithmetic	$CCD60B52
 	OutputPins = {
 		"$71BA9497",
 	};
-	WorkspacePosition = int2(22, -198);
+	WorkspacePosition = int2(-22, -506);
 	Operation = Mul;
 }
 CParticleNodePinIn	$568F037D
@@ -15874,7 +15810,7 @@ CParticleNodePinOut	$71BA9497
 	SelfName = "Value";
 	Owner = "$CCD60B52";
 	ConnectedPins = {
-		"$E2149F5C",
+		"$2775A839",
 	};
 }
 CParticleNodeDiscretizationPoint	$AC1EF3A6
@@ -15885,14 +15821,14 @@ CParticleNodeDiscretizationPoint	$AC1EF3A6
 	OutputPins = {
 		"$C353CE38",
 	};
-	WorkspacePosition = int2(506, -352);
+	WorkspacePosition = int2(858, -616);
 }
 CParticleNodePinIn	$5DDF2861
 {
 	SelfName = "Value";
 	Owner = "$AC1EF3A6";
 	ConnectedPins = {
-		"$E329C34F",
+		"$AF580F11",
 	};
 }
 CParticleNodePinOut	$C353CE38
@@ -15911,7 +15847,7 @@ CParticleNodeDiscretizationPoint	$11DAED5B
 	OutputPins = {
 		"$A34B7E05",
 	};
-	WorkspacePosition = int2(22, -352);
+	WorkspacePosition = int2(-22, -616);
 }
 CParticleNodePinIn	$461A19BA
 {
@@ -15926,18 +15862,22 @@ CParticleNodePinOut	$A34B7E05
 	SelfName = "Value";
 	Owner = "$11DAED5B";
 	ConnectedPins = {
-		"$FCCBFBF5",
+		"$D5D31CD6",
+		"$808033D4",
 	};
 }
 CParticleNodeTemplateExport	$DDBA42AC
 {
+	Description = {
+		"@eng:Allows to quickly disable the timer while maintaining its separate running state unchanged. When set to <c>false</c>, the timer will stop running and keep its value. When set back to <c>true</c>, it will resume its previous state based on whichever value the <c>Start</c> and <c>Stop</c> properties have.\\n\\nBasically a second independent <c>Stop</c> control.",
+	};
 	InputPins = {
 		"$5A3380DF",
 	};
 	OutputPins = {
 		"$1000B18E",
 	};
-	WorkspacePosition = int2(-792, 154);
+	WorkspacePosition = int2(-726, -88);
 	ExportedName = "Enabled";
 	ExportedType = bool;
 	Type = Input;
@@ -15962,10 +15902,13 @@ CParticleNodePinOut	$1000B18E
 }
 CParticleNodeTemplateExport	$5F2B4869
 {
+	Description = {
+		"@eng:Timer value",
+	};
 	InputPins = {
 		"$9AEAEAE0",
 	};
-	WorkspacePosition = int2(770, -352);
+	WorkspacePosition = int2(1078, -616);
 	ExportedName = "Value";
 	ExportedType = float;
 	Type = Output;
@@ -15988,7 +15931,7 @@ CParticleNodeArithmetic	$DC047323
 	OutputPins = {
 		"$7EF61AD4",
 	};
-	WorkspacePosition = int2(-506, 154);
+	WorkspacePosition = int2(-484, -88);
 	Operation = And;
 }
 CParticleNodePinIn	$2A43AF22
@@ -16004,7 +15947,7 @@ CParticleNodePinIn	$75888B8D
 	SelfName = "ValueB";
 	Owner = "$DC047323";
 	ConnectedPins = {
-		"$230827B7",
+		"$0113C07F",
 	};
 }
 CParticleNodePinOut	$7EF61AD4
@@ -16016,219 +15959,15 @@ CParticleNodePinOut	$7EF61AD4
 		"$DB7C674E",
 	};
 }
-CParticleNodeTemplateExport	$ADBAA827
-{
-	InputPins = {
-		"$979FC676",
-	};
-	OutputPins = {
-		"$B0C40B71",
-	};
-	WorkspacePosition = int2(-1738, 616);
-	ExportedName = "Start";
-	ExportedType = bool;
-	Type = Input;
-	CategoryName = {
-		"@eng:Timer",
-	};
-}
-CParticleNodePinIn	$979FC676
-{
-	SelfName = "DefaultValue";
-	Owner = "$ADBAA827";
-}
-CParticleNodePinOut	$B0C40B71
-{
-	SelfName = "Value";
-	Owner = "$ADBAA827";
-	ConnectedPins = {
-		"$556FF591",
-	};
-}
-CParticleNodeTemplateExport	$F3A9E688
-{
-	InputPins = {
-		"$7B73C3EB",
-	};
-	OutputPins = {
-		"$95F16B8A",
-	};
-	WorkspacePosition = int2(-1738, 726);
-	ExportedName = "Stop";
-	ExportedType = bool;
-	Type = Input;
-	CategoryName = {
-		"@eng:Timer",
-	};
-}
-CParticleNodePinIn	$7B73C3EB
-{
-	SelfName = "DefaultValue";
-	Owner = "$F3A9E688";
-}
-CParticleNodePinOut	$95F16B8A
-{
-	SelfName = "Value";
-	Owner = "$F3A9E688";
-	ConnectedPins = {
-		"$8C2A632A",
-	};
-}
-CParticleNodeDiscretizationPoint	$E0F94C15
-{
-	InputPins = {
-		"$69C621FC",
-	};
-	OutputPins = {
-		"$E6422A6F",
-	};
-	WorkspacePosition = int2(-1298, 462);
-}
-CParticleNodePinIn	$69C621FC
-{
-	SelfName = "Value";
-	Owner = "$E0F94C15";
-	ConnectedPins = {
-		"$9BC41347",
-	};
-}
-CParticleNodePinOut	$E6422A6F
-{
-	SelfName = "Value";
-	Owner = "$E0F94C15";
-	ConnectedPins = {
-		"$E4229179",
-	};
-}
-CParticleNodeArithmetic	$0CC8D25E
-{
-	InputPins = {
-		"$E4229179",
-		"$31F06130",
-	};
-	OutputPins = {
-		"$1630FFB3",
-	};
-	WorkspacePosition = int2(-1056, 462);
-	Operation = Or;
-}
-CParticleNodePinIn	$E4229179
-{
-	SelfName = "Value";
-	Owner = "$0CC8D25E";
-	ConnectedPins = {
-		"$E6422A6F",
-	};
-}
-CParticleNodePinIn	$31F06130
-{
-	SelfName = "ValueB";
-	Owner = "$0CC8D25E";
-	ConnectedPins = {
-		"$C2110B28",
-	};
-}
-CParticleNodePinOut	$1630FFB3
-{
-	SelfName = "Value";
-	Owner = "$0CC8D25E";
-	ConnectedPins = {
-		"$5AFCDF9D",
-	};
-}
-CParticleNodeArithmetic	$C5BDEEF2
-{
-	InputPins = {
-		"$5AFCDF9D",
-		"$2167F824",
-	};
-	OutputPins = {
-		"$230827B7",
-	};
-	WorkspacePosition = int2(-792, 462);
-	Operation = And;
-}
-CParticleNodePinIn	$5AFCDF9D
-{
-	SelfName = "Value";
-	Owner = "$C5BDEEF2";
-	ConnectedPins = {
-		"$1630FFB3",
-	};
-}
-CParticleNodePinIn	$2167F824
-{
-	SelfName = "ValueB";
-	Owner = "$C5BDEEF2";
-	ConnectedPins = {
-		"$D679FAD8",
-	};
-}
-CParticleNodePinOut	$230827B7
-{
-	SelfName = "Value";
-	Owner = "$C5BDEEF2";
-	ConnectedPins = {
-		"$C4BFD95A",
-		"$75888B8D",
-	};
-}
-CParticleNodeMathFunction1	$E2847546
-{
-	InputPins = {
-		"$8EABFA81",
-	};
-	OutputPins = {
-		"$D679FAD8",
-	};
-	WorkspacePosition = int2(-1056, 616);
-	Function = BitwiseNot;
-}
-CParticleNodePinIn	$8EABFA81
-{
-	SelfName = "Value";
-	Owner = "$E2847546";
-	ConnectedPins = {
-		"$19C3CC35",
-	};
-}
-CParticleNodePinOut	$D679FAD8
-{
-	SelfName = "Value";
-	Owner = "$E2847546";
-	ConnectedPins = {
-		"$2167F824",
-	};
-}
-CParticleNodeDiscretizationPoint	$B7D0467B
-{
-	InputPins = {
-		"$C4BFD95A",
-	};
-	OutputPins = {
-		"$CB1E6625",
-	};
-	WorkspacePosition = int2(-506, 462);
-}
-CParticleNodePinIn	$C4BFD95A
-{
-	SelfName = "Value";
-	Owner = "$B7D0467B";
-	ConnectedPins = {
-		"$230827B7",
-	};
-}
-CParticleNodePinOut	$CB1E6625
-{
-	SelfName = "Value";
-	Owner = "$B7D0467B";
-}
 CParticleNodeTemplateExport	$30B53D4C
 {
+	Description = {
+		"@eng:Evaluates to <c>true</c> if the timer is currently running, <c>false</c> otherwise",
+	};
 	InputPins = {
 		"$1516BFFF",
 	};
-	WorkspacePosition = int2(506, 154);
+	WorkspacePosition = int2(-242, -88);
 	ExportedName = "IsRunning";
 	ExportedType = bool;
 	Type = Output;
@@ -16242,129 +15981,13 @@ CParticleNodePinIn	$1516BFFF
 		"$7EF61AD4",
 	};
 }
-CParticleNodeAnnotation	$5B974F2E
-{
-	CustomName = {
-		"@eng:Start / Stop logic",
-	};
-	WorkspacePosition = int2(-1782, 396);
-	SelfSize = int2(1496, 484);
-}
 CParticleNodeAnnotation	$32316689
 {
 	CustomName = {
 		"@eng:Time counting",
 	};
-	WorkspacePosition = int2(-286, -440);
-	SelfSize = int2(1276, 418);
-}
-CParticleNodeTemplateExport	$50DE5380
-{
-	InputPins = {
-		"$55F1B843",
-	};
-	OutputPins = {
-		"$8B09CAC2",
-	};
-	WorkspacePosition = int2(-1738, 462);
-	ExportedName = "Autostart";
-	ExportedType = bool;
-	Type = Input;
-	CategoryName = {
-		"@eng:Timer",
-	};
-	DefaultValueB4 = bool4(true, false, false, false);
-}
-CParticleNodePinIn	$55F1B843
-{
-	SelfName = "DefaultValue";
-	Owner = "$50DE5380";
-}
-CParticleNodePinOut	$8B09CAC2
-{
-	SelfName = "Value";
-	Owner = "$50DE5380";
-	ConnectedPins = {
-		"$34A39174",
-	};
-}
-CParticleNodeEvaluateAtSpawn	$CB94FFAD
-{
-	InputPins = {
-		"$34A39174",
-	};
-	OutputPins = {
-		"$9BC41347",
-	};
-	WorkspacePosition = int2(-1518, 462);
-}
-CParticleNodePinIn	$34A39174
-{
-	SelfName = "Value";
-	Owner = "$CB94FFAD";
-	ConnectedPins = {
-		"$8B09CAC2",
-	};
-}
-CParticleNodePinOut	$9BC41347
-{
-	SelfName = "Value";
-	Owner = "$CB94FFAD";
-	ConnectedPins = {
-		"$69C621FC",
-	};
-}
-CParticleNodePassThrough	$21020016
-{
-	InputPins = {
-		"$556FF591",
-	};
-	OutputPins = {
-		"$C2110B28",
-	};
-	WorkspacePosition = int2(-1298, 638);
-}
-CParticleNodePinIn	$556FF591
-{
-	SelfName = "Value";
-	Owner = "$21020016";
-	ConnectedPins = {
-		"$B0C40B71",
-	};
-}
-CParticleNodePinOut	$C2110B28
-{
-	SelfName = "Value";
-	Owner = "$21020016";
-	ConnectedPins = {
-		"$31F06130",
-	};
-}
-CParticleNodePassThrough	$84C1750B
-{
-	InputPins = {
-		"$8C2A632A",
-	};
-	OutputPins = {
-		"$19C3CC35",
-	};
-	WorkspacePosition = int2(-1298, 748);
-}
-CParticleNodePinIn	$8C2A632A
-{
-	SelfName = "Value";
-	Owner = "$84C1750B";
-	ConnectedPins = {
-		"$95F16B8A",
-	};
-}
-CParticleNodePinOut	$19C3CC35
-{
-	SelfName = "Value";
-	Owner = "$84C1750B";
-	ConnectedPins = {
-		"$8EABFA81",
-	};
+	WorkspacePosition = int2(-286, -704);
+	SelfSize = int2(1628, 374);
 }
 CParticleNodeAnnotation	$D6C4949C
 {
@@ -16374,8 +15997,8 @@ CParticleNodeAnnotation	$D6C4949C
 	Description = {
 		"@eng:$(Graph.Description)",
 	};
-	WorkspacePosition = int2(-1760, -440);
-	SelfSize = int2(1034, 484);
+	WorkspacePosition = int2(-1408, -858);
+	SelfSize = int2(1034, 528);
 }
 CParticleNodeGraph	$B395BE00
 {
@@ -16444,7 +16067,7 @@ CParticleNodeTemplateExport	$09E79FCF
 	OutputPins = {
 		"$2ECDEFBC",
 	};
-	WorkspacePosition = int2(-176, 330);
+	WorkspacePosition = int2(-176, 396);
 	ExportedName = "Increment";
 	ExportedType = int;
 	Type = Input;
@@ -16472,7 +16095,7 @@ CParticleNodeArithmetic	$0D8D77D6
 	OutputPins = {
 		"$8BBAAAED",
 	};
-	WorkspacePosition = int2(-242, 0);
+	WorkspacePosition = int2(-242, -264);
 	Operation = Mul;
 }
 CParticleNodePinIn	$EE035E4C
@@ -16510,7 +16133,7 @@ CParticleNodeTemplateExport	$0D1B2004
 	OutputPins = {
 		"$3AC0542C",
 	};
-	WorkspacePosition = int2(-506, 0);
+	WorkspacePosition = int2(-484, -264);
 	ExportedName = "TimeScale";
 	ExportedType = float;
 	Type = Input;
@@ -22428,4 +22051,1555 @@ CEditorBackdropFrameExporter	$029B091C
 CEditorBackdropSpotLight	$1057900F
 {
 	Enabled = false;
+}
+CParticleNodeGraph	$E7C91C42
+{
+	CustomName = "reverse bits";
+	Description = {
+		"@eng:Reverses the bits of the input <c>int</c>.\\n\\nThe <c>BitCount</c> property specifies how many bits will be reversed.\\nIf <c>BitCount</c> is lower than <c>32</c>, only these lower bits will be reversed, the upper bits will be cleared.\\n\\nFor example, reversing 15 bits of the 32-bits integer <c>2870431569</c>:\\n<c>0b10101011000101110100111101010001</c>\\nWill give the result:\\n<c>0b00000000000000000100010101111001</c>\\nWhis is <c>17785</c>\\n\\n<b>Performance considerations:</b>\\nMost efficient values for <c>BitCount</c> are <c>4</c>, then <c>8</c>, then <c>32</c>, and finally all other values in-between.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_InspectBinary";
+	Nodes = {
+		"$97260A67",
+		"$5EC999ED",
+		"$A44D3252",
+		"$61B4B953",
+		"$165BF4F5",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplateExport	$97260A67
+{
+	InputPins = {
+		"$4ADB0535",
+	};
+	OutputPins = {
+		"$25FB2324",
+	};
+	WorkspacePosition = int2(-484, -44);
+	ExportedName = "Value";
+	ExportedType = int;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$4ADB0535
+{
+	SelfName = "DefaultValue";
+	Owner = "$97260A67";
+}
+CParticleNodePinOut	$25FB2324
+{
+	SelfName = "Value";
+	Owner = "$97260A67";
+	ConnectedPins = {
+		"$23E6A441",
+	};
+}
+CParticleNodeTemplateExport	$5EC999ED
+{
+	InputPins = {
+		"$41A2B3E2",
+	};
+	WorkspacePosition = int2(550, -44);
+	ExportedName = "Value";
+	ExportedType = int;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$41A2B3E2
+{
+	SelfName = "Value";
+	Owner = "$5EC999ED";
+	ConnectedPins = {
+		"$8144BF97",
+	};
+}
+CParticleNodeAnnotation	$A44D3252
+{
+	Description = {
+		"@eng:$(Graph.Description)",
+	};
+	WorkspacePosition = int2(-528, -924);
+	SelfSize = int2(1298, 770);
+}
+CParticleNodeScript	$61B4B953
+{
+	InputPins = {
+		"$23E6A441",
+		"$F40C54C8",
+	};
+	OutputPins = {
+		"$8144BF97",
+	};
+	WorkspacePosition = int2(22, -44);
+	Expression = "Value = slr(reverse_bits32(Value), 32 - BitCount);
+";
+}
+CParticleNodePinIn	$23E6A441
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$61B4B953";
+	BaseType = int;
+	ConnectedPins = {
+		"$25FB2324",
+	};
+}
+CParticleNodePinOut	$8144BF97
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$61B4B953";
+	BaseType = int;
+	ConnectedPins = {
+		"$41A2B3E2",
+	};
+}
+CParticleNodeTemplateExport	$165BF4F5
+{
+	InputPins = {
+		"$59E8B0BA",
+	};
+	OutputPins = {
+		"$89E757E4",
+	};
+	WorkspacePosition = int2(-484, 110);
+	ExportedName = "BitCount";
+	ExportedType = int;
+	Type = Input;
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	DefaultValueI4 = int4(32, 0, 0, 0);
+	MinValueI4 = int4(1, 0, 0, 0);
+	MaxValueI4 = int4(32, 0, 0, 0);
+}
+CParticleNodePinIn	$59E8B0BA
+{
+	SelfName = "DefaultValue";
+	Owner = "$165BF4F5";
+}
+CParticleNodePinOut	$89E757E4
+{
+	SelfName = "Value";
+	Owner = "$165BF4F5";
+	ConnectedPins = {
+		"$F40C54C8",
+	};
+}
+CParticleNodePinIn	$F40C54C8
+{
+	SelfName = "BitCount";
+	Type = int;
+	Owner = "$61B4B953";
+	BaseType = int;
+	ConnectedPins = {
+		"$89E757E4",
+	};
+}
+CParticleNodeAssign	$9A3E6840
+{
+	InputPins = {
+		"$808033D4",
+		"$667A340F",
+	};
+	OutputPins = {
+		"$AF580F11",
+	};
+	WorkspacePosition = int2(638, -616);
+}
+CParticleNodePinIn	$808033D4
+{
+	SelfName = "Value";
+	Owner = "$9A3E6840";
+	ConnectedPins = {
+		"$A34B7E05",
+	};
+}
+CParticleNodePinIn	$667A340F
+{
+	SelfName = "NewValue";
+	Owner = "$9A3E6840";
+	ConnectedPins = {
+		"$99DB174D",
+	};
+}
+CParticleNodePinOut	$AF580F11
+{
+	SelfName = "Value";
+	Owner = "$9A3E6840";
+	ConnectedPins = {
+		"$5DDF2861",
+	};
+}
+CParticleNodeMathFunction3	$E083B119
+{
+	InputPins = {
+		"$546789FC",
+		"$D3159AEB",
+		"$E98B3D36",
+	};
+	OutputPins = {
+		"$99DB174D",
+	};
+	WorkspacePosition = int2(418, -572);
+	Function = Select;
+}
+CParticleNodePinIn	$546789FC
+{
+	SelfName = "Value";
+	Owner = "$E083B119";
+	ConnectedPins = {
+		"$8C23D4E7",
+	};
+}
+CParticleNodePinIn	$D3159AEB
+{
+	SelfName = "ValueIfTrue";
+	Type = float;
+	Owner = "$E083B119";
+}
+CParticleNodePinIn	$E98B3D36
+{
+	SelfName = "Condition";
+	Owner = "$E083B119";
+	ConnectedPins = {
+		"$ED6A5C43",
+	};
+}
+CParticleNodePinOut	$99DB174D
+{
+	SelfName = "Value";
+	Owner = "$E083B119";
+	ConnectedPins = {
+		"$667A340F",
+	};
+}
+CParticleNodePassThrough	$C3E9A228
+{
+	CustomName = {
+		"@eng:Reset ?",
+	};
+	InputPins = {
+		"$47B483D7",
+	};
+	OutputPins = {
+		"$39AC8495",
+	};
+	WorkspacePosition = int2(-22, 110);
+}
+CParticleNodePinIn	$47B483D7
+{
+	SelfName = "Value";
+	Owner = "$C3E9A228";
+	ConnectedPins = {
+		"$2B8FCB23",
+	};
+}
+CParticleNodePinOut	$39AC8495
+{
+	SelfName = "Value";
+	Owner = "$C3E9A228";
+	ConnectedPins = {
+		"$D9BE10BF",
+	};
+}
+CParticleNodeArithmetic	$F47FE335
+{
+	InputPins = {
+		"$D5D31CD6",
+		"$2775A839",
+	};
+	OutputPins = {
+		"$8C23D4E7",
+	};
+	WorkspacePosition = int2(198, -572);
+}
+CParticleNodePinIn	$D5D31CD6
+{
+	SelfName = "Value";
+	Owner = "$F47FE335";
+	ConnectedPins = {
+		"$A34B7E05",
+	};
+}
+CParticleNodePinIn	$2775A839
+{
+	SelfName = "ValueB";
+	Owner = "$F47FE335";
+	ConnectedPins = {
+		"$71BA9497",
+	};
+}
+CParticleNodePinOut	$8C23D4E7
+{
+	SelfName = "Value";
+	Owner = "$F47FE335";
+	ConnectedPins = {
+		"$546789FC",
+	};
+}
+CParticleNodeGraph	$BDE2F7D9
+{
+	CustomName = "TimerControls";
+	Description = {
+		"@eng:This node exposes all classic timer controls and keeps track of the running & reset states.",
+	};
+	Public = true;
+	IconKey = "Toolbar_Timer";
+	Nodes = {
+		"$805763E3",
+		"$B835F369",
+		"$B8784B78",
+		"$3F022047",
+		"$C2C87087",
+		"$C6952FEC",
+		"$0CE36399",
+		"$C9B6C3A6",
+		"$9D64ACBD",
+		"$3CBCC825",
+		"$51F15C02",
+		"$9E270ECC",
+		"$315DC1DC",
+		"$98BC842D",
+		"$D2440E55",
+		"$13D3F8C0",
+		"$E4A222E6",
+		"$D0A3757C",
+		"$90785EB7",
+		"$5B1D9E88",
+		"$DCE13649",
+		"$EB63B1FE",
+		"$B71E76DD",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodePassThrough	$805763E3
+{
+	InputPins = {
+		"$86A5F074",
+	};
+	OutputPins = {
+		"$EFF66D53",
+	};
+	WorkspacePosition = int2(-572, 44);
+}
+CParticleNodePinIn	$86A5F074
+{
+	SelfName = "Value";
+	Owner = "$805763E3";
+	ConnectedPins = {
+		"$3B8C3199",
+	};
+}
+CParticleNodePinOut	$EFF66D53
+{
+	SelfName = "Value";
+	Owner = "$805763E3";
+	ConnectedPins = {
+		"$FD78E61D",
+		"$43DAC540",
+	};
+}
+CParticleNodePassThrough	$B835F369
+{
+	InputPins = {
+		"$FC4837E5",
+	};
+	OutputPins = {
+		"$3032FF0F",
+	};
+	WorkspacePosition = int2(-352, 198);
+}
+CParticleNodePinIn	$FC4837E5
+{
+	SelfName = "Value";
+	Owner = "$B835F369";
+	ConnectedPins = {
+		"$83E8E52F",
+	};
+}
+CParticleNodePinOut	$3032FF0F
+{
+	SelfName = "Value";
+	Owner = "$B835F369";
+	ConnectedPins = {
+		"$CC948489",
+	};
+}
+CParticleNodeEvaluateAtSpawn	$B8784B78
+{
+	InputPins = {
+		"$8C720ABA",
+	};
+	OutputPins = {
+		"$B4A00131",
+	};
+	WorkspacePosition = int2(-572, -308);
+}
+CParticleNodePinIn	$8C720ABA
+{
+	SelfName = "Value";
+	Owner = "$B8784B78";
+	ConnectedPins = {
+		"$E0CAA8AE",
+	};
+}
+CParticleNodePinOut	$B4A00131
+{
+	SelfName = "Value";
+	Owner = "$B8784B78";
+	ConnectedPins = {
+		"$39EB63BE",
+	};
+}
+CParticleNodeArithmetic	$3F022047
+{
+	InputPins = {
+		"$8B98BA8C",
+		"$BB8A9487",
+		"$CC948489",
+	};
+	OutputPins = {
+		"$70658532",
+	};
+	WorkspacePosition = int2(-110, 88);
+	Operation = Or;
+	InputCount = 3;
+}
+CParticleNodePinIn	$8B98BA8C
+{
+	SelfName = "Value";
+	Owner = "$3F022047";
+	ConnectedPins = {
+		"$3E36A458",
+	};
+}
+CParticleNodePinIn	$BB8A9487
+{
+	SelfName = "ValueB";
+	Owner = "$3F022047";
+	ConnectedPins = {
+		"$C5331823",
+	};
+}
+CParticleNodePinIn	$CC948489
+{
+	SelfName = "Value3";
+	Owner = "$3F022047";
+	ConnectedPins = {
+		"$3032FF0F",
+	};
+}
+CParticleNodePinOut	$70658532
+{
+	SelfName = "Value";
+	Owner = "$3F022047";
+	ConnectedPins = {
+		"$5CCD4D7D",
+	};
+}
+CParticleNodeMathFunction1	$C2C87087
+{
+	InputPins = {
+		"$485FACDC",
+	};
+	OutputPins = {
+		"$8F030660",
+	};
+	WorkspacePosition = int2(-110, -88);
+	Function = BitwiseNot;
+}
+CParticleNodePinIn	$485FACDC
+{
+	SelfName = "Value";
+	Owner = "$C2C87087";
+	ConnectedPins = {
+		"$CE82DA8F",
+	};
+}
+CParticleNodePinOut	$8F030660
+{
+	SelfName = "Value";
+	Owner = "$C2C87087";
+	ConnectedPins = {
+		"$00EA0311",
+	};
+}
+CParticleNodeArithmetic	$C6952FEC
+{
+	InputPins = {
+		"$1ADD0C7A",
+		"$00EA0311",
+	};
+	OutputPins = {
+		"$2982D41C",
+	};
+	WorkspacePosition = int2(132, -308);
+	Operation = And;
+}
+CParticleNodePinIn	$1ADD0C7A
+{
+	SelfName = "Value";
+	Owner = "$C6952FEC";
+	ConnectedPins = {
+		"$013BF0C2",
+	};
+}
+CParticleNodePinIn	$00EA0311
+{
+	SelfName = "ValueB";
+	Owner = "$C6952FEC";
+	ConnectedPins = {
+		"$8F030660",
+	};
+}
+CParticleNodePinOut	$2982D41C
+{
+	SelfName = "Value";
+	Owner = "$C6952FEC";
+	ConnectedPins = {
+		"$892F0093",
+	};
+}
+CParticleNodeArithmetic	$0CE36399
+{
+	InputPins = {
+		"$DD2BE725",
+		"$43DAC540",
+	};
+	OutputPins = {
+		"$CE82DA8F",
+	};
+	WorkspacePosition = int2(-484, -88);
+	Operation = Or;
+}
+CParticleNodePinIn	$DD2BE725
+{
+	SelfName = "Value";
+	Owner = "$0CE36399";
+	ConnectedPins = {
+		"$24D1AE42",
+	};
+}
+CParticleNodePinIn	$43DAC540
+{
+	SelfName = "ValueB";
+	Owner = "$0CE36399";
+	ConnectedPins = {
+		"$EFF66D53",
+	};
+}
+CParticleNodePinOut	$CE82DA8F
+{
+	SelfName = "Value";
+	Owner = "$0CE36399";
+	ConnectedPins = {
+		"$485FACDC",
+	};
+}
+CParticleNodeDiscretizationPoint	$C9B6C3A6
+{
+	CustomName = {
+		"@eng:Running",
+	};
+	InputPins = {
+		"$892F0093",
+	};
+	OutputPins = {
+		"$B814AD51",
+	};
+	WorkspacePosition = int2(374, -308);
+}
+CParticleNodePinIn	$892F0093
+{
+	SelfName = "Value";
+	Owner = "$C9B6C3A6";
+	ConnectedPins = {
+		"$2982D41C",
+	};
+}
+CParticleNodePinOut	$B814AD51
+{
+	SelfName = "Value";
+	Owner = "$C9B6C3A6";
+	ConnectedPins = {
+		"$74272453",
+	};
+}
+CParticleNodeDiscretizationPoint	$9D64ACBD
+{
+	CustomName = {
+		"@eng:Running",
+	};
+	InputPins = {
+		"$39EB63BE",
+	};
+	OutputPins = {
+		"$1CF7B90C",
+	};
+	WorkspacePosition = int2(-352, -308);
+}
+CParticleNodePinIn	$39EB63BE
+{
+	SelfName = "Value";
+	Owner = "$9D64ACBD";
+	ConnectedPins = {
+		"$B4A00131",
+	};
+}
+CParticleNodePinOut	$1CF7B90C
+{
+	SelfName = "Value";
+	Owner = "$9D64ACBD";
+	ConnectedPins = {
+		"$AD8D9394",
+	};
+}
+CParticleNodePassThrough	$3CBCC825
+{
+	InputPins = {
+		"$1293DC3E",
+	};
+	OutputPins = {
+		"$F79BBEFD",
+	};
+	WorkspacePosition = int2(-352, -176);
+}
+CParticleNodePinIn	$1293DC3E
+{
+	SelfName = "Value";
+	Owner = "$3CBCC825";
+	ConnectedPins = {
+		"$130C35A7",
+	};
+}
+CParticleNodePinOut	$F79BBEFD
+{
+	SelfName = "Value";
+	Owner = "$3CBCC825";
+	ConnectedPins = {
+		"$77458D5B",
+	};
+}
+CParticleNodePassThrough	$51F15C02
+{
+	InputPins = {
+		"$FD78E61D",
+	};
+	OutputPins = {
+		"$3E36A458",
+	};
+	WorkspacePosition = int2(-352, 110);
+}
+CParticleNodePinIn	$FD78E61D
+{
+	SelfName = "Value";
+	Owner = "$51F15C02";
+	ConnectedPins = {
+		"$EFF66D53",
+	};
+}
+CParticleNodePinOut	$3E36A458
+{
+	SelfName = "Value";
+	Owner = "$51F15C02";
+	ConnectedPins = {
+		"$8B98BA8C",
+	};
+}
+CParticleNodeArithmetic	$9E270ECC
+{
+	InputPins = {
+		"$AD8D9394",
+		"$77458D5B",
+		"$BE771F2C",
+	};
+	OutputPins = {
+		"$013BF0C2",
+	};
+	WorkspacePosition = int2(-110, -308);
+	Operation = Or;
+	InputCount = 3;
+}
+CParticleNodePinIn	$AD8D9394
+{
+	SelfName = "Value";
+	Owner = "$9E270ECC";
+	ConnectedPins = {
+		"$1CF7B90C",
+	};
+}
+CParticleNodePinIn	$77458D5B
+{
+	SelfName = "ValueB";
+	Owner = "$9E270ECC";
+	ConnectedPins = {
+		"$F79BBEFD",
+	};
+}
+CParticleNodePinIn	$BE771F2C
+{
+	SelfName = "Value3";
+	Owner = "$9E270ECC";
+	ConnectedPins = {
+		"$C5331823",
+	};
+}
+CParticleNodePinOut	$013BF0C2
+{
+	SelfName = "Value";
+	Owner = "$9E270ECC";
+	ConnectedPins = {
+		"$1ADD0C7A",
+	};
+}
+CParticleNodePassThrough	$315DC1DC
+{
+	InputPins = {
+		"$14A2FFD2",
+	};
+	OutputPins = {
+		"$C5331823",
+	};
+	WorkspacePosition = int2(-352, 154);
+}
+CParticleNodePinIn	$14A2FFD2
+{
+	SelfName = "Value";
+	Owner = "$315DC1DC";
+	ConnectedPins = {
+		"$035D3791",
+	};
+}
+CParticleNodePinOut	$C5331823
+{
+	SelfName = "Value";
+	Owner = "$315DC1DC";
+	ConnectedPins = {
+		"$BB8A9487",
+		"$BE771F2C",
+	};
+}
+CParticleNodePassThrough	$98BC842D
+{
+	InputPins = {
+		"$34F602AE",
+	};
+	OutputPins = {
+		"$83E8E52F",
+	};
+	WorkspacePosition = int2(-572, 264);
+}
+CParticleNodePinIn	$34F602AE
+{
+	SelfName = "Value";
+	Owner = "$98BC842D";
+	ConnectedPins = {
+		"$8181467D",
+	};
+}
+CParticleNodePinOut	$83E8E52F
+{
+	SelfName = "Value";
+	Owner = "$98BC842D";
+	ConnectedPins = {
+		"$FC4837E5",
+	};
+}
+CParticleNodeTemplateExport	$D2440E55
+{
+	InputPins = {
+		"$5CCD4D7D",
+	};
+	WorkspacePosition = int2(660, 88);
+	ExportedName = "IsReset";
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$5CCD4D7D
+{
+	SelfName = "Value";
+	Owner = "$D2440E55";
+	ConnectedPins = {
+		"$70658532",
+	};
+}
+CParticleNodeTemplateExport	$13D3F8C0
+{
+	InputPins = {
+		"$74272453",
+	};
+	WorkspacePosition = int2(660, -308);
+	ExportedName = "IsRunning";
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$74272453
+{
+	SelfName = "Value";
+	Owner = "$13D3F8C0";
+	ConnectedPins = {
+		"$B814AD51",
+	};
+}
+CParticleNodeTemplate	$997DC1A0
+{
+	InputPins = {
+		"$755BCE31",
+		"$FA24372D",
+		"$5D9A1A16",
+		"$28913783",
+		"$3E5FF912",
+		"$01547D9D",
+	};
+	OutputPins = {
+		"$0113C07F",
+		"$2B8FCB23",
+	};
+	WorkspacePosition = int2(-726, 44);
+	SubGraphName = "TimerControls";
+}
+CParticleNodePinIn	$755BCE31
+{
+	SelfName = "Autostart";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinOut	$0113C07F
+{
+	SelfName = "IsRunning";
+	Owner = "$997DC1A0";
+	ConnectedPins = {
+		"$75888B8D",
+	};
+}
+CParticleNodePinOut	$2B8FCB23
+{
+	SelfName = "IsReset";
+	Owner = "$997DC1A0";
+	ConnectedPins = {
+		"$47B483D7",
+	};
+}
+CParticleNodeTemplateExport	$E4A222E6
+{
+	Description = {
+		"@eng:If <c>true</c>, resets the timer value to <c>0.0</c>.\\nDoes not change the running state (keeps the timer stopped if it was stopped, keeps it running if it was running)\\n\\nTypically set to <c>true</c> only for a single frame, then set back to <c>false</c> on the next frames.\\n\\nExample usage: Plug the result of a collision test in there to restart a timer that counts time elapsed since the last collision.",
+	};
+	InputPins = {
+		"$7343F5D5",
+	};
+	OutputPins = {
+		"$8181467D",
+	};
+	WorkspacePosition = int2(-814, 242);
+	ExportedName = "Reset";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$7343F5D5
+{
+	SelfName = "DefaultValue";
+	Owner = "$E4A222E6";
+}
+CParticleNodePinOut	$8181467D
+{
+	SelfName = "Value";
+	Owner = "$E4A222E6";
+	ConnectedPins = {
+		"$34F602AE",
+	};
+}
+CParticleNodeTemplateExport	$D0A3757C
+{
+	Description = {
+		"@eng:If set to <c>true</c>, the timer will be running as long as <c>Stop</c> and <c>Pause</c> are <c>false</c>.\\nIf set to <c>false</c>, the timer will stop running if <c>Restart</c> is also <c>false</c>.",
+	};
+	InputPins = {
+		"$92F6DF81",
+	};
+	OutputPins = {
+		"$130C35A7",
+	};
+	WorkspacePosition = int2(-814, -198);
+	ExportedName = "Start";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$92F6DF81
+{
+	SelfName = "DefaultValue";
+	Owner = "$D0A3757C";
+}
+CParticleNodePinOut	$130C35A7
+{
+	SelfName = "Value";
+	Owner = "$D0A3757C";
+	ConnectedPins = {
+		"$1293DC3E",
+	};
+}
+CParticleNodeTemplateExport	$90785EB7
+{
+	Description = {
+		"@eng:If set to <c>true</c>, the timer will stop running.\\nWhen set to <c>false</c>, the timer will resume running if either of <c>Start</c> or <c>Restart</c> are <c>true</c>, and <c>Stop</c> is <c>false</c>",
+	};
+	InputPins = {
+		"$115BA4C0",
+	};
+	OutputPins = {
+		"$24D1AE42",
+	};
+	WorkspacePosition = int2(-814, -88);
+	ExportedName = "Pause";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$115BA4C0
+{
+	SelfName = "DefaultValue";
+	Owner = "$90785EB7";
+}
+CParticleNodePinOut	$24D1AE42
+{
+	SelfName = "Value";
+	Owner = "$90785EB7";
+	ConnectedPins = {
+		"$DD2BE725",
+	};
+}
+CParticleNodeTemplateExport	$5B1D9E88
+{
+	Description = {
+		"@eng:Shortcut for <c>Pause=true</c> and <c>Reset=true</c>.\\nIf set to <c>true</c>, the timer will stop running and reset to <c>0.0</c>",
+	};
+	InputPins = {
+		"$30DF5E0C",
+	};
+	OutputPins = {
+		"$3B8C3199",
+	};
+	WorkspacePosition = int2(-814, 22);
+	ExportedName = "Stop";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$30DF5E0C
+{
+	SelfName = "DefaultValue";
+	Owner = "$5B1D9E88";
+}
+CParticleNodePinOut	$3B8C3199
+{
+	SelfName = "Value";
+	Owner = "$5B1D9E88";
+	ConnectedPins = {
+		"$86A5F074",
+	};
+}
+CParticleNodeTemplateExport	$DCE13649
+{
+	Description = {
+		"@eng:Shortcut to <c>Start=true</c> and <c>Reset=true</c>\\n\\nTypically set to <c>true</c> only for a single frame, then set back to <c>false</c> on the next frames.\\n\\nExample usage: Plug the result of a collision test in there to restart a timer that counts time elapsed since the last collision.",
+	};
+	InputPins = {
+		"$16B7AF99",
+	};
+	OutputPins = {
+		"$035D3791",
+	};
+	WorkspacePosition = int2(-814, 132);
+	ExportedName = "Restart";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$16B7AF99
+{
+	SelfName = "DefaultValue";
+	Owner = "$DCE13649";
+}
+CParticleNodePinOut	$035D3791
+{
+	SelfName = "Value";
+	Owner = "$DCE13649";
+	ConnectedPins = {
+		"$14A2FFD2",
+	};
+}
+CParticleNodePinIn	$FA24372D
+{
+	SelfName = "Start";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+}
+CParticleNodePinIn	$5D9A1A16
+{
+	SelfName = "Pause";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+}
+CParticleNodePinIn	$28913783
+{
+	SelfName = "Stop";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+}
+CParticleNodePinIn	$3E5FF912
+{
+	SelfName = "Restart";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+}
+CParticleNodePinIn	$01547D9D
+{
+	SelfName = "Reset";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$997DC1A0";
+	BaseType = bool;
+}
+CParticleNodeTemplateExport	$EB63B1FE
+{
+	Description = {
+		"@eng:When set to <c>true</c>, the timer will start running as soon as the particle is born and the simulation starts.",
+	};
+	InputPins = {
+		"$8E2D2D19",
+	};
+	OutputPins = {
+		"$E0CAA8AE",
+	};
+	WorkspacePosition = int2(-814, -308);
+	ExportedName = "Autostart";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$8E2D2D19
+{
+	SelfName = "DefaultValue";
+	Owner = "$EB63B1FE";
+}
+CParticleNodePinOut	$E0CAA8AE
+{
+	SelfName = "Value";
+	Owner = "$EB63B1FE";
+	ConnectedPins = {
+		"$8C720ABA",
+	};
+}
+CParticleNodeTemplateExport	$E15DB120
+{
+	Description = {
+		"@eng:When set to <c>true</c>, the counter will start counting as soon as the particle is born and the simulation starts.",
+	};
+	InputPins = {
+		"$EB9E04D7",
+	};
+	OutputPins = {
+		"$743C268E",
+	};
+	WorkspacePosition = int2(-836, 330);
+	ExportedName = "Autostart";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$EB9E04D7
+{
+	SelfName = "DefaultValue";
+	Owner = "$E15DB120";
+}
+CParticleNodePinOut	$743C268E
+{
+	SelfName = "Value";
+	Owner = "$E15DB120";
+	ConnectedPins = {
+		"$7818ED55",
+	};
+}
+CParticleNodeTemplateExport	$BC6663A0
+{
+	Description = {
+		"@eng:If set to <c>true</c>, the counter will be running as long as <c>Stop</c> and <c>Pause</c> are <c>false</c>.\\nIf set to <c>false</c>, the counter will stop running if <c>Restart</c> is also <c>false</c>.",
+	};
+	InputPins = {
+		"$74A5E39E",
+	};
+	OutputPins = {
+		"$EA7CB2D2",
+	};
+	WorkspacePosition = int2(-836, 440);
+	ExportedName = "Start";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$74A5E39E
+{
+	SelfName = "DefaultValue";
+	Owner = "$BC6663A0";
+}
+CParticleNodePinOut	$EA7CB2D2
+{
+	SelfName = "Value";
+	Owner = "$BC6663A0";
+	ConnectedPins = {
+		"$AF4464C9",
+	};
+}
+CParticleNodeTemplateExport	$A4B3D6A1
+{
+	Description = {
+		"@eng:If set to <c>true</c>, the counter will stop running.\\nWhen set to <c>false</c>, the counter will resume running if either of <c>Start</c> or <c>Restart</c> are <c>true</c>, and <c>Stop</c> is <c>false</c>",
+	};
+	InputPins = {
+		"$0A89C692",
+	};
+	OutputPins = {
+		"$B58C0815",
+	};
+	WorkspacePosition = int2(-836, 550);
+	ExportedName = "Pause";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$0A89C692
+{
+	SelfName = "DefaultValue";
+	Owner = "$A4B3D6A1";
+}
+CParticleNodePinOut	$B58C0815
+{
+	SelfName = "Value";
+	Owner = "$A4B3D6A1";
+	ConnectedPins = {
+		"$9B33A863",
+	};
+}
+CParticleNodeTemplateExport	$A0D4CEF0
+{
+	Description = {
+		"@eng:Shortcut for <c>Pause=true</c> and <c>Reset=true</c>.\\nIf set to <c>true</c>, the counter will stop running and reset to <c>0</c>",
+	};
+	InputPins = {
+		"$59D545E7",
+	};
+	OutputPins = {
+		"$C6118817",
+	};
+	WorkspacePosition = int2(-836, 660);
+	ExportedName = "Stop";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$59D545E7
+{
+	SelfName = "DefaultValue";
+	Owner = "$A0D4CEF0";
+}
+CParticleNodePinOut	$C6118817
+{
+	SelfName = "Value";
+	Owner = "$A0D4CEF0";
+	ConnectedPins = {
+		"$C13FF7E3",
+	};
+}
+CParticleNodeTemplateExport	$E266209E
+{
+	Description = {
+		"@eng:Shortcut to <c>Start=true</c> and <c>Reset=true</c>\\n\\nTypically set to <c>true</c> only for a single frame, then set back to <c>false</c> on the next frames.",
+	};
+	InputPins = {
+		"$E377A4F9",
+	};
+	OutputPins = {
+		"$A65B9F1B",
+	};
+	WorkspacePosition = int2(-836, 770);
+	ExportedName = "Restart";
+	ExportedType = bool;
+	Type = Input;
+	Order = 1;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$E377A4F9
+{
+	SelfName = "DefaultValue";
+	Owner = "$E266209E";
+}
+CParticleNodePinOut	$A65B9F1B
+{
+	SelfName = "Value";
+	Owner = "$E266209E";
+	ConnectedPins = {
+		"$E075E964",
+	};
+}
+CParticleNodeTemplateExport	$0F79DC1B
+{
+	Description = {
+		"@eng:If <c>true</c>, resets the counter value to <c>0</c>.\\nDoes not change the running state (keeps the counter stopped if it was stopped, keeps it running if it was running)\\n\\nTypically set to <c>true</c> only for a single frame, then set back to <c>false</c> on the next frames.",
+	};
+	InputPins = {
+		"$51A3F9E2",
+	};
+	OutputPins = {
+		"$F2715E79",
+	};
+	WorkspacePosition = int2(-836, 880);
+	ExportedName = "Reset";
+	ExportedType = bool;
+	Type = Input;
+	Order = 1;
+	CategoryName = {
+		"@eng:Timer",
+	};
+}
+CParticleNodePinIn	$51A3F9E2
+{
+	SelfName = "DefaultValue";
+	Owner = "$0F79DC1B";
+}
+CParticleNodePinOut	$F2715E79
+{
+	SelfName = "Value";
+	Owner = "$0F79DC1B";
+	ConnectedPins = {
+		"$F41FF414",
+	};
+}
+CParticleNodeTemplate	$7642807C
+{
+	InputPins = {
+		"$7818ED55",
+		"$AF4464C9",
+		"$9B33A863",
+		"$C13FF7E3",
+		"$E075E964",
+		"$F41FF414",
+	};
+	OutputPins = {
+		"$959AEFCF",
+		"$DD73979E",
+	};
+	WorkspacePosition = int2(-484, 484);
+	SubGraphName = "TimerControls";
+}
+CParticleNodePinIn	$7818ED55
+{
+	SelfName = "Autostart";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$743C268E",
+	};
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$AF4464C9
+{
+	SelfName = "Start";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$EA7CB2D2",
+	};
+}
+CParticleNodePinIn	$9B33A863
+{
+	SelfName = "Pause";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$B58C0815",
+	};
+}
+CParticleNodePinIn	$C13FF7E3
+{
+	SelfName = "Stop";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$C6118817",
+	};
+}
+CParticleNodePinIn	$E075E964
+{
+	SelfName = "Restart";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$A65B9F1B",
+	};
+}
+CParticleNodePinIn	$F41FF414
+{
+	SelfName = "Reset";
+	Type = bool;
+	Owner = "$7642807C";
+	BaseType = bool;
+	ConnectedPins = {
+		"$F2715E79",
+	};
+}
+CParticleNodePinOut	$959AEFCF
+{
+	SelfName = "IsRunning";
+	Owner = "$7642807C";
+	ConnectedPins = {
+		"$C6E3948E",
+	};
+}
+CParticleNodePinOut	$DD73979E
+{
+	SelfName = "IsReset";
+	Owner = "$7642807C";
+	ConnectedPins = {
+		"$FFD69488",
+	};
+}
+CParticleNodePinIn	$C6E3948E
+{
+	SelfName = "Value3";
+	Owner = "$EAF86A1C";
+	ConnectedPins = {
+		"$959AEFCF",
+	};
+}
+CParticleNodePassThrough	$934531A8
+{
+	InputPins = {
+		"$D9BE10BF",
+	};
+	OutputPins = {
+		"$ED6A5C43",
+	};
+	WorkspacePosition = int2(110, 110);
+}
+CParticleNodePinIn	$D9BE10BF
+{
+	SelfName = "Value";
+	Owner = "$934531A8";
+	ConnectedPins = {
+		"$39AC8495",
+	};
+}
+CParticleNodePinOut	$ED6A5C43
+{
+	SelfName = "Value";
+	Owner = "$934531A8";
+	ConnectedPins = {
+		"$E98B3D36",
+	};
+}
+CParticleNodeArithmetic	$23FF8034
+{
+	InputPins = {
+		"$2929D3AF",
+		"$5DEC3C1C",
+	};
+	OutputPins = {
+		"$BC4C77BC",
+	};
+	WorkspacePosition = int2(330, -22);
+}
+CParticleNodePinIn	$2929D3AF
+{
+	SelfName = "Value";
+	Owner = "$23FF8034";
+	ConnectedPins = {
+		"$DF78EAE4",
+	};
+}
+CParticleNodePinIn	$5DEC3C1C
+{
+	SelfName = "ValueB";
+	Owner = "$23FF8034";
+	ConnectedPins = {
+		"$7618380C",
+	};
+}
+CParticleNodePinOut	$BC4C77BC
+{
+	SelfName = "Value";
+	Owner = "$23FF8034";
+	ConnectedPins = {
+		"$25D99DFF",
+	};
+}
+CParticleNodeMathFunction3	$9FF4A216
+{
+	InputPins = {
+		"$25D99DFF",
+		"$75CBA60C",
+		"$95137631",
+	};
+	OutputPins = {
+		"$07A46BFC",
+	};
+	WorkspacePosition = int2(550, -22);
+	Function = Select;
+}
+CParticleNodePinIn	$25D99DFF
+{
+	SelfName = "Value";
+	Owner = "$9FF4A216";
+	ConnectedPins = {
+		"$BC4C77BC",
+	};
+}
+CParticleNodePinIn	$75CBA60C
+{
+	SelfName = "ValueIfTrue";
+	Type = float;
+	Owner = "$9FF4A216";
+}
+CParticleNodePinIn	$95137631
+{
+	SelfName = "Condition";
+	Owner = "$9FF4A216";
+	ConnectedPins = {
+		"$DCB53398",
+	};
+}
+CParticleNodePinOut	$07A46BFC
+{
+	SelfName = "Value";
+	Owner = "$9FF4A216";
+	ConnectedPins = {
+		"$41700382",
+	};
+}
+CParticleNodePassThrough	$9FE8B364
+{
+	InputPins = {
+		"$8B327F2C",
+	};
+	OutputPins = {
+		"$DCB53398",
+	};
+	WorkspacePosition = int2(264, 550);
+}
+CParticleNodePinIn	$8B327F2C
+{
+	SelfName = "Value";
+	Owner = "$9FE8B364";
+	ConnectedPins = {
+		"$22808315",
+	};
+}
+CParticleNodePinOut	$DCB53398
+{
+	SelfName = "Value";
+	Owner = "$9FE8B364";
+	ConnectedPins = {
+		"$95137631",
+	};
+}
+CParticleNodePassThrough	$156AE9E0
+{
+	CustomName = {
+		"@eng:Reset ?",
+	};
+	InputPins = {
+		"$FFD69488",
+	};
+	OutputPins = {
+		"$22808315",
+	};
+	WorkspacePosition = int2(154, 550);
+}
+CParticleNodePinIn	$FFD69488
+{
+	SelfName = "Value";
+	Owner = "$156AE9E0";
+	ConnectedPins = {
+		"$DD73979E",
+	};
+}
+CParticleNodePinOut	$22808315
+{
+	SelfName = "Value";
+	Owner = "$156AE9E0";
+	ConnectedPins = {
+		"$8B327F2C",
+	};
+}
+CParticleNodeAnnotation	$17C4C411
+{
+	Description = {
+		"@eng:Here we redefine all input nodes instead of auto-exporting them from the <c>TimerControls</c> template simply to customize the pin descriptions to say \"counter\" instead of \"timer\".",
+	};
+	WorkspacePosition = int2(-1144, 506);
+	Scale = -2;
+	PostIt = true;
+	SelfSize = int2(560, 374);
+}
+CParticleNodeAnnotation	$B71E76DD
+{
+	CustomName = {
+		"@eng:Timer Controls",
+	};
+	Description = {
+		"@eng:$(Graph.Description)",
+	};
+	WorkspacePosition = int2(-418, -638);
+	SelfSize = int2(836, 198);
 }

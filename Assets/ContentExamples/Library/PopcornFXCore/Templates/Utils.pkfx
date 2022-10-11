@@ -1,4 +1,4 @@
-Version = 2.13.0.13771;
+Version = 2.14.0.14607;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -2798,6 +2798,7 @@ CParticleNodeGraph	$6128E19F
 		"$093EF2CC",
 		"$1A2BA65E",
 		"$505DF345",
+		"$95F3D88E",
 	};
 	WorkspacePosition = int2(-26, -97);
 	WorkspaceZoom = -6;
@@ -2835,6 +2836,7 @@ CParticleNodeScript	$E71217E3
 	};
 	OutputPins = {
 		"$D724F094",
+		"$84F7EFB0",
 	};
 	WorkspacePosition = int2(1078, 22);
 	Expression = "Value = Curve.sample(Cursor);";
@@ -9512,6 +9514,7 @@ CParticleNodeTemplate	$A9299A26
 	};
 	OutputPins = {
 		"$CA0BC80E",
+		"$CDD88290",
 	};
 	WorkspacePosition = int2(-242, -110);
 	SubGraphName = "CurveOverTime";
@@ -27217,4 +27220,37 @@ CParticleNodePinIn	$9ABED406
 	Owner = "$8E0E9FEF";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinOut	$84F7EFB0
+{
+	SelfName = "Cursor";
+	Owner = "$E71217E3";
+	ConnectedPins = {
+		"$79468AE5",
+	};
+}
+CParticleNodeTemplateExport	$95F3D88E
+{
+	Description = {
+		"@eng:Effective cursor used to sample the curve, once all the range, scale, repeat, and reverse modifiers have been applied.",
+	};
+	InputPins = {
+		"$79468AE5",
+	};
+	WorkspacePosition = int2(1474, 154);
+	ExportedName = "Cursor";
+	Type = Output;
+}
+CParticleNodePinIn	$79468AE5
+{
+	SelfName = "Value";
+	Owner = "$95F3D88E";
+	ConnectedPins = {
+		"$84F7EFB0",
+	};
+}
+CParticleNodePinOut	$CDD88290
+{
+	SelfName = "Cursor";
+	Owner = "$A9299A26";
 }

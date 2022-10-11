@@ -1,0 +1,9 @@
+Version = 2.14.0.14607;
+COvenBakeConfig_Mesh	$704B60BD
+{
+	Description = {
+		"@eng:Asset & animations created by GDQuest and contributors (https://www.gdquest.com/)",
+	};
+	ImportAnimation = true;
+	ImportSkeleton = true;
+}

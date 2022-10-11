@@ -461,7 +461,11 @@ namespace DemoRoom
             {
                 AZ::Render::MaterialAssignmentMap namePlateMaterials;
                 AZ::Render::MaterialComponentRequestBus::EventResult(   namePlateMaterials, entityId,
+#if PK_O3DE_MAJOR_VERSION > 2205
+                                                                        &AZ::Render::MaterialComponentRequestBus::Events::GetDefautMaterialMap);
+#else
                                                                         &AZ::Render::MaterialComponentRequestBus::Events::GetOriginalMaterialAssignments);
+#endif
                 for (const auto& materialPair : namePlateMaterials)
                 {
                     if (materialPair.first.IsDefault())
@@ -469,7 +473,11 @@ namespace DemoRoom
 
                     AZStd::string label;
                     AZ::Render::MaterialComponentRequestBus::EventResult(   label, entityId,
+#if PK_O3DE_MAJOR_VERSION > 2205
+                                                                            &AZ::Render::MaterialComponentRequestBus::Events::GetMaterialLabel,
+#else
                                                                             &AZ::Render::MaterialComponentRequestBus::Events::GetMaterialSlotLabel,
+#endif
                                                                             materialPair.first);
 
                     auto materialIt = materialAssignmentMap.find(label);
@@ -477,10 +485,18 @@ namespace DemoRoom
                     if (materialIt != materialAssignmentMap.end())
                     {
                         AZ::Render::MaterialComponentRequestBus::Event( entityId,
+#if PK_O3DE_MAJOR_VERSION > 2205
+                                                                        &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
+#else
                                                                         &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialOverride,
+#endif
                                                                         materialPair.first, materialIt->second);
                         AZ::Render::MaterialReceiverNotificationBus::Event( entityId,
+#if PK_O3DE_MAJOR_VERSION > 2205
+                                                                            &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+#else
                                                                             &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentsChanged);
+#endif
                     }
                     else
                         AZ_Error("DemoRoom", false, "No material defined for slot \"%s\"", label.c_str());

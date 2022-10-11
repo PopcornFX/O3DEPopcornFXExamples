@@ -163,7 +163,11 @@ namespace DemoRoom
             &AZ::Render::MaterialComponentRequestBus::Events::FindMaterialAssignmentId, 0, m_slotLabel);
 
         AZ::Render::MaterialComponentRequestBus::Event(GetEntityId(),
+#if PK_O3DE_MAJOR_VERSION > 2205
+            &AZ::Render::MaterialComponentRequestBus::Events::SetPropertyValueT<AZ::Color>,
+#else
             &AZ::Render::MaterialComponentRequestBus::Events::SetPropertyOverrideT<AZ::Color>,
+#endif
             slot, "baseColor.color", color);
     }
 }
