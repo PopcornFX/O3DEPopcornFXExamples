@@ -491,10 +491,11 @@ namespace DemoRoom
                                                                         &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialOverride,
 #endif
                                                                         materialPair.first, materialIt->second);
-                        AZ::Render::MaterialReceiverNotificationBus::Event( entityId,
 #if PK_O3DE_MAJOR_VERSION > 2205
-                                                                            &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+                        AZ::Render::MaterialConsumerNotificationBus::Event( entityId,
+                                                                            &AZ::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
 #else
+                        AZ::Render::MaterialReceiverNotificationBus::Event( entityId,
                                                                             &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentsChanged);
 #endif
                     }

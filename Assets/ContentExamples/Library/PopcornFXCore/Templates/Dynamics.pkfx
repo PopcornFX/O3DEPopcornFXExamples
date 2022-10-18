@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.14.0.14645;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -14757,7 +14757,13 @@ CParticleNodeTemplate	$69CF2E9A
 	InputPins = {
 		"$1749C465",
 		"$1586A14E",
+		"$5A3A1A09",
 		"$192DA15D",
+		"$09F35E4B",
+		"$249E6E98",
+		"$10628201",
+		"$E1CBC9CC",
+		"$4529B705",
 	};
 	OutputPins = {
 		"$D9B8D88C",
@@ -19999,7 +20005,13 @@ CParticleNodeTemplate	$31CA6DC7
 	InputPins = {
 		"$6A822C96",
 		"$0052AD0B",
+		"$837787A8",
 		"$5886BA48",
+		"$5DFC524D",
+		"$07CFBD0F",
+		"$32B70C7E",
+		"$59C03C1D",
+		"$8616C629",
 	};
 	OutputPins = {
 		"$E2255C11",
@@ -43711,4 +43723,102 @@ CParticleNodePinOut	$767AD074
 	ConnectedPins = {
 		"$1F427C8E",
 	};
+}
+CParticleNodePinIn	$5A3A1A09
+{
+	SelfName = "Autostart";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$09F35E4B
+{
+	SelfName = "Start";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$249E6E98
+{
+	SelfName = "Pause";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$10628201
+{
+	SelfName = "Stop";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$E1CBC9CC
+{
+	SelfName = "Restart";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$4529B705
+{
+	SelfName = "Reset";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$837787A8
+{
+	SelfName = "Autostart";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$5DFC524D
+{
+	SelfName = "Start";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
+}
+CParticleNodePinIn	$07CFBD0F
+{
+	SelfName = "Pause";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
+}
+CParticleNodePinIn	$32B70C7E
+{
+	SelfName = "Stop";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
+}
+CParticleNodePinIn	$59C03C1D
+{
+	SelfName = "Restart";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
+}
+CParticleNodePinIn	$8616C629
+{
+	SelfName = "Reset";
+	Type = bool;
+	Visible = false;
+	Owner = "$31CA6DC7";
+	BaseType = bool;
 }

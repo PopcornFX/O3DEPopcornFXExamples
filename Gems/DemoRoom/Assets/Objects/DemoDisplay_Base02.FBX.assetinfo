@@ -6,13 +6,25 @@
             "name": "DemoDisplay_Base02",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_Base2.SM_Base2_1"
+                    "RootNode.SM_Base2"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_Base2",
-                    "RootNode.SM_Base2.SM_Base2_2"
+                    "RootNode.SM_Base2.transform",
+                    "RootNode.SM_Base2.custom_properties",
+                    "RootNode.SM_Base2.UV0",
+                    "RootNode.SM_Base2.SM_Base_Gray",
+                    "RootNode.SM_Base2.SM_Base_Black"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_Base_Gray"
+                    },
+                    {
+                        "Name": "SM_Base_Black"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -29,11 +41,13 @@
             "name": "DemoDisplay_Base02",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_Base2",
-                    "RootNode.SM_Base2.SM_Base2_1",
-                    "RootNode.SM_Base2.SM_Base2_2"
+                    "RootNode.SM_Base2.transform",
+                    "RootNode.SM_Base2.custom_properties",
+                    "RootNode.SM_Base2.UV0",
+                    "RootNode.SM_Base2.SM_Base_Gray",
+                    "RootNode.SM_Base2.SM_Base_Black"
                 ]
             },
             "rules": {

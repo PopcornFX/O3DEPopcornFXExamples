@@ -46,10 +46,6 @@
                 "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                 "Id": 8905729729646265437,
                 "Parent Entity": ""
-            },
-            "Component_[9857815868778918274]": {
-                "$type": "SelectionComponent",
-                "Id": 9857815868778918274
             }
         }
     },
@@ -58,10 +54,6 @@
             "Id": "Entity_[522072225306]",
             "Name": "DemoRoomGlobalSky",
             "Components": {
-                "Component_[11980494120202836095]": {
-                    "$type": "SelectionComponent",
-                    "Id": 11980494120202836095
-                },
                 "Component_[1428633914413949476]": {
                     "$type": "EditorLockComponent",
                     "Id": 1428633914413949476

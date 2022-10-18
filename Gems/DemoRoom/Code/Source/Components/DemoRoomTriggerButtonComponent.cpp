@@ -18,22 +18,26 @@ namespace DemoRoom
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonComponent::GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required)
     {
-        required.push_back(AZ_CRC("TransformService", 0x8ee22c50));
-        required.push_back(AZ_CRC("PhysXTriggerService", 0x3a117d7b));
-        required.push_back(AZ_CRC("MeshService", 0x71d8a455));
-        required.push_back(AZ_CRC("MaterialProviderService", 0x64849a6b));
+        required.push_back(AZ_CRC_CE("TransformService"));
+#if PK_O3DE_MAJOR_VERSION > 2205
+        required.push_back(AZ_CRC_CE("PhysicsTriggerService"));
+#else
+        required.push_back(AZ_CRC_CE("PhysXTriggerService"));
+#endif
+        required.push_back(AZ_CRC_CE("MeshService"));
+        required.push_back(AZ_CRC_CE("MaterialProviderService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("DemoRoomTriggerButtonService"));
+        provided.push_back(AZ_CRC_CE("DemoRoomTriggerButtonService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("DemoRoomTriggerButtonService"));
+        incompatible.push_back(AZ_CRC_CE("DemoRoomTriggerButtonService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
@@ -59,7 +63,7 @@ namespace DemoRoom
                     //->Attribute("Icon", "Icons/Components/DemoRoomTriggerButton.svg")
                     //->Attribute("ViewportIcon", "Icons/Components/Viewport/DemoRoomTriggerButton.svg")
                     ->Attribute("AutoExpand", true)
-                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC("Game", 0x232b318c))
+                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC_CE("Game"))
                     ->DataElement(0, &DemoRoomTriggerButtonComponent::m_receivers, "Receiver Entities", "Entities which will receive trigger enter/exit notifications")
                     ->ClassElement(AZ::Edit::ClassElements::Group, "Button material properties")
                     ->Attribute(AZ::Edit::Attributes::AutoExpand, false)

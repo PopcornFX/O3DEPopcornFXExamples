@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.14.0.14645;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1453,6 +1453,7 @@ CParticleNodeTemplate	$393A0570
 	};
 	OutputPins = {
 		"$23CD6B8F",
+		"$EB707133",
 	};
 	WorkspacePosition = int2(-308, 726);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -2162,6 +2163,7 @@ CParticleNodeTemplate	$A8867986
 	};
 	OutputPins = {
 		"$35E520DB",
+		"$16D8F3F8",
 	};
 	WorkspacePosition = int2(-308, 176);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -3764,6 +3766,7 @@ CParticleNodeRendererMesh	$F1C0A980
 		"$927E871E",
 		"$29DF75EA",
 		"$F65D5923",
+		"$9B848A43",
 		"$E3F5FA13",
 		"$36D8719B",
 		"$D484B84C",
@@ -3771,6 +3774,7 @@ CParticleNodeRendererMesh	$F1C0A980
 		"$B27E4E35",
 		"$373632DE",
 		"$DAD469DA",
+		"$CD19C40C",
 	};
 	WorkspacePosition = int2(198, -22);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
@@ -3782,12 +3786,14 @@ CParticleNodeRendererMesh	$F1C0A980
 		"EnableRendering",
 		"Lit",
 		"LegacyLit",
+		"Atlas",
 		"MeshAtlas",
 		"AlphaRemap",
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
 		"UseVertexColors",
+		"MeshLOD",
 	};
 }
 CParticleNodePinIn	$0EC48177
@@ -9149,4 +9155,32 @@ CParticleNodePinOut	$DE4AD773
 	ConnectedPins = {
 		"$77026CD4",
 	};
+}
+CParticleNodePinOut	$EB707133
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$393A0570";
+}
+CParticleNodePinOut	$16D8F3F8
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$A8867986";
+}
+CParticleNodePinIn	$9B848A43
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$F1C0A980";
+	BaseType = bool;
+}
+CParticleNodePinIn	$CD19C40C
+{
+	SelfName = "MeshLOD";
+	Type = bool;
+	Visible = false;
+	Owner = "$F1C0A980";
+	BaseType = bool;
 }

@@ -30,7 +30,7 @@ namespace DemoRoom
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomSwitchLevelComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("SwitchLevel", 0xd41af40c));
+        provided.push_back(AZ_CRC_CE("SwitchLevel"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
@@ -56,7 +56,7 @@ namespace DemoRoom
                     ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                     ->Attribute("Category", "Gameplay")
                     ->Attribute("AutoExpand", true)
-                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC("Game", 0x232b318c))
+                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC_CE("Game"))
                     ->DataElement(0, &DemoRoomSwitchLevelComponent::m_levelName, "Level Name", "Name of the level to load")
                     ;
             }

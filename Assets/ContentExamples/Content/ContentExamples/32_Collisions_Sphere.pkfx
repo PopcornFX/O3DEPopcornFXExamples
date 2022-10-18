@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.14.0.14645;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1586,10 +1586,13 @@ CParticleNodeGraph	$55FD02E7
 CParticleNodeTemplate	$03E95363
 {
 	InputPins = {
-		"$D9374702",
 		"$BBDDD045",
 		"$FAF85684",
+		"$D9374702",
 		"$815F85E5",
+		"$4E608996",
+		"$D7D43EE4",
+		"$64ED38EB",
 		"$3C4DF703",
 	};
 	OutputPins = {
@@ -1974,6 +1977,7 @@ CParticleNodeTemplate	$EFF3C641
 	};
 	OutputPins = {
 		"$64967489",
+		"$2B51BF94",
 	};
 	WorkspacePosition = int2(374, -286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -2285,12 +2289,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$D78BF510",
 		"$BA90A06A",
 		"$39D1657D",
+		"$8058D1E8",
 		"$B755D1F6",
 		"$5E033361",
 		"$CDE06E09",
 		"$7018AB5A",
 		"$6E40BE20",
 		"$12601F50",
+		"$B827D5D1",
 	};
 	WorkspacePosition = int2(1914, -66);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
@@ -2302,12 +2308,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"EnableRendering",
 		"Lit",
 		"LegacyLit",
+		"Atlas",
 		"MeshAtlas",
 		"AlphaRemap",
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
 		"UseVertexColors",
+		"MeshLOD",
 	};
 }
 CParticleNodePinIn	$AEBE7241
@@ -2562,4 +2570,50 @@ CParticleNodePinOut	$F9267975
 	ConnectedPins = {
 		"$89E2811C",
 	};
+}
+CParticleNodePinIn	$8058D1E8
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$B827D5D1
+{
+	SelfName = "MeshLOD";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$4E608996
+{
+	SelfName = "Stop";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinIn	$D7D43EE4
+{
+	SelfName = "Restart";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinIn	$64ED38EB
+{
+	SelfName = "Reset";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinOut	$2B51BF94
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$EFF3C641";
 }

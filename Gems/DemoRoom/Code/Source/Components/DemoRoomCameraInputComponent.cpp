@@ -23,14 +23,18 @@ namespace DemoRoom
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomCameraInputComponent::GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required)
     {
-        required.push_back(AZ_CRC("TransformService", 0x8ee22c50));
-        required.push_back(AZ_CRC("PhysXCharacterGameplayService", 0xfacd7876));
+        required.push_back(AZ_CRC_CE("TransformService"));
+#if PK_O3DE_MAJOR_VERSION > 2205
+        required.push_back(AZ_CRC_CE("PhysicsCharacterGameplayService"));
+#else
+        required.push_back(AZ_CRC_CE("PhysXCharacterGameplayService"));
+#endif
     }
     
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomCameraInputComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("InputService", 0xd41af40c));
+        provided.push_back(AZ_CRC_CE("InputService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
@@ -62,7 +66,7 @@ namespace DemoRoom
                     //->Attribute("Icon", "Icons/Components/DemoRoomCameraInput.svg")
                     //->Attribute("ViewportIcon", "Icons/Components/Viewport/DemoRoomCameraInput.svg")
                     ->Attribute("AutoExpand", true)
-                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC("Game", 0x232b318c))
+                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC_CE("Game"))
                     ->DataElement(0, &DemoRoomCameraInputComponent::m_cameraEntityId, "Camera Entity", "Camera entity to rotate")
                     ->DataElement(0, &DemoRoomCameraInputComponent::m_moveSpeed, "Move Speed", "Speed at which the camera moves")
                     ->DataElement(0, &DemoRoomCameraInputComponent::m_rotationSpeed, "Rotation Speed", "Speed at which the camera rotates")
@@ -125,7 +129,11 @@ namespace DemoRoom
         //Gravity
         const AZ::Vector3 gravity = AZ::Vector3(0.0f, 0.0f, -13.0f);
 
+#if PK_O3DE_MAJOR_VERSION > 2205
+        Physics::CharacterRequestBus::Event(GetEntityId(), &Physics::CharacterRequests::AddVelocityForPhysicsTimestep, movement * m_moveSpeed + gravity);
+#else
         Physics::CharacterRequestBus::Event(GetEntityId(), &Physics::CharacterRequests::AddVelocity, movement * m_moveSpeed + gravity);
+#endif
     }
     
     //////////////////////////////////////////////////////////////////////////////

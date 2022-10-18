@@ -34,12 +34,12 @@ namespace DemoRoom
 
     void DemoRoomDrawTextComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("DemoRoomDrawTextService"));
+        provided.push_back(AZ_CRC_CE("DemoRoomDrawTextService"));
     }
 
     void DemoRoomDrawTextComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("DemoRoomDrawTextService"));
+        incompatible.push_back(AZ_CRC_CE("DemoRoomDrawTextService"));
     }
 
     void DemoRoomDrawTextComponent::GetRequiredServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& required)

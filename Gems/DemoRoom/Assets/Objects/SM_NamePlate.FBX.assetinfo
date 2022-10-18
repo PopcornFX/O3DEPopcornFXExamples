@@ -6,13 +6,21 @@
             "name": "SM_NamePlate",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_NamePlate.SM_NamePlate_1"
+                    "RootNode.SM_NamePlate"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_NamePlate",
-                    "RootNode.SM_NamePlate.SM_NamePlate_2"
+                    "RootNode.SM_NamePlate.transform",
+                    "RootNode.SM_NamePlate.custom_properties",
+                    "RootNode.SM_NamePlate.UVChannel_1",
+                    "RootNode.SM_NamePlate.SM_NamePlate"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_NamePlate"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -27,11 +35,12 @@
             "name": "SM_NamePlate",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_NamePlate",
-                    "RootNode.SM_NamePlate.SM_NamePlate_1",
-                    "RootNode.SM_NamePlate.SM_NamePlate_2"
+                    "RootNode.SM_NamePlate.transform",
+                    "RootNode.SM_NamePlate.custom_properties",
+                    "RootNode.SM_NamePlate.UVChannel_1",
+                    "RootNode.SM_NamePlate.SM_NamePlate"
                 ]
             },
             "rules": {

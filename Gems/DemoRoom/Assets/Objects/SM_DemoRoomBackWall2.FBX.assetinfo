@@ -6,13 +6,22 @@
             "name": "SM_DemoRoomBackWall2",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2_1"
+                    "RootNode.SM_DemoRoomBackWall2"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_DemoRoomBackWall2",
-                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2_2"
+                    "RootNode.SM_DemoRoomBackWall2.transform",
+                    "RootNode.SM_DemoRoomBackWall2.custom_properties",
+                    "RootNode.SM_DemoRoomBackWall2.UVChannel_1",
+                    "RootNode.SM_DemoRoomBackWall2.UVChannel_2",
+                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_DemoRoomBackWall2"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -27,11 +36,13 @@
             "name": "SM_DemoRoomBackWall2",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_DemoRoomBackWall2",
-                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2_1",
-                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2_2"
+                    "RootNode.SM_DemoRoomBackWall2.transform",
+                    "RootNode.SM_DemoRoomBackWall2.custom_properties",
+                    "RootNode.SM_DemoRoomBackWall2.UVChannel_1",
+                    "RootNode.SM_DemoRoomBackWall2.UVChannel_2",
+                    "RootNode.SM_DemoRoomBackWall2.SM_DemoRoomBackWall2"
                 ]
             },
             "rules": {
