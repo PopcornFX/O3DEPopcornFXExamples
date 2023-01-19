@@ -1,4 +1,4 @@
-Version = 2.14.0.14645;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -155,6 +155,7 @@ CParticleNodeTemplateExport	$48E2E8B7
 CParticleNodePinIn	$82F1B3B1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$48E2E8B7";
 }
 CParticleNodePinOut	$3F05660E
@@ -188,6 +189,7 @@ CParticleNodeTemplateExport	$3B3DDE67
 CParticleNodePinIn	$9E526218
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3B3DDE67";
 }
 CParticleNodePinOut	$0E4E8810
@@ -243,6 +245,7 @@ CParticleNodeTemplateExport	$CE8CC02E
 CParticleNodePinIn	$371F2116
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$CE8CC02E";
 }
 CParticleNodePinOut	$C861FC98
@@ -445,6 +448,7 @@ CParticleNodeTemplateExport	$7CFB103C
 CParticleNodePinIn	$C1777DC9
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7CFB103C";
 }
 CParticleNodePinOut	$6C420902
@@ -505,6 +509,7 @@ CParticleNodeTemplateExport	$725E6552
 CParticleNodePinIn	$AE4BEA47
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$725E6552";
 }
 CParticleNodePinOut	$3C2D9656
@@ -542,6 +547,7 @@ CParticleNodeTemplateExport	$86A6D721
 CParticleNodePinIn	$B3B4766F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$86A6D721";
 }
 CParticleNodePinOut	$5CD65C82
@@ -947,6 +953,7 @@ CParticleNodeTemplateExport	$4703F6C7
 CParticleNodePinIn	$B2CD145B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$4703F6C7";
 }
 CParticleNodePinOut	$D6C00AD9
@@ -986,6 +993,7 @@ CParticleNodeTemplateExport	$6B1D589C
 CParticleNodePinIn	$37128679
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$6B1D589C";
 }
 CParticleNodePinOut	$13C68F23
@@ -1254,6 +1262,7 @@ CParticleNodeTemplateExport	$FE14B3C9
 CParticleNodePinIn	$FD02CAD4
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FE14B3C9";
 }
 CParticleNodePinOut	$B0195CFE
@@ -1534,6 +1543,7 @@ CParticleNodeTemplateExport	$77113DEC
 CParticleNodePinIn	$454E1360
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$77113DEC";
 }
 CParticleNodePinOut	$712E2C6D
@@ -1588,6 +1598,7 @@ CParticleNodeTemplateExport	$EFDA194D
 CParticleNodePinIn	$FC3975B1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$EFDA194D";
 }
 CParticleNodePinOut	$8D71372D
@@ -1643,6 +1654,7 @@ CParticleNodeTemplateExport	$E266874C
 CParticleNodePinIn	$CFC3FB22
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$E266874C";
 }
 CParticleNodePinOut	$16135D00
@@ -1678,6 +1690,7 @@ CParticleNodeTemplateExport	$92005702
 CParticleNodePinIn	$2544A909
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$92005702";
 }
 CParticleNodePinOut	$4CBAFBB9
@@ -1714,6 +1727,7 @@ CParticleNodeTemplateExport	$12543354
 CParticleNodePinIn	$AF385776
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$12543354";
 }
 CParticleNodePinOut	$1A2581E6
@@ -1749,6 +1763,7 @@ CParticleNodeTemplateExport	$A6D7C79B
 CParticleNodePinIn	$179AACF9
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A6D7C79B";
 }
 CParticleNodePinOut	$1994F12D
@@ -2237,6 +2252,7 @@ CParticleNodeTemplateExport	$81F4516E
 CParticleNodePinIn	$52C9BC8F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$81F4516E";
 }
 CParticleNodePinOut	$B8052041
@@ -2365,11 +2381,13 @@ CParticleNodeTemplateExport	$71820357
 CParticleNodePinIn	$E55210BA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$71820357";
 }
 CParticleNodePinIn	$04C8CF44
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$B1304ACD";
 }
 CParticleNodeTemplateExport	$B1304ACD
@@ -2433,6 +2451,7 @@ CParticleNodeTemplateExport	$22795F7A
 CParticleNodePinIn	$0D911931
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$22795F7A";
 }
 CParticleNodePinOut	$59BCFDDA
@@ -2499,6 +2518,7 @@ CParticleNodeTemplateExport	$FEABFC84
 CParticleNodePinIn	$B2413DE1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FEABFC84";
 }
 CParticleNodePinIn	$76E4BBA2
@@ -3046,6 +3066,7 @@ CParticleNodeTemplateExport	$6D35CD62
 CParticleNodePinIn	$C9C3E4C6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$6D35CD62";
 }
 CParticleNodePinOut	$1028658D
@@ -3081,6 +3102,7 @@ CParticleNodeTemplateExport	$A98F99CF
 CParticleNodePinIn	$062956E3
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A98F99CF";
 }
 CParticleNodePinOut	$2B82A874
@@ -3115,6 +3137,7 @@ CParticleNodeTemplateExport	$43194493
 CParticleNodePinIn	$B71AA396
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$43194493";
 }
 CParticleNodePinOut	$77FCCCB3
@@ -3199,6 +3222,7 @@ CParticleNodeTemplateExport	$2D3664CA
 CParticleNodePinIn	$89BB4887
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$2D3664CA";
 }
 CParticleNodePinOut	$BA3D9AD3
@@ -3274,6 +3298,7 @@ CParticleNodeTemplateExport	$C25387E4
 CParticleNodePinIn	$1FD14411
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C25387E4";
 }
 CParticleNodePinOut	$CFBB7EF5
@@ -3540,6 +3565,7 @@ CParticleNodeTemplateExport	$696AACBB
 CParticleNodePinIn	$D6053923
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$696AACBB";
 }
 CParticleNodePinIn	$3B5D3399
@@ -4543,6 +4569,7 @@ CParticleNodeTemplateExport	$2C2DC676
 CParticleNodePinIn	$726311E9
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$2C2DC676";
 }
 CParticleNodePinOut	$C924D098
@@ -4583,6 +4610,7 @@ CParticleNodeTemplateExport	$C92401AD
 CParticleNodePinIn	$F24403CD
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C92401AD";
 }
 CParticleNodePinOut	$C61FB0E9
@@ -4654,6 +4682,7 @@ CParticleNodeTemplateExport	$16775414
 CParticleNodePinIn	$88441C92
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$16775414";
 }
 CParticleNodePinOut	$5707AB76
@@ -4694,6 +4723,7 @@ CParticleNodeTemplateExport	$14856F4B
 CParticleNodePinIn	$1685B890
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$14856F4B";
 }
 CParticleNodePinOut	$D58D1EA9
@@ -4732,6 +4762,7 @@ CParticleNodeTemplateExport	$8AC6F833
 CParticleNodePinIn	$0D34D356
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8AC6F833";
 }
 CParticleNodePinOut	$2847C8BC
@@ -4767,6 +4798,7 @@ CParticleNodeTemplateExport	$9B29A239
 CParticleNodePinIn	$5B5E2416
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9B29A239";
 }
 CParticleNodePinOut	$FBD49281
@@ -4816,6 +4848,7 @@ CParticleNodeTemplateExport	$BBFA6D38
 CParticleNodePinIn	$37FB28F3
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$BBFA6D38";
 }
 CParticleNodePinOut	$175E4F1A
@@ -5837,6 +5870,7 @@ CParticleNodeTemplateExport	$CEDA7710
 CParticleNodePinIn	$CADBE50A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$CEDA7710";
 }
 CParticleNodePinOut	$7FD1DDBD
@@ -5912,6 +5946,7 @@ CParticleNodeTemplateExport	$5471988B
 CParticleNodePinIn	$25CFD83E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$5471988B";
 }
 CParticleNodePinIn	$6D73F85C
@@ -5955,6 +5990,7 @@ CParticleNodeTemplateExport	$E943B59A
 CParticleNodePinIn	$100290F6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$E943B59A";
 }
 CParticleNodePinOut	$10EC9831
@@ -6042,6 +6078,7 @@ CParticleNodeTemplateExport	$02BA4940
 CParticleNodePinIn	$DB4BC243
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$02BA4940";
 }
 CParticleNodePinOut	$FEE8BCC5
@@ -6213,6 +6250,7 @@ CParticleNodeTemplateExport	$7404114A
 CParticleNodePinIn	$2BE225CF
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7404114A";
 }
 CParticleNodePinOut	$61D11CC4
@@ -6251,6 +6289,7 @@ CParticleNodeTemplateExport	$F062DA50
 CParticleNodePinIn	$BDB2F1CB
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F062DA50";
 }
 CParticleNodePinOut	$3A0CD9D2
@@ -7351,6 +7390,7 @@ CParticleNodeTemplateExport	$4DB59BA6
 CParticleNodePinIn	$96D2396E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$4DB59BA6";
 }
 CParticleNodePinOut	$74FFACDC
@@ -7617,6 +7657,7 @@ CParticleNodeTemplateExport	$BC48D3F5
 CParticleNodePinIn	$88528E4C
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$BC48D3F5";
 }
 CParticleNodePinIn	$10B04802
@@ -8040,6 +8081,7 @@ CParticleNodeTemplateExport	$C78E66C3
 CParticleNodePinIn	$6CC00AE6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C78E66C3";
 }
 CParticleNodePinOut	$758FF91A
@@ -8079,6 +8121,7 @@ CParticleNodeTemplateExport	$579C35B8
 CParticleNodePinIn	$14CB3FFB
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$579C35B8";
 }
 CParticleNodePinOut	$6AAB1162
@@ -8114,6 +8157,7 @@ CParticleNodeTemplateExport	$3DE479F1
 CParticleNodePinIn	$F2A3B354
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3DE479F1";
 }
 CParticleNodePinOut	$A81B3699
@@ -8148,6 +8192,7 @@ CParticleNodeTemplateExport	$6DFD7A2E
 CParticleNodePinIn	$CAC8C58E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$6DFD7A2E";
 }
 CParticleNodePinOut	$8CFA41A8
@@ -8183,6 +8228,7 @@ CParticleNodeTemplateExport	$81D31231
 CParticleNodePinIn	$B058AABC
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$81D31231";
 }
 CParticleNodePinOut	$1568D569
@@ -8386,6 +8432,7 @@ CParticleNodeTemplateExport	$7C0E15CA
 CParticleNodePinIn	$0B794859
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7C0E15CA";
 }
 CParticleNodePinOut	$57E2643D
@@ -8415,6 +8462,7 @@ CParticleNodeTemplateExport	$D37104FD
 CParticleNodePinIn	$70A40E06
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D37104FD";
 }
 CParticleNodePinOut	$F55BBC5F
@@ -9233,6 +9281,7 @@ CParticleNodeTemplateExport	$F2B909C9
 CParticleNodePinIn	$CE361DCF
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F2B909C9";
 }
 CParticleNodePinOut	$DD351AA3
@@ -9739,6 +9788,7 @@ CParticleNodeTemplateExport	$DD84B954
 CParticleNodePinIn	$B36C80D8
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$DD84B954";
 }
 CParticleNodePinOut	$6D0AD45B
@@ -9769,6 +9819,7 @@ CParticleNodeTemplateExport	$81430DCC
 CParticleNodePinIn	$92B8EF79
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$81430DCC";
 }
 CParticleNodePinOut	$6ACB2BBE
@@ -9799,6 +9850,7 @@ CParticleNodeTemplateExport	$A70A929C
 CParticleNodePinIn	$B966C58F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A70A929C";
 }
 CParticleNodePinOut	$1CB8403A
@@ -9838,6 +9890,7 @@ CParticleNodeTemplateExport	$B767CF45
 CParticleNodePinIn	$8F86318C
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$B767CF45";
 }
 CParticleNodePinOut	$50A5AB6D
@@ -9884,6 +9937,7 @@ CParticleNodePinOut	$D1E030CC
 CParticleNodePinIn	$B4CA56A0
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8BC20B9B";
 }
 CParticleNodeTemplateExport	$4D71B356
@@ -9923,6 +9977,7 @@ CParticleNodePinOut	$485A6DD5
 CParticleNodePinIn	$6F780ADE
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$4D71B356";
 }
 CParticleNodeTemplateExport	$089CE2C1
@@ -9962,6 +10017,7 @@ CParticleNodePinOut	$D3544D6F
 CParticleNodePinIn	$80BD4D52
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$089CE2C1";
 }
 CParticleNodeTemplateExport	$6A188D50
@@ -10001,6 +10057,7 @@ CParticleNodePinOut	$E577AA75
 CParticleNodePinIn	$926C7C49
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$6A188D50";
 }
 CParticleNodeTemplateExport	$D47C074E
@@ -10028,6 +10085,7 @@ CParticleNodeTemplateExport	$D47C074E
 CParticleNodePinIn	$D52E9B1C
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D47C074E";
 }
 CParticleNodePinOut	$BC438BB3
@@ -10203,6 +10261,7 @@ CParticleNodeTemplateExport	$3C27A3BF
 CParticleNodePinIn	$80FCF863
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3C27A3BF";
 }
 CParticleNodePinOut	$79CCED72
@@ -10534,6 +10593,7 @@ CParticleNodeTemplateExport	$613A8B12
 CParticleNodePinIn	$F2C19E07
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$613A8B12";
 }
 CParticleNodePinOut	$C51DBC1F
@@ -10573,6 +10633,7 @@ CParticleNodeTemplateExport	$B6A3A13D
 CParticleNodePinIn	$768A943A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$B6A3A13D";
 }
 CParticleNodePinOut	$6613BD8F
@@ -10612,6 +10673,7 @@ CParticleNodeTemplateExport	$666322FA
 CParticleNodePinIn	$AE58CA9F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$666322FA";
 }
 CParticleNodePinOut	$E447FB8A
@@ -10650,6 +10712,7 @@ CParticleNodeTemplateExport	$FF8E3F8E
 CParticleNodePinIn	$9B76DED0
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FF8E3F8E";
 }
 CParticleNodePinOut	$AAB51170
@@ -10689,6 +10752,7 @@ CParticleNodeTemplateExport	$C0AE572B
 CParticleNodePinIn	$D913E658
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C0AE572B";
 }
 CParticleNodePinOut	$8EAB82A0
@@ -10757,6 +10821,7 @@ CParticleNodeTemplateExport	$F248D8F3
 CParticleNodePinIn	$8015B352
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F248D8F3";
 }
 CParticleNodePinOut	$9D6FA47E
@@ -10791,6 +10856,7 @@ CParticleNodeTemplateExport	$F321A9DD
 CParticleNodePinIn	$8BC3A1F3
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F321A9DD";
 }
 CParticleNodePinOut	$DFCA44A6
@@ -11299,6 +11365,7 @@ CParticleNodeTemplateExport	$2CCDE422
 CParticleNodePinIn	$6C5570D1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$2CCDE422";
 }
 CParticleNodePinOut	$0126853B
@@ -11329,6 +11396,7 @@ CParticleNodeTemplateExport	$BAFC6268
 CParticleNodePinIn	$B40543CA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$BAFC6268";
 }
 CParticleNodePinOut	$0F0BC928
@@ -11373,6 +11441,7 @@ CParticleNodeTemplateExport	$A60DDF1E
 CParticleNodePinIn	$98A74851
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A60DDF1E";
 }
 CParticleNodePinOut	$F8B572C9
@@ -11413,6 +11482,7 @@ CParticleNodeTemplateExport	$DABA8FA1
 CParticleNodePinIn	$23969A6B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$DABA8FA1";
 }
 CParticleNodePinOut	$2EE1C0DE
@@ -11453,6 +11523,7 @@ CParticleNodeTemplateExport	$1B36DFBC
 CParticleNodePinIn	$E17B0182
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$1B36DFBC";
 }
 CParticleNodePinOut	$DD799BE8
@@ -11491,6 +11562,7 @@ CParticleNodeTemplateExport	$C469D88C
 CParticleNodePinIn	$5165D660
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C469D88C";
 }
 CParticleNodePinOut	$654C3FC2
@@ -12051,6 +12123,7 @@ CParticleNodeTemplateExport	$4F5A6D8A
 CParticleNodePinIn	$76BD08EB
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$4F5A6D8A";
 }
 CParticleNodePinOut	$CD099122
@@ -12076,6 +12149,7 @@ CParticleNodeTemplateExport	$3D44C3B9
 CParticleNodePinIn	$53A49ED6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3D44C3B9";
 }
 CParticleNodePinOut	$55B6803C
@@ -12425,6 +12499,7 @@ CParticleNodeTemplateExport	$D930597E
 CParticleNodePinIn	$FC3EA57B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D930597E";
 }
 CParticleNodePinOut	$BC4F78EA
@@ -12450,6 +12525,7 @@ CParticleNodeTemplateExport	$01602775
 CParticleNodePinIn	$BBEDDDEA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$01602775";
 }
 CParticleNodePinOut	$3C2A12C0
@@ -12475,6 +12551,7 @@ CParticleNodeTemplateExport	$16A963C3
 CParticleNodePinIn	$C5873B26
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$16A963C3";
 }
 CParticleNodePinOut	$54A212D4
@@ -12500,6 +12577,7 @@ CParticleNodeTemplateExport	$152B3886
 CParticleNodePinIn	$F059650A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$152B3886";
 }
 CParticleNodePinOut	$ED0B3B90
@@ -12525,6 +12603,7 @@ CParticleNodeTemplateExport	$8E73926C
 CParticleNodePinIn	$FE96C857
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8E73926C";
 }
 CParticleNodePinOut	$548AF16C
@@ -12702,6 +12781,7 @@ CParticleNodeTemplateExport	$3F3F17A2
 CParticleNodePinIn	$E35C8210
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3F3F17A2";
 }
 CParticleNodePinOut	$C3BFFA6D
@@ -12743,6 +12823,7 @@ CParticleNodeTemplateExport	$A54839C3
 CParticleNodePinIn	$D8D9143F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A54839C3";
 }
 CParticleNodePinOut	$FF724BBF
@@ -13528,6 +13609,7 @@ CParticleNodeTemplateExport	$B8122143
 CParticleNodePinIn	$B19D5086
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$B8122143";
 }
 CParticleNodePinOut	$ACB99578
@@ -13572,6 +13654,7 @@ CParticleNodeTemplateExport	$BEB91E12
 CParticleNodePinIn	$079C6C37
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$BEB91E12";
 }
 CParticleNodePinOut	$2E6D40C5
@@ -13616,6 +13699,7 @@ CParticleNodeTemplateExport	$28C3226B
 CParticleNodePinIn	$18EC014A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$28C3226B";
 }
 CParticleNodePinOut	$35E64725
@@ -13745,6 +13829,7 @@ CParticleNodeTemplateExport	$8921F213
 CParticleNodePinIn	$8BAEFC6D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8921F213";
 }
 CParticleNodePinOut	$182F680C
@@ -13774,6 +13859,7 @@ CParticleNodeTemplateExport	$C8CF1A45
 CParticleNodePinIn	$A2BA2397
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C8CF1A45";
 }
 CParticleNodePinOut	$B0C06551
@@ -14210,6 +14296,7 @@ CParticleNodeTemplateExport	$8F4222F5
 CParticleNodePinIn	$11330EEC
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8F4222F5";
 }
 CParticleNodePinOut	$8005D0F8
@@ -14244,6 +14331,7 @@ CParticleNodeTemplateExport	$912AF182
 CParticleNodePinIn	$5161F6A4
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$912AF182";
 }
 CParticleNodePinOut	$2C61443C
@@ -14310,6 +14398,7 @@ CParticleNodeTemplateExport	$33A1D04D
 CParticleNodePinIn	$69473B78
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$33A1D04D";
 }
 CParticleNodePinOut	$2864197E
@@ -14669,6 +14758,7 @@ CParticleNodeTemplateExport	$9C39F2A9
 CParticleNodePinIn	$C5C91C3B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9C39F2A9";
 }
 CParticleNodePinOut	$B7614A10
@@ -14694,6 +14784,7 @@ CParticleNodeTemplateExport	$A4C9BA81
 CParticleNodePinIn	$601CB884
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A4C9BA81";
 }
 CParticleNodePinOut	$D179B9D3
@@ -15794,6 +15885,7 @@ CParticleNodeTemplateExport	$AE83EC1C
 CParticleNodePinIn	$4D8C8E41
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$AE83EC1C";
 }
 CParticleNodePinOut	$F1182F9B
@@ -15827,6 +15919,7 @@ CParticleNodeTemplateExport	$24E8D2D4
 CParticleNodePinIn	$46602C17
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$24E8D2D4";
 }
 CParticleNodePinOut	$DF790B40
@@ -16894,6 +16987,7 @@ CParticleNodeTemplateExport	$9DFE8086
 CParticleNodePinIn	$35444EE1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9DFE8086";
 }
 CParticleNodePinOut	$4F4858D6
@@ -16963,6 +17057,7 @@ CParticleNodeTemplateExport	$D4C46408
 CParticleNodePinIn	$A9D61ACE
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D4C46408";
 }
 CParticleNodePinOut	$9A73E9A5
@@ -17002,6 +17097,7 @@ CParticleNodeTemplateExport	$40E4D2C6
 CParticleNodePinIn	$7C3022EA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$40E4D2C6";
 }
 CParticleNodePinOut	$B1EFCB16
@@ -17042,6 +17138,7 @@ CParticleNodeTemplateExport	$43775A41
 CParticleNodePinIn	$D8683AC8
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$43775A41";
 }
 CParticleNodePinOut	$D71D85D7
@@ -17077,6 +17174,7 @@ CParticleNodeTemplateExport	$C2E4C8C2
 CParticleNodePinIn	$9FC15544
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C2E4C8C2";
 }
 CParticleNodePinOut	$E2892362
@@ -17318,6 +17416,7 @@ CParticleNodeTemplateExport	$7815A506
 CParticleNodePinIn	$EFDC858D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7815A506";
 }
 CParticleNodePinOut	$6C000590
@@ -18126,6 +18225,7 @@ CParticleNodeTemplateExport	$1730EA4D
 CParticleNodePinIn	$F6FA5C75
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$1730EA4D";
 }
 CParticleNodePinOut	$36CE0E5A
@@ -20163,6 +20263,7 @@ CParticleNodeTemplateExport	$0755FA7C
 CParticleNodePinIn	$9C203F9B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0755FA7C";
 }
 CParticleNodePinOut	$EB3245E7
@@ -21064,6 +21165,7 @@ CParticleNodeTemplateExport	$A48DD08C
 CParticleNodePinIn	$634A6A1E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A48DD08C";
 }
 CParticleNodePinOut	$8FD85751
@@ -21101,6 +21203,7 @@ CParticleNodeTemplateExport	$0A34D530
 CParticleNodePinIn	$E5B9B6EC
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0A34D530";
 }
 CParticleNodePinOut	$3DD07628
@@ -21294,6 +21397,7 @@ CParticleNodeTemplateExport	$40E8C359
 CParticleNodePinIn	$5635B675
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$40E8C359";
 }
 CParticleNodePinOut	$94A91A1E
@@ -22326,6 +22430,7 @@ CParticleNodeTemplateExport	$D6EEA348
 CParticleNodePinIn	$5F44DFAB
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D6EEA348";
 }
 CParticleNodePinOut	$2FB70E0C
@@ -22363,6 +22468,7 @@ CParticleNodeTemplateExport	$36207FBF
 CParticleNodePinIn	$E54029EE
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$36207FBF";
 }
 CParticleNodePinOut	$5209F849
@@ -22431,6 +22537,7 @@ CParticleNodeTemplateExport	$0384856D
 CParticleNodePinIn	$96A2AA34
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0384856D";
 }
 CParticleNodePinOut	$D970BB07
@@ -22668,6 +22775,7 @@ CParticleNodeTemplateExport	$1A488438
 CParticleNodePinIn	$42F2DB5B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$1A488438";
 }
 CParticleNodePinOut	$55F99FBA
@@ -22705,6 +22813,7 @@ CParticleNodeTemplateExport	$C73E7C05
 CParticleNodePinIn	$ED0A18AC
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C73E7C05";
 }
 CParticleNodePinOut	$CF350EDF
@@ -23583,6 +23692,7 @@ CParticleNodeTemplate	$69CF2E9A
 		"$913C489C",
 		"$A7D32F26",
 		"$C560B5ED",
+		"$5520D21B",
 		"$2436715E",
 		"$357E7650",
 		"$D5E19E89",
@@ -24100,6 +24210,7 @@ CParticleNodePinOut	$BD363541
 CParticleNodePinIn	$7073363A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$60C9C8A1";
 }
 CParticleNodeConstant	$1FBEFF98
@@ -24225,6 +24336,7 @@ CParticleNodePinOut	$C0F73CD3
 CParticleNodePinIn	$74E7812D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C0310144";
 }
 CParticleNodeTemplateExport	$D804B229
@@ -24311,6 +24423,7 @@ CParticleNodePinOut	$D84CC345
 CParticleNodePinIn	$9D6F4705
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$63E735B5";
 }
 CParticleNodePassThrough	$242A1035
@@ -24730,6 +24843,7 @@ CParticleNodePinOut	$3A46F931
 CParticleNodePinIn	$9C5DA727
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$29636605";
 }
 CParticleNodeTemplate	$FA1135EE
@@ -25645,6 +25759,7 @@ CParticleNodePinOut	$83D9873C
 CParticleNodePinIn	$833C07AA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7FE20390";
 }
 CParticleNodePassThrough	$7FADD3A7
@@ -25801,6 +25916,7 @@ CParticleNodePinOut	$E3065CF9
 CParticleNodePinIn	$49A5AF2E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$CFB26334";
 }
 CParticleNodeTemplateExport	$892E9361
@@ -25840,6 +25956,7 @@ CParticleNodePinOut	$EE30D057
 CParticleNodePinIn	$2A3F028C
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$892E9361";
 }
 CParticleNodeTemplateExport	$0B5AD588
@@ -25873,6 +25990,7 @@ CParticleNodePinOut	$B1D445DD
 CParticleNodePinIn	$9CEF9D87
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0B5AD588";
 }
 CParticleNodePassThrough	$C7B9509F
@@ -26331,6 +26449,7 @@ CParticleNodePinOut	$51C842B9
 CParticleNodePinIn	$E2763396
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$52DF9D07";
 }
 CParticleNodeTemplateExport	$C21F30EC
@@ -26374,6 +26493,7 @@ CParticleNodePinOut	$D522ECB3
 CParticleNodePinIn	$5E33AF45
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C21F30EC";
 }
 CParticleNodePassThrough	$79E2D2B8
@@ -26659,6 +26779,7 @@ CParticleNodePinOut	$CE29CC66
 CParticleNodePinIn	$BE68BAF6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FE6E6754";
 }
 CParticleNodeMathFunction3	$87C6A0A5
@@ -26772,6 +26893,7 @@ CParticleNodePinOut	$345DA8B9
 CParticleNodePinIn	$B50D12C7
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9F82AB31";
 }
 CParticleNodeConstant	$C51418BD
@@ -26872,6 +26994,7 @@ CParticleNodePinOut	$B4984B63
 CParticleNodePinIn	$AF5EFB30
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$DCFD4187";
 }
 CParticleNodePassThrough	$A82507A5
@@ -26933,6 +27056,7 @@ CParticleNodeTemplateExport	$2F854127
 CParticleNodePinIn	$C681D376
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$2F854127";
 }
 CParticleNodePinOut	$E2189C71
@@ -26970,6 +27094,7 @@ CParticleNodeTemplateExport	$FB614B88
 CParticleNodePinIn	$D91C8CEB
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FB614B88";
 }
 CParticleNodePinOut	$31F5688A
@@ -27095,6 +27220,7 @@ CParticleNodeTemplateExport	$05539FDC
 CParticleNodePinIn	$1E5C8DCF
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$05539FDC";
 }
 CParticleNodePinOut	$4BD7493E
@@ -27127,6 +27253,7 @@ CParticleNodeTemplateExport	$79E4E1D9
 CParticleNodePinIn	$D39EC910
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$79E4E1D9";
 }
 CParticleNodePinOut	$AF299513
@@ -27187,6 +27314,7 @@ CParticleNodeTemplateExport	$7BCB4F17
 CParticleNodePinIn	$FB490026
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7BCB4F17";
 }
 CParticleNodePinOut	$8A93EEE1
@@ -27362,6 +27490,7 @@ CParticleNodeTemplateExport	$362883A2
 CParticleNodePinIn	$94ABBA0D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$362883A2";
 }
 CParticleNodePinOut	$0AA9AB54
@@ -27395,6 +27524,7 @@ CParticleNodeTemplateExport	$D93542A7
 CParticleNodePinIn	$ED8932F6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$D93542A7";
 }
 CParticleNodePinOut	$E17BB1F1
@@ -27424,6 +27554,7 @@ CParticleNodeTemplateExport	$85CF4F08
 CParticleNodePinIn	$0AD9166B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$85CF4F08";
 }
 CParticleNodePinOut	$2C3FF00A
@@ -27654,6 +27785,7 @@ CParticleNodeTemplateExport	$C6ED4C00
 CParticleNodePinIn	$8BB7DAC3
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C6ED4C00";
 }
 CParticleNodePinOut	$33E15F42
@@ -28178,6 +28310,7 @@ CParticleNodeTemplateExport	$E5020D1A
 CParticleNodePinIn	$136EC4E5
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$E5020D1A";
 }
 CParticleNodePinOut	$CCC9A30C
@@ -28254,6 +28387,7 @@ CParticleNodeTemplateExport	$FD67F503
 CParticleNodePinIn	$062A6682
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FD67F503";
 }
 CParticleNodePinOut	$476FE66D
@@ -28786,4 +28920,12 @@ CParticleNodeAnnotation	$EB7B87C3
 CEditorBackdropSpotLight	$93476353
 {
 	Enabled = false;
+}
+CParticleNodePinIn	$5520D21B
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$69CF2E9A";
+	BaseType = bool;
 }

@@ -1,4 +1,4 @@
-Version = 2.14.0.14645;
+Version = 2.15.0.15796;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -136,6 +136,7 @@ CParticleNodeTemplate	$A4528282
 		"$0ECFECDD",
 		"$B965539F",
 		"$97396C6B",
+		"$884CD341",
 		"$A18DF93A",
 		"$3D3390BB",
 		"$5C381E7D",
@@ -703,6 +704,7 @@ CParticleNodeTemplateExport	$243145FE
 CParticleNodePinIn	$AA31F220
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$243145FE";
 }
 CParticleNodePinOut	$5CE5E0E4
@@ -1480,4 +1482,12 @@ CParticleNodePinOut	$D95BF25F
 	ConnectedPins = {
 		"$8DEB33FA",
 	};
+}
+CParticleNodePinIn	$884CD341
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$A4528282";
+	BaseType = bool;
 }

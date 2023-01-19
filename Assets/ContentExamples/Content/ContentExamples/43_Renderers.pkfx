@@ -1,4 +1,4 @@
-Version = 2.14.0.14645;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -173,8 +173,8 @@ CParticleNodeTemplate	$1838F4AE
 		"$A13D2D10",
 		"$B92198B9",
 		"$02CF91B5",
-		"$6539F1B2",
 		"$31CE33E9",
+		"$6539F1B2",
 		"$7CE540CD",
 		"$3245FB22",
 		"$55B1C429",
@@ -339,6 +339,7 @@ CParticleNodeTemplate	$5A5BD1DE
 		"$8BA95130",
 		"$8058C653",
 		"$E32FF502",
+		"$7B61401B",
 		"$59DA6D2D",
 		"$4BF15ED4",
 		"$A0A649A7",
@@ -1654,8 +1655,8 @@ CParticleNodeTemplate	$E9BACC0B
 		"$9A224A1B",
 		"$EE5222C9",
 		"$167C7612",
-		"$92EA2510",
 		"$91C5F013",
+		"$92EA2510",
 		"$5A72F28D",
 		"$B37C31F8",
 		"$90AC243E",
@@ -2546,6 +2547,7 @@ CParticleNodeTemplate	$CD25E42C
 		"$AB0F171F",
 		"$F9302875",
 		"$4B34867B",
+		"$7EEFD937",
 		"$C10558DA",
 		"$79DB5691",
 		"$A37DE442",
@@ -2982,6 +2984,7 @@ CParticleNodeTemplate	$14239AB6
 		"$66BE6E02",
 		"$95235305",
 		"$DF8AA753",
+		"$F4A5714A",
 		"$32C8E403",
 		"$937D9BB8",
 		"$38BE98F3",
@@ -3265,8 +3268,8 @@ CParticleNodeTemplate	$910E1C2A
 		"$93E15A21",
 		"$27E89766",
 		"$CFED0657",
-		"$DF21FE6A",
 		"$B22807CF",
+		"$DF21FE6A",
 		"$C9EA39B2",
 		"$5266B528",
 		"$15CC8FC0",
@@ -4185,6 +4188,7 @@ CParticleNodeTemplate	$0993E467
 		"$714DABF7",
 		"$177D38DE",
 		"$03B3F523",
+		"$1A3D0A7E",
 		"$2047B425",
 		"$C926A3B1",
 		"$C0A185CB",
@@ -4481,8 +4485,8 @@ CParticleNodeTemplate	$69908BB4
 		"$56899707",
 		"$6F42798F",
 		"$8EA24BAC",
-		"$4F5731AB",
 		"$47C4DA9B",
+		"$4F5731AB",
 		"$BEEED78C",
 		"$F761C54F",
 		"$850FCECA",
@@ -5630,8 +5634,8 @@ CParticleNodeTemplate	$5D3B8CD4
 		"$68DAEDCE",
 		"$442A248C",
 		"$E419F117",
-		"$E4104B13",
 		"$69A65204",
+		"$E4104B13",
 		"$55B12340",
 		"$F8349DEC",
 		"$C79198DB",
@@ -6127,6 +6131,7 @@ CParticleNodeTemplate	$B7DB5E3D
 		"$D6886D93",
 		"$B1706829",
 		"$ED9A5394",
+		"$9C84F3F6",
 		"$F2E273E2",
 		"$D8232BCE",
 		"$BB606DC9",
@@ -6699,8 +6704,8 @@ CParticleNodeTemplate	$97427EAD
 		"$C0AF5DAA",
 		"$157E3F5C",
 		"$AD37E02F",
-		"$89E62D09",
 		"$D07C718F",
+		"$89E62D09",
 		"$C3362F9A",
 		"$EAF94C61",
 		"$E94BB624",
@@ -7197,6 +7202,7 @@ CParticleNodeTemplate	$8169D06E
 		"$8ED7001F",
 		"$2FD35DBA",
 		"$B0DB6304",
+		"$2CB6A7A9",
 		"$A14A99ED",
 		"$2D6CE3E9",
 		"$8BAD9FC0",
@@ -8113,8 +8119,8 @@ CParticleNodeTemplate	$A89F8AE9
 		"$58A016E3",
 		"$2CBDDE87",
 		"$6018ECD6",
-		"$FA037DD6",
 		"$9E4DAC82",
+		"$FA037DD6",
 		"$2578B7FD",
 		"$47FD5BD6",
 		"$6AF09BF4",
@@ -8627,6 +8633,7 @@ CParticleNodeTemplate	$D45EBDC6
 		"$4236D315",
 		"$17E52DF8",
 		"$09A245F3",
+		"$F846951E",
 		"$F75D0A08",
 		"$031D74F2",
 		"$3F628306",
@@ -9182,5 +9189,61 @@ CParticleNodePinIn	$CD19C40C
 	Type = bool;
 	Visible = false;
 	Owner = "$F1C0A980";
+	BaseType = bool;
+}
+CParticleNodePinIn	$7B61401B
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+}
+CParticleNodePinIn	$7EEFD937
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$CD25E42C";
+	BaseType = bool;
+}
+CParticleNodePinIn	$F4A5714A
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$14239AB6";
+	BaseType = bool;
+}
+CParticleNodePinIn	$1A3D0A7E
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$0993E467";
+	BaseType = bool;
+}
+CParticleNodePinIn	$9C84F3F6
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$B7DB5E3D";
+	BaseType = bool;
+}
+CParticleNodePinIn	$2CB6A7A9
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$8169D06E";
+	BaseType = bool;
+}
+CParticleNodePinIn	$F846951E
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$D45EBDC6";
 	BaseType = bool;
 }

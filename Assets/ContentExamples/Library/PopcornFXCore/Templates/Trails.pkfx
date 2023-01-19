@@ -1,4 +1,4 @@
-Version = 2.14.0.14645;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -71,8 +71,6 @@ CParticleNodeGraph	$F415EE0A
 		"$A8E147C1",
 		"$79E2D2B8",
 		"$C21F30EC",
-		"$5B034851",
-		"$789A2408",
 		"$689E4961",
 		"$48AB3C2B",
 		"$ECEF2762",
@@ -97,8 +95,6 @@ CParticleNodeGraph	$F415EE0A
 		"$A2C9392B",
 		"$01090FA8",
 		"$F52F1B09",
-		"$01641BFA",
-		"$7F6A82EF",
 		"$4D35D56A",
 		"$392C9A4F",
 		"$D50DE24C",
@@ -144,6 +140,9 @@ CParticleNodeGraph	$F415EE0A
 		"$0D51D66F",
 		"$16CC31DC",
 		"$2565BAAE",
+		"$0DFB156E",
+		"$B26DC62D",
+		"$4DEFB5C8",
 	};
 	WorkspacePosition = int2(-229, -189);
 	WorkspaceZoom = -8;
@@ -202,6 +201,7 @@ CParticleNodeTemplateExport	$60C9C8A1
 CParticleNodePinIn	$7073363A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$60C9C8A1";
 }
 CParticleNodePinOut	$070EAFF6
@@ -290,7 +290,7 @@ CParticleNodeTemplateExport	$8F3D1F59
 	OutputPins = {
 		"$18F80D1A",
 	};
-	WorkspacePosition = int2(1496, 154);
+	WorkspacePosition = int2(1496, 220);
 	ExportedName = "SpawnInterval";
 	ExportedType = float;
 	Type = Input;
@@ -307,6 +307,7 @@ CParticleNodeTemplateExport	$8F3D1F59
 CParticleNodePinIn	$267FD248
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$8F3D1F59";
 }
 CParticleNodePinIn	$E9CC11D1
@@ -443,6 +444,7 @@ CParticleNodeTemplateExport	$DCFD4187
 CParticleNodePinIn	$AF5EFB30
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$DCFD4187";
 }
 CParticleNodePinOut	$445F2B0E
@@ -521,6 +523,7 @@ CParticleNodeTemplateExport	$CFB26334
 CParticleNodePinIn	$49A5AF2E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$CFB26334";
 }
 CParticleNodePinIn	$D2DE937B
@@ -567,6 +570,7 @@ CParticleNodeTemplateExport	$892E9361
 CParticleNodePinIn	$2A3F028C
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$892E9361";
 }
 CParticleNodePinOut	$7B3BF866
@@ -644,6 +648,7 @@ CParticleNodeTemplateExport	$0B5AD588
 CParticleNodePinIn	$9CEF9D87
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0B5AD588";
 }
 CParticleNodePinIn	$6A529DB8
@@ -722,6 +727,7 @@ CParticleNodeTemplateExport	$C0310144
 CParticleNodePinIn	$74E7812D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C0310144";
 }
 CParticleNodePassThrough	$7FADD3A7
@@ -1125,7 +1131,7 @@ CParticleNodeTemplateExport	$C21F30EC
 	OutputPins = {
 		"$D522ECB3",
 	};
-	WorkspacePosition = int2(748, -660);
+	WorkspacePosition = int2(198, -594);
 	ExportedName = "FirstSpawnDelay";
 	ExportedType = float;
 	Type = Input;
@@ -1142,6 +1148,7 @@ CParticleNodeTemplateExport	$C21F30EC
 CParticleNodePinIn	$5E33AF45
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C21F30EC";
 }
 CParticleNodePinOut	$D522ECB3
@@ -1149,59 +1156,7 @@ CParticleNodePinOut	$D522ECB3
 	SelfName = "Value";
 	Owner = "$C21F30EC";
 	ConnectedPins = {
-		"$883B19FD",
-	};
-}
-CParticleNodeConstant	$5B034851
-{
-	OutputPins = {
-		"$60F0075D",
-	};
-	WorkspacePosition = int2(748, -792);
-	ValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$60F0075D
-{
-	SelfName = "Value";
-	Owner = "$5B034851";
-	ConnectedPins = {
-		"$321D125B",
-	};
-}
-CParticleNodeArithmetic	$789A2408
-{
-	InputPins = {
-		"$321D125B",
-		"$883B19FD",
-	};
-	OutputPins = {
-		"$2928A330",
-	};
-	WorkspacePosition = int2(1012, -748);
-	Operation = Sub;
-}
-CParticleNodePinIn	$321D125B
-{
-	SelfName = "Value";
-	Owner = "$789A2408";
-	ConnectedPins = {
-		"$60F0075D",
-	};
-}
-CParticleNodePinIn	$883B19FD
-{
-	SelfName = "ValueB";
-	Owner = "$789A2408";
-	ConnectedPins = {
-		"$D522ECB3",
-	};
-}
-CParticleNodePinOut	$2928A330
-{
-	SelfName = "Value";
-	Owner = "$789A2408";
-	ConnectedPins = {
-		"$E66BEFCB",
+		"$DE344E43",
 	};
 }
 CParticleNodeTemplateExport	$689E4961
@@ -1229,6 +1184,7 @@ CParticleNodeTemplateExport	$689E4961
 CParticleNodePinIn	$2A7930EE
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$689E4961";
 }
 CParticleNodePinOut	$5847059A
@@ -1248,7 +1204,7 @@ CParticleNodeArithmetic	$48AB3C2B
 	OutputPins = {
 		"$2E4C33E6",
 	};
-	WorkspacePosition = int2(1496, -22);
+	WorkspacePosition = int2(1496, 44);
 	Operation = Mul;
 }
 CParticleNodePinIn	$713E325D
@@ -1327,6 +1283,7 @@ CParticleNodeTemplateExport	$29636605
 CParticleNodePinIn	$9C5DA727
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$29636605";
 }
 CParticleNodePinOut	$3A46F931
@@ -1748,6 +1705,7 @@ CParticleNodeTemplateExport	$FE6E6754
 CParticleNodePinIn	$BE68BAF6
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$FE6E6754";
 }
 CParticleNodePinOut	$CE29CC66
@@ -2027,6 +1985,7 @@ CParticleNodeTemplateExport	$9C39F2A9
 CParticleNodePinIn	$C5C91C3B
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9C39F2A9";
 }
 CParticleNodePinOut	$B7614A10
@@ -2053,6 +2012,7 @@ CParticleNodeTemplateExport	$A4C9BA81
 CParticleNodePinIn	$601CB884
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A4C9BA81";
 }
 CParticleNodePinOut	$D179B9D3
@@ -2179,6 +2139,7 @@ CParticleNodePinOut	$345DA8B9
 CParticleNodePinIn	$B50D12C7
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9F82AB31";
 }
 CParticleNodeTemplate	$BB46698D
@@ -2344,68 +2305,6 @@ CParticleNodePinOut	$CB2AD2F8
 		"$D15686F4",
 	};
 }
-CParticleNodeConstant	$01641BFA
-{
-	OutputPins = {
-		"$A2FD878D",
-	};
-	WorkspacePosition = int2(1012, -506);
-	Type = int;
-}
-CParticleNodePinOut	$A2FD878D
-{
-	SelfName = "Value";
-	Owner = "$01641BFA";
-	ConnectedPins = {
-		"$686A9708",
-	};
-}
-CParticleNodeScript	$7F6A82EF
-{
-	CustomName = {
-		"@eng:Accumulator",
-	};
-	InputPins = {
-		"$E66BEFCB",
-		"$686A9708",
-	};
-	OutputPins = {
-		"$380C15A6",
-	};
-	WorkspacePosition = int2(1276, -638);
-	Expression = "InitialAccum = int2(asint(InitialSpawnFraction), InitialEmittedCount);
-";
-}
-CParticleNodePinIn	$E66BEFCB
-{
-	SelfName = "InitialSpawnFraction";
-	Type = float;
-	Owner = "$7F6A82EF";
-	BaseType = float;
-	ConnectedPins = {
-		"$2928A330",
-	};
-}
-CParticleNodePinIn	$686A9708
-{
-	SelfName = "InitialEmittedCount";
-	Type = int;
-	Owner = "$7F6A82EF";
-	BaseType = int;
-	ConnectedPins = {
-		"$A2FD878D",
-	};
-}
-CParticleNodePinOut	$380C15A6
-{
-	SelfName = "InitialAccum";
-	Type = int2;
-	Owner = "$7F6A82EF";
-	BaseType = int2;
-	ConnectedPins = {
-		"$25928F84",
-	};
-}
 CParticleNodePassThrough	$4D35D56A
 {
 	InputPins = {
@@ -2414,14 +2313,14 @@ CParticleNodePassThrough	$4D35D56A
 	OutputPins = {
 		"$9D7745DF",
 	};
-	WorkspacePosition = int2(1760, 22);
+	WorkspacePosition = int2(1716, 22);
 }
 CParticleNodePinIn	$25928F84
 {
 	SelfName = "Value";
 	Owner = "$4D35D56A";
 	ConnectedPins = {
-		"$380C15A6",
+		"$BE85E8A8",
 	};
 }
 CParticleNodePinOut	$9D7745DF
@@ -3193,6 +3092,7 @@ CParticleNodeTemplateExport	$A48DD08C
 CParticleNodePinIn	$634A6A1E
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$A48DD08C";
 }
 CParticleNodePinOut	$8FD85751
@@ -3226,6 +3126,7 @@ CParticleNodeTemplateExport	$0A34D530
 CParticleNodePinIn	$E5B9B6EC
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$0A34D530";
 }
 CParticleNodePinOut	$3DD07628
@@ -3449,6 +3350,7 @@ CParticleNodeTemplateExport	$40E8C359
 CParticleNodePinIn	$5635B675
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$40E8C359";
 }
 CParticleNodePinOut	$94A91A1E
@@ -3712,6 +3614,7 @@ CParticleNodeTemplateExport	$7FE20390
 CParticleNodePinIn	$833C07AA
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$7FE20390";
 }
 CParticleNodePinOut	$83D9873C
@@ -3887,7 +3790,7 @@ CParticleNodeMathFunction3	$5F44DFAB
 	OutputPins = {
 		"$9D2B1A2F",
 	};
-	WorkspacePosition = int2(1034, -286);
+	WorkspacePosition = int2(1012, -286);
 	Function = Select;
 }
 CParticleNodePinIn	$D806D24A
@@ -3927,7 +3830,7 @@ CParticleNodeConstant	$55289D1E
 	OutputPins = {
 		"$EC84D339",
 	};
-	WorkspacePosition = int2(792, -242);
+	WorkspacePosition = int2(770, -242);
 }
 CParticleNodePinOut	$EC84D339
 {
@@ -3980,7 +3883,7 @@ CParticleNodePassThrough	$125230CB
 	OutputPins = {
 		"$E7F879F5",
 	};
-	WorkspacePosition = int2(1430, 0);
+	WorkspacePosition = int2(1430, 66);
 }
 CParticleNodePinIn	$F527E9EA
 {
@@ -4003,9 +3906,9 @@ CParticleNodeAnnotation	$C45BF55C
 	CustomName = {
 		"@eng:Spawn accumulator",
 	};
-	WorkspacePosition = int2(682, -836);
+	WorkspacePosition = int2(440, -682);
 	Color = float4(5.2156866e-01, 6.8627453e-01, 7.0196080e-01, 1.0000000e+00);
-	SelfSize = int2(836, 440);
+	SelfSize = int2(814, 242);
 }
 CParticleNodeAnnotation	$22B8D14F
 {
@@ -4657,6 +4560,7 @@ CParticleNodeTemplateExport	$00D4AAE2
 CParticleNodePinIn	$9F6B524D
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$00D4AAE2";
 }
 CParticleNodePinOut	$41590894
@@ -4762,6 +4666,7 @@ CParticleNodeTemplateExport	$F1D537BC
 CParticleNodePinIn	$1410132F
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F1D537BC";
 }
 CParticleNodePinOut	$98048A1E
@@ -4803,6 +4708,7 @@ CParticleNodeTemplateExport	$C268C439
 CParticleNodePinIn	$41852AF0
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C268C439";
 }
 CParticleNodePinOut	$1E5CAC73
@@ -4857,7 +4763,7 @@ CParticleNodePassThrough	$04801506
 	OutputPins = {
 		"$E39D6C98",
 	};
-	WorkspacePosition = int2(924, -308);
+	WorkspacePosition = int2(902, -308);
 }
 CParticleNodePinIn	$313C3541
 {
@@ -5114,6 +5020,7 @@ CParticleNodeTemplateExport	$C072C98D
 CParticleNodePinIn	$F8EE30D4
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$C072C98D";
 }
 CParticleNodePinOut	$52697627
@@ -5140,6 +5047,7 @@ CParticleNodeTemplateExport	$256FAC76
 CParticleNodePinIn	$033D718A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$256FAC76";
 }
 CParticleNodePinOut	$4092CA15
@@ -5482,7 +5390,7 @@ CParticleNodeArithmetic	$00BEF5DD
 	OutputPins = {
 		"$DD84822E",
 	};
-	WorkspacePosition = int2(792, -154);
+	WorkspacePosition = int2(770, -154);
 	Operation = Or;
 }
 CParticleNodePinIn	$3FC3A1A4
@@ -5560,6 +5468,7 @@ CParticleNodeTemplateExport	$32F31C2D
 CParticleNodePinIn	$A9FB2F35
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$32F31C2D";
 }
 CParticleNodePinOut	$A9B0504B
@@ -5722,6 +5631,7 @@ CParticleNodeTemplateExport	$3E130D02
 CParticleNodePinIn	$8774EF8A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$3E130D02";
 }
 CParticleNodePinOut	$5050C599
@@ -5917,6 +5827,7 @@ CParticleNodeTemplateExport	$F5EA07A0
 CParticleNodePinIn	$00389649
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$F5EA07A0";
 }
 CParticleNodePinOut	$5B5C3395
@@ -6159,6 +6070,7 @@ CParticleNodeTemplateExport	$5A510783
 CParticleNodePinIn	$191E85A9
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$5A510783";
 }
 CParticleNodePinOut	$ED210C2E
@@ -6200,7 +6112,7 @@ CParticleNodeTemplate	$C3244010
 	OutputPins = {
 		"$A26207D8",
 	};
-	WorkspacePosition = int2(726, 308);
+	WorkspacePosition = int2(770, 308);
 	SubGraphName = "_PrepareSpawnMetric";
 }
 CParticleNodePinIn	$E178D203
@@ -6271,9 +6183,9 @@ CParticleNodeAnnotation	$D970BB07
 	CustomName = {
 		"@eng:Spawn metric",
 	};
-	WorkspacePosition = int2(374, 220);
+	WorkspacePosition = int2(440, 220);
 	Color = float4(4.0784317e-01, 6.8235296e-01, 3.9215690e-01, 1.0000000e+00);
-	SelfSize = int2(880, 264);
+	SelfSize = int2(814, 264);
 }
 CParticleNodePassThrough	$A558358C
 {
@@ -6805,7 +6717,7 @@ CParticleNodePassThrough	$0D51D66F
 	OutputPins = {
 		"$628BA99D",
 	};
-	WorkspacePosition = int2(1430, 44);
+	WorkspacePosition = int2(1430, 110);
 }
 CParticleNodePinIn	$7EB164DE
 {
@@ -6831,8 +6743,9 @@ CParticleNodeAnnotation	$16CC31DC
 	Description = {
 		"@eng:$(Graph.Description)\\n\\nThe graph computes how many events should be pulsed this frame based on the chosen spawn metric, and uses the <c>EventGenerator</c> node to pulse those events, then proceeds to append various payloads before piping the event stream out.",
 	};
-	WorkspacePosition = int2(-748, -726);
-	SelfSize = int2(836, 572);
+	WorkspacePosition = int2(-748, -858);
+	PostIt = true;
+	SelfSize = int2(836, 704);
 }
 CParticleNodePassThrough	$D279714D
 {
@@ -7058,6 +6971,7 @@ CParticleNodeTemplateExport	$AF25EEE5
 CParticleNodePinIn	$E4B4B52A
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$AF25EEE5";
 }
 CParticleNodePinOut	$7A5BA301
@@ -7100,5 +7014,97 @@ CParticleNodePinOut	$1CD3ACDD
 	Owner = "$2565BAAE";
 	ConnectedPins = {
 		"$F55E532D",
+	};
+}
+CParticleNodeScript	$0DFB156E
+{
+	CustomName = {
+		"@eng:Accumulator",
+	};
+	InputPins = {
+		"$DE344E43",
+	};
+	OutputPins = {
+		"$0EC020CE",
+	};
+	WorkspacePosition = int2(770, -594);
+	Expression = "// Build the int2 accumuator expected by the event generator node
+// by packing the raw bits of the spawn fraction, and the initial emitted count:
+
+int		initialEmittedCount = 0;
+float	initialSpawnFraction = 1.0 - FirstSpawnDelay;
+InitialAccum = int2(asint(initialSpawnFraction), initialEmittedCount);
+";
+}
+CParticleNodePinIn	$DE344E43
+{
+	SelfName = "FirstSpawnDelay";
+	Type = float;
+	Owner = "$0DFB156E";
+	BaseType = float;
+	ConnectedPins = {
+		"$D522ECB3",
+	};
+}
+CParticleNodePinOut	$0EC020CE
+{
+	SelfName = "InitialAccum";
+	Type = int2;
+	Owner = "$0DFB156E";
+	BaseType = int2;
+	ConnectedPins = {
+		"$CB39ABE3",
+	};
+}
+CParticleNodePassThrough	$B26DC62D
+{
+	InputPins = {
+		"$CB39ABE3",
+	};
+	OutputPins = {
+		"$5CE5016D",
+	};
+	WorkspacePosition = int2(1232, -572);
+}
+CParticleNodePinIn	$CB39ABE3
+{
+	SelfName = "Value";
+	Owner = "$B26DC62D";
+	ConnectedPins = {
+		"$0EC020CE",
+	};
+}
+CParticleNodePinOut	$5CE5016D
+{
+	SelfName = "Value";
+	Owner = "$B26DC62D";
+	ConnectedPins = {
+		"$E7839FE1",
+	};
+}
+CParticleNodePassThrough	$4DEFB5C8
+{
+	InputPins = {
+		"$E7839FE1",
+	};
+	OutputPins = {
+		"$BE85E8A8",
+	};
+	WorkspacePosition = int2(1342, -572);
+}
+CParticleNodePinIn	$E7839FE1
+{
+	SelfName = "Value";
+	Owner = "$4DEFB5C8";
+	ConnectedPins = {
+		"$5CE5016D",
+	};
+}
+CParticleNodePinOut	$BE85E8A8
+{
+	SelfName = "Value";
+	Owner = "$4DEFB5C8";
+	ConnectedPins = {
+		"$25928F84",
 	};
 }
