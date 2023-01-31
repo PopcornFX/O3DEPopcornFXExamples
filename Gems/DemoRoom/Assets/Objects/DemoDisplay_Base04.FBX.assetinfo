@@ -6,13 +6,33 @@
             "name": "DemoDisplay_Base04",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_BaseRoom.SM_BaseRoom_1"
+                    "RootNode.SM_BaseRoom"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_BaseRoom",
-                    "RootNode.SM_BaseRoom.SM_BaseRoom_2"
+                    "RootNode.SM_BaseRoom.transform",
+                    "RootNode.SM_BaseRoom.custom_properties",
+                    "RootNode.SM_BaseRoom.UV0",
+                    "RootNode.SM_BaseRoom.Material #248",
+                    "RootNode.SM_BaseRoom.Material #245",
+                    "RootNode.SM_BaseRoom.Material #247",
+                    "RootNode.SM_BaseRoom.Material #246 Slot #4"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "Material #248"
+                    },
+                    {
+                        "Name": "Material #245"
+                    },
+                    {
+                        "Name": "Material #247"
+                    },
+                    {
+                        "Name": "Material #246 Slot #4"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -33,11 +53,15 @@
             "name": "DemoDisplay_Base04",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_BaseRoom",
-                    "RootNode.SM_BaseRoom.SM_BaseRoom_1",
-                    "RootNode.SM_BaseRoom.SM_BaseRoom_2"
+                    "RootNode.SM_BaseRoom.transform",
+                    "RootNode.SM_BaseRoom.custom_properties",
+                    "RootNode.SM_BaseRoom.UV0",
+                    "RootNode.SM_BaseRoom.Material #248",
+                    "RootNode.SM_BaseRoom.Material #245",
+                    "RootNode.SM_BaseRoom.Material #247",
+                    "RootNode.SM_BaseRoom.Material #246 Slot #4"
                 ]
             },
             "rules": {

@@ -6,13 +6,21 @@
             "name": "DemoDisplay_Base03",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_1"
+                    "RootNode.SM_Base_FlatWall"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_Base_FlatWall",
-                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_2"
+                    "RootNode.SM_Base_FlatWall.transform",
+                    "RootNode.SM_Base_FlatWall.custom_properties",
+                    "RootNode.SM_Base_FlatWall.UVChannel_1",
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_Base_FlatWall"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -27,11 +35,12 @@
             "name": "DemoDisplay_Base03",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_Base_FlatWall",
-                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_1",
-                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall_2"
+                    "RootNode.SM_Base_FlatWall.transform",
+                    "RootNode.SM_Base_FlatWall.custom_properties",
+                    "RootNode.SM_Base_FlatWall.UVChannel_1",
+                    "RootNode.SM_Base_FlatWall.SM_Base_FlatWall"
                 ]
             },
             "rules": {

@@ -38,13 +38,13 @@ namespace DemoRoom
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonReceiverComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("DemoRoomTriggerButtonReceiverService"));
+        provided.push_back(AZ_CRC_CE("DemoRoomTriggerButtonReceiverService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonReceiverComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("DemoRoomTriggerButtonService"));
+        incompatible.push_back(AZ_CRC_CE("DemoRoomTriggerButtonService"));
     }
     
     //////////////////////////////////////////////////////////////////////////////
@@ -66,7 +66,7 @@ namespace DemoRoom
                     //->Attribute("Icon", "Icons/Components/DemoRoomTriggerButton.svg")
                     //->Attribute("ViewportIcon", "Icons/Components/Viewport/DemoRoomTriggerButton.svg")
                     ->Attribute("AutoExpand", true)
-                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC("Game", 0x232b318c))
+                    ->Attribute("AppearsInAddComponentMenu", AZ_CRC_CE("Game"))
                     ;
             }
         }

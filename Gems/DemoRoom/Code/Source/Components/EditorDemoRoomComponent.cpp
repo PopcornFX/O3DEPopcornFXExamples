@@ -45,12 +45,12 @@ namespace DemoRoom
 
     void EditorDemoRoomComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("DemoRoomService"));
+        provided.push_back(AZ_CRC_CE("DemoRoomService"));
     }
 
     void EditorDemoRoomComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("DemoRoomService"));
+        incompatible.push_back(AZ_CRC_CE("DemoRoomService"));
     }
 
     void EditorDemoRoomComponent::GetRequiredServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& required)

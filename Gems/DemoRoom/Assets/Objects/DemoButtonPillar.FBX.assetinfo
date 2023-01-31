@@ -6,13 +6,29 @@
             "name": "DemoButtonPillar",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_Button.SM_Button_1"
+                    "RootNode.SM_Button"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_Button",
-                    "RootNode.SM_Button.SM_Button_2"
+                    "RootNode.SM_Button.transform",
+                    "RootNode.SM_Button.custom_properties",
+                    "RootNode.SM_Button.UV0",
+                    "RootNode.SM_Button.SM_Button001_Gray",
+                    "RootNode.SM_Button.SM_Button001_Black",
+                    "RootNode.SM_Button.SM_Button001_Red"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_Button001_Gray"
+                    },
+                    {
+                        "Name": "SM_Button001_Black"
+                    },
+                    {
+                        "Name": "SM_Button001_Red"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -31,11 +47,14 @@
             "name": "DemoButtonPillar",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_Button",
-                    "RootNode.SM_Button.SM_Button_1",
-                    "RootNode.SM_Button.SM_Button_2"
+                    "RootNode.SM_Button.transform",
+                    "RootNode.SM_Button.custom_properties",
+                    "RootNode.SM_Button.UV0",
+                    "RootNode.SM_Button.SM_Button001_Gray",
+                    "RootNode.SM_Button.SM_Button001_Black",
+                    "RootNode.SM_Button.SM_Button001_Red"
                 ]
             },
             "rules": {

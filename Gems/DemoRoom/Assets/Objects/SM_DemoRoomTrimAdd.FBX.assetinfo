@@ -6,13 +6,21 @@
             "name": "SM_DemoRoomTrimAdd",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_1"
+                    "RootNode.SM_DemoRoomTrimAdd"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_DemoRoomTrimAdd",
-                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_2"
+                    "RootNode.SM_DemoRoomTrimAdd.transform",
+                    "RootNode.SM_DemoRoomTrimAdd.custom_properties",
+                    "RootNode.SM_DemoRoomTrimAdd.UVChannel_1",
+                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_Color"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_DemoRoomTrimAdd_Color"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -27,11 +35,12 @@
             "name": "SM_DemoRoomTrimAdd",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_DemoRoomTrimAdd",
-                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_1",
-                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_2"
+                    "RootNode.SM_DemoRoomTrimAdd.transform",
+                    "RootNode.SM_DemoRoomTrimAdd.custom_properties",
+                    "RootNode.SM_DemoRoomTrimAdd.UVChannel_1",
+                    "RootNode.SM_DemoRoomTrimAdd.SM_DemoRoomTrimAdd_Color"
                 ]
             },
             "rules": {

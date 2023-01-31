@@ -1,4 +1,4 @@
-Version = 2.13.0.13771;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -141,6 +141,7 @@ CParticleNodeTemplate	$5A5BD1DE
 		"$8BA95130",
 		"$8058C653",
 		"$E32FF502",
+		"$53B64A0F",
 		"$59DA6D2D",
 		"$FE831814",
 		"$A0A649A7",
@@ -475,8 +476,8 @@ CParticleNodeTemplate	$81AA2F2D
 		"$BFDE6A09",
 		"$ED471889",
 		"$D146DD62",
-		"$081F6707",
 		"$CA74DBE5",
+		"$081F6707",
 		"$C99ACCFF",
 		"$EB89342C",
 		"$D28E95AF",
@@ -904,6 +905,7 @@ CParticleNodeTemplate	$F00F8158
 		"$F691A050",
 		"$32042D9F",
 		"$A3C15349",
+		"$D4548A44",
 	};
 	OutputPins = {
 		"$7EF44F78",
@@ -1508,6 +1510,7 @@ CParticleNodeTemplateExport	$E117C4B9
 CParticleNodePinIn	$ABFF9BAD
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$E117C4B9";
 }
 CParticleNodePinOut	$B307B6FC
@@ -1554,6 +1557,7 @@ CParticleNodeTemplateExport	$80C0AF20
 CParticleNodePinIn	$8DC02179
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$80C0AF20";
 }
 CParticleNodePinOut	$61126A6A
@@ -1586,10 +1590,13 @@ CParticleNodeGraph	$55FD02E7
 CParticleNodeTemplate	$03E95363
 {
 	InputPins = {
-		"$D9374702",
 		"$BBDDD045",
 		"$FAF85684",
+		"$D9374702",
 		"$815F85E5",
+		"$4E608996",
+		"$D7D43EE4",
+		"$64ED38EB",
 		"$3C4DF703",
 	};
 	OutputPins = {
@@ -1629,7 +1636,7 @@ CParticleNodePinIn	$FAF85684
 }
 CParticleNodePinIn	$815F85E5
 {
-	SelfName = "Stop";
+	SelfName = "Pause";
 	Type = bool;
 	Owner = "$03E95363";
 	BaseType = bool;
@@ -1718,6 +1725,7 @@ CParticleNodeTemplateExport	$26B52FF8
 CParticleNodePinIn	$60BE3CA5
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$26B52FF8";
 }
 CParticleNodePinOut	$C8C77D63
@@ -1766,6 +1774,7 @@ CParticleNodeTemplateExport	$9D8B9393
 CParticleNodePinIn	$D3A5BEE1
 {
 	SelfName = "DefaultValue";
+	Visible = false;
 	Owner = "$9D8B9393";
 }
 CParticleNodePinOut	$1F0C16FB
@@ -1974,6 +1983,7 @@ CParticleNodeTemplate	$EFF3C641
 	};
 	OutputPins = {
 		"$64967489",
+		"$2B51BF94",
 	};
 	WorkspacePosition = int2(374, -286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -2285,12 +2295,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$D78BF510",
 		"$BA90A06A",
 		"$39D1657D",
+		"$8058D1E8",
 		"$B755D1F6",
 		"$5E033361",
 		"$CDE06E09",
 		"$7018AB5A",
 		"$6E40BE20",
 		"$12601F50",
+		"$B827D5D1",
 	};
 	WorkspacePosition = int2(1914, -66);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
@@ -2302,12 +2314,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"EnableRendering",
 		"Lit",
 		"LegacyLit",
+		"Atlas",
 		"MeshAtlas",
 		"AlphaRemap",
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
 		"UseVertexColors",
+		"MeshLOD",
 	};
 }
 CParticleNodePinIn	$AEBE7241
@@ -2562,4 +2576,66 @@ CParticleNodePinOut	$F9267975
 	ConnectedPins = {
 		"$89E2811C",
 	};
+}
+CParticleNodePinIn	$8058D1E8
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$B827D5D1
+{
+	SelfName = "MeshLOD";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$4E608996
+{
+	SelfName = "Stop";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinIn	$D7D43EE4
+{
+	SelfName = "Restart";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinIn	$64ED38EB
+{
+	SelfName = "Reset";
+	Type = bool;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = bool;
+}
+CParticleNodePinOut	$2B51BF94
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$EFF3C641";
+}
+CParticleNodePinIn	$D4548A44
+{
+	SelfName = "Clamp";
+	Type = bool;
+	Visible = false;
+	Owner = "$F00F8158";
+	BaseType = bool;
+}
+CParticleNodePinIn	$53B64A0F
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
 }

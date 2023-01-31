@@ -6,13 +6,34 @@
             "name": "SM_DemoDisplay03_Combined",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode. SM_DemoDisplay03_Combined. SM_DemoDisplay03_Combined_1"
+                    "RootNode. SM_DemoDisplay03_Combined"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode. SM_DemoDisplay03_Combined",
-                    "RootNode. SM_DemoDisplay03_Combined. SM_DemoDisplay03_Combined_2"
+                    "RootNode. SM_DemoDisplay03_Combined.transform",
+                    "RootNode. SM_DemoDisplay03_Combined.custom_properties",
+                    "RootNode. SM_DemoDisplay03_Combined.UV0",
+                    "RootNode. SM_DemoDisplay03_Combined.UV1",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #207",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #208",
+                    "RootNode. SM_DemoDisplay03_Combined.SM_Base_FlatWall",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #451"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "Material #207"
+                    },
+                    {
+                        "Name": "Material #208"
+                    },
+                    {
+                        "Name": "SM_Base_FlatWall"
+                    },
+                    {
+                        "Name": "Material #451"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -33,11 +54,16 @@
             "name": "SM_DemoDisplay03_Combined",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode. SM_DemoDisplay03_Combined",
-                    "RootNode. SM_DemoDisplay03_Combined. SM_DemoDisplay03_Combined_1",
-                    "RootNode. SM_DemoDisplay03_Combined. SM_DemoDisplay03_Combined_2"
+                    "RootNode. SM_DemoDisplay03_Combined.transform",
+                    "RootNode. SM_DemoDisplay03_Combined.custom_properties",
+                    "RootNode. SM_DemoDisplay03_Combined.UV0",
+                    "RootNode. SM_DemoDisplay03_Combined.UV1",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #207",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #208",
+                    "RootNode. SM_DemoDisplay03_Combined.SM_Base_FlatWall",
+                    "RootNode. SM_DemoDisplay03_Combined.Material #451"
                 ]
             },
             "rules": {

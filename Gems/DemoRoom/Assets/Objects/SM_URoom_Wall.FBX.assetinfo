@@ -6,13 +6,21 @@
             "name": "SM_URoom_Wall",
             "NodeSelectionList": {
                 "selectedNodes": [
-                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_1"
+                    "RootNode.SM_URoom_Wall"
                 ],
                 "unselectedNodes": [
-                    {},
                     "RootNode",
-                    "RootNode.SM_URoom_Wall",
-                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_2"
+                    "RootNode.SM_URoom_Wall.transform",
+                    "RootNode.SM_URoom_Wall.custom_properties",
+                    "RootNode.SM_URoom_Wall.UVChannel_1",
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_Gray"
+                ]
+            },
+            "PhysicsMaterialSlots": {
+                "Slots": [
+                    {
+                        "Name": "SM_URoom_Wall_Gray"
+                    }
                 ]
             },
             "MaterialSlots": [
@@ -27,11 +35,12 @@
             "name": "SM_URoom_Wall",
             "nodeSelectionList": {
                 "selectedNodes": [
-                    {},
                     "RootNode",
                     "RootNode.SM_URoom_Wall",
-                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_1",
-                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_2"
+                    "RootNode.SM_URoom_Wall.transform",
+                    "RootNode.SM_URoom_Wall.custom_properties",
+                    "RootNode.SM_URoom_Wall.UVChannel_1",
+                    "RootNode.SM_URoom_Wall.SM_URoom_Wall_Gray"
                 ]
             },
             "rules": {

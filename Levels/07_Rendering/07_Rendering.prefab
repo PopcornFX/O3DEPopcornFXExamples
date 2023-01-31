@@ -37,13 +37,14 @@
                 "$type": "EditorEntityIconComponent",
                 "Id": 5688118765544765547
             },
-            "Component_[6545738857812235305]": {
-                "$type": "SelectionComponent",
-                "Id": 6545738857812235305
-            },
             "Component_[7247035804068349658]": {
                 "$type": "EditorPrefabComponent",
                 "Id": 7247035804068349658
+            },
+            "Component_[8283856043474165756]": {
+                "$type": "LocalViewBookmarkComponent",
+                "Id": 8283856043474165756,
+                "LocalBookmarkFileName": "07_Rendering_76166707550.setreg"
             },
             "Component_[9307224322037797205]": {
                 "$type": "EditorLockComponent",
@@ -103,10 +104,6 @@
                     "$type": "EditorOnlyEntityComponent",
                     "Id": 17936719579205013841
                 },
-                "Component_[4903321140213222237]": {
-                    "$type": "SelectionComponent",
-                    "Id": 4903321140213222237
-                },
                 "Component_[7254478249189225497]": {
                     "$type": "EditorInspectorComponent",
                     "Id": 7254478249189225497
@@ -125,10 +122,6 @@
             "Id": "Entity_[1427314958250]",
             "Name": "Generated",
             "Components": {
-                "Component_[11859331070929168289]": {
-                    "$type": "SelectionComponent",
-                    "Id": 11859331070929168289
-                },
                 "Component_[16967962123299224725]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 16967962123299224725,
@@ -190,10 +183,6 @@
                         "Entity_[1440199860138]",
                         "Entity_[1444494827434]"
                     ]
-                },
-                "Component_[13739537019037864656]": {
-                    "$type": "SelectionComponent",
-                    "Id": 13739537019037864656
                 },
                 "Component_[1526997076122877870]": {
                     "$type": "EditorOnlyEntityComponent",
@@ -281,7 +270,6 @@
                                     "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
                                     "subId": 275336492
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_uroom_wall.azmodel"
                             }
                         }
@@ -295,6 +283,13 @@
                     "$type": "EditorColliderComponent",
                     "Id": 1452804974624672104,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "SM_URoom_Wall_Gray"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {}
@@ -363,10 +358,6 @@
                 "Component_[6036209579104876201]": {
                     "$type": "EditorVisibilityComponent",
                     "Id": 6036209579104876201
-                },
-                "Component_[9935994595865290423]": {
-                    "$type": "SelectionComponent",
-                    "Id": 9935994595865290423
                 }
             }
         },
@@ -377,10 +368,6 @@
                 "Component_[11010394042694731863]": {
                     "$type": "EditorOnlyEntityComponent",
                     "Id": 11010394042694731863
-                },
-                "Component_[12089007494814318738]": {
-                    "$type": "SelectionComponent",
-                    "Id": 12089007494814318738
                 },
                 "Component_[15094159098244357276]": {
                     "$type": "EditorInspectorComponent",
@@ -398,6 +385,16 @@
                     "$type": "EditorColliderComponent",
                     "Id": 2575465409917797958,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #402"
+                                },
+                                {
+                                    "Name": "Material #403"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -522,7 +519,6 @@
                                     "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
                                     "subId": 279240912
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroomtrim.azmodel"
                             }
                         }
@@ -538,6 +534,13 @@
                     "$type": "EditorColliderComponent",
                     "Id": 10023999814305394659,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -655,10 +658,6 @@
                     "$type": "EditorEntitySortComponent",
                     "Id": 1844695812318204671
                 },
-                "Component_[5636552002155807540]": {
-                    "$type": "SelectionComponent",
-                    "Id": 5636552002155807540
-                },
                 "Component_[5790559052272388588]": {
                     "$type": "EditorInspectorComponent",
                     "Id": 5790559052272388588
@@ -678,7 +677,6 @@
                                     "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
                                     "subId": 277271043
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroomclamp.azmodel"
                             }
                         }
@@ -739,10 +737,6 @@
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 7422054001870936976
                 },
-                "Component_[7632477987668223521]": {
-                    "$type": "SelectionComponent",
-                    "Id": 7632477987668223521
-                },
                 "Component_[8866966299206556644]": {
                     "$type": "EditorLockComponent",
                     "Id": 8866966299206556644
@@ -798,10 +792,6 @@
                 "Component_[18311375037661163956]": {
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 18311375037661163956
-                },
-                "Component_[3364096051994915203]": {
-                    "$type": "SelectionComponent",
-                    "Id": 3364096051994915203
                 },
                 "Component_[569727124177679240]": {
                     "$type": "AZ::Render::EditorAreaLightComponent",
@@ -899,10 +889,6 @@
                     "$type": "EditorVisibilityComponent",
                     "Id": 12412932151716229545
                 },
-                "Component_[13017281151454466007]": {
-                    "$type": "SelectionComponent",
-                    "Id": 13017281151454466007
-                },
                 "Component_[16323267829574837098]": {
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 16323267829574837098
@@ -919,6 +905,16 @@
                     "$type": "EditorColliderComponent",
                     "Id": 3921032861524504549,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #399"
+                                },
+                                {
+                                    "Name": "Material #398"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -966,7 +962,6 @@
                                     "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
                                     "subId": 284767730
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroomu.azmodel"
                             }
                         }
@@ -1037,6 +1032,13 @@
                     "$type": "EditorColliderComponent",
                     "Id": 1414826380013862519,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #289"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {}
@@ -1107,15 +1109,10 @@
                                     "guid": "{4CB00DC9-EE5D-5F48-BC63-C0C25FBE075E}",
                                     "subId": 279528232
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroombackwall.azmodel"
                             }
                         }
                     }
-                },
-                "Component_[365866635005223039]": {
-                    "$type": "SelectionComponent",
-                    "Id": 365866635005223039
                 },
                 "Component_[7818146077927816628]": {
                     "$type": "EditorVisibilityComponent",
@@ -1176,10 +1173,6 @@
                     "$type": "EditorEntityIconComponent",
                     "Id": 6862756378007092340
                 },
-                "Component_[8070475784870689692]": {
-                    "$type": "SelectionComponent",
-                    "Id": 8070475784870689692
-                },
                 "Component_[8975069808474115938]": {
                     "$type": "EditorVisibilityComponent",
                     "Id": 8975069808474115938
@@ -1205,10 +1198,6 @@
                             0.0
                         ]
                     }
-                },
-                "Component_[11389479298182896024]": {
-                    "$type": "SelectionComponent",
-                    "Id": 11389479298182896024
                 },
                 "Component_[14057215405289665232]": {
                     "$type": "EditorMaterialComponent",
@@ -1269,7 +1258,6 @@
                                     "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
                                     "subId": 275336492
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_uroom_wall.azmodel"
                             }
                         }
@@ -1287,6 +1275,13 @@
                     "$type": "EditorColliderComponent",
                     "Id": 5838987537644792105,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {}
@@ -1345,14 +1340,20 @@
                     "$type": "EditorEntityIconComponent",
                     "Id": 10793938034307134756
                 },
-                "Component_[10827486989685711030]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10827486989685711030
-                },
                 "Component_[12640309451247435067]": {
                     "$type": "EditorColliderComponent",
                     "Id": 12640309451247435067,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #402"
+                                },
+                                {
+                                    "Name": "Material #403"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -1409,7 +1410,6 @@
                                     "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
                                     "subId": 279240912
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroomtrim.azmodel"
                             }
                         }
@@ -1588,7 +1588,6 @@
                                     "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
                                     "subId": 277271043
                                 },
-                                "loadBehavior": "PreLoad",
                                 "assetHint": "objects/sm_demoroomclamp.azmodel"
                             }
                         }
@@ -1606,14 +1605,20 @@
                     "$type": "EditorLockComponent",
                     "Id": 4978569659016162735
                 },
-                "Component_[5703074244219890714]": {
-                    "$type": "SelectionComponent",
-                    "Id": 5703074244219890714
-                },
                 "Component_[7519766988024213826]": {
                     "$type": "EditorColliderComponent",
                     "Id": 7519766988024213826,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #396"
+                                },
+                                {
+                                    "Name": "Material #394"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -1653,10 +1658,6 @@
             "Id": "Entity_[14820138633447]",
             "Name": "Billboard Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -1681,21 +1682,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{557FDEA1-B790-550A-8B89-86004F388337}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -1704,6 +1690,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{557FDEA1-B790-550A-8B89-86004F388337}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -1771,10 +1772,6 @@
             "Id": "Entity_[19544602659047]",
             "Name": "Ribbon Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -1799,21 +1796,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{BBA6996D-5243-54BC-BBC0-11E2B529696F}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -1822,6 +1804,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{BBA6996D-5243-54BC-BBC0-11E2B529696F}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -1889,10 +1886,6 @@
             "Id": "Entity_[21056431147239]",
             "Name": "Mesh Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -1917,21 +1910,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{18832E71-9997-563A-82E6-DC33763460FE}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -1940,6 +1918,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{18832E71-9997-563A-82E6-DC33763460FE}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -2007,10 +2000,6 @@
             "Id": "Entity_[24092973025511]",
             "Name": "Triangle Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2035,21 +2024,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{23CD25AD-F803-5CC7-AB6F-ADD4EB8A2FCD}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -2058,6 +2032,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{23CD25AD-F803-5CC7-AB6F-ADD4EB8A2FCD}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -2125,10 +2114,6 @@
             "Id": "Entity_[25677815957735]",
             "Name": "Light Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2153,21 +2138,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{7C7685B6-7802-51B5-8D23-2FD51B975F4A}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -2176,6 +2146,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{7C7685B6-7802-51B5-8D23-2FD51B975F4A}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -2243,10 +2228,6 @@
             "Id": "Entity_[25725060597991]",
             "Name": "Sound Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2271,21 +2252,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{0E48C1BD-F68B-5FC6-88E8-7639078EBE20}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -2294,6 +2260,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{0E48C1BD-F68B-5FC6-88E8-7639078EBE20}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -2361,10 +2342,6 @@
             "Id": "Entity_[27357148170471]",
             "Name": "Decal Icon",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2389,21 +2366,6 @@
                                     },
                                     "Value": {
                                         "PropertyOverrides": {
-                                            "baseColor.textureMap": {
-                                                "$type": "AssetId",
-                                                "Value": {
-                                                    "guid": "{80FEF686-1340-5EEB-9B8B-941320A23531}",
-                                                    "subId": 1000
-                                                }
-                                            },
-                                            "baseColor.textureBlendMode": {
-                                                "$type": "unsigned int",
-                                                "Value": 0
-                                            },
-                                            "opacity.mode": {
-                                                "$type": "unsigned int",
-                                                "Value": 2
-                                            },
                                             "baseColor.color": {
                                                 "$type": "Color",
                                                 "Value": [
@@ -2412,6 +2374,21 @@
                                                     0.0,
                                                     1.0
                                                 ]
+                                            },
+                                            "baseColor.textureBlendMode": {
+                                                "$type": "unsigned int",
+                                                "Value": 0
+                                            },
+                                            "baseColor.textureMap": {
+                                                "$type": "AssetId",
+                                                "Value": {
+                                                    "guid": "{80FEF686-1340-5EEB-9B8B-941320A23531}",
+                                                    "subId": 1000
+                                                }
+                                            },
+                                            "opacity.mode": {
+                                                "$type": "unsigned int",
+                                                "Value": 2
                                             }
                                         }
                                     }
@@ -2479,10 +2456,6 @@
             "Id": "Entity_[32313540430055]",
             "Name": "Light Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2539,10 +2512,6 @@
             "Id": "Entity_[32455274350823]",
             "Name": "Sound Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2599,10 +2568,6 @@
             "Id": "Entity_[32493929056487]",
             "Name": "Decal Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2659,10 +2624,6 @@
             "Id": "Entity_[32532583762151]",
             "Name": "Triangle Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2719,10 +2680,6 @@
             "Id": "Entity_[32571238467815]",
             "Name": "Mesh Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2779,10 +2736,6 @@
             "Id": "Entity_[32609893173479]",
             "Name": "Ribbon Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2839,10 +2792,6 @@
             "Id": "Entity_[32648547879143]",
             "Name": "Billboard Text",
             "Components": {
-                "Component_[10038339055867873818]": {
-                    "$type": "SelectionComponent",
-                    "Id": 10038339055867873818
-                },
                 "Component_[11824733852849504331]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 11824733852849504331
@@ -2922,10 +2871,6 @@
                     "Lights": true,
                     "Double Height": true
                 },
-                "Component_[14167357563782666679]": {
-                    "$type": "SelectionComponent",
-                    "Id": 14167357563782666679
-                },
                 "Component_[16125298065483064397]": {
                     "$type": "EditorEntityIconComponent",
                     "Id": 16125298065483064397
@@ -2997,10 +2942,6 @@
                     "$type": "EditorLockComponent",
                     "Id": 17890433335801081566
                 },
-                "Component_[4699276626342649294]": {
-                    "$type": "SelectionComponent",
-                    "Id": 4699276626342649294
-                },
                 "Component_[7021539043065981667]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 7021539043065981667
@@ -3019,10 +2960,6 @@
             "Id": "Entity_[4692605749479]",
             "Name": "Stand_1",
             "Components": {
-                "Component_[12394086758913233982]": {
-                    "$type": "SelectionComponent",
-                    "Id": 12394086758913233982
-                },
                 "Component_[13075730871866209312]": {
                     "$type": "EditorLockComponent",
                     "Id": 13075730871866209312
@@ -3121,6 +3058,22 @@
                     "$type": "EditorColliderComponent",
                     "Id": 13708728077809552800,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #207"
+                                },
+                                {
+                                    "Name": "Material #208"
+                                },
+                                {
+                                    "Name": "SM_Base_FlatWall"
+                                },
+                                {
+                                    "Name": "Material #451"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {},
@@ -3174,10 +3127,6 @@
                             }
                         }
                     }
-                },
-                "Component_[18139431598172602758]": {
-                    "$type": "SelectionComponent",
-                    "Id": 18139431598172602758
                 },
                 "Component_[2189742485429521065]": {
                     "$type": "EditorLockComponent",
@@ -3374,6 +3323,13 @@
                     "$type": "EditorColliderComponent",
                     "Id": 2763752284351109589,
                     "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "SM_NamePlate"
+                                }
+                            ]
+                        },
                         "MaterialSelection": {
                             "MaterialIds": [
                                 {}
@@ -3401,10 +3357,6 @@
                             }
                         }
                     }
-                },
-                "Component_[4411805196912933193]": {
-                    "$type": "SelectionComponent",
-                    "Id": 4411805196912933193
                 },
                 "Component_[5235332398367588346]": {
                     "$type": "EditorEntitySortComponent",
@@ -3489,10 +3441,6 @@
                 "Component_[15655496213331463418]": {
                     "$type": "EditorVisibilityComponent",
                     "Id": 15655496213331463418
-                },
-                "Component_[17884897167840164354]": {
-                    "$type": "SelectionComponent",
-                    "Id": 17884897167840164354
                 },
                 "Component_[18000938441523020310]": {
                     "$type": "EditorDisabledCompositionComponent",

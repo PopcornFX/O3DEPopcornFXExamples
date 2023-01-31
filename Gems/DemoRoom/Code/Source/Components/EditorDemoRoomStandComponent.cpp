@@ -62,7 +62,7 @@ namespace DemoRoom
                     ->Attribute(AZ::Edit::Attributes::Category, "DemoRoom")
                     //->Attribute(AZ::Edit::Attributes::Icon, "Icons/Components/DemoRoomStand.svg")
                     //->Attribute(AZ::Edit::Attributes::ViewportIcon, "Icons/Components/Viewport/DemoRoomStand.svg")
-                    ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC("Game", 0x232b318c))
+                    ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC_CE("Game"))
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &EditorDemoRoomStandComponent::m_type, "Type", "Stand Type.")
                     ->EnumAttribute(StandType::Type1, "Type 1")
                     ->EnumAttribute(StandType::Type2, "Type 2")
@@ -88,12 +88,12 @@ namespace DemoRoom
 
     void EditorDemoRoomStandComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("DemoRoomStandService"));
+        provided.push_back(AZ_CRC_CE("DemoRoomStandService"));
     }
 
     void EditorDemoRoomStandComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("DemoRoomStandService"));
+        incompatible.push_back(AZ_CRC_CE("DemoRoomStandService"));
     }
 
     void EditorDemoRoomStandComponent::GetRequiredServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& required)

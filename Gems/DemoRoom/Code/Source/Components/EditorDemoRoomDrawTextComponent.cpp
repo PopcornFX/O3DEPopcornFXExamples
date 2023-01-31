@@ -33,7 +33,7 @@ namespace DemoRoom
                     "DemoRoom DrawText", "Setup a 3D text")
                     ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                     ->Attribute(AZ::Edit::Attributes::Category, "DemoRoom")
-                    ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC("Game"))
+                    ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC_CE("Game"))
                     ->DataElement(AZ::Edit::UIHandlers::MultiLineEdit, &EditorDemoRoomDrawTextComponent::m_text, "Text", "Text to display.")
                     ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorDemoRoomDrawTextComponent::OnPropertyUpdate)
                     ->DataElement(AZ::Edit::UIHandlers::Color, &EditorDemoRoomDrawTextComponent::m_color, "Color", "Color of the text to display.")
