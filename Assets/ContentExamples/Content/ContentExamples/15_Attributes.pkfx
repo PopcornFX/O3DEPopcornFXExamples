@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -28,18 +28,17 @@ CParticleNodeGraph	$42E16C02
 		"$8DAC3545",
 		"$04495BA3",
 		"$1D5FEA1A",
-		"$D49DDA8B",
 		"$1A5FCBB8",
 	};
-	WorkspacePosition = int2(81, 2);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(11, -12);
+	WorkspaceZoom = -6;
 }
 CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(0.0000000e+00, 2.2221701e+00, 5.5139499e+00);
-	StartCameraOrientation = float3(2.1502452e-01, -1.3438998e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.0500000e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeRendererBillboard	$8F7A985A
@@ -78,7 +77,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$A11F5972",
 	};
 	WorkspacePosition = int2(946, -88);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -136,7 +135,7 @@ CParticleNodeSetLife	$D734A95F
 	InputPins = {
 		"$3B3DDE67",
 	};
-	WorkspacePosition = int2(-792, -264);
+	WorkspacePosition = int2(-726, -264);
 }
 CParticleNodePinIn	$3B3DDE67
 {
@@ -276,8 +275,8 @@ CParticleNodeGraph	$81861AB7
 		"$7A95A970",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-125, -73);
-	WorkspaceZoom = -1;
+	WorkspacePosition = int2(-100, -49);
+	WorkspaceZoom = -5;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -327,6 +326,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$077A5E6A",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -770,12 +770,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -6.8362546e-01, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -8.0000001e-01, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -1136,7 +1137,7 @@ CParticleNodeTemplate	$5179248F
 		"$929C8C3D",
 		"$D8521D77",
 	};
-	WorkspacePosition = int2(-792, -110);
+	WorkspacePosition = int2(-726, -110);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
 	SubGraphName = "VortexVelocity";
 }
@@ -1242,7 +1243,7 @@ CParticleNodeMathFunction2	$0442DBB9
 	OutputPins = {
 		"$DCE7E93F",
 	};
-	WorkspacePosition = int2(-1232, 154);
+	WorkspacePosition = int2(-1166, 154);
 	Function = Rand;
 }
 CParticleNodePinIn	$4C7A92B8
@@ -1312,7 +1313,7 @@ CParticleNodeTemplateExport	$F773E3E9
 	OutputPins = {
 		"$E2A0DF02",
 	};
-	WorkspacePosition = int2(-1232, 44);
+	WorkspacePosition = int2(-1166, 44);
 	ExportedName = "RotationSpeed";
 	ExportedType = float;
 	Type = Input;
@@ -1472,7 +1473,7 @@ CParticleNodeSamplerData_Shape	$95D9DA56
 	OutputPins = {
 		"$57CD53C5",
 	};
-	WorkspacePosition = int2(-1584, -110);
+	WorkspacePosition = int2(-1518, -110);
 	ResourceDesc = "$F551587E";
 }
 CParticleNodePinOut	$57CD53C5
@@ -1524,7 +1525,7 @@ CParticleNodeTemplate	$6B48A472
 		"$08EB59FC",
 		"$59FFA990",
 	};
-	WorkspacePosition = int2(-1232, -110);
+	WorkspacePosition = int2(-1166, -110);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
 	SubGraphName = "ShapeSample";
 }
@@ -2072,7 +2073,7 @@ CParticleNodePinIn	$7A530EEC
 	Owner = "$ADE576EF";
 	BaseType = float4;
 	ConnectedPins = {
-		"$1D728460",
+		"$D004D123",
 	};
 }
 CParticleNodePinIn	$D9FCA38E
@@ -2286,7 +2287,7 @@ CParticleNodeRendererBillboard	$237957C1
 		"$AC56E2DE",
 	};
 	WorkspacePosition = int2(726, -462);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2560,7 +2561,7 @@ CParticleNodePinOut	$D004D123
 	Owner = "$5D9F3F6E";
 	ConnectedPins = {
 		"$61D82A82",
-		"$2D6C83B1",
+		"$7A530EEC",
 	};
 }
 CParticleNodePassThrough	$8DAC3545
@@ -2624,7 +2625,7 @@ CParticleNodePassThrough	$1D5FEA1A
 	OutputPins = {
 		"$E37DA584",
 	};
-	WorkspacePosition = int2(814, -330);
+	WorkspacePosition = int2(902, -330);
 }
 CParticleNodePinIn	$DDC58038
 {
@@ -2640,32 +2641,6 @@ CParticleNodePinOut	$E37DA584
 	Owner = "$1D5FEA1A";
 	ConnectedPins = {
 		"$6C1F011D",
-	};
-}
-CParticleNodePassThrough	$D49DDA8B
-{
-	InputPins = {
-		"$2D6C83B1",
-	};
-	OutputPins = {
-		"$1D728460",
-	};
-	WorkspacePosition = int2(858, -286);
-}
-CParticleNodePinIn	$2D6C83B1
-{
-	SelfName = "Value";
-	Owner = "$D49DDA8B";
-	ConnectedPins = {
-		"$D004D123",
-	};
-}
-CParticleNodePinOut	$1D728460
-{
-	SelfName = "Value";
-	Owner = "$D49DDA8B";
-	ConnectedPins = {
-		"$7A530EEC",
 	};
 }
 CParticleNodeEventPayloadExtract	$BE845642
@@ -3141,7 +3116,7 @@ CParticleNodeTemplate	$0D6791D1
 	OutputPins = {
 		"$C82F560B",
 	};
-	WorkspacePosition = int2(-1034, -330);
+	WorkspacePosition = int2(-1122, -286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "local position to world";
 }
@@ -3177,6 +3152,7 @@ CParticleAttributeDeclaration	$0BE051AC
 	CategoryName = {
 		"@eng:Trail",
 	};
+	DefaultValueB4 = bool4(true, false, false, false);
 	Pinned = true;
 }
 CParticleNodeTemplateExport	$1A5FCBB8
@@ -3196,6 +3172,7 @@ CParticleNodeTemplateExport	$1A5FCBB8
 	CategoryName = {
 		"@eng:Trail",
 	};
+	DefaultValueB4 = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$E8DC200C
 {
@@ -3234,7 +3211,7 @@ CParticleNodeTemplateExport	$C4F1041B
 	OutputPins = {
 		"$604AA8F9",
 	};
-	WorkspacePosition = int2(-154, -132);
+	WorkspacePosition = int2(-220, -132);
 	ExportedName = "TrailType";
 	ExportedType = int;
 	Type = Input;
@@ -3294,7 +3271,7 @@ CParticleNodeRendererRibbon	$0EAA4E45
 		"$B2A9098D",
 	};
 	WorkspacePosition = int2(704, 66);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Ribbon.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
 		"Transparent",
@@ -3575,7 +3552,7 @@ CParticleNodeCompare	$FAA48717
 	OutputPins = {
 		"$0C8F58A6",
 	};
-	WorkspacePosition = int2(66, -132);
+	WorkspacePosition = int2(0, -132);
 }
 CParticleNodePinIn	$10E58277
 {
@@ -3608,7 +3585,7 @@ CParticleNodeMathFunction1	$7DA5B7C6
 	OutputPins = {
 		"$0940FD2D",
 	};
-	WorkspacePosition = int2(330, 198);
+	WorkspacePosition = int2(352, 198);
 	Function = BitwiseNot;
 }
 CParticleNodePinIn	$56EC0457
@@ -3713,7 +3690,7 @@ CParticleNodePassThrough	$B35D73D1
 	OutputPins = {
 		"$9D94255C",
 	};
-	WorkspacePosition = int2(308, -264);
+	WorkspacePosition = int2(330, -264);
 }
 CParticleNodePinIn	$EE8AA348
 {
@@ -3730,4 +3707,13 @@ CParticleNodePinOut	$9D94255C
 	ConnectedPins = {
 		"$97813259",
 	};
+}
+CParticleNodePinIn	$077A5E6A
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

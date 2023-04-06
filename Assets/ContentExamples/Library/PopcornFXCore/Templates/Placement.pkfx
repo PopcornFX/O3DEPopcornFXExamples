@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -53,6 +53,9 @@ CEditorAssetEffect	$96CD1EC2
 CParticleNodeGraph	$42E16C02
 {
 	CustomName = "SpawnOnGrid";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a regular **1D, 2D, or 3D grid**.\\n\\nAllows to easily spawn particles on a grid.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -142,6 +145,8 @@ CParticleNodeGraph	$6BF6C3A0
 		"$AD503566",
 		"$5BE0DC1B",
 		"$891F1A6C",
+		"$DFD8D3F6",
+		"$93F8C1C9",
 	};
 	WorkspacePosition = int2(-2, 62);
 	WorkspaceZoom = -7;
@@ -154,6 +159,7 @@ CParticleNodeLayer	$D6C00AD9
 	InputPins = {
 		"$EFDA194D",
 		"$9B24DD04",
+		"$98775836",
 		"$D403CB3E",
 	};
 	OutputPins = {
@@ -529,7 +535,7 @@ CParticleNodePinIn	$8D71372D
 	Owner = "$9DE14C68";
 	BaseType = float;
 	ConnectedPins = {
-		"$16135D00",
+		"$11DD76AE",
 	};
 }
 CParticleNodePinIn	$EA2359A4
@@ -762,7 +768,6 @@ CParticleNodeGraph	$D4DF65A2
 {
 	ClassType = Event;
 	Nodes = {
-		"$8B4A6C50",
 		"$500768A5",
 		"$E6F13778",
 		"$C5B01702",
@@ -783,26 +788,6 @@ CParticleNodeGraph	$D4DF65A2
 	};
 	WorkspacePosition = int2(-42, -109);
 	WorkspaceZoom = -5;
-}
-CParticleNodeEventParent	$8B4A6C50
-{
-	CustomName = {
-		"@eng:Parent event",
-	};
-	OutputPins = {
-		"$374E1088",
-	};
-	WorkspacePosition = int2(-1012, 88);
-}
-CParticleNodePinOut	$374E1088
-{
-	SelfName = "Signal";
-	Type = event;
-	Owner = "$8B4A6C50";
-	BaseType = event;
-	ConnectedPins = {
-		"$971B2D93",
-	};
 }
 CParticleNodeTemplateExport	$500768A5
 {
@@ -845,7 +830,7 @@ CParticleNodePinOut	$16135D00
 	SelfName = "Value";
 	Owner = "$006CED04";
 	ConnectedPins = {
-		"$8D71372D",
+		"$BF6C48BA",
 	};
 }
 CParticleNodePassThrough	$B773DB38
@@ -948,9 +933,6 @@ CParticleNodePinIn	$7F097648
 }
 CParticleNodeEventPayloadExtract	$E6F13778
 {
-	CustomName = {
-		"@eng:EmittedCount",
-	};
 	InputPins = {
 		"$971B2D93",
 		"$B84C2EEF",
@@ -970,9 +952,6 @@ CParticleNodePinIn	$971B2D93
 	Type = event;
 	Owner = "$E6F13778";
 	BaseType = event;
-	ConnectedPins = {
-		"$374E1088",
-	};
 }
 CParticleNodePinOut	$A8D13B76
 {
@@ -1039,6 +1018,9 @@ CParticleNodePinOut	$BB9DD4B1
 CParticleNodeGraph	$C39BD2E2
 {
 	CustomName = "SpawnOnGeosphere";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a regular **geosphere**.\\n\\nAllows to easily spawn particles on a regular sphere.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -1136,6 +1118,7 @@ CParticleNodeTemplate	$7D2AE2D5
 {
 	InputPins = {
 		"$E2381FBC",
+		"$01CD2775",
 		"$91391B2F",
 		"$405E321E",
 		"$876F8C39",
@@ -1371,10 +1354,8 @@ CParticleNodeGraph	$27C9BA22
 	Nodes = {
 		"$6E31F28D",
 		"$214F4271",
-		"$E81F34FC",
 		"$D24B8D5E",
 		"$0FC20247",
-		"$CBF71E99",
 		"$AA270D92",
 		"$CFF8F3FA",
 		"$A2B0FAEC",
@@ -1384,6 +1365,7 @@ CParticleNodeGraph	$27C9BA22
 		"$9514598E",
 		"$A8854E88",
 		"$A7F51D46",
+		"$869D96F2",
 	};
 	WorkspacePosition = int2(17, 34);
 	WorkspaceZoom = -6;
@@ -1450,7 +1432,7 @@ CParticleNodePinOut	$D697968A
 	Owner = "$214F4271";
 	BaseType = float;
 	ConnectedPins = {
-		"$BF8B64D0",
+		"$2BCAE05B",
 		"$6163326F",
 	};
 }
@@ -1462,23 +1444,6 @@ CParticleNodePinOut	$6D355315
 	BaseType = float4;
 	ConnectedPins = {
 		"$9B15C281",
-	};
-}
-CParticleNodeEventParent	$E81F34FC
-{
-	OutputPins = {
-		"$9F37396F",
-	};
-	WorkspacePosition = int2(-1452, 22);
-}
-CParticleNodePinOut	$9F37396F
-{
-	SelfName = "Signal";
-	Type = event;
-	Owner = "$E81F34FC";
-	BaseType = event;
-	ConnectedPins = {
-		"$012E6879",
 	};
 }
 CParticleNodeEventPayloadExtract	$D24B8D5E
@@ -1502,9 +1467,6 @@ CParticleNodePinIn	$012E6879
 	Type = event;
 	Owner = "$D24B8D5E";
 	BaseType = event;
-	ConnectedPins = {
-		"$9F37396F",
-	};
 }
 CParticleNodePinIn	$B66D8430
 {
@@ -1565,7 +1527,7 @@ CParticleNodePinIn	$2E65AC91
 	Owner = "$0FC20247";
 	BaseType = float;
 	ConnectedPins = {
-		"$C5C07BD3",
+		"$9DBE18CD",
 	};
 }
 CParticleNodePinIn	$B9CD8E28
@@ -1609,32 +1571,6 @@ CParticleNodePinOut	$F8B2279C
 	BaseType = event;
 	ConnectedPins = {
 		"$8D7ECB4F",
-	};
-}
-CParticleNodePassThrough	$CBF71E99
-{
-	InputPins = {
-		"$BF8B64D0",
-	};
-	OutputPins = {
-		"$C5C07BD3",
-	};
-	WorkspacePosition = int2(-528, -242);
-}
-CParticleNodePinIn	$BF8B64D0
-{
-	SelfName = "Value";
-	Owner = "$CBF71E99";
-	ConnectedPins = {
-		"$D697968A",
-	};
-}
-CParticleNodePinOut	$C5C07BD3
-{
-	SelfName = "Value";
-	Owner = "$CBF71E99";
-	ConnectedPins = {
-		"$2E65AC91",
 	};
 }
 CParticleNodeEventPayloadAppend	$AA270D92
@@ -1770,7 +1706,6 @@ CParticleNodeGraph	$EAC16162
 	ClassType = Event;
 	Nodes = {
 		"$33D046B1",
-		"$BAB48355",
 		"$3F9417AF",
 		"$5F2C5132",
 		"$0D3BA5C1",
@@ -1825,24 +1760,6 @@ CParticleNodePinIn	$0F81952B
 		"$1747A386",
 	};
 }
-CParticleNodeEventParent	$BAB48355
-{
-	OutputPins = {
-		"$EA3A0A3C",
-	};
-	WorkspacePosition = int2(-1804, 110);
-}
-CParticleNodePinOut	$EA3A0A3C
-{
-	SelfName = "Signal";
-	Type = event;
-	Owner = "$BAB48355";
-	BaseType = event;
-	ConnectedPins = {
-		"$E29EA89E",
-		"$1D3DCEDD",
-	};
-}
 CParticleNodeEventPayloadExtract	$3F9417AF
 {
 	InputPins = {
@@ -1864,9 +1781,6 @@ CParticleNodePinIn	$E29EA89E
 	Type = event;
 	Owner = "$3F9417AF";
 	BaseType = event;
-	ConnectedPins = {
-		"$EA3A0A3C",
-	};
 }
 CParticleNodePinIn	$C26604B9
 {
@@ -1915,9 +1829,6 @@ CParticleNodePinIn	$1D3DCEDD
 	Type = event;
 	Owner = "$5F2C5132";
 	BaseType = event;
-	ConnectedPins = {
-		"$EA3A0A3C",
-	};
 }
 CParticleNodePinIn	$2577F864
 {
@@ -2142,6 +2053,9 @@ CParticleNodePinOut	$739C056C
 CParticleNodeGraph	$B4C31A9F
 {
 	CustomName = "SpawnOnFibonacciSequence";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a **2D fibonnaci spiral**.\\n\\nAllows to easily spawn particles on a fibonnaci spiral.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -2250,6 +2164,7 @@ CParticleNodeTemplate	$2B3C4B36
 	};
 	InputPins = {
 		"$84648F31",
+		"$DC8CFF71",
 		"$388ED548",
 		"$1E6FF9AB",
 		"$F4A2F44A",
@@ -2411,6 +2326,9 @@ CParticleNodeLayer	$F3DA02D4
 	CustomName = {
 		"@eng:Fibonacci sequencer",
 	};
+	Description = {
+		"@eng:Generates events with transform payloads placed on a **regular circle**.\\n\\nAllows to easily spawn particles on a circle.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	InputPins = {
 		"$D8F8B027",
 		"$5C1188B8",
@@ -2458,7 +2376,6 @@ CParticleNodeGraph	$3F5F938A
 	CustomName = "Behavior";
 	ClassType = Event;
 	Nodes = {
-		"$D39B16F2",
 		"$9BA1CE7B",
 		"$3866F72E",
 		"$6F1F498F",
@@ -2473,28 +2390,10 @@ CParticleNodeGraph	$3F5F938A
 		"$BA024169",
 		"$FE651435",
 		"$FBBA0EE6",
-		"$FC8DF2CA",
 		"$2A0F0FE5",
 	};
 	WorkspacePosition = int2(203, -89);
 	WorkspaceZoom = -5;
-}
-CParticleNodeEventParent	$D39B16F2
-{
-	OutputPins = {
-		"$6A0D279D",
-	};
-	WorkspacePosition = int2(-1782, 88);
-}
-CParticleNodePinOut	$6A0D279D
-{
-	SelfName = "Signal";
-	Type = event;
-	Owner = "$D39B16F2";
-	BaseType = event;
-	ConnectedPins = {
-		"$8CAC015A",
-	};
 }
 CParticleNodeEventPayloadExtract	$9BA1CE7B
 {
@@ -2517,9 +2416,6 @@ CParticleNodePinIn	$8CAC015A
 	Type = event;
 	Owner = "$9BA1CE7B";
 	BaseType = event;
-	ConnectedPins = {
-		"$6A0D279D",
-	};
 }
 CParticleNodePinIn	$05E9AE25
 {
@@ -2780,7 +2676,7 @@ CParticleNodeGraph	$0FF81C08
 {
 	CustomName = "FibonacciSequencePlacement";
 	Description = {
-		"@eng:Given the point index and total number of points, returns a float3 containing the position of that point on a fibonacci sphere, and the float2 UV coordinates of that point",
+		"@eng:Given the point index and total number of points, returns a `float3` containing the position of that point on a **fibonacci sphere**, and the `float2` UV coordinates of that point.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -4374,6 +4270,9 @@ CParticleNodePinOut	$6736E09B
 CParticleNodeGraph	$B21F6DFA
 {
 	CustomName = "LinearGridPlacement";
+	Description = {
+		"@eng:Given the point index and total number of points, returns a `float3` containing the position of that point on a regular **1D, 2D, or 3D grid**.",
+	};
 	Public = true;
 	ClassType = Math;
 	IconKey = "Node_PointGrid";
@@ -5748,10 +5647,10 @@ CParticleNodePinIn	$4EC7E014
 CParticleNodePinIn	$F1A13667
 {
 	SelfName = "ValueB";
+	Type = int;
 	Owner = "$FBBA0EE6";
-	ConnectedPins = {
-		"$A440C455",
-	};
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueI = int4(1, 0, 0, 0);
 }
 CParticleNodePinOut	$D86651B6
 {
@@ -5761,25 +5660,12 @@ CParticleNodePinOut	$D86651B6
 		"$FF9A8EC7",
 	};
 }
-CParticleNodeConstant	$FC8DF2CA
-{
-	OutputPins = {
-		"$A440C455",
-	};
-	WorkspacePosition = int2(-1782, 462);
-	ValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$A440C455
-{
-	SelfName = "Value";
-	Owner = "$FC8DF2CA";
-	ConnectedPins = {
-		"$F1A13667",
-	};
-}
 CParticleNodeGraph	$13946196
 {
 	CustomName = "SpawnOnFibonacciSphere";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a regular **fibonnaci sphere**.\\n\\nAllows to easily spawn particles on a regular sphere.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -5797,6 +5683,9 @@ CParticleNodeGraph	$13946196
 CParticleNodeGraph	$0BD93511
 {
 	CustomName = "SpawnOnFibonacciDisk";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a regular **fibonnaci disk**.\\n\\nAllows to easily spawn particles on a regular disk.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -5865,6 +5754,7 @@ CParticleNodeTemplate	$5DAADF3C
 	};
 	InputPins = {
 		"$DDBB10AF",
+		"$2801DB95",
 		"$2909A531",
 		"$8EFBF5B9",
 		"$76977A70",
@@ -5943,6 +5833,7 @@ CParticleNodeTemplate	$53D465F7
 	};
 	InputPins = {
 		"$6A4A7086",
+		"$F5E72C22",
 		"$D6EEA348",
 		"$D9C38C18",
 		"$516490BB",
@@ -7677,6 +7568,9 @@ CParticleNodePinOut	$580C3559
 CParticleNodeGraph	$ABE6E290
 {
 	CustomName = "SpawnOnCircle";
+	Description = {
+		"@eng:Generates events with transform payloads placed on a regular **circle**.\\n\\nAllows to easily spawn particles on a regular circle.\\n\\nThe child particle layers should use `Local Position To World` nodes to properly transform the particle positions on the generated locations.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
@@ -7749,6 +7643,7 @@ CParticleNodeTemplate	$CA78875B
 	};
 	InputPins = {
 		"$C7DABBBA",
+		"$B1B76619",
 		"$ABE7C805",
 		"$CB0754AC",
 		"$E61CFADF",
@@ -7934,7 +7829,6 @@ CParticleNodeGraph	$0E2BD9B3
 	CustomName = "Behavior";
 	ClassType = Event;
 	Nodes = {
-		"$DF84D0F2",
 		"$E6394A24",
 		"$56E4E07B",
 		"$33B9B025",
@@ -7949,23 +7843,6 @@ CParticleNodeGraph	$0E2BD9B3
 	};
 	WorkspacePosition = int2(203, -89);
 	WorkspaceZoom = -5;
-}
-CParticleNodeEventParent	$DF84D0F2
-{
-	OutputPins = {
-		"$7CFC699D",
-	};
-	WorkspacePosition = int2(-1826, 88);
-}
-CParticleNodePinOut	$7CFC699D
-{
-	SelfName = "Signal";
-	Type = event;
-	Owner = "$DF84D0F2";
-	BaseType = event;
-	ConnectedPins = {
-		"$1EAAE1B7",
-	};
 }
 CParticleNodeEventPayloadExtract	$E6394A24
 {
@@ -7988,9 +7865,6 @@ CParticleNodePinIn	$1EAAE1B7
 	Type = event;
 	Owner = "$E6394A24";
 	BaseType = event;
-	ConnectedPins = {
-		"$7CFC699D",
-	};
 }
 CParticleNodePinIn	$5320B746
 {
@@ -8460,7 +8334,7 @@ CParticleNodeGraph	$CF540EF6
 {
 	CustomName = "CirclePlacement";
 	Description = {
-		"@eng:Given the point index and total number of points, returns a float3 containing the position of that point on a regular circle",
+		"@eng:Given the point index and total number of points, returns a `float3` containing the position of that point on a **regular circle**.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -11710,4 +11584,161 @@ CParticleNodePinIn	$6AF41363
 	Visible = false;
 	Owner = "$CA78875B";
 	BaseType = bool;
+}
+CParticleNodePinIn	$01CD2775
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$7D2AE2D5";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$DC8CFF71
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$2B3C4B36";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$B1B76619
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$CA78875B";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$2801DB95
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$5DAADF3C";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$F5E72C22
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$53D465F7";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeTemplateExport	$DFD8D3F6
+{
+	Description = {
+		"@eng:If `false`, events won\'t pulse.",
+	};
+	InputPins = {
+		"$9B56D90B",
+	};
+	OutputPins = {
+		"$2598985F",
+	};
+	WorkspacePosition = int2(308, -66);
+	ExportedName = "Enabled";
+	ExportedType = bool;
+	Type = Input;
+	Order = 6;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$9B56D90B
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$DFD8D3F6";
+}
+CParticleNodePinOut	$2598985F
+{
+	SelfName = "Value";
+	Owner = "$DFD8D3F6";
+	ConnectedPins = {
+		"$1CBAB39A",
+	};
+}
+CParticleNodeArithmetic	$93F8C1C9
+{
+	InputPins = {
+		"$BF6C48BA",
+		"$1CBAB39A",
+	};
+	OutputPins = {
+		"$11DD76AE",
+	};
+	WorkspacePosition = int2(528, -154);
+	Operation = Mul;
+}
+CParticleNodePinIn	$BF6C48BA
+{
+	SelfName = "Value";
+	Owner = "$93F8C1C9";
+	ConnectedPins = {
+		"$16135D00",
+	};
+}
+CParticleNodePinIn	$1CBAB39A
+{
+	SelfName = "ValueB";
+	Owner = "$93F8C1C9";
+	ConnectedPins = {
+		"$2598985F",
+	};
+}
+CParticleNodePinOut	$11DD76AE
+{
+	SelfName = "Value";
+	Owner = "$93F8C1C9";
+	ConnectedPins = {
+		"$8D71372D",
+	};
+}
+CParticleNodePinIn	$98775836
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$D6C00AD9";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePassThrough	$869D96F2
+{
+	InputPins = {
+		"$2BCAE05B",
+	};
+	OutputPins = {
+		"$9DBE18CD",
+	};
+	WorkspacePosition = int2(-374, -242);
+}
+CParticleNodePinIn	$2BCAE05B
+{
+	SelfName = "Value";
+	Owner = "$869D96F2";
+	ConnectedPins = {
+		"$D697968A",
+	};
+}
+CParticleNodePinOut	$9DBE18CD
+{
+	SelfName = "Value";
+	Owner = "$869D96F2";
+	ConnectedPins = {
+		"$2E65AC91",
+	};
 }

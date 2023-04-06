@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -2411,6 +2411,7 @@ CParticleNodeGraph	$FC3A8B0C
 		"$19C3CC35",
 		"$B7C5E6C4",
 		"$46CF6AD7",
+		"$C52ACE96",
 	};
 	WorkspacePosition = int2(60, -225);
 	WorkspaceZoom = -6;
@@ -2424,6 +2425,7 @@ CParticleNodeLayer	$4BFB40BF
 		"$3BE17EEE",
 		"$BD5D9138",
 		"$0AF23766",
+		"$9A605C30",
 		"$61CA28BB",
 		"$93D9CDE0",
 		"$B460050F",
@@ -2511,9 +2513,6 @@ CParticleNodePinOut	$346E34E8
 }
 CParticleNodeTemplateExport	$A92D01CB
 {
-	CustomName = {
-		"@eng:Localspace",
-	};
 	InputPins = {
 		"$31C28EEA",
 	};
@@ -2559,7 +2558,7 @@ CParticleNodeRendererSound	$2D43E259
 		"$22A8AC84",
 	};
 	WorkspacePosition = int2(594, 176);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Sound.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Sound.pkma";
 	RendererFeatures = {
 		"EnableRendering",
 		"GeometrySound",
@@ -2663,9 +2662,6 @@ CParticleNodePinOut	$675115AC
 }
 CParticleNodeTemplateExport	$FC594FDF
 {
-	CustomName = {
-		"@eng:Duration",
-	};
 	InputPins = {
 		"$2A232C8E",
 	};
@@ -2788,6 +2784,7 @@ CParticleNodeGraph	$6128E19F
 	Public = true;
 	ClassType = Sampler;
 	IconKey = "Sampler_Curve";
+	SearchKeywords = "CurveOverLife";
 	Nodes = {
 		"$673D414E",
 		"$E71217E3",
@@ -3584,7 +3581,7 @@ CParticleNodeScript	$1747A386
 	WorkspacePosition = int2(-220, 220);
 	Expression = "bool	isStopped = !effect.isRunning();
 float	fadeOut = 1 - LifeRatioSinceStop;
-float 	lrStep = effect.dt / DeathDelay;
+float 	lrStep = select(effect.dt / DeathDelay, infinity, (DeathDelay == 0.f));
 LifeRatioSinceStop = saturate(LifeRatioSinceStop + select(0, lrStep, isStopped));
 self.kill(LifeRatioSinceStop == 1);
 ";
@@ -8592,9 +8589,11 @@ CParticleNodePinIn	$F2EC2AB5
 {
 	SelfName = "General.Enabled";
 	Type = bool;
-	Visible = false;
 	Owner = "$2D43E259";
 	BaseType = bool;
+	ConnectedPins = {
+		"$70BD5939",
+	};
 	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinOut	$654D151C
@@ -9536,6 +9535,7 @@ CParticleNodeGraph	$394193FD
 	AutoInline = true;
 	ClassType = Sampler;
 	IconKey = "Sampler_Curve";
+	SearchKeywords = "CurveOverLife";
 	Nodes = {
 		"$AED69404",
 		"$A9299A26",
@@ -11705,6 +11705,7 @@ CParticleNodeTemplate	$709C301D
 {
 	InputPins = {
 		"$235952A4",
+		"$C6A10B13",
 		"$014F5437",
 		"$B00CDBC6",
 		"$61912301",
@@ -11946,7 +11947,7 @@ CParticleNodeRendererBillboard	$BAA1B698
 		"$8C77F9F8",
 	};
 	WorkspacePosition = int2(814, 220);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -12477,6 +12478,7 @@ CParticleNodeTemplate	$3310B3E6
 {
 	InputPins = {
 		"$D617CDA1",
+		"$6A833B3D",
 		"$723ABC78",
 		"$7F79589B",
 		"$CDD745FA",
@@ -12720,7 +12722,7 @@ CParticleNodeRendererBillboard	$2FC4CC3C
 		"$39001091",
 	};
 	WorkspacePosition = int2(814, 220);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -15167,7 +15169,7 @@ CParticleNodeRendererBillboard	$711CECD8
 		"$43F4C1AB",
 	};
 	WorkspacePosition = int2(1144, -132);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -19108,13 +19110,14 @@ CParticleNodePinOut	$CF8EF99E
 CParticleNodeTemplate	$3B69EC10
 {
 	InputPins = {
+		"$81EE1167",
 		"$AEBF120E",
 	};
 	OutputPins = {
 		"$07299839",
 	};
 	WorkspacePosition = int2(660, -242);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Color.pkfx";
 	SubGraphName = "srgb to linear";
 }
 CParticleNodePinIn	$AEBF120E
@@ -27449,6 +27452,7 @@ CParticleNodeGraph	$2C9226A5
 		"@eng:Generates random values from based on an integer input.",
 	};
 	Public = true;
+	IconKey = "Node_Math_Rand";
 	Nodes = {
 		"$83F5C6FF",
 		"$3E9F55B4",
@@ -27733,6 +27737,7 @@ CParticleNodeGraph	$A32F87E7
 		"@eng:Hash function to generate an integer from a float3 input.",
 	};
 	Public = true;
+	IconKey = "Toolbar_InspectBinary";
 	Nodes = {
 		"$0382EBE9",
 		"$B2F89A0F",
@@ -27830,6 +27835,7 @@ CParticleNodeGraph	$D781B046
 		"@eng:Hash function to generate an integer from a float input.",
 	};
 	Public = true;
+	IconKey = "Toolbar_InspectBinary";
 	Nodes = {
 		"$2AF61072",
 		"$A21EB3EB",
@@ -27927,6 +27933,7 @@ CParticleNodeGraph	$E6E68863
 		"@eng:Hash function to generate an integer from a float2 input.",
 	};
 	Public = true;
+	IconKey = "Toolbar_InspectBinary";
 	Nodes = {
 		"$28CA42DD",
 		"$D890898A",
@@ -28024,6 +28031,7 @@ CParticleNodeGraph	$B43E3E6D
 		"@eng:Hash function to generate an integer from a float4 input.",
 	};
 	Public = true;
+	IconKey = "Toolbar_InspectBinary";
 	Nodes = {
 		"$3564B11A",
 		"$9F5AF4FC",
@@ -28113,4 +28121,75 @@ CParticleNodePinOut	$139392CA
 	ConnectedPins = {
 		"$4E0B70D6",
 	};
+}
+CParticleNodePinIn	$C6A10B13
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$709C301D";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$6A833B3D
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$3310B3E6";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeTemplateExport	$C52ACE96
+{
+	Description = {
+		"@eng:If `false`, events won\'t pulse.",
+	};
+	InputPins = {
+		"$B48DAE36",
+	};
+	OutputPins = {
+		"$70BD5939",
+	};
+	WorkspacePosition = int2(198, 264);
+	ExportedName = "Enabled";
+	ExportedType = bool;
+	Type = Input;
+	CategoryName = {
+		"@eng:Sound",
+	};
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$B48DAE36
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$C52ACE96";
+}
+CParticleNodePinOut	$70BD5939
+{
+	SelfName = "Value";
+	Owner = "$C52ACE96";
+	ConnectedPins = {
+		"$F2EC2AB5",
+	};
+}
+CParticleNodePinIn	$9A605C30
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4BFB40BF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$81EE1167
+{
+	SelfName = "Mode";
+	Type = int;
+	Owner = "$3B69EC10";
+	BaseType = int;
 }

@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -25717,13 +25717,12 @@ CParticleNodeTemplate	$B76AD561
 	InputPins = {
 		"$28F3CEBC",
 		"$C593673A",
-		"$67DB40E6",
 		"$EEFFD10A",
+		"$67DB40E6",
+		"$4AFE027C",
 		"$FBD592A2",
 		"$A132EC52",
 		"$F0AB77A6",
-		"$EC002C1C",
-		"$4AFE027C",
 	};
 	WorkspacePosition = int2(352, -506);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Debug.pkfx";
@@ -25796,15 +25795,6 @@ CParticleNodePinIn	$F0AB77A6
 		"$B3B8342E",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$EC002C1C
-{
-	SelfName = "Size";
-	Type = float;
-	Visible = false;
-	Owner = "$B76AD561";
-	BaseType = float;
-	ValueF = float4(9.9999998e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$4AFE027C
 {

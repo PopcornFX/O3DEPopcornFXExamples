@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -11,8 +11,8 @@ CEditorAssetEffect	$41EED1A4
 	};
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(1.1092543e-02, 2.1749196e+00, 6.7589221e+00);
-	StartCameraOrientation = float3(3.4135154e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.0500000e+00, 6.5000000e+00);
+	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -28,8 +28,8 @@ CParticleNodeGraph	$81861AB7
 		"$02509890",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-598, -2);
-	WorkspaceZoom = -1;
+	WorkspacePosition = int2(-281, 3);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -101,12 +101,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.8453755e+00, 9.3993771e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.8000000e+00, 1.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -132,6 +133,7 @@ CParticleNodeTemplate	$A8732D40
 {
 	InputPins = {
 		"$3C6DEC40",
+		"$474AFD64",
 		"$60D9CD13",
 		"$D6FE5E5A",
 		"$53B2F077",
@@ -919,7 +921,7 @@ CParticleNodeRendererBillboard	$B298D1F0
 		"$0F6F5525",
 	};
 	WorkspacePosition = int2(242, -198);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -1127,7 +1129,7 @@ CParticleNodeTemplateExport	$A698C3A9
 	InputPins = {
 		"$AE2C041A",
 	};
-	WorkspacePosition = int2(242, 220);
+	WorkspacePosition = int2(242, 154);
 	ExportedName = "EventCollide";
 	ExportedType = event;
 	Type = Output;
@@ -1237,6 +1239,9 @@ CParticleNodePinIn	$57FA67D6
 }
 CParticleNodeTemplate	$C8AD1FAF
 {
+	CustomName = {
+		"@eng:Random color",
+	};
 	InputPins = {
 		"$62313F15",
 		"$DAB26A50",
@@ -1485,7 +1490,7 @@ CParticleNodeEventPayloadAppend	$F74111F0
 	OutputPins = {
 		"$384BF440",
 	};
-	WorkspacePosition = int2(0, 220);
+	WorkspacePosition = int2(0, 154);
 	PayloadName = "Color";
 	PayloadType = float4;
 }
@@ -1535,4 +1540,13 @@ CParticleNodePinIn	$0F4A435F
 	Visible = false;
 	Owner = "$A8732D40";
 	BaseType = bool;
+}
+CParticleNodePinIn	$474AFD64
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$A8732D40";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

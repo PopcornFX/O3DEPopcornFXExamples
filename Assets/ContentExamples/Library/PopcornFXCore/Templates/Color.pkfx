@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -7,6 +7,13 @@ CParticleEffect	$6B70D015
 		"$D857A09F",
 		"$2BBAE5F0",
 		"$B16FCD4A",
+		"$2942BB93",
+		"$66B56BE2",
+		"$69555EBE",
+		"$8AF4A744",
+		"$E422EF73",
+		"$544D51FA",
+		"$51224BBB",
 		"$AAFF12BE",
 		"$9C42C17D",
 		"$1A488438",
@@ -22,6 +29,7 @@ CParticleEffect	$6B70D015
 		"$6964ADB3",
 		"$17E22F51",
 		"$15C7A33A",
+		"$979F82F4",
 	};
 	AttributeFlatList = "$8F7A985A";
 }
@@ -480,7 +488,7 @@ CParticleNodeGraph	$D857A09F
 {
 	CustomName = "RGBA Split";
 	Description = {
-		"@eng:Takes a <c>float4 RGBA</c> color as input, outputs the <c>float3 RGB</c> and <c>float A</c> components.",
+		"@eng:Takes a `float4 RGBA` color as input, outputs the `float3 RGB` and `float A` components separately.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -672,7 +680,7 @@ CParticleNodeGraph	$2BBAE5F0
 {
 	CustomName = "RGBA Build";
 	Description = {
-		"@eng:Builds a <c>float4 RGBA</c> color from an input <c>float3 RGB</c> and <c>float A</c>.",
+		"@eng:Builds a `float4 RGBA` color from an input `float3 RGB` and `float A` component.",
 	};
 	Public = true;
 	ClassType = Math;
@@ -1565,6 +1573,9 @@ CParticleNodePinIn	$EF48E30B
 CParticleNodeGraph	$C4870DE6
 {
 	CustomName = "Color";
+	Description = {
+		"@eng:Allows to modify or randomize an input color using lots of different controls.",
+	};
 	Public = true;
 	ClassType = Math;
 	IconKey = "Toolbar_PaintPalette";
@@ -1627,7 +1638,6 @@ CParticleNodeGraph	$C4870DE6
 		"$41775296",
 		"$B19B6432",
 		"$3D42F5D0",
-		"$E7EB4A36",
 		"$368AF6F0",
 		"$2F62486D",
 		"$20C47EC7",
@@ -1643,7 +1653,6 @@ CParticleNodeGraph	$C4870DE6
 		"$3B66025D",
 		"$8E7D7448",
 		"$FD10B359",
-		"$4E0176DD",
 		"$9E0B536A",
 		"$611B05F9",
 		"$79895FB5",
@@ -1672,8 +1681,8 @@ CParticleNodeGraph	$C4870DE6
 		"$4465F300",
 		"$1DDF1DBC",
 	};
-	WorkspacePosition = int2(78, -123);
-	WorkspaceZoom = -6;
+	WorkspacePosition = int2(-19, -107);
+	WorkspaceZoom = -7;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$B3552DAA
@@ -1685,7 +1694,6 @@ CParticleNodeTemplate	$B3552DAA
 		"$343027AB",
 	};
 	WorkspacePosition = int2(-22, -352);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "rgb to hsv";
 }
 CParticleNodePinIn	$4D58B59C
@@ -1743,6 +1751,9 @@ CParticleNodeScript	$98EF1339
 {
 	CustomName = {
 		"@eng:Adjust",
+	};
+	Description = {
+		"@eng:Main color adjustment logic.\\nTakes the `Shift`, `Variation` and `Bias` values and applies them for all `H`, `S`, `V` components.",
 	};
 	InputPins = {
 		"$3D6B801D",
@@ -1901,7 +1912,6 @@ CParticleNodeTemplate	$131E16B4
 		"$97190F7B",
 	};
 	WorkspacePosition = int2(836, -352);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "hsv to rgb";
 }
 CParticleNodePinIn	$E81E5A97
@@ -3310,7 +3320,6 @@ CParticleNodeTemplate	$3D42F5D0
 		"$3146E207",
 	};
 	WorkspacePosition = int2(792, 748);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "hsv to rgb";
 }
 CParticleNodePinIn	$593D0C6B
@@ -3329,22 +3338,6 @@ CParticleNodePinOut	$3146E207
 	Owner = "$3D42F5D0";
 	ConnectedPins = {
 		"$5E08B260",
-	};
-}
-CParticleNodeConstant	$E7EB4A36
-{
-	OutputPins = {
-		"$8AE29997",
-	};
-	WorkspacePosition = int2(-220, 1056);
-	ValueF4 = float4(5.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$8AE29997
-{
-	SelfName = "Value";
-	Owner = "$E7EB4A36";
-	ConnectedPins = {
-		"$DF2D1604",
 	};
 }
 CParticleNodeTemplate	$368AF6F0
@@ -3372,10 +3365,9 @@ CParticleNodePinIn	$DC8191B1
 CParticleNodePinIn	$BA1C2204
 {
 	SelfName = "HueShift";
+	Type = float;
 	Owner = "$368AF6F0";
-	ConnectedPins = {
-		"$0F033067",
-	};
+	ValueF = float4(5.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinOut	$688EDDC2
 {
@@ -3463,7 +3455,6 @@ CParticleNodeTemplate	$1FD45279
 		"$22FEED04",
 	};
 	WorkspacePosition = int2(792, 924);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "hsv to rgb";
 }
 CParticleNodePinIn	$ECF500E7
@@ -3553,7 +3544,6 @@ CParticleNodeTemplate	$A40862F0
 		"$37361BCC",
 	};
 	WorkspacePosition = int2(792, 1100);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "hsv to rgb";
 }
 CParticleNodePinIn	$C1DEA124
@@ -3630,7 +3620,7 @@ CParticleNodePassThrough	$5BBF3900
 	OutputPins = {
 		"$F2C63823",
 	};
-	WorkspacePosition = int2(-396, 1122);
+	WorkspacePosition = int2(-176, 1122);
 }
 CParticleNodePinIn	$5E327EB0
 {
@@ -3657,7 +3647,7 @@ CParticleNodePassThrough	$B31CEEF3
 	OutputPins = {
 		"$B655AD8D",
 	};
-	WorkspacePosition = int2(-286, 1166);
+	WorkspacePosition = int2(-66, 1166);
 }
 CParticleNodePinIn	$FD868407
 {
@@ -3762,32 +3752,6 @@ CParticleNodeAnnotation	$FD10B359
 	Color = float4(6.1568630e-01, 7.0588237e-01, 1.0000000e+00, 1.0000000e+00);
 	SelfSize = int2(1078, 594);
 }
-CParticleNodePassThrough	$4E0176DD
-{
-	InputPins = {
-		"$DF2D1604",
-	};
-	OutputPins = {
-		"$0F033067",
-	};
-	WorkspacePosition = int2(220, 1078);
-}
-CParticleNodePinIn	$DF2D1604
-{
-	SelfName = "Value";
-	Owner = "$4E0176DD";
-	ConnectedPins = {
-		"$8AE29997",
-	};
-}
-CParticleNodePinOut	$0F033067
-{
-	SelfName = "Value";
-	Owner = "$4E0176DD";
-	ConnectedPins = {
-		"$BA1C2204",
-	};
-}
 CParticleNodePassThrough	$9E0B536A
 {
 	InputPins = {
@@ -3848,7 +3812,7 @@ CParticleNodeTemplateExport	$79895FB5
 	OutputPins = {
 		"$2158721C",
 	};
-	WorkspacePosition = int2(-880, 1100);
+	WorkspacePosition = int2(-660, 1100);
 	ExportedName = "TriadAngle";
 	ExportedType = float;
 	Type = Input;
@@ -3888,7 +3852,7 @@ CParticleNodeArithmetic	$857EC96B
 	OutputPins = {
 		"$B6F96DF3",
 	};
-	WorkspacePosition = int2(-616, 1100);
+	WorkspacePosition = int2(-396, 1100);
 	Operation = Div;
 }
 CParticleNodePinIn	$9055C070
@@ -3922,7 +3886,7 @@ CParticleNodeMathFunction1	$1E16D547
 	OutputPins = {
 		"$1A12B374",
 	};
-	WorkspacePosition = int2(-220, 1144);
+	WorkspacePosition = int2(0, 1144);
 	Function = Neg;
 }
 CParticleNodePinIn	$43EAE883
@@ -4490,10 +4454,8 @@ CParticleNodeScript	$CC39D3AD
 	WorkspacePosition = int2(1166, -352);
 	Expression = "// Clamp alpha to [0,1]
 // (will be optimized out by the optimizer if no clamping is needed)
-
-// This should work fine, but see bug #5071, it doesn\'t. The separate min/max does though:
-//Color = clamp(Color, float4(-infinity.xxx, 0.0), float4(infinity.xxx, 1.0));
-Color = min(max(Color, float4(-infinity.xxx, 0.0)), float4(infinity.xxx, 1.0));
+// Will also get simplified to a single \'min\' or \'max\' if possible instead of a full \'clamp\'
+Color = clamp(Color, float4(-infinity.xxx, 0.0), float4(infinity.xxx, 1.0));
 
 // This produces less efficient instructions than the above clamp
 //Color = float4(Color.rgb, saturate(Color.a));
@@ -4654,7 +4616,7 @@ CParticleNodeGraph	$B16FCD4A
 {
 	CustomName = "Color lerp";
 	Description = {
-		"@eng:Interpolates between RGBA colors <c>ColorA</c> and <c>ColorB</c>, <b>in HSV space</b>, producing clean Hue gradients.",
+		"@eng:Interpolates between `ColorA` and `ColorB`.\\nPerforms the interpolation **in HSV space**, producing clean Hue gradients.\\n\\nThe input colors can be `RGB` or `RGBA`, but must have the same vector dimension (Either both `RGB` or both `RGBA`, but not one `RGB` and the other `RGBA`)",
 	};
 	Public = true;
 	ClassType = Math;
@@ -4678,7 +4640,7 @@ CParticleNodeGraph	$B16FCD4A
 CParticleNodeTemplateExport	$6CD66C3E
 {
 	Description = {
-		"@eng:First color",
+		"@eng:First `RGB` or `RGBA` color",
 	};
 	InputPins = {
 		"$6EDB49DD",
@@ -4716,7 +4678,7 @@ CParticleNodePinOut	$A7DD3365
 CParticleNodeTemplateExport	$5AF6490E
 {
 	Description = {
-		"@eng:Output interpolated color",
+		"@eng:Output `RGB` or `RGBA` interpolated color",
 	};
 	InputPins = {
 		"$B00AAE76",
@@ -4747,7 +4709,6 @@ CParticleNodeTemplate	$5C813A4F
 		"$776A0D76",
 	};
 	WorkspacePosition = int2(-264, -176);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "rgb to hsv";
 }
 CParticleNodePinIn	$B75A8773
@@ -4821,7 +4782,6 @@ CParticleNodeTemplate	$C8853CEC
 		"$D4247077",
 	};
 	WorkspacePosition = int2(330, -176);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "hsv to rgb";
 }
 CParticleNodePinIn	$00AD867D
@@ -4845,7 +4805,7 @@ CParticleNodePinOut	$D4247077
 CParticleNodeTemplateExport	$E7BA871E
 {
 	Description = {
-		"@eng:Second color",
+		"@eng:Second `RGB` or `RGBA` color",
 	};
 	InputPins = {
 		"$DAEFF95E",
@@ -4889,7 +4849,6 @@ CParticleNodeTemplate	$62B7E542
 		"$F8D2A011",
 	};
 	WorkspacePosition = int2(-264, -44);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "rgb to hsv";
 }
 CParticleNodePinIn	$6914531A
@@ -4913,7 +4872,7 @@ CParticleNodePinOut	$F8D2A011
 CParticleNodeTemplateExport	$CA39022C
 {
 	Description = {
-		"@eng:Interpolation cursor in the <c>[0, 1]</c> range",
+		"@eng:Interpolation cursor in the `[0, 1]` range",
 	};
 	InputPins = {
 		"$C93DDD41",
@@ -4969,5 +4928,1991 @@ CParticleNodePinOut	$BD4FFD63
 	Owner = "$A6A366F1";
 	ConnectedPins = {
 		"$7E7027D0",
+	};
+}
+CParticleNodeGraph	$2942BB93
+{
+	CustomName = "Luminance";
+	Description = {
+		"@eng:Computes the grayscale / luminance of the input `Color`.\\n\\nAllows to pick between different luminance computation modes:<ul>\\n<li>**`Luminance`**: CIE Luminance. \"Proper luminance\", weighted based on human eye response to perceived intensities. **Fast to compute**.</li>\\n<li>**`Perceptual`**: CIE LAB perceptual luminance. **Slow to compute**.</li>\\n<li>**`RGB Average`**: Simple average of R, G, and B components of the input color. **Fast to compute**.</li>\\n</ul>",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "color constructor assembler";
+	Nodes = {
+		"$0880141B",
+		"$EB22976B",
+		"$17A950F0",
+		"$91BE2191",
+		"$AEBB99A4",
+		"$1D6BD998",
+		"$542F4159",
+	};
+	WorkspacePosition = int2(-68, 34);
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$0880141B
+{
+	Description = {
+		"@eng:`RGB` or `RGBA` color, in linear space.\\n\\nIf your source color is in sRGB space, use the `sRGB to Linear` node to convert it to linear space before wiring it into this node.",
+	};
+	InputPins = {
+		"$782F76BE",
+	};
+	OutputPins = {
+		"$F90AE3DF",
+	};
+	WorkspacePosition = int2(-594, -176);
+	ExportedName = "Color";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$782F76BE
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$0880141B";
+}
+CParticleNodePinOut	$F90AE3DF
+{
+	SelfName = "Value";
+	Owner = "$0880141B";
+	ConnectedPins = {
+		"$7ADC58E6",
+	};
+}
+CParticleNodeTemplateExport	$EB22976B
+{
+	Description = {
+		"@eng:Output luminance in linear space.\\n\\nIf `Mode` is set to `Perceptual`, the output will not be a luminance in linear space, but in \"kind-of-sRGB space\". You can get a similar look as the other two modes by applying a `pow(x, 2.2)` on the output, but it will likely be a gross approximation and if you have to do that, you\'re probably better off using the `Luminance` mode directly, it\'ll be both way faster and more accurate for linear space.",
+	};
+	InputPins = {
+		"$2849833A",
+	};
+	WorkspacePosition = int2(396, -308);
+	ExportedName = "Lum";
+	ExportedType = float;
+	ExportedTypeMask = 6144;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$2849833A
+{
+	SelfName = "Value";
+	Owner = "$EB22976B";
+	ConnectedPins = {
+		"$1716A956",
+	};
+}
+CParticleNodeTemplateExport	$17A950F0
+{
+	Description = {
+		"@eng:The kind of Luminance to compute.<ul>\\n<li>**`Luminance`**: CIE Luminance. \"Proper luminance\", weighted based on human eye response to perceived intensities. **Fast to compute**.</li>\\n<li>**`Perceptual`**: CIE LAB perceptual luminance. **Slow to compute**.</li>\\n<li>**`RGB Average`**: Simple average of R, G, and B components of the input color. **Fast to compute**.</li>\\n</ul>**Performance hint:** The `Luminance` and `Average` modes are **5 times faster** (simple dot product) than the `Perceptual` mode.\\nThe `Perceptual` mode is not necessarily \"better\" than the default `Luminance` quality-wise, it is simply a different quantity (see description of the output `Lum` pin).",
+	};
+	InputPins = {
+		"$347356A4",
+	};
+	OutputPins = {
+		"$14D4E8DC",
+	};
+	WorkspacePosition = int2(-594, -308);
+	ExportedName = "Mode";
+	ExportedType = int;
+	Type = Input;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"Luminance",
+		"Perceptual",
+		"RGB Average",
+	};
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$347356A4
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$17A950F0";
+}
+CParticleNodePinOut	$14D4E8DC
+{
+	SelfName = "Value";
+	Owner = "$17A950F0";
+	ConnectedPins = {
+		"$7996478D",
+	};
+}
+CParticleNodeScript	$91BE2191
+{
+	InputPins = {
+		"$DFB3A93E",
+	};
+	OutputPins = {
+		"$C03AD946",
+		"$988A8B17",
+		"$89EFE625",
+	};
+	WorkspacePosition = int2(-242, -264);
+	Expression = "float3	rgb = Color.rgb;
+Luminance = dot(rgb, float3(0.212671f, 0.715160f, 0.072169f));
+Average = dot(rgb, float3(1/3.0f));
+Perceptual = iif(Luminance >= 0.008856452f, cbrt(Luminance), (841/108.0f) * Luminance + (4/29.0f)) * 1.16f - 0.16f;
+";
+}
+CParticleNodePinIn	$DFB3A93E
+{
+	SelfName = "Color";
+	Owner = "$91BE2191";
+	ConnectedPins = {
+		"$9935D69C",
+	};
+}
+CParticleNodePinOut	$988A8B17
+{
+	SelfName = "Luminance";
+	Owner = "$91BE2191";
+	ConnectedPins = {
+		"$4D12102A",
+	};
+}
+CParticleNodePinOut	$89EFE625
+{
+	SelfName = "Perceptual";
+	Owner = "$91BE2191";
+	ConnectedPins = {
+		"$B66224B8",
+	};
+}
+CParticleNodePinOut	$C03AD946
+{
+	SelfName = "Average";
+	Owner = "$91BE2191";
+	ConnectedPins = {
+		"$9BE69F90",
+	};
+}
+CParticleNodeSwitch	$AEBB99A4
+{
+	InputPins = {
+		"$7996478D",
+		"$9BE69F90",
+		"$4D12102A",
+		"$B66224B8",
+		"$F69F102B",
+		"$1AC30C19",
+	};
+	OutputPins = {
+		"$1716A956",
+	};
+	WorkspacePosition = int2(132, -308);
+}
+CParticleNodePinIn	$7996478D
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$AEBB99A4";
+	ConnectedPins = {
+		"$14D4E8DC",
+	};
+}
+CParticleNodePinIn	$9BE69F90
+{
+	SelfName = "DefaultCase";
+	Type = int;
+	Owner = "$AEBB99A4";
+	ConnectedPins = {
+		"$C03AD946",
+	};
+}
+CParticleNodePinIn	$4D12102A
+{
+	SelfName = "Case0";
+	Type = int;
+	Owner = "$AEBB99A4";
+	ConnectedPins = {
+		"$988A8B17",
+	};
+}
+CParticleNodePinIn	$B66224B8
+{
+	SelfName = "Case1";
+	Type = int;
+	Owner = "$AEBB99A4";
+	ConnectedPins = {
+		"$89EFE625",
+	};
+}
+CParticleNodePinIn	$F69F102B
+{
+	SelfName = "CompareValue0";
+	Type = int;
+	Visible = false;
+	Owner = "$AEBB99A4";
+}
+CParticleNodePinIn	$1AC30C19
+{
+	SelfName = "CompareValue1";
+	Type = int;
+	Visible = false;
+	Owner = "$AEBB99A4";
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodePinOut	$1716A956
+{
+	SelfName = "Value";
+	Owner = "$AEBB99A4";
+	ConnectedPins = {
+		"$2849833A",
+	};
+}
+CParticleNodePassThrough	$1D6BD998
+{
+	InputPins = {
+		"$7ADC58E6",
+	};
+	OutputPins = {
+		"$0E0113D6",
+	};
+	WorkspacePosition = int2(-418, -154);
+}
+CParticleNodePinIn	$7ADC58E6
+{
+	SelfName = "Value";
+	Owner = "$1D6BD998";
+	ConnectedPins = {
+		"$F90AE3DF",
+	};
+}
+CParticleNodePinOut	$0E0113D6
+{
+	SelfName = "Value";
+	Owner = "$1D6BD998";
+	ConnectedPins = {
+		"$437642A7",
+	};
+}
+CParticleNodePassThrough	$542F4159
+{
+	InputPins = {
+		"$437642A7",
+	};
+	OutputPins = {
+		"$9935D69C",
+	};
+	WorkspacePosition = int2(-286, -242);
+}
+CParticleNodePinIn	$437642A7
+{
+	SelfName = "Value";
+	Owner = "$542F4159";
+	ConnectedPins = {
+		"$0E0113D6",
+	};
+}
+CParticleNodePinOut	$9935D69C
+{
+	SelfName = "Value";
+	Owner = "$542F4159";
+	ConnectedPins = {
+		"$DFB3A93E",
+	};
+}
+CParticleNodeGraph	$979F82F4
+{
+	CustomName = "_PromoteRGBToRGBA_IFN";
+	Description = {
+		"@eng:[INTERNAL]\\nIf `TestType` is a `float3`, outputs the `RGB Value` input unchanged.\\nIf `TestType` is a `float4`, outputs an `RGBA` value using the input `RGB Value` and the alpha component of `TestType`",
+	};
+	ClassType = Math;
+	Nodes = {
+		"$7239148D",
+		"$49EBA520",
+		"$A088B719",
+		"$DDF61DA2",
+		"$6FFB9A75",
+		"$4E36D887",
+		"$F0DAE837",
+		"$E21F6E4E",
+		"$B64C5DFD",
+	};
+	WorkspacePosition = int2(-194, -24);
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$7239148D
+{
+	InputPins = {
+		"$A1B803B9",
+	};
+	OutputPins = {
+		"$3CB207A6",
+	};
+	WorkspacePosition = int2(-352, -66);
+	ExportedName = "Value";
+	ExportedTypeMask = 6144;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$A1B803B9
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$7239148D";
+}
+CParticleNodePinOut	$3CB207A6
+{
+	SelfName = "Value";
+	Owner = "$7239148D";
+	ConnectedPins = {
+		"$93B62330",
+	};
+}
+CParticleNodeTemplateExport	$49EBA520
+{
+	InputPins = {
+		"$7385D679",
+	};
+	OutputPins = {
+		"$8F3B7EAF",
+	};
+	WorkspacePosition = int2(-572, 22);
+	ExportedName = "TestType";
+	ExportedTypeMask = 6144;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$7385D679
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$49EBA520";
+}
+CParticleNodePinOut	$8F3B7EAF
+{
+	SelfName = "Value";
+	Owner = "$49EBA520";
+	ConnectedPins = {
+		"$08483092",
+	};
+}
+CParticleNodeTemplateExport	$A088B719
+{
+	InputPins = {
+		"$5BD84A79",
+	};
+	WorkspacePosition = int2(1056, -66);
+	ExportedName = "Value";
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$5BD84A79
+{
+	SelfName = "Value";
+	Owner = "$A088B719";
+	ConnectedPins = {
+		"$AB19F88A",
+	};
+}
+CParticleNodeStaticTypeSwitch	$DDF61DA2
+{
+	InputPins = {
+		"$8D093310",
+		"$E0AA5B05",
+		"$6A8310B8",
+	};
+	OutputPins = {
+		"$AB19F88A",
+	};
+	WorkspacePosition = int2(770, -66);
+	TypeEqualTo = float4;
+}
+CParticleNodePinIn	$8D093310
+{
+	SelfName = "Value";
+	Owner = "$DDF61DA2";
+	ConnectedPins = {
+		"$E4BCD780",
+	};
+}
+CParticleNodePinIn	$E0AA5B05
+{
+	SelfName = "ValueB";
+	Owner = "$DDF61DA2";
+	ConnectedPins = {
+		"$BA90EEE2",
+	};
+}
+CParticleNodePinIn	$6A8310B8
+{
+	SelfName = "TestType";
+	Owner = "$DDF61DA2";
+	ConnectedPins = {
+		"$A7851FE8",
+	};
+}
+CParticleNodePinOut	$AB19F88A
+{
+	SelfName = "Value";
+	Owner = "$DDF61DA2";
+	ConnectedPins = {
+		"$5BD84A79",
+	};
+}
+CParticleNodePassThrough	$6FFB9A75
+{
+	InputPins = {
+		"$93B62330",
+	};
+	OutputPins = {
+		"$E4BCD780",
+	};
+	WorkspacePosition = int2(-88, -44);
+}
+CParticleNodePinIn	$93B62330
+{
+	SelfName = "Value";
+	Owner = "$6FFB9A75";
+	ConnectedPins = {
+		"$3CB207A6",
+	};
+}
+CParticleNodePinOut	$E4BCD780
+{
+	SelfName = "Value";
+	Owner = "$6FFB9A75";
+	ConnectedPins = {
+		"$8D093310",
+		"$0E993193",
+	};
+}
+CParticleNodeSplitter	$4E36D887
+{
+	InputPins = {
+		"$0E993193",
+	};
+	OutputPins = {
+		"$FE860857",
+		"$4E2836D2",
+		"$E8242CC1",
+	};
+	WorkspacePosition = int2(88, 88);
+	Dimension = 3D;
+}
+CParticleNodePinIn	$0E993193
+{
+	SelfName = "Value";
+	Owner = "$4E36D887";
+	ConnectedPins = {
+		"$E4BCD780",
+	};
+}
+CParticleNodePinOut	$FE860857
+{
+	SelfName = "X";
+	Owner = "$4E36D887";
+	ConnectedPins = {
+		"$E4CB5129",
+	};
+}
+CParticleNodePinOut	$4E2836D2
+{
+	SelfName = "Y";
+	Owner = "$4E36D887";
+	ConnectedPins = {
+		"$2696D096",
+	};
+}
+CParticleNodePinOut	$E8242CC1
+{
+	SelfName = "Z";
+	Owner = "$4E36D887";
+	ConnectedPins = {
+		"$C17EC7E0",
+	};
+}
+CParticleNodeConstructor	$F0DAE837
+{
+	InputPins = {
+		"$E4CB5129",
+		"$2696D096",
+		"$C17EC7E0",
+		"$13E07731",
+	};
+	OutputPins = {
+		"$BA90EEE2",
+	};
+	WorkspacePosition = int2(374, 88);
+}
+CParticleNodePinIn	$E4CB5129
+{
+	SelfName = "X";
+	Owner = "$F0DAE837";
+	ConnectedPins = {
+		"$FE860857",
+	};
+}
+CParticleNodePinIn	$2696D096
+{
+	SelfName = "Y";
+	Owner = "$F0DAE837";
+	ConnectedPins = {
+		"$4E2836D2",
+	};
+}
+CParticleNodePinIn	$C17EC7E0
+{
+	SelfName = "Z";
+	Owner = "$F0DAE837";
+	ConnectedPins = {
+		"$E8242CC1",
+	};
+}
+CParticleNodePinIn	$13E07731
+{
+	SelfName = "W";
+	Owner = "$F0DAE837";
+	ConnectedPins = {
+		"$723B4FD4",
+	};
+}
+CParticleNodePinOut	$BA90EEE2
+{
+	SelfName = "Value";
+	Owner = "$F0DAE837";
+	ConnectedPins = {
+		"$E0AA5B05",
+	};
+}
+CParticleNodePassThrough	$E21F6E4E
+{
+	InputPins = {
+		"$08483092",
+	};
+	OutputPins = {
+		"$A7851FE8",
+	};
+	WorkspacePosition = int2(-220, 44);
+}
+CParticleNodePinIn	$08483092
+{
+	SelfName = "Value";
+	Owner = "$E21F6E4E";
+	ConnectedPins = {
+		"$8F3B7EAF",
+	};
+}
+CParticleNodePinOut	$A7851FE8
+{
+	SelfName = "Value";
+	Owner = "$E21F6E4E";
+	ConnectedPins = {
+		"$6A8310B8",
+		"$0F15C75F",
+	};
+}
+CParticleNodeGraph	$66B56BE2
+{
+	CustomName = "linear to srgb";
+	Description = {
+		"@eng:Converts the input `RGB` or `RGBA` color from Linear to sRGB space.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "gamma colorspace convert conversion";
+	Nodes = {
+		"$F7407478",
+		"$BFE74FCF",
+		"$F2F443A6",
+		"$D49A609A",
+		"$287FA54C",
+		"$FE73CC85",
+		"$4FF25F3E",
+		"$D31B8FF1",
+		"$AB809207",
+		"$0E202119",
+		"$955BBC9E",
+		"$BAF76E95",
+		"$872DE4D0",
+		"$95408530",
+	};
+	WorkspacePosition = int2(-128, -28);
+	WorkspaceZoom = -5;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$F7407478
+{
+	Description = {
+		"@eng:Input color in **Linear space**",
+	};
+	InputPins = {
+		"$988E409B",
+	};
+	OutputPins = {
+		"$D9937A37",
+	};
+	WorkspacePosition = int2(-594, -66);
+	ExportedName = "ColorLinear";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	Order = 1;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$988E409B
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$F7407478";
+}
+CParticleNodePinOut	$D9937A37
+{
+	SelfName = "Value";
+	Owner = "$F7407478";
+	ConnectedPins = {
+		"$019A4B75",
+		"$C1A0189A",
+	};
+}
+CParticleNodeScript	$BFE74FCF
+{
+	InputPins = {
+		"$019A4B75",
+		"$2AE4E149",
+	};
+	OutputPins = {
+		"$3A4C94ED",
+	};
+	WorkspacePosition = int2(-176, -66);
+	Expression = "auto		colExact = linear2srgb(ColorLinear);
+auto		colFast = fast.linear2srgb(ColorLinear);
+ColorSRGB = select(colExact, colFast, Mode != 0);";
+}
+CParticleNodePinIn	$019A4B75
+{
+	SelfName = "ColorLinear";
+	Owner = "$BFE74FCF";
+	ConnectedPins = {
+		"$D9937A37",
+	};
+}
+CParticleNodePinIn	$2AE4E149
+{
+	SelfName = "Mode";
+	Owner = "$BFE74FCF";
+	ConnectedPins = {
+		"$2B43C496",
+	};
+}
+CParticleNodePinOut	$3A4C94ED
+{
+	SelfName = "ColorSRGB";
+	Owner = "$BFE74FCF";
+	ConnectedPins = {
+		"$288EA836",
+	};
+}
+CParticleNodeTemplateExport	$F2F443A6
+{
+	Description = {
+		"@eng:Output color in **sRGB space**",
+	};
+	InputPins = {
+		"$31CC8B2E",
+	};
+	WorkspacePosition = int2(1210, -66);
+	ExportedName = "ColorSRGB";
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorLinear";
+}
+CParticleNodePinIn	$31CC8B2E
+{
+	SelfName = "Value";
+	Owner = "$F2F443A6";
+	ConnectedPins = {
+		"$C05FD798",
+	};
+}
+CParticleNodeTemplateExport	$D49A609A
+{
+	Description = {
+		"@eng:Type of colorspace conversion to perform<ul>\\n<li>**`Exact`**: Accurate sRGB conversion</li>\\n<li>**`Fast`**: Fast approximation using a polynomial</li>\\n<li>**`Pow 2.2 Approximation`**: Fast approximation using `pow(x, 1/2.2)`</li>\\n</ul>\\n**Performance hint:** `Fast` mode will be **~3 times faster** than `Exact`. It will also have **better precision and be faster** than the `Pow 2.2 Approximation`.\\n\\nThe only time you would want to use the `Pow 2.2 Approximation` mode is if you need the conversion to be explicitly and precisely a pow 1/2.2 conversion, for example you rely on this somewhere else in your rendering pipeline. It is included for completeness but not expected to be useful most of the time.",
+	};
+	InputPins = {
+		"$85A7C7E7",
+	};
+	OutputPins = {
+		"$2B43C496",
+	};
+	WorkspacePosition = int2(-594, 66);
+	ExportedName = "Mode";
+	ExportedType = int;
+	Type = Input;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"Exact",
+		"Fast",
+		"Pow 2.2 Approximation",
+	};
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$85A7C7E7
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$D49A609A";
+}
+CParticleNodePinOut	$2B43C496
+{
+	SelfName = "Value";
+	Owner = "$D49A609A";
+	ConnectedPins = {
+		"$2AE4E149",
+		"$9B69EA23",
+	};
+}
+CParticleNodeMathFunction3	$287FA54C
+{
+	InputPins = {
+		"$288EA836",
+		"$C490A25D",
+		"$F5EE6D6C",
+	};
+	OutputPins = {
+		"$C05FD798",
+	};
+	WorkspacePosition = int2(990, -66);
+	Function = Select;
+}
+CParticleNodePinIn	$288EA836
+{
+	SelfName = "Value";
+	Owner = "$287FA54C";
+	ConnectedPins = {
+		"$3A4C94ED",
+	};
+}
+CParticleNodePinIn	$C490A25D
+{
+	SelfName = "ValueIfTrue";
+	Owner = "$287FA54C";
+	ConnectedPins = {
+		"$FEDD836F",
+	};
+}
+CParticleNodePinIn	$F5EE6D6C
+{
+	SelfName = "Condition";
+	Owner = "$287FA54C";
+	ConnectedPins = {
+		"$7907237F",
+	};
+}
+CParticleNodePinOut	$C05FD798
+{
+	SelfName = "Value";
+	Owner = "$287FA54C";
+	ConnectedPins = {
+		"$31CC8B2E",
+	};
+}
+CParticleNodeCompare	$FE73CC85
+{
+	InputPins = {
+		"$9B69EA23",
+		"$E0EC4E13",
+	};
+	OutputPins = {
+		"$2D307421",
+	};
+	WorkspacePosition = int2(-286, 220);
+}
+CParticleNodePinIn	$9B69EA23
+{
+	SelfName = "Value";
+	Owner = "$FE73CC85";
+	ConnectedPins = {
+		"$2B43C496",
+	};
+}
+CParticleNodePinIn	$E0EC4E13
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$FE73CC85";
+	ValueF = float4(2.0000000e+00, 2.0000000e+00, 2.0000000e+00, 2.0000000e+00);
+}
+CParticleNodePinOut	$2D307421
+{
+	SelfName = "Result";
+	Owner = "$FE73CC85";
+	ConnectedPins = {
+		"$1F2D8A71",
+	};
+}
+CParticleNodeSwizzle	$4FF25F3E
+{
+	InputPins = {
+		"$277AA12D",
+	};
+	OutputPins = {
+		"$27475C74",
+	};
+	WorkspacePosition = int2(132, 66);
+	Dimension = 3D;
+}
+CParticleNodePinIn	$277AA12D
+{
+	SelfName = "Value";
+	Owner = "$4FF25F3E";
+	ConnectedPins = {
+		"$67A0152B",
+	};
+}
+CParticleNodePinOut	$27475C74
+{
+	SelfName = "Value";
+	Owner = "$4FF25F3E";
+	ConnectedPins = {
+		"$0E2D0A57",
+	};
+}
+CParticleNodePassThrough	$D31B8FF1
+{
+	InputPins = {
+		"$C1A0189A",
+	};
+	OutputPins = {
+		"$581E0366",
+	};
+	WorkspacePosition = int2(-176, 88);
+}
+CParticleNodePinIn	$C1A0189A
+{
+	SelfName = "Value";
+	Owner = "$D31B8FF1";
+	ConnectedPins = {
+		"$D9937A37",
+	};
+}
+CParticleNodePinOut	$581E0366
+{
+	SelfName = "Value";
+	Owner = "$D31B8FF1";
+	ConnectedPins = {
+		"$B9CE3513",
+	};
+}
+CParticleNodeMathFunction2	$AB809207
+{
+	InputPins = {
+		"$0E2D0A57",
+		"$0D242A24",
+	};
+	OutputPins = {
+		"$43C90962",
+	};
+	WorkspacePosition = int2(352, 66);
+	Function = Pow;
+}
+CParticleNodePinIn	$0E2D0A57
+{
+	SelfName = "Value";
+	Owner = "$AB809207";
+	ConnectedPins = {
+		"$27475C74",
+	};
+}
+CParticleNodePinIn	$0D242A24
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$AB809207";
+	ValueF = float4(4.5454499e-01, 2.2000000e+00, 2.2000000e+00, 2.2000000e+00);
+}
+CParticleNodePinOut	$43C90962
+{
+	SelfName = "Value";
+	Owner = "$AB809207";
+	ConnectedPins = {
+		"$267040A6",
+	};
+}
+CParticleNodePassThrough	$0E202119
+{
+	InputPins = {
+		"$1F2D8A71",
+	};
+	OutputPins = {
+		"$7907237F",
+	};
+	WorkspacePosition = int2(770, 242);
+}
+CParticleNodePinIn	$1F2D8A71
+{
+	SelfName = "Value";
+	Owner = "$0E202119";
+	ConnectedPins = {
+		"$2D307421",
+	};
+}
+CParticleNodePinOut	$7907237F
+{
+	SelfName = "Value";
+	Owner = "$0E202119";
+	ConnectedPins = {
+		"$F5EE6D6C",
+	};
+}
+CParticleNodePassThrough	$955BBC9E
+{
+	InputPins = {
+		"$B9CE3513",
+	};
+	OutputPins = {
+		"$67A0152B",
+	};
+	WorkspacePosition = int2(-22, 88);
+}
+CParticleNodePinIn	$B9CE3513
+{
+	SelfName = "Value";
+	Owner = "$955BBC9E";
+	ConnectedPins = {
+		"$581E0366",
+	};
+}
+CParticleNodePinOut	$67A0152B
+{
+	SelfName = "Value";
+	Owner = "$955BBC9E";
+	ConnectedPins = {
+		"$277AA12D",
+		"$5450747B",
+	};
+}
+CParticleNodePassThrough	$BAF76E95
+{
+	InputPins = {
+		"$D440B789",
+	};
+	OutputPins = {
+		"$5B3815A1",
+	};
+	WorkspacePosition = int2(506, 198);
+}
+CParticleNodePinIn	$D440B789
+{
+	SelfName = "Value";
+	Owner = "$BAF76E95";
+	ConnectedPins = {
+		"$77823F92",
+	};
+}
+CParticleNodePinOut	$5B3815A1
+{
+	SelfName = "Value";
+	Owner = "$BAF76E95";
+	ConnectedPins = {
+		"$C987F210",
+	};
+}
+CParticleNodePassThrough	$872DE4D0
+{
+	InputPins = {
+		"$5450747B",
+	};
+	OutputPins = {
+		"$77823F92",
+	};
+	WorkspacePosition = int2(110, 198);
+}
+CParticleNodePinIn	$5450747B
+{
+	SelfName = "Value";
+	Owner = "$872DE4D0";
+	ConnectedPins = {
+		"$67A0152B",
+	};
+}
+CParticleNodePinOut	$77823F92
+{
+	SelfName = "Value";
+	Owner = "$872DE4D0";
+	ConnectedPins = {
+		"$D440B789",
+	};
+}
+CParticleNodeTemplate	$95408530
+{
+	InputPins = {
+		"$267040A6",
+		"$C987F210",
+	};
+	OutputPins = {
+		"$FEDD836F",
+	};
+	WorkspacePosition = int2(638, 66);
+	SubGraphName = "_PromoteRGBToRGBA_IFN";
+}
+CParticleNodePinIn	$267040A6
+{
+	SelfName = "Value";
+	Owner = "$95408530";
+	ConnectedPins = {
+		"$43C90962",
+	};
+}
+CParticleNodePinIn	$C987F210
+{
+	SelfName = "TestType";
+	Owner = "$95408530";
+	ConnectedPins = {
+		"$5B3815A1",
+	};
+}
+CParticleNodePinOut	$FEDD836F
+{
+	SelfName = "Value";
+	Owner = "$95408530";
+	ConnectedPins = {
+		"$C490A25D",
+	};
+}
+CParticleNodeGraph	$69555EBE
+{
+	CustomName = "linear to srgb fast";
+	Description = {
+		"@eng:Converts the input `RGB` or `RGBA` color from Linear to sRGB space.\\n\\nIdentical to the `linear to srgb` node with `Mode = Fast`",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "gamma colorspace convert conversion";
+	Nodes = {
+		"$6EA24440",
+		"$29A415FD",
+		"$EC98D697",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeScript	$6EA24440
+{
+	InputPins = {
+		"$ED90ABBF",
+	};
+	OutputPins = {
+		"$92F1A4A6",
+	};
+	WorkspacePosition = int2(-44, -88);
+	Expression = "ColorSRGB = fast.linear2srgb(ColorLinear);";
+}
+CParticleNodePinIn	$ED90ABBF
+{
+	SelfName = "ColorLinear";
+	Owner = "$6EA24440";
+	ConnectedPins = {
+		"$A3A6DA6E",
+	};
+}
+CParticleNodePinOut	$92F1A4A6
+{
+	SelfName = "ColorSRGB";
+	Owner = "$6EA24440";
+	ConnectedPins = {
+		"$9785A48F",
+	};
+}
+CParticleNodeTemplateExport	$29A415FD
+{
+	Description = {
+		"@eng:Input color in **Linear space**",
+	};
+	InputPins = {
+		"$3341BC9E",
+	};
+	OutputPins = {
+		"$A3A6DA6E",
+	};
+	WorkspacePosition = int2(-462, -88);
+	ExportedName = "ColorLinear";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$3341BC9E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$29A415FD";
+}
+CParticleNodePinOut	$A3A6DA6E
+{
+	SelfName = "Value";
+	Owner = "$29A415FD";
+	ConnectedPins = {
+		"$ED90ABBF",
+	};
+}
+CParticleNodeTemplateExport	$EC98D697
+{
+	Description = {
+		"@eng:Output color in **sRGB space**",
+	};
+	InputPins = {
+		"$9785A48F",
+	};
+	WorkspacePosition = int2(352, -88);
+	ExportedName = "ColorSRGB";
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorLinear";
+}
+CParticleNodePinIn	$9785A48F
+{
+	SelfName = "Value";
+	Owner = "$EC98D697";
+	ConnectedPins = {
+		"$92F1A4A6",
+	};
+}
+CParticleNodeGraph	$8AF4A744
+{
+	CustomName = "srgb to linear";
+	Description = {
+		"@eng:Converts the input `RGB` or `RGBA` color from sRGB to Linear space.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "gamma colorspace convert conversion";
+	Nodes = {
+		"$43849E4B",
+		"$A93333D9",
+		"$A8E21EA1",
+		"$14F469A7",
+		"$452E2A7B",
+		"$56271EBA",
+		"$8B6206A4",
+		"$373500D3",
+		"$BF680214",
+		"$ABEB69EF",
+		"$92BA64DB",
+		"$619D07BF",
+		"$1FAAEF3A",
+		"$1EC79F70",
+	};
+	WorkspacePosition = int2(-158, 18);
+	WorkspaceZoom = -5;
+	Collapsed = true;
+}
+CParticleNodeScript	$43849E4B
+{
+	InputPins = {
+		"$FAF72DC6",
+		"$59A41F40",
+	};
+	OutputPins = {
+		"$D08E5EB8",
+	};
+	WorkspacePosition = int2(-88, -198);
+	Expression = "auto		colExact = srgb2linear(ColorSRGB);
+auto		colFast = fast.srgb2linear(ColorSRGB);
+ColorLinear = select(colExact, colFast, Mode != 0);";
+}
+CParticleNodePinIn	$FAF72DC6
+{
+	SelfName = "ColorSRGB";
+	Owner = "$43849E4B";
+	ConnectedPins = {
+		"$460FCF59",
+	};
+}
+CParticleNodePinIn	$59A41F40
+{
+	SelfName = "Mode";
+	Owner = "$43849E4B";
+	ConnectedPins = {
+		"$E62DA7C6",
+	};
+}
+CParticleNodePinOut	$D08E5EB8
+{
+	SelfName = "ColorLinear";
+	Owner = "$43849E4B";
+	ConnectedPins = {
+		"$3F5E4C9F",
+	};
+}
+CParticleNodeTemplateExport	$A93333D9
+{
+	Description = {
+		"@eng:Input color in **sRGB space**",
+	};
+	InputPins = {
+		"$A4E10434",
+	};
+	OutputPins = {
+		"$460FCF59",
+	};
+	WorkspacePosition = int2(-506, -198);
+	ExportedName = "ColorSRGB";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	Order = 1;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$A4E10434
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$A93333D9";
+}
+CParticleNodePinOut	$460FCF59
+{
+	SelfName = "Value";
+	Owner = "$A93333D9";
+	ConnectedPins = {
+		"$FAF72DC6",
+		"$E7CEE799",
+	};
+}
+CParticleNodeTemplateExport	$A8E21EA1
+{
+	Description = {
+		"@eng:Output color in **Linear space**",
+	};
+	InputPins = {
+		"$0E5785A9",
+	};
+	WorkspacePosition = int2(1298, -198);
+	ExportedName = "ColorLinear";
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorSRGB";
+}
+CParticleNodePinIn	$0E5785A9
+{
+	SelfName = "Value";
+	Owner = "$A8E21EA1";
+	ConnectedPins = {
+		"$B87648D1",
+	};
+}
+CParticleNodeTemplateExport	$14F469A7
+{
+	Description = {
+		"@eng:Type of colorspace conversion to perform<ul>\\n<li>**`Exact`**: Accurate sRGB conversion</li>\\n<li>**`Fast`**: Fast approximation using a polynomial</li>\\n<li>**`Pow 2.2 Approximation`**: Fast approximation using `pow(x, 2.2)`</li>\\n</ul>\\n**Performance hint:** `Fast` mode will be **~3 times faster** than `Exact`. It will also have **better precision and be faster** than the `Pow 2.2 Approximation`.\\n\\nThe only time you would want to use the `Pow 2.2 Approximation` mode is if you need the conversion to be explicitly and precisely a pow 2.2 conversion, for example you rely on this somewhere else in your rendering pipeline. It is included for completeness but not expected to be useful most of the time.",
+	};
+	InputPins = {
+		"$758476FF",
+	};
+	OutputPins = {
+		"$E62DA7C6",
+	};
+	WorkspacePosition = int2(-506, -66);
+	ExportedName = "Mode";
+	ExportedType = int;
+	Type = Input;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"Exact",
+		"Fast",
+		"Pow 2.2 Approximation",
+	};
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$758476FF
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$14F469A7";
+}
+CParticleNodePinOut	$E62DA7C6
+{
+	SelfName = "Value";
+	Owner = "$14F469A7";
+	ConnectedPins = {
+		"$59A41F40",
+		"$EF21EB65",
+	};
+}
+CParticleNodePassThrough	$452E2A7B
+{
+	InputPins = {
+		"$E7CEE799",
+	};
+	OutputPins = {
+		"$73C5A0BD",
+	};
+	WorkspacePosition = int2(-88, -44);
+}
+CParticleNodePinIn	$E7CEE799
+{
+	SelfName = "Value";
+	Owner = "$452E2A7B";
+	ConnectedPins = {
+		"$460FCF59",
+	};
+}
+CParticleNodePinOut	$73C5A0BD
+{
+	SelfName = "Value";
+	Owner = "$452E2A7B";
+	ConnectedPins = {
+		"$73198377",
+	};
+}
+CParticleNodePassThrough	$56271EBA
+{
+	InputPins = {
+		"$73198377",
+	};
+	OutputPins = {
+		"$BAA226A5",
+	};
+	WorkspacePosition = int2(66, -44);
+}
+CParticleNodePinIn	$73198377
+{
+	SelfName = "Value";
+	Owner = "$56271EBA";
+	ConnectedPins = {
+		"$73C5A0BD",
+	};
+}
+CParticleNodePinOut	$BAA226A5
+{
+	SelfName = "Value";
+	Owner = "$56271EBA";
+	ConnectedPins = {
+		"$E04D32C4",
+		"$2BB3C723",
+	};
+}
+CParticleNodePassThrough	$8B6206A4
+{
+	InputPins = {
+		"$2BB3C723",
+	};
+	OutputPins = {
+		"$AAF4B0B2",
+	};
+	WorkspacePosition = int2(198, 66);
+}
+CParticleNodePinIn	$2BB3C723
+{
+	SelfName = "Value";
+	Owner = "$8B6206A4";
+	ConnectedPins = {
+		"$BAA226A5",
+	};
+}
+CParticleNodePinOut	$AAF4B0B2
+{
+	SelfName = "Value";
+	Owner = "$8B6206A4";
+	ConnectedPins = {
+		"$CC04863D",
+	};
+}
+CParticleNodeCompare	$373500D3
+{
+	InputPins = {
+		"$EF21EB65",
+		"$A8A2C59B",
+	};
+	OutputPins = {
+		"$05C5087D",
+	};
+	WorkspacePosition = int2(-198, 88);
+}
+CParticleNodePinIn	$EF21EB65
+{
+	SelfName = "Value";
+	Owner = "$373500D3";
+	ConnectedPins = {
+		"$E62DA7C6",
+	};
+}
+CParticleNodePinIn	$A8A2C59B
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$373500D3";
+	ValueF = float4(2.0000000e+00, 2.0000000e+00, 2.0000000e+00, 2.0000000e+00);
+}
+CParticleNodePinOut	$05C5087D
+{
+	SelfName = "Result";
+	Owner = "$373500D3";
+	ConnectedPins = {
+		"$1E57AFBF",
+	};
+}
+CParticleNodeSwizzle	$BF680214
+{
+	InputPins = {
+		"$E04D32C4",
+	};
+	OutputPins = {
+		"$56D6C5E4",
+	};
+	WorkspacePosition = int2(220, -66);
+	Dimension = 3D;
+}
+CParticleNodePinIn	$E04D32C4
+{
+	SelfName = "Value";
+	Owner = "$BF680214";
+	ConnectedPins = {
+		"$BAA226A5",
+	};
+}
+CParticleNodePinOut	$56D6C5E4
+{
+	SelfName = "Value";
+	Owner = "$BF680214";
+	ConnectedPins = {
+		"$272152A9",
+	};
+}
+CParticleNodeMathFunction2	$ABEB69EF
+{
+	InputPins = {
+		"$272152A9",
+		"$5B091EC0",
+	};
+	OutputPins = {
+		"$5DA84702",
+	};
+	WorkspacePosition = int2(440, -66);
+	Function = Pow;
+}
+CParticleNodePinIn	$272152A9
+{
+	SelfName = "Value";
+	Owner = "$ABEB69EF";
+	ConnectedPins = {
+		"$56D6C5E4",
+	};
+}
+CParticleNodePinIn	$5B091EC0
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$ABEB69EF";
+	ValueF = float4(2.2000000e+00, 2.2000000e+00, 2.2000000e+00, 2.2000000e+00);
+}
+CParticleNodePinOut	$5DA84702
+{
+	SelfName = "Value";
+	Owner = "$ABEB69EF";
+	ConnectedPins = {
+		"$53BCD4D5",
+	};
+}
+CParticleNodePassThrough	$92BA64DB
+{
+	InputPins = {
+		"$CC04863D",
+	};
+	OutputPins = {
+		"$4F93D1CE",
+	};
+	WorkspacePosition = int2(594, 66);
+}
+CParticleNodePinIn	$CC04863D
+{
+	SelfName = "Value";
+	Owner = "$92BA64DB";
+	ConnectedPins = {
+		"$AAF4B0B2",
+	};
+}
+CParticleNodePinOut	$4F93D1CE
+{
+	SelfName = "Value";
+	Owner = "$92BA64DB";
+	ConnectedPins = {
+		"$3163C0F5",
+	};
+}
+CParticleNodeTemplate	$619D07BF
+{
+	InputPins = {
+		"$53BCD4D5",
+		"$3163C0F5",
+	};
+	OutputPins = {
+		"$C52FAB31",
+	};
+	WorkspacePosition = int2(726, -66);
+	SubGraphName = "_PromoteRGBToRGBA_IFN";
+}
+CParticleNodePinIn	$53BCD4D5
+{
+	SelfName = "Value";
+	Owner = "$619D07BF";
+	ConnectedPins = {
+		"$5DA84702",
+	};
+}
+CParticleNodePinIn	$3163C0F5
+{
+	SelfName = "TestType";
+	Owner = "$619D07BF";
+	ConnectedPins = {
+		"$4F93D1CE",
+	};
+}
+CParticleNodePinOut	$C52FAB31
+{
+	SelfName = "Value";
+	Owner = "$619D07BF";
+	ConnectedPins = {
+		"$CF8CFABB",
+	};
+}
+CParticleNodePassThrough	$1FAAEF3A
+{
+	InputPins = {
+		"$1E57AFBF",
+	};
+	OutputPins = {
+		"$92D10D11",
+	};
+	WorkspacePosition = int2(858, 110);
+}
+CParticleNodePinIn	$1E57AFBF
+{
+	SelfName = "Value";
+	Owner = "$1FAAEF3A";
+	ConnectedPins = {
+		"$05C5087D",
+	};
+}
+CParticleNodePinOut	$92D10D11
+{
+	SelfName = "Value";
+	Owner = "$1FAAEF3A";
+	ConnectedPins = {
+		"$9E9DC68F",
+	};
+}
+CParticleNodeMathFunction3	$1EC79F70
+{
+	InputPins = {
+		"$3F5E4C9F",
+		"$CF8CFABB",
+		"$9E9DC68F",
+	};
+	OutputPins = {
+		"$B87648D1",
+	};
+	WorkspacePosition = int2(1078, -198);
+	Function = Select;
+}
+CParticleNodePinIn	$3F5E4C9F
+{
+	SelfName = "Value";
+	Owner = "$1EC79F70";
+	ConnectedPins = {
+		"$D08E5EB8",
+	};
+}
+CParticleNodePinIn	$CF8CFABB
+{
+	SelfName = "ValueIfTrue";
+	Owner = "$1EC79F70";
+	ConnectedPins = {
+		"$C52FAB31",
+	};
+}
+CParticleNodePinIn	$9E9DC68F
+{
+	SelfName = "Condition";
+	Owner = "$1EC79F70";
+	ConnectedPins = {
+		"$92D10D11",
+	};
+}
+CParticleNodePinOut	$B87648D1
+{
+	SelfName = "Value";
+	Owner = "$1EC79F70";
+	ConnectedPins = {
+		"$0E5785A9",
+	};
+}
+CParticleNodeGraph	$E422EF73
+{
+	CustomName = "srgb to linear fast";
+	Description = {
+		"@eng:Converts the input `RGB` or `RGBA` color from sRGB to Linear space.\\n\\nIdentical to the `srgb to linear` node with `Mode = Fast`",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "gamma colorspace convert conversion";
+	Nodes = {
+		"$7CDE29D2",
+		"$720AC2AF",
+		"$B847F4F7",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplateExport	$7CDE29D2
+{
+	Description = {
+		"@eng:Input color in **sRGB space**",
+	};
+	InputPins = {
+		"$CF001066",
+	};
+	OutputPins = {
+		"$E1329907",
+	};
+	WorkspacePosition = int2(-462, -88);
+	ExportedName = "ColorSRGB";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Color",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$CF001066
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$7CDE29D2";
+}
+CParticleNodePinOut	$E1329907
+{
+	SelfName = "Value";
+	Owner = "$7CDE29D2";
+	ConnectedPins = {
+		"$FFE3C8F9",
+	};
+}
+CParticleNodeTemplateExport	$720AC2AF
+{
+	Description = {
+		"@eng:Output color in **Linear space**",
+	};
+	InputPins = {
+		"$76ED688B",
+	};
+	WorkspacePosition = int2(352, -88);
+	ExportedName = "ColorLinear";
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorSRGB";
+}
+CParticleNodePinIn	$76ED688B
+{
+	SelfName = "Value";
+	Owner = "$720AC2AF";
+	ConnectedPins = {
+		"$7C585399",
+	};
+}
+CParticleNodeScript	$B847F4F7
+{
+	InputPins = {
+		"$FFE3C8F9",
+	};
+	OutputPins = {
+		"$7C585399",
+	};
+	WorkspacePosition = int2(-44, -88);
+	Expression = "ColorLinear = fast.srgb2linear(ColorSRGB);";
+}
+CParticleNodePinIn	$FFE3C8F9
+{
+	SelfName = "ColorSRGB";
+	Owner = "$B847F4F7";
+	ConnectedPins = {
+		"$E1329907",
+	};
+}
+CParticleNodePinOut	$7C585399
+{
+	SelfName = "ColorLinear";
+	Owner = "$B847F4F7";
+	ConnectedPins = {
+		"$76ED688B",
+	};
+}
+CParticleNodeGraph	$544D51FA
+{
+	CustomName = "rgb to hsv";
+	Description = {
+		"@eng:Converts an `RGB`/`RGBA` color to the `HSV`/`HSVA` colorspace.\\n\\nThe output `Hue` and `Saturation` will always be in the `[0,1]` range.\\nThe output `Value` will be in the `[0,1]` range if the input `RGB` is not an HDR color. Otherwise, if it is an HDR color, `Value` will go above `1.0` accordingly.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "colorspace convert conversion";
+	Nodes = {
+		"$DD0BB37F",
+		"$5DE7E091",
+		"$425416DC",
+	};
+	WorkspacePosition = int2(-5, -77);
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplateExport	$DD0BB37F
+{
+	Description = {
+		"@eng:Input color in `RGB` space.\\n\\nCan be either a `float3 RGB` or a `float4 RGBA` color.",
+	};
+	InputPins = {
+		"$3140ED0D",
+	};
+	OutputPins = {
+		"$CEC22931",
+	};
+	WorkspacePosition = int2(-462, 110);
+	ExportedName = "ColorRGB";
+	ExportedTypeMask = 6144;
+	Semantic = Color;
+	Type = Input;
+	VisibleByDefault = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$3140ED0D
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$DD0BB37F";
+}
+CParticleNodePinOut	$CEC22931
+{
+	SelfName = "Value";
+	Owner = "$DD0BB37F";
+	ConnectedPins = {
+		"$142A9552",
+	};
+}
+CParticleNodeTemplateExport	$5DE7E091
+{
+	Description = {
+		"@eng:Output `HSV` or `HSVA` color.\\n\\nIf the input is `RGB`, will output `HSV`.\\nIf the input is `RGBA`, will output `HSVA`.",
+	};
+	InputPins = {
+		"$85390822",
+	};
+	WorkspacePosition = int2(352, 110);
+	ExportedName = "ColorHSV";
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorRGB";
+}
+CParticleNodePinIn	$85390822
+{
+	SelfName = "Value";
+	Owner = "$5DE7E091";
+	ConnectedPins = {
+		"$1DAC9A96",
+	};
+}
+CParticleNodeScript	$425416DC
+{
+	InputPins = {
+		"$142A9552",
+	};
+	OutputPins = {
+		"$1DAC9A96",
+	};
+	WorkspacePosition = int2(-44, 110);
+	Expression = "ColorHSV = rgb2hsv(ColorRGB);";
+}
+CParticleNodePinIn	$142A9552
+{
+	SelfName = "ColorRGB";
+	Owner = "$425416DC";
+	ConnectedPins = {
+		"$CEC22931",
+	};
+}
+CParticleNodePinOut	$1DAC9A96
+{
+	SelfName = "ColorHSV";
+	Owner = "$425416DC";
+	ConnectedPins = {
+		"$85390822",
+	};
+}
+CParticleNodeGraph	$51224BBB
+{
+	CustomName = "hsv to rgb";
+	Description = {
+		"@eng:Converts an `HSV`/`HSVA` color to the `RGB`/`RGBA` colorspace.\\n\\nIf the input `Value` is above `1.0`, the output RGB colors will be HDR and in the `[0, V]` range, with `V = hsv.z`",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_PaintPalette";
+	SearchKeywords = "colorspace convert conversion";
+	Nodes = {
+		"$E5D366E2",
+		"$D3195ED3",
+		"$D9FDD2C3",
+	};
+	WorkspacePosition = int2(-19, -3);
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplateExport	$E5D366E2
+{
+	Description = {
+		"@eng:Output `RGB` or `RGBA` color.\\n\\nIf the input is `HSV`, will output `RGB`.\\nIf the input is `HSVA`, will output `RGBA`.",
+	};
+	InputPins = {
+		"$FBA1B9C4",
+	};
+	WorkspacePosition = int2(352, -66);
+	ExportedName = "ColorRGB";
+	Semantic = Color;
+	Type = Output;
+	VisibleByDefault = true;
+	PassthroughInput = "ColorHSV";
+}
+CParticleNodePinIn	$FBA1B9C4
+{
+	SelfName = "Value";
+	Owner = "$E5D366E2";
+	ConnectedPins = {
+		"$CDCDC6C3",
+	};
+}
+CParticleNodeScript	$D3195ED3
+{
+	InputPins = {
+		"$8F340A81",
+	};
+	OutputPins = {
+		"$CDCDC6C3",
+	};
+	WorkspacePosition = int2(-44, -66);
+	Expression = "ColorRGB = hsv2rgb(ColorHSV);";
+}
+CParticleNodePinIn	$8F340A81
+{
+	SelfName = "ColorHSV";
+	Owner = "$D3195ED3";
+	ConnectedPins = {
+		"$E4A1FAE0",
+	};
+}
+CParticleNodePinOut	$CDCDC6C3
+{
+	SelfName = "ColorRGB";
+	Owner = "$D3195ED3";
+	ConnectedPins = {
+		"$FBA1B9C4",
+	};
+}
+CParticleNodeTemplateExport	$D9FDD2C3
+{
+	Description = {
+		"@eng:Input color in `HSV` space.\\n\\nCan be either a `float3 HSV` or a `float4 HSVA` color.",
+	};
+	InputPins = {
+		"$273DF141",
+	};
+	OutputPins = {
+		"$E4A1FAE0",
+	};
+	WorkspacePosition = int2(-462, -66);
+	ExportedName = "ColorHSV";
+	ExportedTypeMask = 6144;
+	Type = Input;
+	VisibleByDefault = true;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$273DF141
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$D9FDD2C3";
+}
+CParticleNodePinOut	$E4A1FAE0
+{
+	SelfName = "Value";
+	Owner = "$D9FDD2C3";
+	ConnectedPins = {
+		"$8F340A81",
+	};
+}
+CParticleNodeTemplate	$B64C5DFD
+{
+	InputPins = {
+		"$0F15C75F",
+		"$AF264A55",
+	};
+	OutputPins = {
+		"$723B4FD4",
+	};
+	WorkspacePosition = int2(88, 286);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "getVectorW";
+}
+CParticleNodePinIn	$AF264A55
+{
+	SelfName = "DefaultValue";
+	Type = float;
+	Visible = false;
+	Owner = "$B64C5DFD";
+}
+CParticleNodePinIn	$0F15C75F
+{
+	SelfName = "Value";
+	Owner = "$B64C5DFD";
+	ConnectedPins = {
+		"$A7851FE8",
+	};
+}
+CParticleNodePinOut	$723B4FD4
+{
+	SelfName = "w";
+	Type = float;
+	Owner = "$B64C5DFD";
+	ConnectedPins = {
+		"$13E07731",
 	};
 }

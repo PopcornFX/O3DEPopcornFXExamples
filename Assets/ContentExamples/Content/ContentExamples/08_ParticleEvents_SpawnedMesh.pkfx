@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -11,8 +11,8 @@ CEditorAssetEffect	$41EED1A4
 	};
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(3.7333529e-02, 2.5975208e+00, 6.8432307e+00);
-	StartCameraOrientation = float3(3.8838816e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.0500000e+00, 6.5000000e+00);
+	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -29,8 +29,8 @@ CParticleNodeGraph	$81861AB7
 		"$9CFDB9A2",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-44, -26);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-162, -7);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -102,12 +102,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.8453755e+00, 9.3993771e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.8000000e+00, 1.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -139,6 +140,7 @@ CParticleNodeGraph	$C909C3A1
 		"$E8E7F96C",
 		"$B21074FC",
 	};
+	WorkspacePosition = int2(36, -188);
 	WorkspaceZoom = -4;
 }
 CParticleNodeLayer	$9CFDB9A2
@@ -187,6 +189,7 @@ CParticleNodeRendererMesh	$3743FC5A
 		"$F59530F6",
 		"$4E8E1528",
 		"$A504E62F",
+		"$438F1BD2",
 		"$35DA816A",
 		"$7DBBA596",
 		"$2DED3896",
@@ -206,13 +209,14 @@ CParticleNodeRendererMesh	$3743FC5A
 		"$ED8C30B0",
 	};
 	WorkspacePosition = int2(264, 308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
 		"EnableRendering",
+		"Culling",
 		"Lit",
 		"LegacyLit",
 		"Atlas",
@@ -398,6 +402,7 @@ CParticleNodePinIn	$2DED3896
 	Visible = false;
 	Owner = "$3743FC5A";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$87ED46AB
 {
@@ -564,4 +569,13 @@ CParticleNodePinIn	$ED8C30B0
 	Visible = false;
 	Owner = "$3743FC5A";
 	BaseType = bool;
+}
+CParticleNodePinIn	$438F1BD2
+{
+	SelfName = "General.DoubleSided";
+	Type = bool;
+	Visible = false;
+	Owner = "$3743FC5A";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

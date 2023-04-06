@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -16358,13 +16358,14 @@ CParticleNodePinOut	$A92D040A
 CParticleNodeTemplate	$6C2E6726
 {
 	InputPins = {
+		"$DF38B43B",
 		"$4A7B12A2",
 	};
 	OutputPins = {
 		"$C54AF502",
 	};
 	WorkspacePosition = int2(1914, 66);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Color.pkfx";
 	SubGraphName = "srgb to linear";
 }
 CParticleNodePinIn	$4A7B12A2
@@ -20597,4 +20598,11 @@ CParticleNodePinOut	$A4908CE1
 	ConnectedPins = {
 		"$E8CF5998",
 	};
+}
+CParticleNodePinIn	$DF38B43B
+{
+	SelfName = "Mode";
+	Type = int;
+	Owner = "$6C2E6726";
+	BaseType = int;
 }

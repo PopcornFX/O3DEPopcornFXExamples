@@ -1,4 +1,4 @@
-Version = 2.15.0.15770;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -413,7 +413,7 @@ CParticleNodeRendererBillboard	$C01E62BC
 		"$06B64EED",
 	};
 	WorkspacePosition = int2(704, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -928,7 +928,7 @@ CParticleNodeRendererBillboard	$56D85F5A
 		"$9C20C2E6",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -1418,7 +1418,7 @@ CParticleNodeRendererBillboard	$FDD3ABF7
 		"$497CD05A",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -1983,7 +1983,7 @@ CParticleNodeRendererBillboard	$2F33C358
 		"$203490E5",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2415,7 +2415,7 @@ CParticleNodeRendererBillboard	$B872FD45
 		"$E7607F51",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2826,7 +2826,7 @@ CParticleNodeRendererBillboard	$61C67FBE
 		"$E125DC11",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -3249,7 +3249,7 @@ CParticleNodeRendererBillboard	$B276316F
 		"$AF43ED64",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -3642,7 +3642,7 @@ CParticleNodeRendererBillboard	$7A033631
 		"$7354F4D6",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -4046,7 +4046,7 @@ CParticleNodeRendererBillboard	$BAA1B698
 		"$28C99025",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -4926,7 +4926,7 @@ CParticleNodeRendererBillboard	$279C9EDC
 		"$92E67AE4",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -5326,7 +5326,7 @@ CParticleNodeRendererBillboard	$1F42BA72
 		"$18BC2B2B",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -5802,7 +5802,7 @@ CParticleNodeRendererBillboard	$F4F8CAE3
 		"$9F138506",
 	};
 	WorkspacePosition = int2(0, -396);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -6274,7 +6274,7 @@ CParticleNodeRendererBillboard	$74C07A90
 		"$FA0F9F3A",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -6654,7 +6654,7 @@ CParticleNodeRendererBillboard	$A9F00F46
 		"$518F9214",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -7043,7 +7043,7 @@ CParticleNodeRendererBillboard	$8D158045
 		"$E6EE37D7",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -7492,7 +7492,7 @@ CParticleNodeRendererBillboard	$CA8A7BD1
 		"$816B626D",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -7999,7 +7999,7 @@ CParticleNodeRendererBillboard	$653EB1DA
 		"$01D05EA4",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -8379,7 +8379,7 @@ CParticleNodeRendererBillboard	$1ACB2F29
 		"$06A934F2",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -8768,7 +8768,7 @@ CParticleNodeRendererBillboard	$3062F334
 		"$F4E5B177",
 	};
 	WorkspacePosition = int2(0, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -9241,7 +9241,7 @@ CParticleNodeRendererBillboard	$BCF5C29D
 		"$7323E372",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -9669,7 +9669,7 @@ CParticleNodeRendererBillboard	$326E5A1F
 		"$B0968415",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -10460,7 +10460,7 @@ CParticleNodeRendererBillboard	$10DD5F3D
 		"$05437ED2",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -10869,7 +10869,7 @@ CParticleNodeRendererBillboard	$9E7FBE1A
 		"$AED78F6B",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -11370,7 +11370,7 @@ CParticleNodeRendererBillboard	$BF2575FC
 		"$FD3CC056",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -13573,7 +13573,7 @@ CParticleNodeRendererBillboard	$D187F8E3
 		"$F06A342E",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -14030,7 +14030,7 @@ CParticleNodeRendererBillboard	$EFF0F984
 		"$4C90B3B5",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -14480,7 +14480,7 @@ CParticleNodeRendererBillboard	$9BC41347
 		"$AD260ED4",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -14893,7 +14893,7 @@ CParticleNodeRendererBillboard	$700E27DD
 		"$13F35571",
 	};
 	WorkspacePosition = int2(660, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -15318,7 +15318,7 @@ CParticleNodeRendererBillboard	$22D2A86B
 		"$DE335EF8",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -15740,7 +15740,7 @@ CParticleNodeRendererBillboard	$433BE9F8
 		"$EDA903DC",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -16150,7 +16150,7 @@ CParticleNodeRendererBillboard	$FB614B88
 		"$53A59064",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -16567,7 +16567,7 @@ CParticleNodeRendererBillboard	$D0900D83
 		"$9AF5D0C4",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -17044,7 +17044,7 @@ CParticleNodeRendererBillboard	$4A82CA62
 		"$9D484C66",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -17403,7 +17403,7 @@ CParticleNodeRendererBillboard	$1B960B4B
 		"$6B3884C6",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -17953,7 +17953,7 @@ CParticleNodeRendererBillboard	$89E303C7
 		"$89F45DB7",
 	};
 	WorkspacePosition = int2(0, -396);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -18445,7 +18445,7 @@ CParticleNodeRendererBillboard	$85867B1A
 		"$A58686B5",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -18944,7 +18944,7 @@ CParticleNodeRendererBillboard	$E731CCB3
 		"$8CA75585",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -19333,7 +19333,7 @@ CParticleNodeRendererBillboard	$CF0E90EC
 		"$3B687EFB",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -19779,7 +19779,7 @@ CParticleNodeRendererBillboard	$1145F2DC
 		"$0C185AA3",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -20263,7 +20263,7 @@ CParticleNodeRendererBillboard	$B5AA39C3
 		"$0952AC49",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -20773,7 +20773,7 @@ CParticleNodeRendererBillboard	$9F077A3B
 		"$1779B60C",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -21254,7 +21254,7 @@ CParticleNodeRendererBillboard	$3966006F
 		"$CFD69DBA",
 	};
 	WorkspacePosition = int2(0, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -21742,7 +21742,7 @@ CParticleNodeRendererBillboard	$AC27E9CD
 		"$E6BDAF5A",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -22152,7 +22152,7 @@ CParticleNodeRendererBillboard	$DAECF110
 		"$0EB6F3C4",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -22602,7 +22602,7 @@ CParticleNodeRendererBillboard	$DE0F22C3
 		"$9AA84A1B",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -23087,7 +23087,7 @@ CParticleNodeRendererBillboard	$6B1F2077
 		"$5003FFDC",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -23595,7 +23595,7 @@ CParticleNodeRendererBillboard	$B6A5F96F
 		"$8E6175DF",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -23997,7 +23997,7 @@ CParticleNodeRendererBillboard	$335B8E9B
 		"$724ED510",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -28594,7 +28594,7 @@ CParticleNodeRendererBillboard	$42BC81E2
 		"$7A20FECD",
 	};
 	WorkspacePosition = int2(704, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -29156,7 +29156,7 @@ CParticleNodeRendererBillboard	$A8AA74C8
 		"$65FFDF1E",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -29700,7 +29700,7 @@ CParticleNodeRendererBillboard	$4B06A4BB
 		"$D759512D",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -30337,7 +30337,7 @@ CParticleNodeRendererBillboard	$03352536
 		"$E51229E9",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -30898,7 +30898,7 @@ CParticleNodeRendererBillboard	$382D7D1E
 		"$D317160A",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -31439,7 +31439,7 @@ CParticleNodeRendererBillboard	$7C896A7A
 		"$74CEBA5C",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -32082,7 +32082,7 @@ CParticleNodeRendererBillboard	$D6EAA4D7
 		"$02945485",
 	};
 	WorkspacePosition = int2(0, -396);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -32662,7 +32662,7 @@ CParticleNodeRendererBillboard	$6F9986E0
 		"$6A4CA2D7",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -33352,7 +33352,7 @@ CParticleNodeRendererBillboard	$9628BC94
 		"$E948F19C",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -33945,7 +33945,7 @@ CParticleNodeRendererBillboard	$A9183E0F
 		"$157CC81C",
 	};
 	WorkspacePosition = int2(0, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -34545,7 +34545,7 @@ CParticleNodeRendererBillboard	$88A0F57E
 		"$371A077F",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -35067,7 +35067,7 @@ CParticleNodeRendererBillboard	$0C6BEEA6
 		"$46C473CF",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -35624,7 +35624,7 @@ CParticleNodeRendererBillboard	$97872E5F
 		"$999189D6",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -36193,7 +36193,7 @@ CParticleNodeRendererBillboard	$42416CC5
 		"$22BC084B",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -36743,7 +36743,7 @@ CParticleNodeRendererBillboard	$A52D16AE
 		"$0CD0150A",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -37422,7 +37422,7 @@ CParticleNodeRendererBillboard	$7C4F9E6D
 		"$3F048C39",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -37943,7 +37943,7 @@ CParticleNodeRendererBillboard	$43BED301
 		"$9F6BC05E",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -38473,7 +38473,7 @@ CParticleNodeRendererBillboard	$1045F388
 		"$F02A0E42",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -39073,7 +39073,7 @@ CParticleNodeRendererBillboard	$73180CCE
 		"$9EA7E3B2",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -39580,7 +39580,7 @@ CParticleNodeRendererBillboard	$AA0FA3BC
 		"$BB5AD7AE",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -40079,7 +40079,7 @@ CParticleNodeRendererBillboard	$211FE004
 		"$21AC19B2",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -40709,7 +40709,7 @@ CParticleNodeRendererBillboard	$BEE9BBB1
 		"$65F8B5FA",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -41289,7 +41289,7 @@ CParticleNodeRendererBillboard	$A4E8E42E
 		"$0456EA3A",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -41798,7 +41798,7 @@ CParticleNodeRendererBillboard	$8BC446F8
 		"$A82DDF47",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -42315,7 +42315,7 @@ CParticleNodeRendererBillboard	$732B2411
 		"$664098F9",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -42792,7 +42792,7 @@ CParticleNodeRendererBillboard	$74608959
 		"$6CAEAEE8",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -43315,7 +43315,7 @@ CParticleNodeRendererBillboard	$79748AE2
 		"$0DAB0B1B",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -43950,7 +43950,7 @@ CParticleNodeRendererBillboard	$AB3D70C7
 		"$203398FB",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -44477,7 +44477,7 @@ CParticleNodeRendererBillboard	$C039666D
 		"$F6F2CF07",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -44980,7 +44980,7 @@ CParticleNodeRendererBillboard	$F79C6322
 		"$E6609AD4",
 	};
 	WorkspacePosition = int2(660, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -45575,7 +45575,7 @@ CParticleNodeRendererBillboard	$3493396E
 		"$55C51575",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -46171,7 +46171,7 @@ CParticleNodeRendererBillboard	$62C0970A
 		"$09CED9A4",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -46890,7 +46890,7 @@ CParticleNodeRendererBillboard	$686C41FF
 		"$342D833D",
 	};
 	WorkspacePosition = int2(0, -396);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -47458,7 +47458,7 @@ CParticleNodeRendererBillboard	$F55F35D0
 		"$81D4065A",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -48033,7 +48033,7 @@ CParticleNodeRendererBillboard	$ADA5E8E4
 		"$E9BC277C",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -48498,7 +48498,7 @@ CParticleNodeRendererBillboard	$F7AD98B3
 		"$ECE537CD",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -49033,7 +49033,7 @@ CParticleNodeRendererBillboard	$A8E89713
 		"$95D6AEAE",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -49606,7 +49606,7 @@ CParticleNodeRendererBillboard	$977E3F7C
 		"$4D3869BC",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -50170,7 +50170,7 @@ CParticleNodeRendererBillboard	$8FD41AE9
 		"$4B225508",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -50656,7 +50656,7 @@ CParticleNodeRendererBillboard	$77C1E554
 		"$6D8953AB",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -51283,7 +51283,7 @@ CParticleNodeRendererBillboard	$BCC63B93
 		"$BF41F58A",
 	};
 	WorkspacePosition = int2(0, -374);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -51844,7 +51844,7 @@ CParticleNodeRendererBillboard	$F095A15D
 		"$274F98A6",
 	};
 	WorkspacePosition = int2(0, -308);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -52428,7 +52428,7 @@ CParticleNodeRendererBillboard	$E980A277
 		"$1803D2FD",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -52906,7 +52906,7 @@ CParticleNodeRendererBillboard	$8DF6E2A2
 		"$264EA1C7",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -53462,7 +53462,7 @@ CParticleNodeRendererBillboard	$F013F362
 		"$6D0DA3E1",
 	};
 	WorkspacePosition = int2(0, -352);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -54019,7 +54019,7 @@ CParticleNodeRendererBillboard	$7DD8D633
 		"$7A5D5543",
 	};
 	WorkspacePosition = int2(0, -286);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -54583,7 +54583,7 @@ CParticleNodeRendererBillboard	$FBFC8D03
 		"$6F3CA187",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -55069,7 +55069,7 @@ CParticleNodeRendererBillboard	$1210B2F6
 		"$187A4522",
 	};
 	WorkspacePosition = int2(0, -330);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",

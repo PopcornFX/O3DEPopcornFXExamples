@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -19,8 +19,8 @@ CParticleNodeGraph	$4B933A29
 		"$426D6A27",
 	};
 	Timeline = "$9154DFA0";
-	WorkspacePosition = int2(-365, 23);
-	WorkspaceZoom = 1;
+	WorkspacePosition = int2(-122, 19);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleTimeline	$9154DFA0
@@ -36,8 +36,8 @@ CParticleTimelineTrack	$EAC726E3
 }
 CEditorAssetEffect	$4ADE8DE2
 {
-	StartCameraPosition = float3(0.0000000e+00, 1.7773600e+00, 6.1473699e+00);
-	StartCameraOrientation = float3(2.2525194e-01, 3.4767212e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.3500000e+00, 6.0000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D
@@ -74,12 +74,13 @@ CEditorBackdropGrid	$2909A531
 CEditorBackdropMesh	$D6EEA348
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.2450850e+00, 5.7351017e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.5000000e+00, 5.0000000e-01);
 }
 CEditorBackdropDirectionalLight	$5F44DFAB
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$D806D24A
@@ -122,6 +123,7 @@ CParticleNodeTemplate	$A4528282
 {
 	InputPins = {
 		"$70D4C363",
+		"$DC046A57",
 		"$5FA569A9",
 		"$1C5570A7",
 		"$834A60BF",
@@ -1078,7 +1080,7 @@ CParticleNodeRendererBillboard	$9629BEA2
 		"$558DB436",
 	};
 	WorkspacePosition = int2(1606, -418);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -1662,4 +1664,13 @@ CParticleNodePinIn	$65687E43
 	Visible = false;
 	Owner = "$A4528282";
 	BaseType = bool;
+}
+CParticleNodePinIn	$DC046A57
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$A4528282";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

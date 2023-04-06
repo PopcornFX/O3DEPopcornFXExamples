@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -18,15 +18,15 @@ CParticleNodeGraph	$42E16C02
 		"$41E5AFE7",
 		"$14BC1BE7",
 	};
-	WorkspacePosition = int2(336, 33);
-	WorkspaceZoom = -3;
+	WorkspacePosition = int2(285, 31);
+	WorkspaceZoom = -4;
 }
 CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(0.0000000e+00, 2.7778699e+00, 5.5837698e+00);
-	StartCameraOrientation = float3(2.0427349e-01, 1.3439002e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.6500001e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeRendererBillboard	$8F7A985A
@@ -64,8 +64,8 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$14978373",
 		"$A11F5972",
 	};
-	WorkspacePosition = int2(154, -44);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	WorkspacePosition = int2(22, -44);
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -248,8 +248,8 @@ CParticleNodeGraph	$81861AB7
 		"$5A5BD1DE",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(250, -2);
-	WorkspaceZoom = -1;
+	WorkspacePosition = int2(132, 8);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -296,6 +296,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$CCA441E4",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -812,12 +813,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -8.6851835e-02, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -2.0000000e-01, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -1215,4 +1217,13 @@ CParticleNodePinIn	$50EFC4E8
 	Visible = false;
 	Owner = "$5A5BD1DE";
 	BaseType = bool;
+}
+CParticleNodePinIn	$CCA441E4
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

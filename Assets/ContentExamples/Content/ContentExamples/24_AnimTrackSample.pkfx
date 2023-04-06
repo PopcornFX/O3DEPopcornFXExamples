@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -30,8 +30,8 @@ CParticleNodeGraph	$81861AB7
 		"$2E03C3C8",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-539, -27);
-	WorkspaceZoom = 0;
+	WorkspacePosition = int2(-213, -16);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -103,12 +103,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -3.0000001e-01, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -2.0000000e-01, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -224,7 +225,7 @@ CParticleNodeRendererBillboard	$4E876109
 		"$C9C6A5CE",
 	};
 	WorkspacePosition = int2(-220, 484);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -913,8 +914,8 @@ CParticleNodeGraph	$601179B2
 		"$E478842B",
 		"$4C1D9C2C",
 	};
-	WorkspacePosition = int2(-192, -175);
-	WorkspaceZoom = -2;
+	WorkspacePosition = int2(-99, -112);
+	WorkspaceZoom = -5;
 }
 CParticleNodeLayer	$2E03C3C8
 {
@@ -1023,7 +1024,7 @@ CParticleNodeRendererBillboard	$4C1D9C2C
 		"$5B309B11",
 	};
 	WorkspacePosition = int2(484, 176);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",

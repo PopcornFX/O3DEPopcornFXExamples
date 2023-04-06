@@ -1,4 +1,4 @@
-Version = 2.15.0.15770;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1774,7 +1774,7 @@ CParticleNodeRendererBillboard	$135D7BC8
 		"$F4D8EC7F",
 	};
 	WorkspacePosition = int2(330, 176);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2064,7 +2064,7 @@ CParticleNodeRendererRibbon	$013378CE
 		"$073CC5A0",
 	};
 	WorkspacePosition = int2(814, -22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Ribbon_Opaque.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Ribbon_Opaque.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
 		"Opaque",

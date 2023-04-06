@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -11,8 +11,8 @@ CEditorAssetEffect	$4B933A29
 {
 	LoopingEnabled = false;
 	LoopDelay = 2.0000000e+00;
-	StartCameraPosition = float3(4.1787766e-02, 2.7368922e+00, 5.4515386e+00);
-	StartCameraOrientation = float3(2.2319457e-01, 4.9921921e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.6500001e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$9154DFA0
@@ -519,6 +519,7 @@ CParticleNodeTemplate	$08509DD1
 {
 	InputPins = {
 		"$7858F8EF",
+		"$9FF4A270",
 		"$B3D284C7",
 		"$A1649880",
 		"$038AA669",
@@ -1002,7 +1003,7 @@ CParticleNodeRendererMesh	$7228487B
 		"$A69E854A",
 	};
 	WorkspacePosition = int2(-3916, 242);
-	FeatureSetPath = "Library/Houdini/Materials/VAT_Fluid.pkma";
+	Material = "Library/Houdini/Materials/VAT_Fluid.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
@@ -1150,6 +1151,7 @@ CParticleNodePinIn	$9024D306
 	Visible = false;
 	Owner = "$7228487B";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$04C8B3F7
 {
@@ -1235,7 +1237,7 @@ CParticleNodeRendererMesh	$7B7EAC30
 		"$FA9688CC",
 	};
 	WorkspacePosition = int2(-4268, 396);
-	FeatureSetPath = "Library/Houdini/Materials/VAT_Soft.pkma";
+	Material = "Library/Houdini/Materials/VAT_Soft.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
@@ -1290,6 +1292,7 @@ CParticleNodePinIn	$9C4C47A6
 	Visible = false;
 	Owner = "$7B7EAC30";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$B11760B9
 {
@@ -1493,7 +1496,7 @@ CParticleNodeRendererMesh	$B79D58A0
 		"$AF88972E",
 	};
 	WorkspacePosition = int2(-4048, 396);
-	FeatureSetPath = "Library/Houdini/Materials/VAT_Rigid.pkma";
+	Material = "Library/Houdini/Materials/VAT_Rigid.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
@@ -1648,6 +1651,7 @@ CParticleNodePinIn	$5CA322F3
 	Visible = false;
 	Owner = "$B79D58A0";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$2CC0E06B
 {
@@ -1867,12 +1871,13 @@ CEditorBackdropGrid	$AB93F1C7
 CEditorBackdropMesh	$CF880096
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -2.0287371e-01, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -2.0000000e-01, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$C9F5C011
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$B34D67A8
@@ -2086,4 +2091,13 @@ CParticleNodePinIn	$32222C33
 	Visible = false;
 	Owner = "$08509DD1";
 	BaseType = bool;
+}
+CParticleNodePinIn	$9FF4A270
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$08509DD1";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

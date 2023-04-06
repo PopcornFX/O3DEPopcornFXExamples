@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -127,6 +127,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$AC06B115",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -352,12 +353,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
 	Position = float3(0.0000000e+00, -2.0087981e+00, 8.8700628e-01);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -1239,13 +1241,12 @@ CParticleNodeTemplate	$8DAD8DF4
 	InputPins = {
 		"$5EF13D96",
 		"$9DDD8147",
-		"$FC9A27CF",
 		"$02262A1E",
+		"$FC9A27CF",
+		"$F671173E",
 		"$D0ED40CE",
 		"$A5B6DC3C",
 		"$1690F7D2",
-		"$1F188710",
-		"$F671173E",
 	};
 	WorkspacePosition = int2(1672, -418);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Debug.pkfx";
@@ -1314,15 +1315,6 @@ CParticleNodePinIn	$1690F7D2
 		"$BAF4C145",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$1F188710
-{
-	SelfName = "Size";
-	Type = float;
-	Visible = false;
-	Owner = "$8DAD8DF4";
-	BaseType = float;
-	ValueF = float4(2.0000001e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$F671173E
 {
@@ -2286,6 +2278,7 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$CEDACC99",
 		"$30994FD4",
 		"$37A4D590",
+		"$890F65D2",
 		"$C0AF947B",
 		"$03D26A21",
 		"$CEFBFFCC",
@@ -2305,13 +2298,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$B827D5D1",
 	};
 	WorkspacePosition = int2(1914, -66);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
 		"EnableRendering",
+		"Culling",
 		"Lit",
 		"LegacyLit",
 		"Atlas",
@@ -2638,4 +2632,22 @@ CParticleNodePinIn	$53B64A0F
 	Visible = false;
 	Owner = "$5A5BD1DE";
 	BaseType = bool;
+}
+CParticleNodePinIn	$AC06B115
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$890F65D2
+{
+	SelfName = "General.DoubleSided";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

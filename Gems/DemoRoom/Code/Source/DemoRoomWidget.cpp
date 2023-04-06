@@ -279,7 +279,7 @@ namespace DemoRoom
         {
             bool hasDemoRoomComponent = false;
             EditorComponentAPIBus::BroadcastResult( hasDemoRoomComponent, &EditorComponentAPIRequests::HasComponentOfType,
-                selectedEntityIds[0], EditorDemoRoomComponentTypeId);
+                selectedEntityIds[0], AZ::Uuid(EditorDemoRoomComponentTypeId));
 
             if (hasDemoRoomComponent)
                 m_selectedEntity = selectedEntityIds[0];
@@ -348,7 +348,7 @@ namespace DemoRoom
             for (auto childId : allDescendents)
             {
                 bool hasStandComponent = false;
-                EditorComponentAPIBus::BroadcastResult(hasStandComponent, &EditorComponentAPIRequests::HasComponentOfType, childId, EditorDemoRoomStandComponentTypeId);
+                EditorComponentAPIBus::BroadcastResult(hasStandComponent, &EditorComponentAPIRequests::HasComponentOfType, childId, AZ::Uuid(EditorDemoRoomStandComponentTypeId));
                 if (hasStandComponent)
                 {
                     AZ::EntityId standMeshEntityId;
@@ -493,10 +493,10 @@ namespace DemoRoom
                                                                         materialPair.first, materialIt->second);
 #if PK_O3DE_MAJOR_VERSION > 2205
                         AZ::Render::MaterialConsumerNotificationBus::Event( entityId,
-                                                                            &AZ::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+                            &AZ::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
 #else
                         AZ::Render::MaterialReceiverNotificationBus::Event( entityId,
-                                                                            &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentsChanged);
+                            &AZ::Render::MaterialReceiverNotificationBus::Events::OnMaterialAssignmentsChanged);
 #endif
                     }
                     else
@@ -747,7 +747,7 @@ namespace DemoRoom
         AZ::EntityId entityId = CreateEntityAtLocation(AZ::Vector3::CreateZero(), AZ::EntityId(), "DemoRoom");
 
         EditorComponentAPIBus::Broadcast(   &EditorComponentAPIRequests::AddComponentOfType, entityId,
-                                            EditorDemoRoomComponentTypeId);
+                                            AZ::Uuid(EditorDemoRoomComponentTypeId));
         return entityId;
     }
 
@@ -755,7 +755,7 @@ namespace DemoRoom
     {
         AZ::EntityId entityId = CreateEntityAtLocation(pos, parentId, name);
 
-        EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, EditorDemoRoomStandComponentTypeId);
+        EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, AZ::Uuid(EditorDemoRoomStandComponentTypeId));
 
         AZ::EntityId standEntityId = CreateEntityAtLocation(AZ::Vector3::CreateZero(), entityId, "Stand");
         EditorComponentAPIBus::Broadcast(   &EditorComponentAPIRequests::AddComponentsOfType, standEntityId,
@@ -770,7 +770,7 @@ namespace DemoRoom
                                                             AZ::Quaternion::CreateFromEulerAnglesDegrees(AZ::Vector3(-30.0f, 0.0f, 0.0f)),
                                                             0.5f);
         AZ::TransformBus::Event(nameplateTextEntityId, &AZ::TransformInterface::SetLocalTM, textTransform);
-        EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, nameplateTextEntityId, EditorDemoRoomDrawTextComponentTypeId);
+        EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, nameplateTextEntityId, AZ::Uuid(EditorDemoRoomDrawTextComponentTypeId));
         EditorDemoRoomDrawTextRequestBus::Event(nameplateTextEntityId, &EditorDemoRoomDrawTextRequests::SetText, "Name");
         EditorDemoRoomDrawTextRequestBus::Event(nameplateTextEntityId, &EditorDemoRoomDrawTextRequests::SetColor, AZ::Color(1.0f));
 

@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -19,8 +19,8 @@ CParticleNodeGraph	$4B933A29
 		"$C1C3CB33",
 	};
 	Timeline = "$9154DFA0";
-	WorkspacePosition = int2(-406, 23);
-	WorkspaceZoom = 1;
+	WorkspacePosition = int2(-137, 28);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleTimeline	$9154DFA0
@@ -36,8 +36,8 @@ CParticleTimelineTrack	$EAC726E3
 }
 CEditorAssetEffect	$4ADE8DE2
 {
-	StartCameraPosition = float3(0.0000000e+00, 2.4920599e+00, 6.3736501e+00);
-	StartCameraOrientation = float3(3.0723014e-01, 3.4731571e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.4500000e+00, 6.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D
@@ -74,12 +74,13 @@ CEditorBackdropGrid	$2909A531
 CEditorBackdropMesh	$D6EEA348
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.2662835e+00, 5.4135990e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.4000000e+00, 1.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$5F44DFAB
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSpotLight	$D806D24A
@@ -129,6 +130,7 @@ CParticleNodeTemplate	$448B03FF
 {
 	InputPins = {
 		"$8EE76DDA",
+		"$9AF4B65A",
 		"$8989528A",
 		"$FB292433",
 		"$B6A63DE9",
@@ -379,8 +381,8 @@ CParticleNodeGraph	$37D43749
 		"$792F8057",
 		"$4B252AF4",
 	};
-	WorkspacePosition = int2(-220, -153);
-	WorkspaceZoom = -4;
+	WorkspacePosition = int2(-126, -104);
+	WorkspaceZoom = -6;
 }
 CParticleNodeSetLife	$9D1D3744
 {
@@ -409,10 +411,17 @@ CParticleNodeRendererBillboard	$60D3E5F1
 		"$7FDB4B38",
 		"$F6948074",
 		"$BB3868A3",
-		"$992CD365",
-		"$79100E60",
+		"$ACA005CF",
+		"$14872913",
 		"$5F06B8ED",
 		"$F685E4EF",
+		"$015371C3",
+		"$526B3BCB",
+		"$78679412",
+		"$8481A52D",
+		"$6108E38A",
+		"$E4F609D0",
+		"$77464CD2",
 		"$CB3334BE",
 		"$A7D6F6C5",
 		"$6CC67BB7",
@@ -425,7 +434,7 @@ CParticleNodeRendererBillboard	$60D3E5F1
 		"$F96F0FC2",
 	};
 	WorkspacePosition = int2(1496, 220);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -548,6 +557,7 @@ CParticleNodePinIn	$F685E4EF
 	Visible = false;
 	Owner = "$60D3E5F1";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$CB3334BE
 {
@@ -1329,24 +1339,6 @@ CParticleNodePinOut	$CAF155F4
 		"$BB3868A3",
 	};
 }
-CParticleNodePinIn	$992CD365
-{
-	SelfName = "Opaque.Type";
-	Type = int;
-	Visible = false;
-	Owner = "$60D3E5F1";
-	BaseType = int;
-	ValueI = int4(1, 0, 0, 0);
-}
-CParticleNodePinIn	$79100E60
-{
-	SelfName = "Opaque.MaskThreshold";
-	Type = float;
-	Visible = false;
-	Owner = "$60D3E5F1";
-	BaseType = float;
-	ValueF = float4(6.9999999e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
 CParticleNodePinIn	$6EC6AB79
 {
 	SelfName = "KillIfBelowDepth";
@@ -1363,4 +1355,92 @@ CParticleNodePinIn	$B3091F73
 	Visible = false;
 	Owner = "$448B03FF";
 	BaseType = bool;
+}
+CParticleNodePinIn	$9AF4B65A
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$448B03FF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$ACA005CF
+{
+	SelfName = "Opaque.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodePinIn	$14872913
+{
+	SelfName = "Opaque.MaskThreshold";
+	Type = float;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = float;
+	ValueF = float4(6.9999999e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$015371C3
+{
+	SelfName = "Lit.NormalMap";
+	Type = dataImage;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = dataImage;
+	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/NMap_Flat.dds";
+}
+CParticleNodePinIn	$526B3BCB
+{
+	SelfName = "Lit.CastShadows";
+	Type = bool;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$78679412
+{
+	SelfName = "Lit.Roughness";
+	Type = float;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 5.0000000e-01, 5.0000000e-01, 5.0000000e-01);
+}
+CParticleNodePinIn	$8481A52D
+{
+	SelfName = "Lit.Metalness";
+	Type = float;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = float;
+}
+CParticleNodePinIn	$6108E38A
+{
+	SelfName = "Lit.RoughMetalMap";
+	Type = dataImage;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = dataImage;
+	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodePinIn	$E4F609D0
+{
+	SelfName = "Lit.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = int;
+}
+CParticleNodePinIn	$77464CD2
+{
+	SelfName = "Lit.LitMaskMap";
+	Type = dataImage;
+	Visible = false;
+	Owner = "$60D3E5F1";
+	BaseType = dataImage;
+	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
 }

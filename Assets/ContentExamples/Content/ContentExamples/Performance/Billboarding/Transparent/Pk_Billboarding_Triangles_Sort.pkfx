@@ -1,4 +1,4 @@
-Version = 2.15.0.15770;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1586,7 +1586,7 @@ CParticleNodeRendererTriangle	$6ED64FF0
 		"$506635BF",
 	};
 	WorkspacePosition = int2(1782, -22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Triangle_Transparent.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Triangle_Transparent.pkma";
 	RendererFeatures = {
 		"GeometryTriangle",
 		"EnableRendering",

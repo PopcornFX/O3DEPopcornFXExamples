@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -69,7 +69,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$051D786C",
 	};
 	WorkspacePosition = int2(352, 110);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -213,7 +213,6 @@ CParticleNodeTemplate	$F02495CD
 		"$1B30654E",
 		"$75C79502",
 		"$8B66367E",
-		"$E12D8BB7",
 		"$DA1862BB",
 		"$EB08CDF0",
 		"$1FBDC01E",
@@ -813,8 +812,8 @@ CParticleNodeTemplate	$66691374
 		"$02EF76BB",
 		"$739D9FA9",
 		"$4254D889",
-		"$E50D3B46",
 		"$7CA2ABFE",
+		"$E50D3B46",
 		"$3DFE1AAF",
 		"$9254A078",
 		"$C6BF5DBD",
@@ -1628,12 +1627,4 @@ CParticleNodePinOut	$D6BE588E
 	SelfName = "Cursor";
 	Visible = false;
 	Owner = "$03C3CD47";
-}
-CParticleNodePinIn	$E12D8BB7
-{
-	SelfName = "Kill";
-	Type = bool;
-	Visible = false;
-	Owner = "$F02495CD";
-	BaseType = bool;
 }

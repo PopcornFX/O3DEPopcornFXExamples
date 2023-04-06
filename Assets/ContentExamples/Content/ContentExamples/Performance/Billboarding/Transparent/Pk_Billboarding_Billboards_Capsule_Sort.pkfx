@@ -1,4 +1,4 @@
-Version = 2.15.0.15770;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -81,7 +81,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$24EA9B7F",
 	};
 	WorkspacePosition = int2(594, -22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Billboard_Transparent.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Billboard_Transparent.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -1833,7 +1833,7 @@ CParticleNodeRendererBillboard	$060A7535
 		"$63129C2D",
 	};
 	WorkspacePosition = int2(968, -22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Billboard_Transparent.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Billboard_Transparent.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
