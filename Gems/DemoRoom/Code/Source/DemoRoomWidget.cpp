@@ -24,6 +24,8 @@
 #include <AtomLyIntegration/CommonFeatures/CoreLights/AreaLightComponentConfig.h>
 
 #include <Source/EditorColliderComponent.h>
+#include <Source/EditorMeshColliderComponent.h>
+#include <Source/EditorStaticRigidBodyComponent.h>
 
 #include <QCheckBox>
 #include <QDoubleValidator>
@@ -385,10 +387,13 @@ namespace DemoRoom
     {
         auto actionCallback = [](AZ::EntityId entityId, bool isStandMesh)
         {
-            bool hasColliderComponent = false;
-            EditorComponentAPIBus::BroadcastResult(hasColliderComponent, &EditorComponentAPIRequests::HasComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
-            if (isStandMesh && hasColliderComponent)
+            //Update the collider IFN
+            bool hasOldColliderComponent = false;
+            EditorComponentAPIBus::BroadcastResult(hasOldColliderComponent, &EditorComponentAPIRequests::HasComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
+
+            if (hasOldColliderComponent)
             {
+                //In O3DE 23.05, Physics asset shape is now handled by EditorMeshColliderComponent.
                 EditorComponentAPIRequests::GetComponentOutcome componentOutcome;
                 EditorComponentAPIBus::BroadcastResult(componentOutcome, &EditorComponentAPIRequests::GetComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
                 if (componentOutcome)
@@ -397,10 +402,32 @@ namespace DemoRoom
                     componentsToRemove.push_back(componentOutcome.GetValue());
                     EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::RemoveComponents, componentsToRemove);
                 }
-                EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
+                EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorMeshColliderComponent::RTTI_Type());
+                EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorStaticRigidBodyComponent::RTTI_Type());
             }
-            else if (!hasColliderComponent)
-                EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorColliderComponent::RTTI_Type());
+            else
+            {
+                bool hasColliderComponent = false;
+                EditorComponentAPIBus::BroadcastResult(hasColliderComponent, &EditorComponentAPIRequests::HasComponentOfType, entityId, PhysX::EditorMeshColliderComponent::RTTI_Type());
+                if (isStandMesh && hasColliderComponent)
+                {
+                    EditorComponentAPIRequests::GetComponentOutcome componentOutcome;
+                    EditorComponentAPIBus::BroadcastResult(componentOutcome, &EditorComponentAPIRequests::GetComponentOfType, entityId, PhysX::EditorMeshColliderComponent::RTTI_Type());
+                    if (componentOutcome)
+                    {
+                        AZStd::vector<AZ::EntityComponentIdPair> componentsToRemove;
+                        componentsToRemove.push_back(componentOutcome.GetValue());
+                        EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::RemoveComponents, componentsToRemove);
+                    }
+                    EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorStaticRigidBodyComponent::RTTI_Type());
+                    EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorMeshColliderComponent::RTTI_Type());
+                }
+                else if (!hasColliderComponent)
+                {
+                    EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorMeshColliderComponent::RTTI_Type());
+                    EditorComponentAPIBus::Broadcast(&EditorComponentAPIRequests::AddComponentOfType, entityId, PhysX::EditorStaticRigidBodyComponent::RTTI_Type());
+                }
+            }
         };
 
         EnumerateDemoRoomMeshEntities(actionCallback);
