@@ -340,45 +340,6 @@
                     "$type": "EditorVisibilityComponent",
                     "Id": 1523855006448368478
                 },
-                "Component_[15587833845610498646]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 15587833845610498646,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "SM_URoom_Wall_Gray"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
-                                    "subId": 4008305374
-                                },
-                                "assetHint": "objects/sm_uroom_wall.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
-                                        "subId": 4008305374
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_uroom_wall.pxmesh"
-                                }
-                            }
-                        }
-                    }
-                },
                 "Component_[15952051130798744872]": {
                     "$type": "EditorLockComponent",
                     "Id": 15952051130798744872
@@ -405,6 +366,40 @@
                 "Component_[17996932046855940490]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 17996932046855940490
+                },
+                "Component_[2887176035735734682]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 2887176035735734682,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "SM_URoom_Wall_Gray"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
+                                    "subId": 4008305374
+                                },
+                                "assetHint": "objects/sm_uroom_wall.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{903E8C39-FAD5-54B8-80ED-B76EDF6832F6}",
+                                        "subId": 4008305374
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_uroom_wall.pxmesh"
+                                }
+                            }
+                        }
+                    }
                 },
                 "Component_[3927431764323373901]": {
                     "$type": "EditorEntityIconComponent",
@@ -450,6 +445,10 @@
                             ]
                         }
                     }
+                },
+                "Component_[5100182099427035782]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 5100182099427035782
                 },
                 "Component_[7740147104300294908]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
@@ -563,21 +562,18 @@
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 17921404711389796415
                 },
-                "Component_[4845849432592074057]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 4845849432592074057,
+                "Component_[2649053587403630857]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 2649053587403630857,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Material #402"
+                                },
+                                {
+                                    "Name": "Material #403"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
                             ]
                         }
                     },
@@ -602,6 +598,10 @@
                             }
                         }
                     }
+                },
+                "Component_[5446774907915073588]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 5446774907915073588
                 },
                 "Component_[5921520519027955993]": {
                     "$type": "EditorVisibilityComponent",
@@ -651,6 +651,10 @@
                         }
                     }
                 },
+                "Component_[10569240370823771050]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 10569240370823771050
+                },
                 "Component_[10936062751026633821]": {
                     "$type": "EditorInspectorComponent",
                     "Id": 10936062751026633821
@@ -658,49 +662,6 @@
                 "Component_[11177739542158338224]": {
                     "$type": "EditorEntitySortComponent",
                     "Id": 11177739542158338224
-                },
-                "Component_[11757401264980161974]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 11757401264980161974,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Material #396"
-                                },
-                                {
-                                    "Name": "Material #394"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
-                                    "subId": 3071300601
-                                },
-                                "assetHint": "objects/sm_demoroomclamp.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
-                                        "subId": 3071300601
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_demoroomclamp.pxmesh"
-                                }
-                            }
-                        }
-                    }
                 },
                 "Component_[1202151474916997646]": {
                     "$type": "EditorMaterialComponent",
@@ -763,6 +724,43 @@
                                     }
                                 }
                             ]
+                        }
+                    }
+                },
+                "Component_[12101043542834444578]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 12101043542834444578,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #396"
+                                },
+                                {
+                                    "Name": "Material #394"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
+                                    "subId": 3071300601
+                                },
+                                "assetHint": "objects/sm_demoroomclamp.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{67FF3236-BA3C-57FE-9804-3C6E6E9B31E1}",
+                                        "subId": 3071300601
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_demoroomclamp.pxmesh"
+                                }
+                            }
                         }
                     }
                 },
@@ -886,6 +884,47 @@
                         }
                     }
                 },
+                "Component_[16886103756935112965]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 16886103756935112965,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #399"
+                                },
+                                {
+                                    "Name": "Material #398"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
+                                    "subId": 3788356145
+                                },
+                                "assetHint": "objects/sm_demoroomu.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
+                                        "subId": 3788356145
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_demoroomu.pxmesh"
+                                }
+                            }
+                        }
+                    }
+                },
+                "Component_[17541602335052146904]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 17541602335052146904
+                },
                 "Component_[18384978830519202796]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 18384978830519202796,
@@ -960,46 +999,6 @@
                                     }
                                 }
                             ]
-                        }
-                    }
-                },
-                "Component_[5806193770613559479]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 5806193770613559479,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Entire object"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
-                                    "subId": 3788356145
-                                },
-                                "assetHint": "objects/sm_demoroomu.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
-                                        "subId": 3788356145
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_demoroomu.pxmesh"
-                                }
-                            }
                         }
                     }
                 },
@@ -1089,6 +1088,10 @@
                     "$type": "EditorInspectorComponent",
                     "Id": 11322681738559244523
                 },
+                "Component_[15561135956667113501]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 15561135956667113501
+                },
                 "Component_[15947006098409611551]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 15947006098409611551
@@ -1096,6 +1099,49 @@
                 "Component_[16160017297955409787]": {
                     "$type": "EditorLockComponent",
                     "Id": 16160017297955409787
+                },
+                "Component_[17034210534499200775]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 17034210534499200775,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #207"
+                                },
+                                {
+                                    "Name": "Material #208"
+                                },
+                                {
+                                    "Name": "SM_Base_FlatWall"
+                                },
+                                {
+                                    "Name": "Material #451"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{BB5079FC-6D23-58FF-9CC9-48D8D4D190EC}",
+                                    "subId": 2530049675
+                                },
+                                "assetHint": "objects/sm_demodisplay03_combined.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{BB5079FC-6D23-58FF-9CC9-48D8D4D190EC}",
+                                        "subId": 2530049675
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_demodisplay03_combined.pxmesh"
+                                }
+                            }
+                        }
+                    }
                 },
                 "Component_[18005044773334110830]": {
                     "$type": "EditorEntityIconComponent",
@@ -1263,57 +1309,6 @@
                         "Entity_[4875300295610]",
                         "Entity_[4965494608826]"
                     ]
-                },
-                "Component_[803698892488645733]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 803698892488645733,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Material #207"
-                                },
-                                {
-                                    "Name": "Material #208"
-                                },
-                                {
-                                    "Name": "SM_Base_FlatWall"
-                                },
-                                {
-                                    "Name": "Material #451"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {},
-                                {},
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{BB5079FC-6D23-58FF-9CC9-48D8D4D190EC}",
-                                    "subId": 2530049675
-                                },
-                                "assetHint": "objects/sm_demodisplay03_combined.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{BB5079FC-6D23-58FF-9CC9-48D8D4D190EC}",
-                                        "subId": 2530049675
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_demodisplay03_combined.pxmesh"
-                                }
-                            }
-                        }
-                    }
                 }
             }
         },
@@ -1332,6 +1327,44 @@
                 "Component_[12436099758404237713]": {
                     "$type": "EditorEntityIconComponent",
                     "Id": 12436099758404237713
+                },
+                "Component_[12812308810725987603]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 12812308810725987603
+                },
+                "Component_[13063412650574282355]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 13063412650574282355,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "SM_NamePlate"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{DE040AF1-A63D-5783-9E1F-E09EEB0EC5C9}",
+                                    "subId": 2758460701
+                                },
+                                "assetHint": "objects/sm_nameplate.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{DE040AF1-A63D-5783-9E1F-E09EEB0EC5C9}",
+                                        "subId": 2758460701
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_nameplate.pxmesh"
+                                }
+                            }
+                        }
+                    }
                 },
                 "Component_[1437684862647166510]": {
                     "$type": "EditorLockComponent",
@@ -1359,45 +1392,6 @@
                 "Component_[6622411579764575719]": {
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 6622411579764575719
-                },
-                "Component_[6656372882869793057]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 6656372882869793057,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Entire object"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{DE040AF1-A63D-5783-9E1F-E09EEB0EC5C9}",
-                                    "subId": 2758460701
-                                },
-                                "assetHint": "objects/sm_nameplate.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{DE040AF1-A63D-5783-9E1F-E09EEB0EC5C9}",
-                                        "subId": 2758460701
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_nameplate.pxmesh"
-                                }
-                            }
-                        }
-                    }
                 },
                 "Component_[7538671680874679372]": {
                     "$type": "EditorVisibilityComponent",
@@ -1612,49 +1606,6 @@
                         ]
                     }
                 },
-                "Component_[14951075757145725661]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 14951075757145725661,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Material #399"
-                                },
-                                {
-                                    "Name": "Material #398"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
-                                    "subId": 3788356145
-                                },
-                                "assetHint": "objects/sm_demoroomu.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
-                                        "subId": 3788356145
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_demoroomu.pxmesh"
-                                }
-                            }
-                        }
-                    }
-                },
                 "Component_[150490866144517270]": {
                     "$type": "AZ::Render::EditorMeshComponent",
                     "Id": 150490866144517270,
@@ -1681,6 +1632,47 @@
                 "Component_[16651491028406437583]": {
                     "$type": "EditorInspectorComponent",
                     "Id": 16651491028406437583
+                },
+                "Component_[1942199613020897163]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 1942199613020897163
+                },
+                "Component_[2401039330154592792]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 2401039330154592792,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #399"
+                                },
+                                {
+                                    "Name": "Material #398"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
+                                    "subId": 3788356145
+                                },
+                                "assetHint": "objects/sm_demoroomu.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{4A141E15-7C7D-5D89-80AD-F4422FF80DE3}",
+                                        "subId": 3788356145
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_demoroomu.pxmesh"
+                                }
+                            }
+                        }
+                    }
                 },
                 "Component_[4705508476272126379]": {
                     "$type": "EditorOnlyEntityComponent",
@@ -1843,9 +1835,9 @@
                     "$type": "EditorVisibilityComponent",
                     "Id": 14703372826809243623
                 },
-                "Component_[15542183771720342941]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 15542183771720342941,
+                "Component_[15465374556843465129]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 15465374556843465129,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
@@ -1855,12 +1847,6 @@
                                 {
                                     "Name": "Material #208"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
                             ]
                         }
                     },
@@ -1920,6 +1906,10 @@
                             -0.18000000715255737
                         ]
                     }
+                },
+                "Component_[434185201144737043]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 434185201144737043
                 },
                 "Component_[4649676864763555291]": {
                     "$type": "EditorInspectorComponent",
@@ -2098,20 +2088,19 @@
                         }
                     }
                 },
-                "Component_[2351226820199789514]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 2351226820199789514,
+                "Component_[2927198888118145758]": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2927198888118145758
+                },
+                "Component_[3003191464114608957]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 3003191464114608957,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
                                     "Name": "SM_NamePlate"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
                             ]
                         }
                     },
@@ -2137,13 +2126,13 @@
                         }
                     }
                 },
-                "Component_[2927198888118145758]": {
-                    "$type": "EditorInspectorComponent",
-                    "Id": 2927198888118145758
-                },
                 "Component_[4304534578957070767]": {
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 4304534578957070767
+                },
+                "Component_[6436681275552741577]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 6436681275552741577
                 },
                 "Component_[9110771950051834437]": {
                     "$type": "EditorEntityIconComponent",
@@ -2286,21 +2275,22 @@
             "Id": "Entity_[14211746586960]",
             "Name": "Section_3",
             "Components": {
-                "Component_[10111842882010770586]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 10111842882010770586,
+                "Component_[11956288883136440076]": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 11956288883136440076
+                },
+                "Component_[14255120867367786467]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 14255120867367786467,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Material #399"
+                                },
+                                {
+                                    "Name": "Material #398"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
                             ]
                         }
                     },
@@ -2325,10 +2315,6 @@
                             }
                         }
                     }
-                },
-                "Component_[11956288883136440076]": {
-                    "$type": "EditorDisabledCompositionComponent",
-                    "Id": 11956288883136440076
                 },
                 "Component_[15740958519926906744]": {
                     "$type": "EditorInspectorComponent",
@@ -2448,6 +2434,10 @@
                 "Component_[784453007316987740]": {
                     "$type": "EditorEntitySortComponent",
                     "Id": 784453007316987740
+                },
+                "Component_[8156743385897691043]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 8156743385897691043
                 }
             }
         },
@@ -2528,30 +2518,18 @@
                     "$type": "EditorInspectorComponent",
                     "Id": 11783634855167431235
                 },
-                "Component_[15041971375115834083]": {
-                    "$type": "EditorEntitySortComponent",
-                    "Id": 15041971375115834083,
-                    "Child Entity Order": [
-                        "Entity_[36475417708801]",
-                        "Entity_[36518367381761]",
-                        "Entity_[14224631488848]"
-                    ]
-                },
-                "Component_[15352769721876604149]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 15352769721876604149,
+                "Component_[12561593120907348577]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 12561593120907348577,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Material #207"
+                                },
+                                {
+                                    "Name": "Material #208"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
                             ]
                         }
                     },
@@ -2576,6 +2554,15 @@
                             }
                         }
                     }
+                },
+                "Component_[15041971375115834083]": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 15041971375115834083,
+                    "Child Entity Order": [
+                        "Entity_[36475417708801]",
+                        "Entity_[36518367381761]",
+                        "Entity_[14224631488848]"
+                    ]
                 },
                 "Component_[1559283421958077231]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
@@ -2683,6 +2670,10 @@
                 "Component_[6937748975591215714]": {
                     "$type": "EditorEntityIconComponent",
                     "Id": 6937748975591215714
+                },
+                "Component_[7665365207405545257]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 7665365207405545257
                 }
             }
         },
@@ -2777,28 +2768,23 @@
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 2419001534484309002
                 },
+                "Component_[2940568241043794233]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 2940568241043794233
+                },
                 "Component_[7219994988139514649]": {
                     "$type": "EditorOnlyEntityComponent",
                     "Id": 7219994988139514649
                 },
-                "Component_[865872558174587712]": {
-                    "$type": "EditorLockComponent",
-                    "Id": 865872558174587712
-                },
-                "Component_[9146043439677757765]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 9146043439677757765,
+                "Component_[7735769930532299405]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 7735769930532299405,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "SM_NamePlate"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
                             ]
                         }
                     },
@@ -2823,6 +2809,10 @@
                             }
                         }
                     }
+                },
+                "Component_[865872558174587712]": {
+                    "$type": "EditorLockComponent",
+                    "Id": 865872558174587712
                 },
                 "Component_[9275272083646051839]": {
                     "$type": "EditorEntityIconComponent",
@@ -2908,28 +2898,23 @@
                         1.0
                     ]
                 },
+                "Component_[11280316267576561199]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 11280316267576561199
+                },
                 "Component_[11298726807072765787]": {
                     "$type": "EditorEntitySortComponent",
                     "Id": 11298726807072765787
                 },
-                "Component_[14823052330073742218]": {
-                    "$type": "EditorEntityIconComponent",
-                    "Id": 14823052330073742218
-                },
-                "Component_[1738353096586303278]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 1738353096586303278,
+                "Component_[12770462763883492149]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 12770462763883492149,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
                                     "Name": "Material #289"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
                             ]
                         }
                     },
@@ -2961,6 +2946,10 @@
                         "HasNonUniformScale": true
                     },
                     "HasNonUniformScale": true
+                },
+                "Component_[14823052330073742218]": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 14823052330073742218
                 },
                 "Component_[2493631088662467550]": {
                     "$type": "EditorPendingCompositionComponent",
@@ -3139,20 +3128,15 @@
                         }
                     }
                 },
-                "Component_[5541753149787995255]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 5541753149787995255,
+                "Component_[6004595903366807669]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 6004595903366807669,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "SM_URoom_Wall_Gray"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
                             ]
                         }
                     },
@@ -3177,6 +3161,10 @@
                             }
                         }
                     }
+                },
+                "Component_[693120292988703391]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 693120292988703391
                 },
                 "Component_[8456830689419607778]": {
                     "$type": "EditorMaterialComponent",
@@ -3249,9 +3237,50 @@
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 11241279913735807332
                 },
+                "Component_[13298283206159956698]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 13298283206159956698
+                },
                 "Component_[13719860069272379864]": {
                     "$type": "EditorEntitySortComponent",
                     "Id": 13719860069272379864
+                },
+                "Component_[14022510948208545181]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 14022510948208545181,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Material #402"
+                                },
+                                {
+                                    "Name": "Material #403"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "PhysicsAsset": {
+                            "Asset": {
+                                "assetId": {
+                                    "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
+                                    "subId": 32440811
+                                },
+                                "assetHint": "objects/sm_demoroomtrim.pxmesh"
+                            },
+                            "Configuration": {
+                                "PhysicsAsset": {
+                                    "assetId": {
+                                        "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
+                                        "subId": 32440811
+                                    },
+                                    "loadBehavior": "QueueLoad",
+                                    "assetHint": "objects/sm_demoroomtrim.pxmesh"
+                                }
+                            }
+                        }
+                    }
                 },
                 "Component_[15472477302424700741]": {
                     "$type": "EditorMaterialComponent",
@@ -3321,49 +3350,6 @@
                     "$type": "EditorDisabledCompositionComponent",
                     "Id": 17017006514125691777
                 },
-                "Component_[3674503626137224717]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 3674503626137224717,
-                    "ColliderConfiguration": {
-                        "MaterialSlots": {
-                            "Slots": [
-                                {
-                                    "Name": "Material #402"
-                                },
-                                {
-                                    "Name": "Material #403"
-                                }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfiguration": {
-                        "PhysicsAsset": {
-                            "Asset": {
-                                "assetId": {
-                                    "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
-                                    "subId": 32440811
-                                },
-                                "assetHint": "objects/sm_demoroomtrim.pxmesh"
-                            },
-                            "Configuration": {
-                                "PhysicsAsset": {
-                                    "assetId": {
-                                        "guid": "{D7138870-6A72-58E8-A50B-9F8FEA2D89F1}",
-                                        "subId": 32440811
-                                    },
-                                    "loadBehavior": "QueueLoad",
-                                    "assetHint": "objects/sm_demoroomtrim.pxmesh"
-                                }
-                            }
-                        }
-                    }
-                },
                 "Component_[415880323635205499]": {
                     "$type": "EditorOnlyEntityComponent",
                     "Id": 415880323635205499
@@ -3406,37 +3392,18 @@
             "Id": "Entity_[14250401292624]",
             "Name": "Clamp",
             "Components": {
-                "Component_[10960923576705031315]": {
-                    "$type": "EditorPendingCompositionComponent",
-                    "Id": 10960923576705031315
-                },
-                "Component_[11951750155532770625]": {
-                    "$type": "EditorEntityIconComponent",
-                    "Id": 11951750155532770625
-                },
-                "Component_[13789817376015518383]": {
-                    "$type": "EditorLockComponent",
-                    "Id": 13789817376015518383
-                },
-                "Component_[14321095819511517881]": {
-                    "$type": "EditorEntitySortComponent",
-                    "Id": 14321095819511517881
-                },
-                "Component_[14548633837419842101]": {
-                    "$type": "EditorColliderComponent",
-                    "Id": 14548633837419842101,
+                "Component_[10680832878714645532]": {
+                    "$type": "EditorMeshColliderComponent",
+                    "Id": 10680832878714645532,
                     "ColliderConfiguration": {
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Material #396"
+                                },
+                                {
+                                    "Name": "Material #394"
                                 }
-                            ]
-                        },
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {},
-                                {}
                             ]
                         }
                     },
@@ -3461,6 +3428,26 @@
                             }
                         }
                     }
+                },
+                "Component_[10960923576705031315]": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 10960923576705031315
+                },
+                "Component_[11951750155532770625]": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 11951750155532770625
+                },
+                "Component_[13789817376015518383]": {
+                    "$type": "EditorLockComponent",
+                    "Id": 13789817376015518383
+                },
+                "Component_[14321095819511517881]": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 14321095819511517881
+                },
+                "Component_[16062347459599448047]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 16062347459599448047
                 },
                 "Component_[17300478669644115558]": {
                     "$type": "EditorInspectorComponent",
@@ -5016,10 +5003,6 @@
                     "op": "replace",
                     "path": "/ContainerEntity/Components/Component_[11772463549890485248]/Transform Data/Translate/2",
                     "value": 2.0
-                },
-                {
-                    "op": "remove",
-                    "path": "/LinkId"
                 }
             ]
         }
