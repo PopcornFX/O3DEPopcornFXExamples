@@ -1,21 +1,21 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
 	Templates = {
 		"$42E16C02",
+		"$22C50851",
 		"$B660FBF9",
 		"$D734A95F",
+		"$1838F4AE",
+		"$96CD1EC2",
 		"$8F7A985A",
+		"$E191BFCB",
 		"$DDECD857",
 		"$565AE820",
 		"$0798FEE6",
 		"$E749E042",
 		"$408647B7",
-		"$22C50851",
-		"$1838F4AE",
-		"$96CD1EC2",
-		"$E191BFCB",
 		"$F415EE0A",
 		"$9AA1D730",
 		"$4272E669",
@@ -33,6 +33,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$62BCE275";
 	WorkspacePosition = int2(23, 28);
 	WorkspaceZoom = -3;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CEditorAssetEffect	$0CD860BD
@@ -43,13 +44,14 @@ CEditorAssetEffect	$0CD860BD
 }
 CParticleNodeGraph	$B660FBF9
 {
-	CustomName = "SimpleTrigger";
+	CustomName = "Trigger";
 	Description = {
-		"@eng:Basic \'trigger\' node wrapper, exposing a bunch of predefined payloads",
+		"@eng:Triggers an event when `Condition` is `true`.\\nEvents are used to spawn child particles.\\n\\nTriggers at most one event per frame. If you need to generate more events per frame, consider using the `Trail` node.",
 	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
+	SearchKeywords = "event trigger pulse";
 	Nodes = {
 		"$DADBF2F1",
 		"$A9934228",
@@ -68,9 +70,9 @@ CParticleNodeGraph	$B660FBF9
 		"$39ED8E82",
 		"$1E5C8DCF",
 		"$79E4E1D9",
+		"$D6CF4EF0",
 	};
-	WorkspacePosition = int2(-212, -13);
-	WorkspaceZoom = -7;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$DADBF2F1
@@ -161,7 +163,7 @@ CParticleNodeEventPayloadAppend	$A2277B6B
 	OutputPins = {
 		"$ECEE2C92",
 	};
-	WorkspacePosition = int2(198, -110);
+	WorkspacePosition = int2(176, -110);
 	PayloadName = "Position";
 	PayloadType = float3;
 	PayloadKind = XFormsPositions;
@@ -202,7 +204,7 @@ CParticleNodeTemplateExport	$D834E0C1
 	InputPins = {
 		"$6B1D589C",
 	};
-	WorkspacePosition = int2(2024, -110);
+	WorkspacePosition = int2(2354, -110);
 	ExportedName = "Signal";
 	ExportedType = event;
 	Type = Output;
@@ -338,7 +340,10 @@ CParticleNodePinOut	$FE14B3C9
 }
 CParticleNodeGraph	$42E16C02
 {
-	CustomName = "TriggerOnce";
+	CustomName = "EventTriggerOnce";
+	Description = {
+		"@eng:Triggers a single event.\\n\\nOnce the `Condition` has been `true` at least once and the event has been triggered, subsequent frames where `Condition` is true will be ignored, and no more events will be pulsed.\\n\\nBasic trigger, does not add any helper payloads.\\nSee `TriggerOnce` if you need some base payloads.",
+	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
@@ -356,8 +361,9 @@ CParticleNodeGraph	$42E16C02
 		"$1EA3501A",
 		"$D39EC910",
 	};
-	WorkspacePosition = int2(-312, 10);
-	WorkspaceZoom = -3;
+	WorkspacePosition = int2(-263, -25);
+	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$C776022A
 {
@@ -602,10 +608,14 @@ CParticleNodePinOut	$E22E94DB
 }
 CParticleNodeGraph	$D734A95F
 {
-	CustomName = "SimpleTriggerOnce";
+	CustomName = "TriggerOnce";
+	Description = {
+		"@eng:Triggers a single event.\\n\\nOnce the `Condition` has been `true` at least once and the event has been triggered, subsequent frames where `Condition` is true will be ignored, and no more events will be pulsed.",
+	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
+	SearchKeywords = "event trigger pulse";
 	Nodes = {
 		"$2D8A7741",
 		"$2E215ABC",
@@ -622,16 +632,15 @@ CParticleNodeGraph	$D734A95F
 		"$725E6552",
 		"$86A6D721",
 		"$36207FBF",
+		"$C4BF3DC9",
+		"$A485139E",
+		"$66D5713B",
 	};
-	WorkspacePosition = int2(-201, -3);
-	WorkspaceZoom = -7;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$2D8A7741
 {
-	CustomName = {
-		"@eng:TriggerOnce",
-	};
 	InputPins = {
 		"$C0425F45",
 		"$B4F3323B",
@@ -640,7 +649,7 @@ CParticleNodeTemplate	$2D8A7741
 		"$F158603E",
 	};
 	WorkspacePosition = int2(-22, -110);
-	SubGraphName = "TriggerOnce";
+	SubGraphName = "EventTriggerOnce";
 }
 CParticleNodePinIn	$C0425F45
 {
@@ -708,8 +717,7 @@ CParticleNodeGraph	$8F7A985A
 		"$C43F52A5",
 		"$4F135EB3",
 	};
-	WorkspacePosition = int2(-102, -3);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$8F92C16F
@@ -749,6 +757,7 @@ CParticleNodeLayer	$8F92C16F
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
 	PreferredSimLocation = CPU;
+	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$CD34D184";
 }
 CParticleNodePinIn	$AE4BEA47
@@ -961,6 +970,7 @@ CParticleNodeGraph	$CD34D184
 	};
 	WorkspacePosition = int2(363, 43);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodePinIn	$415FA9BF
 {
@@ -1257,6 +1267,9 @@ CParticleNodePinIn	$9B9B51B0
 }
 CParticleNodeTemplate	$075C69D5
 {
+	InputPins = {
+		"$1DC2662C",
+	};
 	OutputPins = {
 		"$483FFEC1",
 	};
@@ -1354,7 +1367,7 @@ CParticleNodeEventPayloadAppend	$D481D29F
 	OutputPins = {
 		"$D3403790",
 	};
-	WorkspacePosition = int2(990, -110);
+	WorkspacePosition = int2(1320, -110);
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
@@ -1377,7 +1390,7 @@ CParticleNodePinIn	$12A55E29
 	Owner = "$D481D29F";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$E2F747E1",
+		"$4131C0AA",
 	};
 }
 CParticleNodePinOut	$D3403790
@@ -1481,8 +1494,7 @@ CParticleNodeGraph	$DDECD857
 		"$7BEAC2EE",
 		"$625897FC",
 	};
-	WorkspacePosition = int2(-103, -18);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$FEABFC84
@@ -1502,6 +1514,7 @@ CParticleNodeLayer	$FEABFC84
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
 	PreferredSimLocation = CPU;
+	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$11E9D39E";
 }
 CParticleNodePinIn	$82951987
@@ -1541,8 +1554,7 @@ CParticleNodeGraph	$11E9D39E
 		"$52F2BA0F",
 		"$1B4DC780",
 	};
-	WorkspacePosition = int2(95, -74);
-	WorkspaceZoom = -5;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$700B03DC
 {
@@ -1692,9 +1704,6 @@ CParticleNodePinIn	$463FBC21
 }
 CParticleNodeEventPayloadExtract	$51943AB6
 {
-	CustomName = {
-		"@eng:EmittedCount",
-	};
 	InputPins = {
 		"$8233939E",
 		"$C85F3B9F",
@@ -1899,8 +1908,7 @@ CParticleNodeGraph	$0798FEE6
 		"$D3AD51B3",
 		"$E3C76224",
 	};
-	WorkspacePosition = int2(-33, -23);
-	WorkspaceZoom = -5;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$D37248E0
@@ -1937,6 +1945,7 @@ CParticleNodeLayer	$D37248E0
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
 	PreferredSimLocation = CPU;
+	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$BE842FF3";
 }
 CParticleNodePinIn	$7F464B68
@@ -2011,8 +2020,7 @@ CParticleNodeGraph	$BE842FF3
 		"$C0529C81",
 		"$4CBF64A0",
 	};
-	WorkspacePosition = int2(300, -50);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$EE771965
 {
@@ -2268,14 +2276,13 @@ CParticleNodeGraph	$E749E042
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
-	IconKey = "Node_Event";
+	IconKey = "Toolbar_Timer";
 	Nodes = {
 		"$C3AB6029",
 		"$AC81D9C1",
 		"$429A2E84",
 	};
-	WorkspacePosition = int2(-103, -18);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$C3AB6029
@@ -2295,6 +2302,7 @@ CParticleNodeLayer	$C3AB6029
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
 	PreferredSimLocation = CPU;
+	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$C94A0516";
 }
 CParticleNodePinIn	$7FC67500
@@ -2319,8 +2327,7 @@ CParticleNodeGraph	$C94A0516
 		"$FC594FDF",
 		"$B9866B29",
 	};
-	WorkspacePosition = int2(-64, 71);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$ABEC6F2C
 {
@@ -2706,7 +2713,7 @@ CParticleNodePinOut	$E2F747E1
 	Owner = "$4B99796F";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$12A55E29",
+		"$1A856B58",
 	};
 }
 CParticleTimeline	$62BCE275
@@ -2762,7 +2769,7 @@ CParticleNodeEventPayloadAppend	$E7A7BE8E
 	OutputPins = {
 		"$419C9D15",
 	};
-	WorkspacePosition = int2(1232, -110);
+	WorkspacePosition = int2(1562, -110);
 	PayloadName = "Size";
 	PayloadType = float;
 	IgnoreWarningsUnused = true;
@@ -2808,7 +2815,7 @@ CParticleNodeTemplateExport	$D4EA65F0
 	OutputPins = {
 		"$E64B8FDE",
 	};
-	WorkspacePosition = int2(990, 110);
+	WorkspacePosition = int2(1320, 110);
 	ExportedName = "Size";
 	ExportedType = float;
 	Type = Input;
@@ -2840,7 +2847,7 @@ CParticleNodeEventPayloadAppend	$052CEED2
 	OutputPins = {
 		"$B6F5CC16",
 	};
-	WorkspacePosition = int2(1474, -110);
+	WorkspacePosition = int2(1804, -110);
 	PayloadName = "Color";
 	PayloadType = float4;
 	IgnoreWarningsUnused = true;
@@ -2886,7 +2893,7 @@ CParticleNodeTemplateExport	$F20FBF14
 	OutputPins = {
 		"$E972C2E1",
 	};
-	WorkspacePosition = int2(1232, 110);
+	WorkspacePosition = int2(1562, 110);
 	ExportedName = "Color";
 	ExportedType = float4;
 	Type = Input;
@@ -2920,7 +2927,7 @@ CParticleNodeTemplateExport	$2E215ABC
 	OutputPins = {
 		"$444AF13F",
 	};
-	WorkspacePosition = int2(1342, 110);
+	WorkspacePosition = int2(1628, 110);
 	ExportedName = "Color";
 	ExportedType = float4;
 	Type = Input;
@@ -2997,7 +3004,7 @@ CParticleNodeEventPayloadAppend	$2D0B2651
 	OutputPins = {
 		"$481F80F2",
 	};
-	WorkspacePosition = int2(1562, -110);
+	WorkspacePosition = int2(1870, -110);
 	PayloadName = "Color";
 	PayloadType = float4;
 	IgnoreWarningsUnused = true;
@@ -3029,7 +3036,7 @@ CParticleNodePinOut	$481F80F2
 	Owner = "$2D0B2651";
 	BaseType = event;
 	ConnectedPins = {
-		"$B6AF689A",
+		"$14BD163D",
 	};
 }
 CParticleNodeEventPayloadAppend	$D10978FE
@@ -3041,7 +3048,7 @@ CParticleNodeEventPayloadAppend	$D10978FE
 	OutputPins = {
 		"$357C99A2",
 	};
-	WorkspacePosition = int2(682, -110);
+	WorkspacePosition = int2(726, -110);
 	PayloadName = "Velocity";
 	PayloadType = float3;
 	IgnoreWarningsUnused = true;
@@ -3087,7 +3094,7 @@ CParticleNodeTemplateExport	$1795DE47
 	OutputPins = {
 		"$F7295404",
 	};
-	WorkspacePosition = int2(1056, 110);
+	WorkspacePosition = int2(1386, 110);
 	ExportedName = "Size";
 	ExportedType = float;
 	Type = Input;
@@ -3118,7 +3125,7 @@ CParticleNodePartialDerivative	$C62A1F73
 	OutputPins = {
 		"$B90889D2",
 	};
-	WorkspacePosition = int2(198, 198);
+	WorkspacePosition = int2(198, 220);
 	Base = Time;
 }
 CParticleNodePinIn	$41306560
@@ -3146,7 +3153,7 @@ CParticleNodeEventPayloadAppend	$1EADE0D1
 	OutputPins = {
 		"$4986B565",
 	};
-	WorkspacePosition = int2(990, -110);
+	WorkspacePosition = int2(1386, -110);
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
@@ -3169,7 +3176,7 @@ CParticleNodePinIn	$837C53F9
 	Owner = "$1EADE0D1";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$9D5C1C47",
+		"$C6E9ECD3",
 	};
 }
 CParticleNodePinOut	$4986B565
@@ -3224,7 +3231,7 @@ CParticleNodeTemplateExport	$D4A7787E
 	OutputPins = {
 		"$F38ED084",
 	};
-	WorkspacePosition = int2(418, 198);
+	WorkspacePosition = int2(418, 220);
 	ExportedName = "Velocity";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -3257,7 +3264,7 @@ CParticleNodeTemplateExport	$7CFB103C
 	InputPins = {
 		"$B6AF689A",
 	};
-	WorkspacePosition = int2(1848, -110);
+	WorkspacePosition = int2(2420, -110);
 	ExportedName = "Signal";
 	ExportedType = event;
 	Type = Output;
@@ -3268,7 +3275,7 @@ CParticleNodePinIn	$B6AF689A
 	SelfName = "Value";
 	Owner = "$7CFB103C";
 	ConnectedPins = {
-		"$481F80F2",
+		"$B26FEE1E",
 	};
 }
 CParticleNodeEventPayloadAppend	$6818E968
@@ -3280,7 +3287,7 @@ CParticleNodeEventPayloadAppend	$6818E968
 	OutputPins = {
 		"$B6D3198E",
 	};
-	WorkspacePosition = int2(1276, -110);
+	WorkspacePosition = int2(1628, -110);
 	PayloadName = "Size";
 	PayloadType = float;
 	IgnoreWarningsUnused = true;
@@ -3361,7 +3368,7 @@ CParticleNodeTemplate	$86A6D721
 	OutputPins = {
 		"$9D5C1C47",
 	};
-	WorkspacePosition = int2(748, 198);
+	WorkspacePosition = int2(770, 220);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "orientation.fromForward";
 }
@@ -3382,7 +3389,7 @@ CParticleNodePinOut	$9D5C1C47
 	Owner = "$86A6D721";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$837C53F9",
+		"$EC5A6BA1",
 	};
 }
 CParticleNodePinIn	$3C2D9656
@@ -3458,24 +3465,31 @@ CParticleNodePinOut	$A7466369
 CParticleNodeGraph	$1838F4AE
 {
 	CustomName = "OnSpawn";
+	Description = {
+		"@eng:Triggers a single event when the particle spawns.\\nEvents are used to spawn child particles.",
+	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
+	SearchKeywords = "event trigger";
 	Nodes = {
 		"$E980BD9C",
 		"$CC1A032F",
 		"$F65424E9",
 		"$A11E9526",
 	};
-	WorkspacePosition = int2(138, 9);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeGraph	$96CD1EC2
 {
 	CustomName = "OnDeath";
+	Description = {
+		"@eng:Triggers a single event when the particle dies.\\nEvents are used to spawn child particles.\\n\\nDoes not trigger a death event if the effect has been stopped, unless `EvenWhenEffectStopped` is set to `true`.",
+	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
+	SearchKeywords = "event trigger";
 	Nodes = {
 		"$2137157B",
 		"$5A38F3A2",
@@ -3486,9 +3500,9 @@ CParticleNodeGraph	$96CD1EC2
 		"$F9F48A27",
 		"$2C2DC676",
 		"$D971DF69",
+		"$CD586801",
 	};
-	WorkspacePosition = int2(-140, 1);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeEventTrigger	$E980BD9C
@@ -3556,7 +3570,7 @@ CParticleNodeTemplateExport	$2137157B
 	InputPins = {
 		"$9B29A239",
 	};
-	WorkspacePosition = int2(1408, -66);
+	WorkspacePosition = int2(1782, -66);
 	ExportedName = "OnDeath";
 	ExportedType = event;
 	Type = Output;
@@ -3573,17 +3587,21 @@ CParticleNodePinIn	$9B29A239
 CParticleNodeGraph	$E191BFCB
 {
 	CustomName = "EventMultiplierBurst";
+	Description = {
+		"@eng:Preset for the `EventMultiplier` node that instantaneously spawns a burst of particles.",
+	};
 	Public = true;
 	GraphUsage = EventGraph;
 	ClassType = Event;
-	IconKey = "Node_Event";
+	IconKey = "Node_Math_Mul";
+	SearchKeywords = "*";
 	Nodes = {
 		"$916AD6EF",
 		"$73ED24E6",
 		"$4E8787A1",
 		"$DCC373DA",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$916AD6EF
@@ -3997,7 +4015,7 @@ CParticleNodeTemplateExport	$2A044F27
 	OutputPins = {
 		"$582C5CFA",
 	};
-	WorkspacePosition = int2(-44, 88);
+	WorkspacePosition = int2(0, 88);
 	ExportedName = "Position";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -4039,8 +4057,7 @@ CParticleNodeGraph	$F415EE0A
 		"$9F63D50C",
 		"$466D71AA",
 	};
-	WorkspacePosition = int2(279, 130);
-	WorkspaceZoom = -5;
+	WorkspaceZoom = 0;
 }
 CParticleNodeCompare	$A15AD49B
 {
@@ -4420,7 +4437,7 @@ CParticleNodeTemplate	$50BFCABB
 	OutputPins = {
 		"$64E18AB8",
 	};
-	WorkspacePosition = int2(792, 242);
+	WorkspacePosition = int2(814, 242);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "orientation.fromForward";
 }
@@ -4441,7 +4458,7 @@ CParticleNodePinOut	$64E18AB8
 	Owner = "$50BFCABB";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$1D387666",
+		"$E76F073F",
 	};
 }
 CParticleNodeTemplateExport	$25C59FD1
@@ -4492,7 +4509,7 @@ CParticleNodeEventPayloadAppend	$5699CBC5
 	OutputPins = {
 		"$BBFA6D38",
 	};
-	WorkspacePosition = int2(1034, -66);
+	WorkspacePosition = int2(1452, -66);
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
@@ -4515,7 +4532,7 @@ CParticleNodePinIn	$1D387666
 	Owner = "$5699CBC5";
 	BaseType = orientation;
 	ConnectedPins = {
-		"$64E18AB8",
+		"$89926BB8",
 	};
 }
 CParticleNodePinOut	$BBFA6D38
@@ -4537,7 +4554,7 @@ CParticleNodeEventPayloadAppend	$F9F48A27
 	OutputPins = {
 		"$C46C555A",
 	};
-	WorkspacePosition = int2(726, -66);
+	WorkspacePosition = int2(770, -66);
 	PayloadName = "Velocity";
 	PayloadType = float3;
 	IgnoreWarningsUnused = true;
@@ -6146,7 +6163,10 @@ CParticleNodePinOut	$5ED917D6
 }
 CParticleNodeGraph	$22C50851
 {
-	CustomName = "SimpleOnDeath";
+	CustomName = "EventOnDeath";
+	Description = {
+		"@eng:Triggers a single event when the particle dies.\\nEvents are used to spawn child particles.\\n\\nDoes not trigger a death event if the effect has been stopped, unless `EvenWhenEffectStopped` is set to `true`.\\n\\nBasic trigger, does not add any helper payloads.\\nSee `OnDeath` if you need some base payloads.",
+	};
 	Public = true;
 	ClassType = Event;
 	IconKey = "Node_Event";
@@ -6161,8 +6181,7 @@ CParticleNodeGraph	$22C50851
 		"$D676E44C",
 		"$61816A7F",
 	};
-	WorkspacePosition = int2(85, -4);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$346E34E8
@@ -6240,7 +6259,7 @@ CParticleNodeTemplate	$D24B8D5E
 		"$012E6879",
 	};
 	WorkspacePosition = int2(3256, 924);
-	SubGraphName = "SimpleOnDeath";
+	SubGraphName = "EventOnDeath";
 }
 CParticleNodePinOut	$012E6879
 {
@@ -6354,7 +6373,7 @@ CParticleNodeTemplate	$FC594FDF
 		"$2A232C8E",
 	};
 	WorkspacePosition = int2(-176, 0);
-	SubGraphName = "SimpleOnDeath";
+	SubGraphName = "EventOnDeath";
 }
 CParticleNodePinOut	$2A232C8E
 {
@@ -6375,8 +6394,8 @@ CParticleNodeTemplate	$D971DF69
 	OutputPins = {
 		"$93D9CDE0",
 	};
-	WorkspacePosition = int2(-44, -66);
-	SubGraphName = "SimpleOnDeath";
+	WorkspacePosition = int2(0, -66);
+	SubGraphName = "EventOnDeath";
 }
 CParticleNodePinOut	$93D9CDE0
 {
@@ -6473,8 +6492,7 @@ CParticleNodeGraph	$9AA1D730
 		"$95176383",
 		"$58B32785",
 	};
-	WorkspacePosition = int2(27, -76);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 }
 CParticleNodePassThrough	$C0CC90C2
 {
@@ -7185,7 +7203,7 @@ CParticleNodeGraph	$4272E669
 		"$3B746EF4",
 		"$061230A0",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeEventTrigger	$1BDBE0E0
 {
@@ -8452,8 +8470,7 @@ CParticleNodeGraph	$2E1EFD05
 		"$EBB66F9A",
 		"$E2DC2716",
 	};
-	WorkspacePosition = int2(210, -46);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 }
 CParticleNodeMathFunction3	$82442DAC
 {
@@ -10475,8 +10492,7 @@ CParticleNodeGraph	$2496386F
 		"$DE504F59",
 		"$21100490",
 	};
-	WorkspacePosition = int2(103, -46);
-	WorkspaceZoom = -7;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$F1D537BC
 {
@@ -11835,8 +11851,7 @@ CParticleNodeGraph	$EB24DA66
 		"$2472C7CA",
 		"$B4B501AF",
 	};
-	WorkspacePosition = int2(356, -112);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$1C93B621
@@ -15251,8 +15266,7 @@ CParticleNodeGraph	$549AA450
 		"$05539FDC",
 		"$9A72F210",
 	};
-	WorkspacePosition = int2(-35, -117);
-	WorkspaceZoom = -5;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$73AA61E3
 {
@@ -17162,7 +17176,7 @@ CParticleNodeTemplate	$1E5C8DCF
 	OutputPins = {
 		"$4BD7493E",
 	};
-	WorkspacePosition = int2(1474, 110);
+	WorkspacePosition = int2(1804, 110);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "self.lifeRatio";
 }
@@ -17185,7 +17199,7 @@ CParticleNodeEventPayloadAppend	$79E4E1D9
 	OutputPins = {
 		"$8CAC8C0F",
 	};
-	WorkspacePosition = int2(1716, -110);
+	WorkspacePosition = int2(2046, -110);
 	PayloadName = "LifeRatio";
 	IgnoreWarningsUnused = true;
 }
@@ -18096,6 +18110,7 @@ CParticleNodeGraph	$408647B7
 		"@eng:This node routes the input events to one of its two output pins based on the result of a build-version test.\\n\\nThis test is compile time, so there is no additional cost for this at runtime.\\nIt allows to activate different parts of the effect based on, for example, the platform the effect is baked for.\\nYou can also setup your own build versions & tags in the project settings to bake effects for different quality settings, or any other custom criteria.",
 	};
 	Public = true;
+	GraphUsage = EventGraph;
 	ClassType = Event;
 	IconKey = "Node_If";
 	SearchKeywords = "if tags build test";
@@ -18105,7 +18120,7 @@ CParticleNodeGraph	$408647B7
 		"$708441FA",
 		"$E71C0F27",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$367A1EF0
@@ -18196,8 +18211,7 @@ CParticleNodeGraph	$EEAA9028
 		"$985B4F34",
 		"$060BBB06",
 	};
-	WorkspacePosition = int2(153, 36);
-	WorkspaceZoom = -6;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$28501623
 {
@@ -20490,8 +20504,7 @@ CParticleNodeGraph	$D07ABD38
 		"$1332CC14",
 		"$BCE506FC",
 	};
-	WorkspacePosition = int2(11, 72);
-	WorkspaceZoom = -8;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$DD5769F5
@@ -23433,8 +23446,7 @@ CParticleNodeGraph	$565AE820
 		"$43475F5C",
 		"$E1109462",
 	};
-	WorkspacePosition = int2(-103, -18);
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeLayer	$1F2D70F3
@@ -23453,6 +23465,7 @@ CParticleNodeLayer	$1F2D70F3
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
 	PreferredSimLocation = CPU;
+	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$66084CAB";
 }
 CParticleNodePinIn	$70D964FC
@@ -23488,8 +23501,7 @@ CParticleNodeGraph	$66084CAB
 		"$79FB72D7",
 		"$90A22785",
 	};
-	WorkspacePosition = int2(95, -74);
-	WorkspaceZoom = -5;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$D1B76E35
 {
@@ -23939,4 +23951,184 @@ CParticleNodePinIn	$76BF7C11
 	Owner = "$FFE9806E";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$1DC2662C
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$075C69D5";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodeTemplateExport	$D6CF4EF0
+{
+	Description = {
+		"@eng:This value will be added to the event payload, and used as a `forward` vector to compute an orientation for the child particles if they use \"local to world\" transform nodes.",
+	};
+	InputPins = {
+		"$1A856B58",
+	};
+	OutputPins = {
+		"$4131C0AA",
+	};
+	WorkspacePosition = int2(1012, 220);
+	ExportedName = "Orientation";
+	ExportedType = orientation;
+	Type = Input;
+	Order = 20;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:Payload",
+	};
+}
+CParticleNodePinIn	$1A856B58
+{
+	SelfName = "DefaultValue";
+	Owner = "$D6CF4EF0";
+	ConnectedPins = {
+		"$E2F747E1",
+	};
+}
+CParticleNodePinOut	$4131C0AA
+{
+	SelfName = "Value";
+	Owner = "$D6CF4EF0";
+	ConnectedPins = {
+		"$12A55E29",
+	};
+}
+CParticleNodeTemplateExport	$C4BF3DC9
+{
+	Description = {
+		"@eng:This value will be added to the event payload, and used as a `forward` vector to compute an orientation for the child particles if they use \"local to world\" transform nodes.",
+	};
+	InputPins = {
+		"$EC5A6BA1",
+	};
+	OutputPins = {
+		"$C6E9ECD3",
+	};
+	WorkspacePosition = int2(1078, 220);
+	ExportedName = "Orientation";
+	ExportedType = orientation;
+	Type = Input;
+	Order = 20;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:Payload",
+	};
+}
+CParticleNodePinIn	$EC5A6BA1
+{
+	SelfName = "DefaultValue";
+	Owner = "$C4BF3DC9";
+	ConnectedPins = {
+		"$9D5C1C47",
+	};
+}
+CParticleNodePinOut	$C6E9ECD3
+{
+	SelfName = "Value";
+	Owner = "$C4BF3DC9";
+	ConnectedPins = {
+		"$837C53F9",
+	};
+}
+CParticleNodeEventPayloadAppend	$A485139E
+{
+	InputPins = {
+		"$14BD163D",
+		"$A722B40B",
+	};
+	OutputPins = {
+		"$B26FEE1E",
+	};
+	WorkspacePosition = int2(2112, -110);
+	PayloadName = "LifeRatio";
+	IgnoreWarningsUnused = true;
+}
+CParticleNodePinIn	$14BD163D
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$A485139E";
+	BaseType = event;
+	ConnectedPins = {
+		"$481F80F2",
+	};
+}
+CParticleNodePinIn	$A722B40B
+{
+	SelfName = "Value";
+	Owner = "$A485139E";
+	ConnectedPins = {
+		"$A054485A",
+	};
+}
+CParticleNodePinOut	$B26FEE1E
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$A485139E";
+	BaseType = event;
+	ConnectedPins = {
+		"$B6AF689A",
+	};
+}
+CParticleNodeTemplate	$66D5713B
+{
+	OutputPins = {
+		"$A054485A",
+	};
+	WorkspacePosition = int2(1870, 110);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.lifeRatio";
+}
+CParticleNodePinOut	$A054485A
+{
+	SelfName = "LifeRatio";
+	Type = float;
+	Owner = "$66D5713B";
+	BaseType = float;
+	ConnectedPins = {
+		"$A722B40B",
+	};
+}
+CParticleNodeTemplateExport	$CD586801
+{
+	Description = {
+		"@eng:This value will be added to the event payload, and used as a `forward` vector to compute an orientation for the child particles if they use \"local to world\" transform nodes.",
+	};
+	InputPins = {
+		"$E76F073F",
+	};
+	OutputPins = {
+		"$89926BB8",
+	};
+	WorkspacePosition = int2(1144, 242);
+	ExportedName = "Orientation";
+	ExportedType = orientation;
+	Type = Input;
+	Order = 20;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:Payload",
+	};
+}
+CParticleNodePinIn	$E76F073F
+{
+	SelfName = "DefaultValue";
+	Owner = "$CD586801";
+	ConnectedPins = {
+		"$64E18AB8",
+	};
+}
+CParticleNodePinOut	$89926BB8
+{
+	SelfName = "Value";
+	Owner = "$CD586801";
+	ConnectedPins = {
+		"$1D387666",
+	};
 }

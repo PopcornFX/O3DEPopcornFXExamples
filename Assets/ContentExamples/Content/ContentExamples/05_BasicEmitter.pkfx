@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -19,6 +19,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(221, 0);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$41EED1A4
 {
@@ -67,6 +68,7 @@ CParticleNodeTemplate	$1838F4AE
 		"$8748BF80",
 		"$90F64453",
 		"$9D2B1A2F",
+		"$BE867C2E",
 		"$00F979F0",
 		"$D857A09F",
 		"$8F4E7C6B",
@@ -94,8 +96,9 @@ CParticleNodeTemplate	$1838F4AE
 		"$36F072F4",
 		"$B9B24C5D",
 		"$B33B834A",
-		"$AD04FFA5",
+		"$BF9CF7F6",
 		"$29713CE9",
+		"$AD04FFA5",
 		"$6D9DB8C0",
 	};
 	WorkspacePosition = int2(-308, -22);
@@ -168,6 +171,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-66, -3);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -1541,4 +1545,20 @@ CParticleNodePinIn	$6372FC2D
 	Owner = "$5A5BD1DE";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$BE867C2E
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = int;
+}
+CParticleNodePinOut	$BF9CF7F6
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = int;
 }

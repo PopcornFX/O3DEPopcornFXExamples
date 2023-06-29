@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -503,6 +503,7 @@ CParticleNodeGraph	$D857A09F
 	};
 	WorkspacePosition = int2(-85, 35);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$35A36C4E
 {
@@ -695,6 +696,7 @@ CParticleNodeGraph	$2BBAE5F0
 	};
 	WorkspacePosition = int2(-68, 34);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$14978373
 {
@@ -1683,6 +1685,7 @@ CParticleNodeGraph	$C4870DE6
 	};
 	WorkspacePosition = int2(-19, -107);
 	WorkspaceZoom = -7;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$B3552DAA
@@ -4635,6 +4638,7 @@ CParticleNodeGraph	$B16FCD4A
 	};
 	WorkspacePosition = int2(-68, 34);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$6CD66C3E
@@ -4951,6 +4955,7 @@ CParticleNodeGraph	$2942BB93
 	};
 	WorkspacePosition = int2(-68, 34);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$0880141B
@@ -5248,6 +5253,7 @@ CParticleNodeGraph	$979F82F4
 	};
 	WorkspacePosition = int2(-194, -24);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$7239148D
@@ -5549,6 +5555,7 @@ CParticleNodeGraph	$66B56BE2
 	};
 	WorkspacePosition = int2(-128, -28);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$F7407478
@@ -6128,6 +6135,7 @@ CParticleNodeGraph	$8AF4A744
 	};
 	WorkspacePosition = int2(-158, 18);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeScript	$43849E4B
@@ -6696,6 +6704,7 @@ CParticleNodeGraph	$544D51FA
 	};
 	WorkspacePosition = int2(-5, -77);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$DD0BB37F
 {
@@ -6796,6 +6805,7 @@ CParticleNodeGraph	$51224BBB
 	};
 	WorkspacePosition = int2(-19, -3);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$E5D366E2
 {

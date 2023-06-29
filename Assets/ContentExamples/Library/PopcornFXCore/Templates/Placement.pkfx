@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -72,6 +72,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(72, -13);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$B2CD145B
@@ -150,6 +151,7 @@ CParticleNodeGraph	$6BF6C3A0
 	};
 	WorkspacePosition = int2(-2, 62);
 	WorkspaceZoom = -7;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$D6C00AD9
 {
@@ -788,6 +790,7 @@ CParticleNodeGraph	$D4DF65A2
 	};
 	WorkspacePosition = int2(-42, -109);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$500768A5
 {
@@ -1038,6 +1041,7 @@ CParticleNodeGraph	$C39BD2E2
 	};
 	WorkspacePosition = int2(-15, -11);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$B0AD9A4D
@@ -1369,6 +1373,7 @@ CParticleNodeGraph	$27C9BA22
 	};
 	WorkspacePosition = int2(17, 34);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeSetLife	$6E31F28D
 {
@@ -1721,6 +1726,7 @@ CParticleNodeGraph	$EAC16162
 	};
 	WorkspacePosition = int2(202, -52);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$33D046B1
 {
@@ -2081,6 +2087,7 @@ CParticleNodeGraph	$B4C31A9F
 	};
 	WorkspacePosition = int2(-15, -11);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$FE576E4E
@@ -2394,6 +2401,7 @@ CParticleNodeGraph	$3F5F938A
 	};
 	WorkspacePosition = int2(203, -89);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeEventPayloadExtract	$9BA1CE7B
 {
@@ -2718,6 +2726,7 @@ CParticleNodeGraph	$0FF81C08
 	};
 	WorkspacePosition = int2(138, -61);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$419B676B
 {
@@ -3067,6 +3076,9 @@ CParticleNodePinOut	$F369A8E9
 }
 CParticleNodeTemplate	$71609560
 {
+	InputPins = {
+		"$D70FD61D",
+	};
 	OutputPins = {
 		"$3BFE2FA3",
 	};
@@ -4294,6 +4306,7 @@ CParticleNodeGraph	$B21F6DFA
 	};
 	WorkspacePosition = int2(-75, 1);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$19954745
 {
@@ -6905,6 +6918,7 @@ CParticleNodeGraph	$E837B5B5
 	};
 	WorkspacePosition = int2(-40, -16);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeEventTrigger	$A669FC1C
@@ -7587,6 +7601,7 @@ CParticleNodeGraph	$ABE6E290
 	};
 	WorkspacePosition = int2(-15, -11);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$161EEC93
@@ -7843,6 +7858,7 @@ CParticleNodeGraph	$0E2BD9B3
 	};
 	WorkspacePosition = int2(203, -89);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeEventPayloadExtract	$E6394A24
 {
@@ -8404,6 +8420,7 @@ CParticleNodeGraph	$CF540EF6
 	};
 	WorkspacePosition = int2(376, -178);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$5B71BDF1
 {
@@ -11741,4 +11758,13 @@ CParticleNodePinOut	$9DBE18CD
 	ConnectedPins = {
 		"$2E65AC91",
 	};
+}
+CParticleNodePinIn	$D70FD61D
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$71609560";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

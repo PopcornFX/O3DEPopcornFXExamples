@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -22,6 +22,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(72, -48);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$96CD1EC2
 {
@@ -154,6 +155,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$CE8CC02E";
 	WorkspacePosition = int2(67, -26);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$48E2E8B7
@@ -199,6 +201,7 @@ CParticleNodeTemplate	$F02495CD
 {
 	InputPins = {
 		"$125C39DB",
+		"$694012F0",
 		"$4703F6C7",
 		"$6B1D589C",
 		"$B6F5CC16",
@@ -213,6 +216,7 @@ CParticleNodeTemplate	$F02495CD
 		"$1B30654E",
 		"$75C79502",
 		"$8B66367E",
+		"$00CC99F5",
 		"$DA1862BB",
 		"$EB08CDF0",
 		"$1FBDC01E",
@@ -800,6 +804,7 @@ CParticleNodeTemplate	$66691374
 		"$FA2A7F70",
 		"$91C2929A",
 		"$B7587C29",
+		"$1E8FAC80",
 		"$C05B3B5C",
 		"$FFA2CCA3",
 		"$CA4E497B",
@@ -812,8 +817,8 @@ CParticleNodeTemplate	$66691374
 		"$02EF76BB",
 		"$739D9FA9",
 		"$4254D889",
-		"$7CA2ABFE",
 		"$E50D3B46",
+		"$7CA2ABFE",
 		"$3DFE1AAF",
 		"$9254A078",
 		"$C6BF5DBD",
@@ -827,8 +832,9 @@ CParticleNodeTemplate	$66691374
 		"$0F21D252",
 		"$C417ABED",
 		"$774A7F07",
-		"$2ECE8500",
+		"$51293CE8",
 		"$84CE2A08",
+		"$2ECE8500",
 		"$AE37153E",
 	};
 	WorkspacePosition = int2(-242, 110);
@@ -1627,4 +1633,37 @@ CParticleNodePinOut	$D6BE588E
 	SelfName = "Cursor";
 	Visible = false;
 	Owner = "$03C3CD47";
+}
+CParticleNodePinIn	$694012F0
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$F02495CD";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$00CC99F5
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$F02495CD";
+	BaseType = bool;
+}
+CParticleNodePinIn	$1E8FAC80
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$66691374";
+	BaseType = int;
+}
+CParticleNodePinOut	$51293CE8
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$66691374";
+	BaseType = int;
 }

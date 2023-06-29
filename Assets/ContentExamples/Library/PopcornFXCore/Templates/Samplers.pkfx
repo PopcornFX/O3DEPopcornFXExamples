@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -40,6 +40,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$F158603E";
 	WorkspacePosition = int2(23, 28);
 	WorkspaceZoom = -3;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeGraph	$B660FBF9
@@ -85,6 +86,7 @@ CParticleNodeGraph	$B660FBF9
 	};
 	WorkspacePosition = int2(409, 37);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CEditorAssetEffect	$0FB78BF6
@@ -226,6 +228,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(153, 46);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$25F3E2DD
 {
@@ -489,6 +492,7 @@ CParticleNodeGraph	$D734A95F
 	};
 	WorkspacePosition = int2(610, 215);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$DB243236
@@ -879,6 +883,7 @@ CParticleNodeGraph	$8F7A985A
 	};
 	WorkspacePosition = int2(26, -47);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$712E2C6D
@@ -1035,6 +1040,7 @@ CParticleNodeGraph	$DDECD857
 	};
 	WorkspacePosition = int2(19, -1);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$E6F13778
 {
@@ -1549,6 +1555,7 @@ CParticleNodeGraph	$FE14B3C9
 	};
 	WorkspacePosition = int2(-37, 36);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$4C5D6904
 {
@@ -1717,6 +1724,7 @@ CParticleNodeGraph	$6CCCA72A
 	};
 	WorkspacePosition = int2(-37, 36);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$F43D2A79
 {
@@ -2057,6 +2065,7 @@ CParticleNodeGraph	$E22E94DB
 	};
 	WorkspacePosition = int2(56, 15);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$DA79B087
@@ -2390,6 +2399,7 @@ CParticleNodeGraph	$2D8A7741
 	};
 	WorkspacePosition = int2(-186, -17);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$ECBECFE5
 {
@@ -3108,6 +3118,7 @@ CParticleNodeGraph	$2D0B2651
 	};
 	WorkspacePosition = int2(-169, -66);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$B1F4B726
 {
@@ -3974,6 +3985,7 @@ CParticleNodeGraph	$1795DE47
 	};
 	WorkspacePosition = int2(70, 20);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$7C32E8CD
 {
@@ -4325,6 +4337,7 @@ CParticleNodeGraph	$86A6D721
 	};
 	WorkspacePosition = int2(14, 60);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$2E6D40C5
 {
@@ -4859,6 +4872,7 @@ CParticleNodeGraph	$6128E19F
 	};
 	WorkspacePosition = int2(33, 21);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeScript	$673D414E
@@ -6002,6 +6016,7 @@ CParticleNodeGraph	$19361A7A
 	};
 	WorkspacePosition = int2(210, 7);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeScript	$06D64858
 {
@@ -8599,6 +8614,7 @@ CParticleNodeGraph	$E1B832A7
 	};
 	WorkspacePosition = int2(-136, -105);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$EC956381
@@ -9760,6 +9776,7 @@ CParticleNodeGraph	$1E1BC104
 	};
 	WorkspacePosition = int2(298, 45);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$1F3502B8
 {
@@ -9978,6 +9995,7 @@ CParticleNodeGraph	$D95C77C3
 	};
 	WorkspacePosition = int2(210, 7);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodePassThrough	$FF9A4F29
 {
@@ -12643,6 +12661,7 @@ CParticleNodeGraph	$82C3D9C9
 	};
 	WorkspacePosition = int2(-221, 15);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$1AF47802
 {
@@ -14876,6 +14895,7 @@ CParticleNodeGraph	$2743C992
 	};
 	WorkspacePosition = int2(346, 81);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$E90CBF64
 {
@@ -15430,6 +15450,7 @@ CParticleNodeGraph	$A4299248
 	};
 	WorkspacePosition = int2(-194, 17);
 	WorkspaceZoom = -7;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$81C18571
@@ -16461,6 +16482,7 @@ CParticleNodeGraph	$BE04323A
 	};
 	WorkspacePosition = int2(-75, 9);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeGraph	$6DA88CF3
@@ -16490,6 +16512,7 @@ CParticleNodeGraph	$6DA88CF3
 	};
 	WorkspacePosition = int2(-108, 1);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$8A4BD8FF
@@ -18282,6 +18305,7 @@ CParticleNodeGraph	$CF9086D4
 	};
 	WorkspacePosition = int2(73, 14);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$FE1B4839
@@ -19231,6 +19255,7 @@ CParticleNodeGraph	$81D6401D
 	};
 	WorkspacePosition = int2(-455, -24);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$BBF43AB2
@@ -20101,6 +20126,7 @@ CParticleNodeGraph	$DE8211FD
 	};
 	WorkspacePosition = int2(-37, 36);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplateExport	$D60F02A2
 {

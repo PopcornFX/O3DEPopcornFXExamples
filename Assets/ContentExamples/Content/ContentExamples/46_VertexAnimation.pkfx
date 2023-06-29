@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -31,6 +31,7 @@ CParticleNodeGraph	$9154DFA0
 	Timeline = "$EAC726E3";
 	WorkspacePosition = int2(-268, -13);
 	WorkspaceZoom = -2;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleTimeline	$EAC726E3
@@ -82,6 +83,7 @@ CParticleNodeGraph	$5E7C8343
 	};
 	WorkspacePosition = int2(3055, -415);
 	WorkspaceZoom = -2;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$53454939
 {
@@ -166,6 +168,9 @@ CParticleNodePinOut	$A13A8DA6
 }
 CParticleNodeTemplate	$708F40F0
 {
+	InputPins = {
+		"$2A9965B1",
+	};
 	OutputPins = {
 		"$BC8A85E1",
 	};
@@ -257,6 +262,7 @@ CParticleNodeGraph	$92A0F63C
 	};
 	WorkspacePosition = int2(2448, -252);
 	WorkspaceZoom = -3;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeSetLife	$88F280DA
 {
@@ -377,6 +383,7 @@ CParticleNodeGraph	$150BCF2B
 	};
 	WorkspacePosition = int2(2374, -218);
 	WorkspaceZoom = -3;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeTemplate	$9B02AAA6
 {
@@ -446,6 +453,9 @@ CParticleNodePinOut	$91E77265
 }
 CParticleNodeTemplate	$013F7404
 {
+	InputPins = {
+		"$30830759",
+	};
 	OutputPins = {
 		"$9E4F1637",
 	};
@@ -2100,4 +2110,22 @@ CParticleNodePinIn	$9FF4A270
 	Owner = "$08509DD1";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$2A9965B1
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$708F40F0";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$30830759
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$013F7404";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

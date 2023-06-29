@@ -5080,27 +5080,13 @@
                         "Samplers": [
                             {
                                 "Name": "AnimTrack",
-                                "Type": 7,
+                                "Type": 8,
                                 "EntityId": "Entity_[3650797895296]"
                             }
                         ]
                     },
                     "EditorAttributeList": {
                         "AttributeCategories": [
-                            {
-                                "Samplers": [
-                                    {
-                                        "Entity": "Entity_[3650797895296]"
-                                    }
-                                ]
-                            },
-                            {
-                                "Samplers": [
-                                    {
-                                        "Entity": "Entity_[3650797895296]"
-                                    }
-                                ]
-                            },
                             {
                                 "Samplers": [
                                     {
@@ -6275,11 +6261,6 @@
                             -0.5,
                             1.0,
                             2.0
-                        ],
-                        "Rotate": [
-                            -89.99994659423828,
-                            0.0,
-                            0.0
                         ]
                     }
                 },
@@ -6316,20 +6297,6 @@
                     },
                     "EditorAttributeList": {
                         "AttributeCategories": [
-                            {
-                                "Samplers": [
-                                    {
-                                        "Entity": "Entity_[640915622350]"
-                                    }
-                                ]
-                            },
-                            {
-                                "Samplers": [
-                                    {
-                                        "Entity": "Entity_[640915622350]"
-                                    }
-                                ]
-                            },
                             {
                                 "Samplers": [
                                     {

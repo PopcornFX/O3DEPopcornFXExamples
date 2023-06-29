@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -285,6 +285,7 @@ CParticleNodeGraph	$9154DFA0
 	Timeline = "$EAC726E3";
 	WorkspacePosition = int2(-300, -27);
 	WorkspaceZoom = -11;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleTimeline	$EAC726E3

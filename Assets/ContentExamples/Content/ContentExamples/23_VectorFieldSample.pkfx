@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17676;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -21,6 +21,7 @@ CParticleNodeGraph	$4B933A29
 	Timeline = "$9154DFA0";
 	WorkspacePosition = int2(-137, 28);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleTimeline	$9154DFA0
@@ -383,6 +384,7 @@ CParticleNodeGraph	$37D43749
 	};
 	WorkspacePosition = int2(-126, -104);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeSetLife	$9D1D3744
 {
@@ -657,6 +659,7 @@ CParticleNodeTemplate	$63E41FAA
 		"$5CFFC368",
 		"$7E10B14B",
 		"$4432C3A1",
+		"$2176BA11",
 		"$30A8F066",
 		"$A974E85D",
 		"$25AFDED5",
@@ -684,8 +687,9 @@ CParticleNodeTemplate	$63E41FAA
 		"$999A7EEC",
 		"$921DC8AC",
 		"$AFD8F9E0",
-		"$194F063B",
+		"$AD0FA3B8",
 		"$F77E6E35",
+		"$194F063B",
 		"$A2B6CCB7",
 	};
 	WorkspacePosition = int2(396, 220);
@@ -1443,4 +1447,20 @@ CParticleNodePinIn	$77464CD2
 	Owner = "$60D3E5F1";
 	BaseType = dataImage;
 	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodePinIn	$2176BA11
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$63E41FAA";
+	BaseType = int;
+}
+CParticleNodePinOut	$AD0FA3B8
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$63E41FAA";
+	BaseType = int;
 }
