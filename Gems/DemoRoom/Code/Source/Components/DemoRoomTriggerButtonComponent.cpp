@@ -97,19 +97,31 @@ namespace DemoRoom
             OnTriggerExit(triggerEvent);
         });
     }
-    
+
     //////////////////////////////////////////////////////////////////////////////
     void DemoRoomTriggerButtonComponent::Activate()
     {
+        Physics::RigidBodyNotificationBus::Handler::BusConnect(GetEntityId());
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
+    void DemoRoomTriggerButtonComponent::Deactivate()
+    {
+        Physics::RigidBodyNotificationBus::Handler::BusDisconnect();
+        m_onTriggerEnterHandler.Disconnect();
+        m_onTriggerExitHandler.Disconnect();
+    }
+    
+    //////////////////////////////////////////////////////////////////////////////
+    void DemoRoomTriggerButtonComponent::OnPhysicsEnabled(const AZ::EntityId& entityId)
+    {
         if (auto* physicsSystem = AZ::Interface<AzPhysics::SystemInterface>::Get())
         {
-            AZStd::pair<AzPhysics::SceneHandle, AzPhysics::SimulatedBodyHandle> foundBody = physicsSystem->FindAttachedBodyHandleFromEntityId(GetEntityId());
+            AZStd::pair<AzPhysics::SceneHandle, AzPhysics::SimulatedBodyHandle> foundBody = physicsSystem->FindAttachedBodyHandleFromEntityId(entityId);
             if (foundBody.first != AzPhysics::InvalidSceneHandle)
             {
-                AzPhysics::SimulatedBodyEvents::RegisterOnTriggerEnterHandler(
-                    foundBody.first, foundBody.second, m_onTriggerEnterHandler);
-                AzPhysics::SimulatedBodyEvents::RegisterOnTriggerExitHandler(
-                    foundBody.first, foundBody.second, m_onTriggerExitHandler);
+                AzPhysics::SimulatedBodyEvents::RegisterOnTriggerEnterHandler(foundBody.first, foundBody.second, m_onTriggerEnterHandler);
+                AzPhysics::SimulatedBodyEvents::RegisterOnTriggerExitHandler(foundBody.first, foundBody.second, m_onTriggerExitHandler);
             }
         }
 
@@ -117,7 +129,7 @@ namespace DemoRoom
     }
     
     //////////////////////////////////////////////////////////////////////////////
-    void DemoRoomTriggerButtonComponent::Deactivate()
+    void DemoRoomTriggerButtonComponent::OnPhysicsDisabled([[maybe_unused]] const AZ::EntityId& entityId)
     {
         m_onTriggerEnterHandler.Disconnect();
         m_onTriggerExitHandler.Disconnect();

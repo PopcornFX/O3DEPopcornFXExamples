@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -40,6 +40,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(-69, -8);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$41EED1A4
 {
@@ -81,6 +82,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-125, -20);
 	WorkspaceZoom = -1;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -127,6 +129,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$AC06B115",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -352,12 +355,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
 	Position = float3(0.0000000e+00, -2.0087981e+00, 8.8700628e-01);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -464,6 +468,7 @@ CParticleNodeTemplate	$81AA2F2D
 		"$3A66A2C2",
 		"$DF07DDD4",
 		"$A3D8448B",
+		"$16A992A0",
 		"$D2242214",
 		"$6C96F6A5",
 		"$3A514948",
@@ -491,8 +496,9 @@ CParticleNodeTemplate	$81AA2F2D
 		"$1D128D2C",
 		"$4E9D068C",
 		"$F475456E",
-		"$0DAC2863",
+		"$3F8BC4C2",
 		"$E5B4807A",
+		"$0DAC2863",
 		"$69ED99E4",
 	};
 	WorkspacePosition = int2(-154, -66);
@@ -1238,14 +1244,16 @@ CParticleNodeTemplate	$8DAD8DF4
 {
 	InputPins = {
 		"$5EF13D96",
+		"$02262A1E",
 		"$9DDD8147",
 		"$FC9A27CF",
-		"$02262A1E",
 		"$D0ED40CE",
 		"$A5B6DC3C",
 		"$1690F7D2",
-		"$1F188710",
+		"$F0B0D8B8",
+		"$D3B7C8B3",
 		"$F671173E",
+		"$7E41F66B",
 	};
 	WorkspacePosition = int2(1672, -418);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Debug.pkfx";
@@ -1314,15 +1322,6 @@ CParticleNodePinIn	$1690F7D2
 		"$BAF4C145",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$1F188710
-{
-	SelfName = "Size";
-	Type = float;
-	Visible = false;
-	Owner = "$8DAD8DF4";
-	BaseType = float;
-	ValueF = float4(2.0000001e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$F671173E
 {
@@ -2286,6 +2285,7 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$CEDACC99",
 		"$30994FD4",
 		"$37A4D590",
+		"$890F65D2",
 		"$C0AF947B",
 		"$03D26A21",
 		"$CEFBFFCC",
@@ -2305,13 +2305,14 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$B827D5D1",
 	};
 	WorkspacePosition = int2(1914, -66);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
 		"EnableRendering",
+		"Culling",
 		"Lit",
 		"LegacyLit",
 		"Atlas",
@@ -2638,4 +2639,65 @@ CParticleNodePinIn	$53B64A0F
 	Visible = false;
 	Owner = "$5A5BD1DE";
 	BaseType = bool;
+}
+CParticleNodePinIn	$AC06B115
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$890F65D2
+{
+	SelfName = "General.DoubleSided";
+	Type = bool;
+	Visible = false;
+	Owner = "$5718BBAF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$F0B0D8B8
+{
+	SelfName = "BoxMin";
+	Type = float3;
+	Visible = false;
+	Owner = "$8DAD8DF4";
+	BaseType = float3;
+	ValueF = float4(-5.0000000e-01, -5.0000000e-01, -5.0000000e-01, 0.0000000e+00);
+}
+CParticleNodePinIn	$D3B7C8B3
+{
+	SelfName = "BoxMax";
+	Type = float3;
+	Visible = false;
+	Owner = "$8DAD8DF4";
+	BaseType = float3;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 5.0000000e-01, 0.0000000e+00);
+}
+CParticleNodePinIn	$7E41F66B
+{
+	SelfName = "Size";
+	Type = float;
+	Visible = false;
+	Owner = "$8DAD8DF4";
+	BaseType = float;
+	ValueF = float4(4.9999999e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$16A992A0
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$81AA2F2D";
+	BaseType = int;
+}
+CParticleNodePinOut	$3F8BC4C2
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$81AA2F2D";
+	BaseType = int;
 }

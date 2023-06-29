@@ -37,6 +37,7 @@ class CDemoRoomTextFeatureProcessor
 {
 public:
     AZ_RTTI(CDemoRoomTextFeatureProcessor, "{D86216E4-92A8-43BE-123F-883489C75BA2}", CDemoRoomTextFeatureProcessorInterface);
+    AZ_CLASS_ALLOCATOR(CDemoRoomTextFeatureProcessor, AZ::SystemAllocator, 0);
 
     CDemoRoomTextFeatureProcessor();
     virtual ~CDemoRoomTextFeatureProcessor() = default;

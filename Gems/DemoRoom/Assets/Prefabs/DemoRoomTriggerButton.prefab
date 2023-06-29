@@ -26,10 +26,6 @@
                 "$type": "EditorPrefabComponent",
                 "Id": 15058867185155410616
             },
-            "Component_[1697447212543445297]": {
-                "$type": "SelectionComponent",
-                "Id": 1697447212543445297
-            },
             "Component_[17947784310127699210]": {
                 "$type": "EditorDisabledCompositionComponent",
                 "Id": 17947784310127699210
@@ -69,24 +65,6 @@
                     "$type": "EditorPendingCompositionComponent",
                     "Id": 10631265144975586079
                 },
-                "Component_[11098905456289513099]": {
-                    "$type": "EditorShapeColliderComponent",
-                    "Id": 11098905456289513099,
-                    "ColliderConfiguration": {
-                        "Trigger": true,
-                        "MaterialSelection": {
-                            "MaterialIds": [
-                                {}
-                            ]
-                        }
-                    },
-                    "ShapeConfigs": [
-                        {
-                            "$type": "SphereShapeConfiguration",
-                            "Radius": 3.0
-                        }
-                    ]
-                },
                 "Component_[12542864405745440615]": {
                     "$type": "AZ::Render::EditorMeshComponent",
                     "Id": 12542864405745440615,
@@ -99,6 +77,26 @@
                                 },
                                 "assetHint": "objects/demobuttonpillar.azmodel"
                             }
+                        }
+                    }
+                },
+                "Component_[12844964402402528202]": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 12844964402402528202,
+                    "ColliderConfiguration": {
+                        "Trigger": true,
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 0,
+                        "Sphere": {
+                            "Radius": 3.0
                         }
                     }
                 },
@@ -118,6 +116,10 @@
                 "Component_[1757321712386481978]": {
                     "$type": "EditorEntitySortComponent",
                     "Id": 1757321712386481978
+                },
+                "Component_[17759869375442105928]": {
+                    "$type": "EditorStaticRigidBodyComponent",
+                    "Id": 17759869375442105928
                 },
                 "Component_[17835922552311776264]": {
                     "$type": "EditorMaterialComponent",
@@ -168,15 +170,6 @@
                         }
                     }
                 },
-                "Component_[18211648041958244375]": {
-                    "$type": "EditorSphereShapeComponent",
-                    "Id": 18211648041958244375,
-                    "SphereShape": {
-                        "Configuration": {
-                            "Radius": 3.0
-                        }
-                    }
-                },
                 "Component_[6568587713428264868]": {
                     "$type": "EditorInspectorComponent",
                     "Id": 6568587713428264868,
@@ -213,10 +206,6 @@
                 "Component_[7427362931774271319]": {
                     "$type": "EditorLockComponent",
                     "Id": 7427362931774271319
-                },
-                "Component_[9413595299371217803]": {
-                    "$type": "SelectionComponent",
-                    "Id": 9413595299371217803
                 },
                 "Component_[9862276796165921278]": {
                     "$type": "EditorDisabledCompositionComponent",

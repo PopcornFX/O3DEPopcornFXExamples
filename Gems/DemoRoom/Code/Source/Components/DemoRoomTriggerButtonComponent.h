@@ -6,12 +6,14 @@
 #pragma once
 #include <AzCore/Component/Component.h>
 #include <AzCore/Math/Color.h>
+#include <AzFramework/Physics/RigidBodyBus.h>
 #include <AzFramework/Physics/Common/PhysicsSimulatedBodyEvents.h>
 
 namespace DemoRoom
 {
     class DemoRoomTriggerButtonComponent
         : public AZ::Component
+        , protected Physics::RigidBodyNotificationBus::Handler
     {
     public:
         static void GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required);
@@ -26,6 +28,11 @@ namespace DemoRoom
         void Init() override;
         void Activate() override;
         void Deactivate() override;
+
+protected:
+        // Physics::RigidBodyNotifications overrides ...
+        void OnPhysicsEnabled(const AZ::EntityId& entityId) override;
+        void OnPhysicsDisabled(const AZ::EntityId& entityId) override;
 
 private:
         void OnTriggerEnter(const AzPhysics::TriggerEvent& triggerEvent) const;
