@@ -1,7 +1,7 @@
 # O3DE PopcornFX Examples
 
 **O3DE** project to showcase **PopcornFX** gem features.
-* **PopcornFX:** `2.15`
+* **PopcornFX:** `2.17`
 * **O3DE:** `23.05.0`
 
 This example project presents integration features of PopcornFX into O3DE,
