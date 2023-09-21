@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -24,7 +24,7 @@ CParticleNodeGraph	$81861AB7
 {
 	CustomName = "Root";
 	Timeline = "$DDECD857";
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CParticleTimeline	$DDECD857
@@ -70,9 +70,7 @@ CParticleNodeGraph	$42E16C02
 		"$E3FBA4C3",
 		"$C8B5A2CF",
 	};
-	WorkspacePosition = int2(72, -13);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$B2CD145B
@@ -149,9 +147,7 @@ CParticleNodeGraph	$6BF6C3A0
 		"$DFD8D3F6",
 		"$93F8C1C9",
 	};
-	WorkspacePosition = int2(-2, 62);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeLayer	$D6C00AD9
 {
@@ -400,7 +396,6 @@ CParticleNodeEventPayloadAppend	$32DEADC4
 	PayloadName = "SpawnCount";
 	PayloadType = float;
 	ForceOverride = true;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$74620D7A
 {
@@ -472,7 +467,6 @@ CParticleNodeEventPayloadAppend	$7024C038
 	PayloadType = int;
 	PayloadKind = EmittedCount;
 	ForceOverride = true;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$81F4516E
 {
@@ -788,9 +782,7 @@ CParticleNodeGraph	$D4DF65A2
 		"$6A69200C",
 		"$A3326582",
 	};
-	WorkspacePosition = int2(-42, -109);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$500768A5
 {
@@ -1039,9 +1031,7 @@ CParticleNodeGraph	$C39BD2E2
 		"$AF99325C",
 		"$B4354BA9",
 	};
-	WorkspacePosition = int2(-15, -11);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$B0AD9A4D
@@ -1371,9 +1361,7 @@ CParticleNodeGraph	$27C9BA22
 		"$A7F51D46",
 		"$869D96F2",
 	};
-	WorkspacePosition = int2(17, 34);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$6E31F28D
 {
@@ -1590,7 +1578,6 @@ CParticleNodeEventPayloadAppend	$AA270D92
 	WorkspacePosition = int2(880, -264);
 	PayloadName = "Key";
 	PayloadType = float4;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$031712BD
 {
@@ -1724,9 +1711,7 @@ CParticleNodeGraph	$EAC16162
 		"$1C740E30",
 		"$AB46DCCB",
 	};
-	WorkspacePosition = int2(202, -52);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeScript	$33D046B1
 {
@@ -1910,7 +1895,6 @@ CParticleNodeEventPayloadAppend	$DF7B264B
 	WorkspacePosition = int2(44, 22);
 	PayloadName = "UVW";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$3BE14D6A
 {
@@ -2085,9 +2069,7 @@ CParticleNodeGraph	$B4C31A9F
 		"$7A794AA8",
 		"$E23C6A63",
 	};
-	WorkspacePosition = int2(-15, -11);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$FE576E4E
@@ -2399,9 +2381,7 @@ CParticleNodeGraph	$3F5F938A
 		"$FBBA0EE6",
 		"$2A0F0FE5",
 	};
-	WorkspacePosition = int2(203, -89);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeEventPayloadExtract	$9BA1CE7B
 {
@@ -2481,7 +2461,6 @@ CParticleNodeEventPayloadAppend	$6F1F498F
 	WorkspacePosition = int2(66, 22);
 	PayloadName = "UVW";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$3EEECFFE
 {
@@ -2724,9 +2703,7 @@ CParticleNodeGraph	$0FF81C08
 		"$44763CFB",
 		"$CEBF9ED0",
 	};
-	WorkspacePosition = int2(138, -61);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeScript	$419B676B
 {
@@ -3463,7 +3440,7 @@ CParticleNodeGraph	$F949539F
 		"$089D03C4",
 		"$87CD95A1",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$ACEAE9E3
@@ -3516,7 +3493,6 @@ CParticleNodeTemplateExport	$0706DA94
 	Semantic = 3D_Coordinate;
 	Type = Input;
 	Order = 100;
-	VisibleByDefault = true;
 	TransformMode = Position;
 	CategoryName = {
 		"@eng:Transforms",
@@ -3711,7 +3687,6 @@ CParticleNodeTemplateExport	$2ECA553B
 	ExportedType = orientation;
 	Type = Input;
 	Order = 101;
-	VisibleByDefault = true;
 	CategoryName = {
 		"@eng:Transforms",
 	};
@@ -3744,7 +3719,6 @@ CParticleNodeTemplateExport	$34D3B50C
 	Semantic = 3D_Scale;
 	Type = Input;
 	Order = 102;
-	VisibleByDefault = true;
 	CategoryName = {
 		"@eng:Transforms",
 	};
@@ -3822,7 +3796,6 @@ CParticleNodeTemplateExport	$4C58F06D
 	Semantic = 3D_Coordinate;
 	Type = Input;
 	Order = 1;
-	VisibleByDefault = true;
 	TransformMode = Position;
 }
 CParticleNodePinIn	$DB89F134
@@ -3853,7 +3826,6 @@ CParticleNodeTemplateExport	$4CCA31D6
 	Semantic = 3D_Coordinate;
 	Type = Input;
 	Order = 2;
-	VisibleByDefault = true;
 	TransformMode = Direction;
 }
 CParticleNodePinIn	$129F2A51
@@ -4304,9 +4276,7 @@ CParticleNodeGraph	$B21F6DFA
 		"$64AF00CF",
 		"$2775B444",
 	};
-	WorkspacePosition = int2(-75, 1);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$19954745
 {
@@ -4877,7 +4847,6 @@ CParticleNodeEventPayloadAppend	$C1708010
 	WorkspacePosition = int2(506, 154);
 	PayloadName = "UVW";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$AEF21813
 {
@@ -5175,7 +5144,6 @@ CParticleNodeEventPayloadAppend	$518B80A8
 	WorkspacePosition = int2(792, 154);
 	PayloadName = "Resolution";
 	PayloadType = int3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$2B6A588B
 {
@@ -5403,7 +5371,6 @@ CParticleNodeEventPayloadAppend	$40539BA6
 	PayloadType = int;
 	PayloadKind = EmittedCount;
 	ForceOverride = true;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$3E5CF061
 {
@@ -5446,7 +5413,6 @@ CParticleNodeEventPayloadAppend	$9514598E
 	PayloadName = "SpawnCount";
 	PayloadType = float;
 	ForceOverride = true;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$8382D38D
 {
@@ -5690,7 +5656,7 @@ CParticleNodeGraph	$13946196
 		"$5DAADF3C",
 		"$2F656CC0",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeGraph	$0BD93511
@@ -5710,7 +5676,7 @@ CParticleNodeGraph	$0BD93511
 		"$B6EEDA83",
 		"$A37E7A96",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$F9764750
@@ -6916,9 +6882,7 @@ CParticleNodeGraph	$E837B5B5
 		"$CE3BDBDC",
 		"$325D6DD9",
 	};
-	WorkspacePosition = int2(-40, -16);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeEventTrigger	$A669FC1C
@@ -7001,7 +6965,6 @@ CParticleNodeEventPayloadAppend	$FAE3653D
 	PayloadName = "Position";
 	PayloadType = float3;
 	PayloadKind = XFormsPositions;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$7D881E44
 {
@@ -7072,7 +7035,6 @@ CParticleNodeEventPayloadAppend	$10DE2F6C
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$3EBB8C9F
 {
@@ -7599,9 +7561,7 @@ CParticleNodeGraph	$ABE6E290
 		"$CF454A52",
 		"$796A2797",
 	};
-	WorkspacePosition = int2(-15, -11);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$161EEC93
@@ -7856,9 +7816,7 @@ CParticleNodeGraph	$0E2BD9B3
 		"$F1EFD873",
 		"$C911DBBE",
 	};
-	WorkspacePosition = int2(203, -89);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeEventPayloadExtract	$E6394A24
 {
@@ -7938,7 +7896,6 @@ CParticleNodeEventPayloadAppend	$33B9B025
 	WorkspacePosition = int2(-176, 44);
 	PayloadName = "UVW";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$EE6D4F4C
 {
@@ -8418,9 +8375,7 @@ CParticleNodeGraph	$CF540EF6
 		"$D1F9444F",
 		"$04991D90",
 	};
-	WorkspacePosition = int2(376, -178);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeScript	$5B71BDF1
 {

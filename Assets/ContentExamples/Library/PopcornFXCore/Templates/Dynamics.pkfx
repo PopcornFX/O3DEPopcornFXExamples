@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -54,9 +54,7 @@ CParticleNodeGraph	$81861AB7
 {
 	CustomName = "Root";
 	Timeline = "$052CEED2";
-	WorkspacePosition = int2(23, 28);
-	WorkspaceZoom = -3;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CEditorAssetEffect	$F20FBF14
@@ -100,7 +98,6 @@ CParticleNodeGraph	$B660FBF9
 		"$3FB45D67",
 		"$D857A09F",
 		"$D279714D",
-		"$1EA3501A",
 		"$5209F849",
 		"$D970BB07",
 		"$E7F879F5",
@@ -123,8 +120,6 @@ CParticleNodeGraph	$B660FBF9
 		"$F23C5877",
 		"$2119A3FF",
 		"$B8203416",
-		"$9D2A0738",
-		"$739E0305",
 		"$2DBA928E",
 		"$1DDF8023",
 		"$BCE3E3D4",
@@ -141,10 +136,16 @@ CParticleNodeGraph	$B660FBF9
 		"$AC4AF084",
 		"$0417F3A4",
 		"$3208BE18",
+		"$3729BF02",
+		"$662FCF75",
+		"$BDAC07A4",
+		"$ECD5D002",
+		"$7C187D69",
+		"$C0C013EA",
+		"$29A935DF",
+		"$8CF48A6B",
 	};
-	WorkspacePosition = int2(-294, -173);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$4AF71D41
@@ -155,7 +156,7 @@ CParticleNodeTemplateExport	$4AF71D41
 	InputPins = {
 		"$89BB54AC",
 	};
-	WorkspacePosition = int2(2728, 132);
+	WorkspacePosition = int2(2838, 132);
 	ExportedName = "Velocity";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -183,7 +184,7 @@ CParticleNodeTemplateExport	$3B3DDE67
 	OutputPins = {
 		"$0E4E8810",
 	};
-	WorkspacePosition = int2(-242, 0);
+	WorkspacePosition = int2(-396, 0);
 	ExportedName = "Position";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -219,7 +220,7 @@ CParticleNodeTemplateExport	$CE8CC02E
 	OutputPins = {
 		"$C861FC98",
 	};
-	WorkspacePosition = int2(-242, 132);
+	WorkspacePosition = int2(-396, 132);
 	ExportedName = "Velocity";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -253,7 +254,7 @@ CParticleNodeTemplateExport	$125C39DB
 	InputPins = {
 		"$D10978FE",
 	};
-	WorkspacePosition = int2(2728, 0);
+	WorkspacePosition = int2(2838, 0);
 	ExportedName = "Position";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -280,7 +281,7 @@ CParticleNodeTemplateExport	$ECEE2C92
 	OutputPins = {
 		"$F580CA43",
 	};
-	WorkspacePosition = int2(-242, 1320);
+	WorkspacePosition = int2(-396, 1320);
 	ExportedName = "Accel";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -316,7 +317,7 @@ CParticleNodeTemplateExport	$C71A50C8
 	OutputPins = {
 		"$1EADE0D1",
 	};
-	WorkspacePosition = int2(968, 1232);
+	WorkspacePosition = int2(1430, 1232);
 	ExportedName = "dt";
 	ExportedType = float;
 	Type = Input;
@@ -352,7 +353,7 @@ CParticleNodeTemplateExport	$4703F6C7
 	OutputPins = {
 		"$D6C00AD9",
 	};
-	WorkspacePosition = int2(-242, 814);
+	WorkspacePosition = int2(-396, 814);
 	ExportedName = "Wind";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -388,7 +389,7 @@ CParticleNodeTemplateExport	$49145BE4
 	OutputPins = {
 		"$F09077AB",
 	};
-	WorkspacePosition = int2(-242, 1210);
+	WorkspacePosition = int2(-396, 1210);
 	ExportedName = "Mass";
 	ExportedType = float;
 	Type = Input;
@@ -426,7 +427,7 @@ CParticleNodeArithmetic	$90F64453
 	OutputPins = {
 		"$616B6AF1",
 	};
-	WorkspacePosition = int2(44, 1100);
+	WorkspacePosition = int2(-110, 1100);
 	Operation = Div;
 }
 CParticleNodePinIn	$5AF4F07A
@@ -464,7 +465,7 @@ CParticleNodeTemplateExport	$E2583104
 	OutputPins = {
 		"$9D3F2E00",
 	};
-	WorkspacePosition = int2(-242, 1100);
+	WorkspacePosition = int2(-396, 1100);
 	ExportedName = "Drag";
 	ExportedType = float;
 	Type = Input;
@@ -524,9 +525,7 @@ CParticleNodeGraph	$8F7A985A
 		"$AF26280A",
 		"$7AAFAD19",
 	};
-	WorkspacePosition = int2(-214, -71);
-	WorkspaceZoom = -8;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$77113DEC
 {
@@ -1277,9 +1276,7 @@ CParticleNodeGraph	$DDECD857
 		"$51943AB6",
 		"$3C3B0EAF",
 	};
-	WorkspacePosition = int2(-360, 59);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$71820357
 {
@@ -1914,9 +1911,7 @@ CParticleNodeGraph	$0798FEE6
 		"$BD36201B",
 		"$BCA8A402",
 	};
-	WorkspacePosition = int2(-331, 131);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$6D35CD62
 {
@@ -2066,9 +2061,7 @@ CParticleNodeGraph	$E749E042
 		"$965E2928",
 		"$89F23109",
 	};
-	WorkspacePosition = int2(-188, 143);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$2D3664CA
 {
@@ -3287,9 +3280,7 @@ CParticleNodeGraph	$1838F4AE
 		"$BDE9B9DE",
 		"$A2486285",
 	};
-	WorkspacePosition = int2(-150, -268);
-	WorkspaceZoom = -9;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$2C2DC676
@@ -5311,9 +5302,7 @@ CParticleNodeGraph	$E191BFCB
 		"$6AEF300D",
 		"$74104D01",
 	};
-	WorkspacePosition = int2(4, -8);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSamplerData_Shape	$8856A70B
@@ -5848,7 +5837,7 @@ CParticleNodeTemplate	$6CCCA72A
 	OutputPins = {
 		"$761783D3",
 	};
-	WorkspacePosition = int2(726, 1232);
+	WorkspacePosition = int2(1188, 1232);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "effect.dt";
 }
@@ -5912,9 +5901,7 @@ CParticleNodeGraph	$41EED1A4
 		"$141D86ED",
 		"$D3C80F0A",
 	};
-	WorkspacePosition = int2(-139, -160);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$C78E66C3
@@ -6179,9 +6166,7 @@ CParticleNodeGraph	$62BCE275
 		"$8A638DC6",
 		"$CFC7DB8E",
 	};
-	WorkspacePosition = int2(-38, 26);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeArithmetic	$D64DC50E
 {
@@ -7184,9 +7169,7 @@ CParticleNodeGraph	$0CD860BD
 		"$9F723D61",
 		"$E0383FF2",
 	};
-	WorkspacePosition = int2(-324, -144);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeConstant	$FD65DBF2
@@ -7466,9 +7449,7 @@ CParticleNodeGraph	$DADBF2F1
 	Nodes = {
 		"$861CBC66",
 	};
-	WorkspacePosition = int2(6424, 861);
-	WorkspaceZoom = -3;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$861CBC66
@@ -8505,9 +8486,7 @@ CParticleNodeGraph	$A9934228
 		"$69D07A6F",
 		"$3EBD09FE",
 	};
-	WorkspacePosition = int2(-600, -238);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$DCE268A8
@@ -9189,9 +9168,7 @@ CParticleNodeGraph	$D834E0C1
 		"$7B42C8E5",
 		"$58A88AEE",
 	};
-	WorkspacePosition = int2(44, -1);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeMathFunction1	$ABA7B811
 {
@@ -9551,9 +9528,7 @@ CParticleNodeGraph	$EABBAE94
 		"$1C5F9903",
 		"$63721F97",
 	};
-	WorkspacePosition = int2(-364, 27);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplate	$59215B84
 {
@@ -11861,9 +11836,7 @@ CParticleNodeGraph	$4B99796F
 		"$7815A506",
 		"$B14971FB",
 	};
-	WorkspacePosition = int2(19, -3);
-	WorkspaceZoom = -2;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeConstant	$E46CF645
 {
@@ -12033,9 +12006,7 @@ CParticleNodeGraph	$4B44F286
 		"$ABCC6D28",
 		"$A58A0143",
 	};
-	WorkspacePosition = int2(-26, 13);
-	WorkspaceZoom = -2;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeArithmetic	$B100F48C
 {
@@ -12224,7 +12195,7 @@ CParticleNodeDiscretizationPoint	$C776022A
 	OutputPins = {
 		"$1795DE47",
 	};
-	WorkspacePosition = int2(2508, 0);
+	WorkspacePosition = int2(2618, 0);
 }
 CParticleNodePinIn	$1C5E6D39
 {
@@ -12250,7 +12221,7 @@ CParticleNodeDiscretizationPoint	$C5163AA2
 	OutputPins = {
 		"$63EBE82E",
 	};
-	WorkspacePosition = int2(2508, 132);
+	WorkspacePosition = int2(2618, 132);
 }
 CParticleNodePinIn	$B7B0F3A0
 {
@@ -12285,7 +12256,7 @@ CParticleNodeScript	$B014C0B6
 		"$4BD453DB",
 		"$1E3EA607",
 	};
-	WorkspacePosition = int2(1980, 44);
+	WorkspacePosition = int2(2222, 44);
 	Expression = "// The analytic solution of the 1st order equation: dv/dt = -k*(v-wind) + acc 
 // is: v(t0+t) = (v0-wind-acc/k)*exp(-k(t-t0)) + acc/k + wind
 // ->: v(   t) = exp(-k*t)*v0 + (1-exp(-k*t))/k*acc + (1-exp(-k*t))*wind
@@ -12384,7 +12355,7 @@ CParticleNodePassThrough	$FAC5D9D8
 	OutputPins = {
 		"$D5F865D3",
 	};
-	WorkspacePosition = int2(242, 22);
+	WorkspacePosition = int2(44, 22);
 }
 CParticleNodePinIn	$F4D51BCB
 {
@@ -12400,7 +12371,7 @@ CParticleNodePinOut	$D5F865D3
 	Owner = "$FAC5D9D8";
 	ConnectedPins = {
 		"$B3103991",
-		"$4DE11A5B",
+		"$ECD1EAA3",
 	};
 }
 CParticleNodePassThrough	$94DB7335
@@ -12411,7 +12382,7 @@ CParticleNodePassThrough	$94DB7335
 	OutputPins = {
 		"$F0A99379",
 	};
-	WorkspacePosition = int2(2288, 22);
+	WorkspacePosition = int2(2530, 22);
 }
 CParticleNodePinIn	$658C8516
 {
@@ -12437,7 +12408,7 @@ CParticleNodePassThrough	$43290D5D
 	OutputPins = {
 		"$B9749E47",
 	};
-	WorkspacePosition = int2(286, 110);
+	WorkspacePosition = int2(110, 110);
 }
 CParticleNodePinIn	$8FEC0D8C
 {
@@ -12463,7 +12434,7 @@ CParticleNodePassThrough	$BE4E302C
 	OutputPins = {
 		"$A8B6BF42",
 	};
-	WorkspacePosition = int2(2288, 154);
+	WorkspacePosition = int2(2530, 154);
 }
 CParticleNodePinIn	$9F2C402F
 {
@@ -12489,7 +12460,7 @@ CParticleNodePassThrough	$C78B225F
 	OutputPins = {
 		"$BB20F6E5",
 	};
-	WorkspacePosition = int2(1386, 1122);
+	WorkspacePosition = int2(1606, 1122);
 }
 CParticleNodePinIn	$1A364BF7
 {
@@ -12515,7 +12486,7 @@ CParticleNodePassThrough	$353B08E3
 	OutputPins = {
 		"$4CB4023A",
 	};
-	WorkspacePosition = int2(1408, 1166);
+	WorkspacePosition = int2(1628, 1166);
 }
 CParticleNodePinIn	$2D0B2651
 {
@@ -12542,14 +12513,14 @@ CParticleNodeArithmetic	$9AA9404E
 	OutputPins = {
 		"$773606CB",
 	};
-	WorkspacePosition = int2(1562, 220);
+	WorkspacePosition = int2(1826, 132);
 }
 CParticleNodePinIn	$9F19CD36
 {
 	SelfName = "Value";
 	Owner = "$9AA9404E";
 	ConnectedPins = {
-		"$890CDF67",
+		"$9018D1BF",
 	};
 }
 CParticleNodePinIn	$1B82BDBB
@@ -12557,7 +12528,7 @@ CParticleNodePinIn	$1B82BDBB
 	SelfName = "ValueB";
 	Owner = "$9AA9404E";
 	ConnectedPins = {
-		"$6A0DB693",
+		"$E13AB5DE",
 	};
 }
 CParticleNodePinOut	$773606CB
@@ -12579,7 +12550,7 @@ CParticleNodeTemplateExport	$0755FA7C
 	OutputPins = {
 		"$EB3245E7",
 	};
-	WorkspacePosition = int2(-616, 286);
+	WorkspacePosition = int2(-770, 286);
 	ExportedName = "VectorField";
 	ExportedType = dataVectorField;
 	Type = Input;
@@ -12652,7 +12623,7 @@ CParticleNodePinOut	$890CDF67
 	Owner = "$3FB45D67";
 	BaseType = float3;
 	ConnectedPins = {
-		"$9F19CD36",
+		"$D3DA44D9",
 	};
 }
 CParticleNodeDiscretizationPoint	$35B699B5
@@ -12664,7 +12635,7 @@ CParticleNodeDiscretizationPoint	$35B699B5
 	OutputPins = {
 		"$FE8AAC86",
 	};
-	WorkspacePosition = int2(-22, 132);
+	WorkspacePosition = int2(-176, 132);
 }
 CParticleNodePinOut	$FE8AAC86
 {
@@ -12691,7 +12662,7 @@ CParticleNodeDiscretizationPoint	$5A5BD1DE
 	OutputPins = {
 		"$CAFA7464",
 	};
-	WorkspacePosition = int2(-22, 0);
+	WorkspacePosition = int2(-176, 0);
 }
 CParticleNodePinOut	$CAFA7464
 {
@@ -13108,7 +13079,7 @@ CParticleNodeTemplateExport	$D857A09F
 	OutputPins = {
 		"$4B933A29",
 	};
-	WorkspacePosition = int2(-242, 264);
+	WorkspacePosition = int2(-396, -198);
 	ExportedName = "VectorFieldSamplingMode";
 	ExportedType = int;
 	Type = Input;
@@ -13149,7 +13120,7 @@ CParticleNodeTransform	$D279714D
 	OutputPins = {
 		"$41E5AFE7",
 	};
-	WorkspacePosition = int2(484, 220);
+	WorkspacePosition = int2(462, 308);
 	InputSpace = World;
 	OutputSpace = Local_Emitter;
 }
@@ -13160,7 +13131,7 @@ CParticleNodePinIn	$5F621394
 	Owner = "$D279714D";
 	BaseType = float3;
 	ConnectedPins = {
-		"$DB554ABA",
+		"$C98A83E0",
 	};
 }
 CParticleNodePinOut	$41E5AFE7
@@ -13170,52 +13141,7 @@ CParticleNodePinOut	$41E5AFE7
 	Owner = "$D279714D";
 	BaseType = float3;
 	ConnectedPins = {
-		"$2FB70E0C",
-	};
-}
-CParticleNodeMathFunction3	$1EA3501A
-{
-	InputPins = {
-		"$7837C3E5",
-		"$2FB70E0C",
-		"$36207FBF",
-	};
-	OutputPins = {
-		"$E54029EE",
-	};
-	WorkspacePosition = int2(704, 176);
-	Function = Select;
-}
-CParticleNodePinIn	$7837C3E5
-{
-	SelfName = "Value";
-	Owner = "$1EA3501A";
-	ConnectedPins = {
-		"$C98A83E0",
-	};
-}
-CParticleNodePinIn	$2FB70E0C
-{
-	SelfName = "ValueIfTrue";
-	Owner = "$1EA3501A";
-	ConnectedPins = {
-		"$41E5AFE7",
-	};
-}
-CParticleNodePinIn	$36207FBF
-{
-	SelfName = "Condition";
-	Owner = "$1EA3501A";
-	ConnectedPins = {
-		"$ED80C982",
-	};
-}
-CParticleNodePinOut	$E54029EE
-{
-	SelfName = "Value";
-	Owner = "$1EA3501A";
-	ConnectedPins = {
-		"$C45BF55C",
+		"$7DAC7FB5",
 	};
 }
 CParticleNodeCompare	$5209F849
@@ -13227,7 +13153,7 @@ CParticleNodeCompare	$5209F849
 	OutputPins = {
 		"$ED80C982",
 	};
-	WorkspacePosition = int2(154, 264);
+	WorkspacePosition = int2(22, -198);
 }
 CParticleNodePinIn	$F1356840
 {
@@ -13250,7 +13176,7 @@ CParticleNodePinOut	$ED80C982
 	SelfName = "Result";
 	Owner = "$5209F849";
 	ConnectedPins = {
-		"$36207FBF",
+		"$36AA201A",
 	};
 }
 CParticleNodePassThrough	$D970BB07
@@ -13294,7 +13220,7 @@ CParticleNodePinIn	$C45BF55C
 	SelfName = "Value";
 	Owner = "$E7F879F5";
 	ConnectedPins = {
-		"$E54029EE",
+		"$4A2495D0",
 	};
 }
 CParticleNodePinOut	$22B8D14F
@@ -13313,7 +13239,7 @@ CParticleNodePassThrough	$AAFF12BE
 	OutputPins = {
 		"$09F16690",
 	};
-	WorkspacePosition = int2(1892, 154);
+	WorkspacePosition = int2(2134, 154);
 }
 CParticleNodePinIn	$6C5BA959
 {
@@ -13339,7 +13265,7 @@ CParticleNodeConstant	$23F9C093
 	OutputPins = {
 		"$5A435152",
 	};
-	WorkspacePosition = int2(-44, 330);
+	WorkspacePosition = int2(-176, -132);
 	Type = int;
 }
 CParticleNodePinOut	$5A435152
@@ -13361,7 +13287,7 @@ CParticleNodeTemplateExport	$9154DFA0
 	OutputPins = {
 		"$4ADE8DE2",
 	};
-	WorkspacePosition = int2(-616, 836);
+	WorkspacePosition = int2(-770, 836);
 	ExportedName = "VectorFieldStrength";
 	ExportedType = float3;
 	Semantic = 3D_Scale;
@@ -13448,7 +13374,7 @@ CParticleNodePassThrough	$2BBAE5F0
 	OutputPins = {
 		"$89E0DDB2",
 	};
-	WorkspacePosition = int2(1430, 1254);
+	WorkspacePosition = int2(1650, 1254);
 }
 CParticleNodePinIn	$14978373
 {
@@ -14101,7 +14027,7 @@ CParticleNodeGraph	$DC08BAB2
 		"$F9894E80",
 		"$F62A9EAD",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$0F35B65D
@@ -15556,9 +15482,7 @@ CParticleNodeGraph	$D3ADA054
 		"$2C42D08B",
 		"$EAF86A1C",
 	};
-	WorkspacePosition = int2(-5, 37);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeMathFunction2	$84DDDBA7
 {
@@ -17924,9 +17848,7 @@ CParticleNodeGraph	$53CEE3C9
 		"$82E764F1",
 		"$42857AF9",
 	};
-	WorkspacePosition = int2(72, -15);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$781EF9C0
@@ -18417,9 +18339,7 @@ CParticleNodeGraph	$1F42BA72
 		"$11348336",
 		"$EA980F2B",
 	};
-	WorkspacePosition = int2(10, 83);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$69C2A8C6
@@ -18546,7 +18466,6 @@ CParticleNodeEventPayloadAppend	$F1113642
 	WorkspacePosition = int2(1056, -528);
 	PayloadName = "ContactNormal";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$12B3112D
 {
@@ -18825,7 +18744,6 @@ CParticleNodeEventPayloadAppend	$ABE6F3A0
 	PayloadName = "Position";
 	PayloadType = float3;
 	PayloadKind = XFormsPositions;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$F4F8CAE3
 {
@@ -18869,7 +18787,6 @@ CParticleNodeEventPayloadAppend	$3BA5E794
 	WorkspacePosition = int2(484, -528);
 	PayloadName = "Velocity";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$32CC13E7
 {
@@ -18975,7 +18892,6 @@ CParticleNodeEventPayloadAppend	$F9FA54E4
 	};
 	WorkspacePosition = int2(1628, -528);
 	PayloadName = "LifeRatio";
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$79676377
 {
@@ -19122,7 +19038,6 @@ CParticleNodeEventPayloadAppend	$DA167351
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$1B167BE8
 {
@@ -21076,9 +20991,7 @@ CParticleNodeGraph	$49F127EC
 		"$8C730DA7",
 		"$92B3D11D",
 	};
-	WorkspacePosition = int2(-9, 4);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$31D5AF1F
@@ -29326,7 +29239,7 @@ CParticleNodeTemplateExport	$35FB44F8
 	OutputPins = {
 		"$5ABFEA7A",
 	};
-	WorkspacePosition = int2(-616, 506);
+	WorkspacePosition = int2(-770, 506);
 	ExportedName = "VectorFieldPosition";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -29364,7 +29277,7 @@ CParticleNodeTemplateExport	$657333E3
 	OutputPins = {
 		"$972AD64D",
 	};
-	WorkspacePosition = int2(-616, 616);
+	WorkspacePosition = int2(-770, 616);
 	ExportedName = "VectorFieldOrientation";
 	ExportedType = orientation;
 	Type = Input;
@@ -29501,7 +29414,7 @@ CParticleNodePassThrough	$03235107
 	OutputPins = {
 		"$41789551",
 	};
-	WorkspacePosition = int2(264, 1166);
+	WorkspacePosition = int2(110, 1166);
 }
 CParticleNodePinIn	$02CF30D6
 {
@@ -29527,7 +29440,7 @@ CParticleNodePassThrough	$C13245E8
 	OutputPins = {
 		"$7CFED7EA",
 	};
-	WorkspacePosition = int2(1892, 198);
+	WorkspacePosition = int2(2134, 198);
 }
 CParticleNodePinIn	$F149E6CB
 {
@@ -29553,7 +29466,7 @@ CParticleNodePassThrough	$A602FFF5
 	OutputPins = {
 		"$531BA74F",
 	};
-	WorkspacePosition = int2(1892, 242);
+	WorkspacePosition = int2(2134, 242);
 }
 CParticleNodePinIn	$CC55F35C
 {
@@ -29579,7 +29492,7 @@ CParticleNodePassThrough	$7D0FA0BE
 	OutputPins = {
 		"$21100490",
 	};
-	WorkspacePosition = int2(1914, 286);
+	WorkspacePosition = int2(2156, 286);
 }
 CParticleNodePinIn	$DE504F59
 {
@@ -29629,7 +29542,7 @@ CParticleNodePinOut	$6A0DB693
 	SelfName = "Value";
 	Owner = "$F23C5877";
 	ConnectedPins = {
-		"$1B82BDBB",
+		"$7EF17401",
 	};
 }
 CParticleNodeTemplate	$2119A3FF
@@ -29691,60 +29604,6 @@ CParticleNodePinOut	$18549F28
 		"$18A2032E",
 	};
 }
-CParticleNodePassThrough	$9D2A0738
-{
-	InputPins = {
-		"$4DE11A5B",
-	};
-	OutputPins = {
-		"$DB554ABA",
-	};
-	WorkspacePosition = int2(374, 22);
-}
-CParticleNodePinIn	$4DE11A5B
-{
-	SelfName = "Value";
-	Owner = "$9D2A0738";
-	ConnectedPins = {
-		"$D5F865D3",
-	};
-}
-CParticleNodePinOut	$DB554ABA
-{
-	SelfName = "Value";
-	Owner = "$9D2A0738";
-	ConnectedPins = {
-		"$B48CABAC",
-		"$5F621394",
-	};
-}
-CParticleNodePassThrough	$739E0305
-{
-	InputPins = {
-		"$B48CABAC",
-	};
-	OutputPins = {
-		"$0BD19DDF",
-	};
-	WorkspacePosition = int2(528, 22);
-}
-CParticleNodePinIn	$B48CABAC
-{
-	SelfName = "Value";
-	Owner = "$739E0305";
-	ConnectedPins = {
-		"$DB554ABA",
-	};
-}
-CParticleNodePinOut	$0BD19DDF
-{
-	SelfName = "Value";
-	Owner = "$739E0305";
-	ConnectedPins = {
-		"$FD8A3D69",
-		"$FD854022",
-	};
-}
 CParticleNodePassThrough	$2DBA928E
 {
 	InputPins = {
@@ -29753,14 +29612,14 @@ CParticleNodePassThrough	$2DBA928E
 	OutputPins = {
 		"$C98A83E0",
 	};
-	WorkspacePosition = int2(616, 198);
+	WorkspacePosition = int2(396, 374);
 }
 CParticleNodePinIn	$FD8A3D69
 {
 	SelfName = "Value";
 	Owner = "$2DBA928E";
 	ConnectedPins = {
-		"$0BD19DDF",
+		"$FE26A1A5",
 	};
 }
 CParticleNodePinOut	$C98A83E0
@@ -29768,7 +29627,8 @@ CParticleNodePinOut	$C98A83E0
 	SelfName = "Value";
 	Owner = "$2DBA928E";
 	ConnectedPins = {
-		"$7837C3E5",
+		"$FCB5F911",
+		"$5F621394",
 	};
 }
 CParticleNodePassThrough	$1DDF8023
@@ -29779,14 +29639,14 @@ CParticleNodePassThrough	$1DDF8023
 	OutputPins = {
 		"$9F30F08D",
 	};
-	WorkspacePosition = int2(1804, 22);
+	WorkspacePosition = int2(2046, 22);
 }
 CParticleNodePinIn	$FD854022
 {
 	SelfName = "Value";
 	Owner = "$1DDF8023";
 	ConnectedPins = {
-		"$0BD19DDF",
+		"$FE26A1A5",
 	};
 }
 CParticleNodePinOut	$9F30F08D
@@ -29805,7 +29665,7 @@ CParticleNodePassThrough	$BCE3E3D4
 	OutputPins = {
 		"$88A20776",
 	};
-	WorkspacePosition = int2(-264, 594);
+	WorkspacePosition = int2(-418, 594);
 }
 CParticleNodePinIn	$DCE7A527
 {
@@ -29831,7 +29691,7 @@ CParticleNodePassThrough	$65E2E071
 	OutputPins = {
 		"$9477B0EB",
 	};
-	WorkspacePosition = int2(-264, 682);
+	WorkspacePosition = int2(-418, 682);
 }
 CParticleNodePinIn	$FE16DF88
 {
@@ -29857,7 +29717,7 @@ CParticleNodePassThrough	$691D5C8A
 	OutputPins = {
 		"$DC934AFC",
 	};
-	WorkspacePosition = int2(-264, 462);
+	WorkspacePosition = int2(-418, 462);
 }
 CParticleNodePinIn	$99AB9115
 {
@@ -29883,7 +29743,7 @@ CParticleNodePassThrough	$D212076F
 	OutputPins = {
 		"$35754679",
 	};
-	WorkspacePosition = int2(-264, 550);
+	WorkspacePosition = int2(-418, 550);
 }
 CParticleNodePinIn	$B3B7735E
 {
@@ -29945,7 +29805,7 @@ CParticleNodeTemplateExport	$5EC671CF
 	OutputPins = {
 		"$CD4B7F52",
 	};
-	WorkspacePosition = int2(-242, 946);
+	WorkspacePosition = int2(-396, 946);
 	ExportedName = "SceneWindInfluence";
 	ExportedType = float;
 	Type = Input;
@@ -30306,7 +30166,7 @@ CParticleNodeTemplateExport	$8C301AE3
 	OutputPins = {
 		"$1E63F387",
 	};
-	WorkspacePosition = int2(-616, 396);
+	WorkspacePosition = int2(-770, 396);
 	ExportedName = "VectorFieldTimeCursor";
 	ExportedType = float;
 	Type = Input;
@@ -30368,7 +30228,7 @@ CParticleNodePassThrough	$66B51261
 	OutputPins = {
 		"$7DDC25BD",
 	};
-	WorkspacePosition = int2(-264, 506);
+	WorkspacePosition = int2(-418, 506);
 }
 CParticleNodePinIn	$E135E303
 {
@@ -30438,7 +30298,7 @@ CParticleNodeGraph	$1FA85806
 		"$DDB07AEC",
 		"$9AC4E301",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$DDB07AEC
 {
@@ -30501,7 +30361,7 @@ CParticleNodeGraph	$B21CDF7D
 		"$D91022C5",
 		"$CCB818BB",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$D91022C5
 {
@@ -30598,9 +30458,7 @@ CParticleNodeGraph	$34DF3731
 		"$3362B476",
 		"$0286FAA8",
 	};
-	WorkspacePosition = int2(27, -8);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSamplerData_Shape	$B60A9308
@@ -31705,9 +31563,7 @@ CParticleNodeGraph	$1E1F9C25
 		"$CC982407",
 		"$010B1ACF",
 	};
-	WorkspacePosition = int2(-161, -16);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$8285B808
@@ -32553,9 +32409,7 @@ CParticleNodeGraph	$ACFC96BC
 		"$071EC172",
 		"$64C78E95",
 	};
-	WorkspacePosition = int2(-210, -216);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$A6031495
@@ -35170,9 +35024,7 @@ CParticleNodeGraph	$377CDF6B
 		"$2874725B",
 		"$46488684",
 	};
-	WorkspacePosition = int2(-274, -171);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$68A3A205
@@ -36714,7 +36566,7 @@ CParticleNodeTemplateExport	$349B9B65
 	OutputPins = {
 		"$DDD41DBF",
 	};
-	WorkspacePosition = int2(-616, 726);
+	WorkspacePosition = int2(-770, 726);
 	ExportedName = "VectorFieldScale";
 	ExportedType = float3;
 	Semantic = 3D_Scale;
@@ -36759,7 +36611,7 @@ CParticleNodePassThrough	$AC4AF084
 	OutputPins = {
 		"$9AA1A2FE",
 	};
-	WorkspacePosition = int2(-264, 638);
+	WorkspacePosition = int2(-418, 638);
 }
 CParticleNodePinIn	$4A9CA704
 {
@@ -36896,9 +36748,7 @@ CParticleNodeGraph	$F711B7A2
 		"$DD5EFC22",
 		"$B88EC6A2",
 	};
-	WorkspacePosition = int2(-41, 31);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$DEF79E1E
@@ -45269,5 +45119,257 @@ CParticleNodePinOut	$C6723E93
 	Owner = "$9DE94E18";
 	ConnectedPins = {
 		"$4998062F",
+	};
+}
+CParticleNodeIf	$3729BF02
+{
+	InputPins = {
+		"$AAC08828",
+		"$7DAC7FB5",
+		"$FCB5F911",
+	};
+	OutputPins = {
+		"$4A2495D0",
+	};
+	WorkspacePosition = int2(682, 264);
+}
+CParticleNodePinIn	$AAC08828
+{
+	SelfName = "Condition";
+	Owner = "$3729BF02";
+	ConnectedPins = {
+		"$C7D244F8",
+	};
+}
+CParticleNodePinIn	$7DAC7FB5
+{
+	SelfName = "Value";
+	Owner = "$3729BF02";
+	ConnectedPins = {
+		"$41E5AFE7",
+	};
+}
+CParticleNodePinIn	$FCB5F911
+{
+	SelfName = "ValueIfFalse";
+	Owner = "$3729BF02";
+	ConnectedPins = {
+		"$C98A83E0",
+	};
+}
+CParticleNodePinOut	$4A2495D0
+{
+	SelfName = "Value";
+	Owner = "$3729BF02";
+	ConnectedPins = {
+		"$C45BF55C",
+	};
+}
+CParticleNodePassThrough	$662FCF75
+{
+	InputPins = {
+		"$ECD1EAA3",
+	};
+	OutputPins = {
+		"$FE26A1A5",
+	};
+	WorkspacePosition = int2(154, 22);
+}
+CParticleNodePinIn	$ECD1EAA3
+{
+	SelfName = "Value";
+	Owner = "$662FCF75";
+	ConnectedPins = {
+		"$D5F865D3",
+	};
+}
+CParticleNodePinOut	$FE26A1A5
+{
+	SelfName = "Value";
+	Owner = "$662FCF75";
+	ConnectedPins = {
+		"$FD8A3D69",
+		"$FD854022",
+	};
+}
+CParticleNodeTransform	$BDAC07A4
+{
+	InputPins = {
+		"$E6E354B1",
+	};
+	OutputPins = {
+		"$AB82B69D",
+	};
+	WorkspacePosition = int2(1364, 176);
+	TransformMode = Rotate;
+}
+CParticleNodePinIn	$E6E354B1
+{
+	SelfName = "Value";
+	Type = float3;
+	Owner = "$BDAC07A4";
+	BaseType = float3;
+	ConnectedPins = {
+		"$A2468656",
+	};
+}
+CParticleNodePinOut	$AB82B69D
+{
+	SelfName = "Value";
+	Type = float3;
+	Owner = "$BDAC07A4";
+	BaseType = float3;
+	ConnectedPins = {
+		"$8B09CF9C",
+	};
+}
+CParticleNodeIf	$ECD5D002
+{
+	InputPins = {
+		"$5AFE1ADE",
+		"$8B09CF9C",
+		"$0DC12731",
+	};
+	OutputPins = {
+		"$9018D1BF",
+	};
+	WorkspacePosition = int2(1584, 132);
+}
+CParticleNodePinIn	$5AFE1ADE
+{
+	SelfName = "Condition";
+	Owner = "$ECD5D002";
+	ConnectedPins = {
+		"$9B3DB50C",
+	};
+}
+CParticleNodePinIn	$8B09CF9C
+{
+	SelfName = "Value";
+	Owner = "$ECD5D002";
+	ConnectedPins = {
+		"$AB82B69D",
+	};
+}
+CParticleNodePinIn	$0DC12731
+{
+	SelfName = "ValueIfFalse";
+	Owner = "$ECD5D002";
+	ConnectedPins = {
+		"$A2468656",
+	};
+}
+CParticleNodePinOut	$9018D1BF
+{
+	SelfName = "Value";
+	Owner = "$ECD5D002";
+	ConnectedPins = {
+		"$9F19CD36",
+	};
+}
+CParticleNodePassThrough	$7C187D69
+{
+	InputPins = {
+		"$D3DA44D9",
+	};
+	OutputPins = {
+		"$A2468656",
+	};
+	WorkspacePosition = int2(1298, 242);
+}
+CParticleNodePinIn	$D3DA44D9
+{
+	SelfName = "Value";
+	Owner = "$7C187D69";
+	ConnectedPins = {
+		"$890CDF67",
+	};
+}
+CParticleNodePinOut	$A2468656
+{
+	SelfName = "Value";
+	Owner = "$7C187D69";
+	ConnectedPins = {
+		"$0DC12731",
+		"$E6E354B1",
+	};
+}
+CParticleNodePassThrough	$C0C013EA
+{
+	InputPins = {
+		"$DD141BF0",
+	};
+	OutputPins = {
+		"$9B3DB50C",
+	};
+	WorkspacePosition = int2(1254, -176);
+}
+CParticleNodePinIn	$DD141BF0
+{
+	SelfName = "Value";
+	Owner = "$C0C013EA";
+	ConnectedPins = {
+		"$C7D244F8",
+	};
+}
+CParticleNodePinOut	$9B3DB50C
+{
+	SelfName = "Value";
+	Owner = "$C0C013EA";
+	ConnectedPins = {
+		"$5AFE1ADE",
+	};
+}
+CParticleNodePassThrough	$29A935DF
+{
+	InputPins = {
+		"$36AA201A",
+	};
+	OutputPins = {
+		"$C7D244F8",
+	};
+	WorkspacePosition = int2(352, -176);
+}
+CParticleNodePinIn	$36AA201A
+{
+	SelfName = "Value";
+	Owner = "$29A935DF";
+	ConnectedPins = {
+		"$ED80C982",
+	};
+}
+CParticleNodePinOut	$C7D244F8
+{
+	SelfName = "Value";
+	Owner = "$29A935DF";
+	ConnectedPins = {
+		"$DD141BF0",
+		"$AAC08828",
+	};
+}
+CParticleNodePassThrough	$8CF48A6B
+{
+	InputPins = {
+		"$7EF17401",
+	};
+	OutputPins = {
+		"$E13AB5DE",
+	};
+	WorkspacePosition = int2(1474, 836);
+}
+CParticleNodePinIn	$7EF17401
+{
+	SelfName = "Value";
+	Owner = "$8CF48A6B";
+	ConnectedPins = {
+		"$6A0DB693",
+	};
+}
+CParticleNodePinOut	$E13AB5DE
+{
+	SelfName = "Value";
+	Owner = "$8CF48A6B";
+	ConnectedPins = {
+		"$1B82BDBB",
 	};
 }
