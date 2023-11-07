@@ -4,7 +4,7 @@
     "origin_uri": "https://github.com/PopcornFX/O3DEPopcornFXExamples.git",
     "license": "PopcornFX Community",
     "license_url": "https://www.popcornfx.com/popcornfx-community-license",
-    "display_name": "O3DE PopcornFX Examples",
+    "display_name": "O3DE_PopcornFX_Examples",
     "summary": "O3DE project showcasing the PopcornFX gem.",
     "canonical_tags": [
         "Project"
@@ -13,7 +13,7 @@
         "O3DEPopcornFXExamples"
     ],
     "icon_path": "preview.png",
-    "engine": "o3de",
+    "engine": "o3de-sdk",
     "external_subdirectories": [
         "Gem",
         "Gems/DemoRoom",
@@ -21,5 +21,6 @@
     ],
     "restricted": "O3DEPopcornFXExamples",
     "project_id": "{7b0414a7-5b28-49f8-a9f6-ccf1e9c6b294}",
-    "engine_version": "23.05.1"
+    "engine_version": "2.1.0",
+    "version": ""
 }
