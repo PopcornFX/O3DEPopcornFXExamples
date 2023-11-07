@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -16,9 +16,7 @@ CParticleNodeGraph	$81861AB7
 {
 	CustomName = "Root";
 	Timeline = "$052CEED2";
-	WorkspacePosition = int2(23, 28);
-	WorkspaceZoom = -3;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CEditorAssetEffect	$F20FBF14
@@ -145,9 +143,7 @@ CParticleNodeGraph	$F415EE0A
 		"$B26DC62D",
 		"$4DEFB5C8",
 	};
-	WorkspacePosition = int2(-229, -189);
-	WorkspaceZoom = -8;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePartialDerivative	$BFFE614C
@@ -382,7 +378,6 @@ CParticleNodeEventPayloadAppendInterp	$C676F414
 	WorkspacePosition = int2(1870, 1386);
 	PayloadName = "Velocity";
 	PayloadType = float3;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$E213072E
 {
@@ -1345,7 +1340,6 @@ CParticleNodeEventPayloadAppendInterp	$6E7C94A3
 	WorkspacePosition = int2(1870, 2288);
 	PayloadName = "LifeRatio";
 	PayloadType = float;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$F5C53B2C
 {
@@ -1508,7 +1502,6 @@ CParticleNodeEventPayloadAppendInterp	$B2BFA21F
 	PayloadName = "Orientation";
 	PayloadType = orientation;
 	PayloadKind = XFormsOrientations;
-	IgnoreWarningsUnused = true;
 	HighQualityInterpolation = true;
 }
 CParticleNodePinIn	$25B7B0FC
@@ -1762,9 +1755,7 @@ CParticleNodeGraph	$61D82A82
 		"$DEE9316D",
 		"$096D3A37",
 	};
-	WorkspacePosition = int2(23, 6);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$8EF030AD
@@ -2350,7 +2341,6 @@ CParticleNodeEventPayloadAppend	$392C9A4F
 	PayloadName = "EmittedCount";
 	PayloadType = int;
 	PayloadKind = EmittedCount;
-	IgnoreWarningsUnused = true;
 }
 CParticleNodePinIn	$32B5A42D
 {
@@ -2597,7 +2587,6 @@ CParticleNodeEventPayloadAppendInterp	$F2E00040
 	PayloadName = "Position";
 	PayloadType = float3;
 	PayloadKind = XFormsPositions;
-	IgnoreWarningsUnused = true;
 	Interpolation = Cubic;
 }
 CParticleNodePinIn	$0BCA38EE
@@ -2696,9 +2685,7 @@ CParticleNodeGraph	$E7A7BE8E
 		"$EA37FA49",
 		"$AF25EEE5",
 	};
-	WorkspacePosition = int2(18, 7);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$C2998CBC
@@ -3983,9 +3970,7 @@ CParticleNodeGraph	$FB490026
 		"$9D12828B",
 		"$6A04AB8C",
 	};
-	WorkspacePosition = int2(3, -7);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeCompare	$8A93EEE1
@@ -4882,9 +4867,7 @@ CParticleNodeGraph	$AFB08F84
 		"$F686F85E",
 		"$81F975B7",
 	};
-	WorkspacePosition = int2(-74, -13);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeReinterpret	$E406E297
@@ -5608,9 +5591,7 @@ CParticleNodeGraph	$66595C64
 		"$CF8F8E01",
 		"$60AE90DF",
 	};
-	WorkspacePosition = int2(70, -22);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$3E130D02

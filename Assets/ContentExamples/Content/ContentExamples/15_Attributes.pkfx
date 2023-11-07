@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -3251,6 +3251,8 @@ CParticleNodeRendererRibbon	$0EAA4E45
 		"$6A53D893",
 		"$E836F034",
 		"$FC4FFED4",
+		"$6026EA08",
+		"$0BC1711D",
 		"$795DAACA",
 		"$BDC4957F",
 		"$9DC07FC1",
@@ -3754,4 +3756,22 @@ CParticleNodePinOut	$D027785F
 	Visible = false;
 	Owner = "$B54B8ABE";
 	BaseType = int;
+}
+CParticleNodePinIn	$6026EA08
+{
+	SelfName = "General.PlaneCount";
+	Type = int;
+	Visible = false;
+	Owner = "$0EAA4E45";
+	BaseType = int;
+	ValueI = int4(2, 0, 0, 0);
+}
+CParticleNodePinIn	$0BC1711D
+{
+	SelfName = "General.SegmentCount";
+	Type = int;
+	Visible = false;
+	Owner = "$0EAA4E45";
+	BaseType = int;
+	ValueI = int4(8, 0, 0, 0);
 }

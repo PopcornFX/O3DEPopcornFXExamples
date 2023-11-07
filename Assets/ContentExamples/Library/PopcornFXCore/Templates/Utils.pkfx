@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -60,7 +60,7 @@ CParticleNodeGraph	$81861AB7
 {
 	CustomName = "Root";
 	Timeline = "$DDECD857";
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	GraphType = Event;
 }
 CParticleTimeline	$DDECD857
@@ -139,9 +139,7 @@ CParticleNodeGraph	$B660FBF9
 		"$477D687F",
 		"$CB35A410",
 	};
-	WorkspacePosition = int2(-242, 175);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$E191BFCB
@@ -1586,7 +1584,7 @@ CParticleNodeGraph	$D734A95F
 		"$BE842FF3",
 		"$9E99BB10",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$A4737EA8
@@ -2393,9 +2391,7 @@ CParticleNodeGraph	$A33BCCA0
 		"$4BFB40BF",
 		"$FA8C04BA",
 	};
-	WorkspacePosition = int2(136, 32);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeGraph	$FC3A8B0C
@@ -2424,9 +2420,7 @@ CParticleNodeGraph	$FC3A8B0C
 		"$46CF6AD7",
 		"$C52ACE96",
 	};
-	WorkspacePosition = int2(60, -225);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeLayer	$4BFB40BF
 {
@@ -2741,7 +2735,7 @@ CParticleNodeGraph	$4647869D
 		"$E513E5BC",
 		"$7C20C336",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplate	$EE5855C2
 {
@@ -2829,9 +2823,7 @@ CParticleNodeGraph	$6128E19F
 		"$505DF345",
 		"$95F3D88E",
 	};
-	WorkspacePosition = int2(-26, -97);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSamplerData_Curve	$673D414E
@@ -3506,9 +3498,7 @@ CParticleNodeGraph	$E29EA89E
 		"$59FCF183",
 		"$A2505EED",
 	};
-	WorkspacePosition = int2(60, -84);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$C26604B9
 {
@@ -3739,9 +3729,7 @@ CParticleNodeGraph	$5F621394
 		"$F1356840",
 		"$0384856D",
 	};
-	WorkspacePosition = int2(-38, 68);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$41E5AFE7
 {
@@ -4102,9 +4090,7 @@ CParticleNodeGraph	$96A2AA34
 		"$C71E500B",
 		"$562583B2",
 	};
-	WorkspacePosition = int2(365, 35);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$D970BB07
@@ -5055,9 +5041,7 @@ CParticleNodeGraph	$94ABBA0D
 		"$729F6CE7",
 		"$70E894FD",
 	};
-	WorkspacePosition = int2(-40, -60);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$0AA9AB54
@@ -5346,7 +5330,7 @@ CParticleNodeGraph	$52697627
 		"$372F2C0B",
 		"$A4A5D99F",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeAnnotation	$256FAC76
@@ -5840,9 +5824,7 @@ CParticleNodeGraph	$42D235E4
 		"$F9894E80",
 		"$F62A9EAD",
 	};
-	WorkspacePosition = int2(-68, -37);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeAnnotation	$F23C5877
@@ -6625,6 +6607,7 @@ CParticleNodeGraph	$F388C88F
 	CustomName = "OrientationFromPosition";
 	Public = true;
 	ClassType = Math;
+	IconKey = "Toolbar_XForm_Rotate";
 	Nodes = {
 		"$F46C12EC",
 		"$617483A9",
@@ -6659,18 +6642,15 @@ CParticleNodeGraph	$F388C88F
 		"$714E2BAD",
 		"$4F76157F",
 		"$F41DF916",
-		"$0DE24E9F",
-		"$C88BB5F0",
 		"$E759671D",
 		"$FAEA4BE0",
 		"$4D1979D8",
 		"$16EFBF94",
 		"$491552C4",
 		"$95A5CB9F",
+		"$41FACE50",
 	};
-	WorkspacePosition = int2(-63, 150);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$F46C12EC
@@ -6718,7 +6698,7 @@ CParticleNodeTemplateExport	$617483A9
 	OutputPins = {
 		"$FF274463",
 	};
-	WorkspacePosition = int2(-2816, -484);
+	WorkspacePosition = int2(-2860, -484);
 	ExportedName = "Position";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -6779,7 +6759,7 @@ CParticleNodePinIn	$0718CD70
 	Owner = "$6BAF3CB9";
 	BaseType = float3;
 	ConnectedPins = {
-		"$75EFC9F6",
+		"$F2BC4B12",
 	};
 }
 CParticleNodePinIn	$044FC0F3
@@ -6905,7 +6885,7 @@ CParticleNodeMathFunction3	$3C9506CF
 	OutputPins = {
 		"$3F2A3E13",
 	};
-	WorkspacePosition = int2(-1826, -528);
+	WorkspacePosition = int2(-1870, -528);
 	Function = Select;
 }
 CParticleNodePinIn	$56CCB63E
@@ -6937,7 +6917,6 @@ CParticleNodePinOut	$3F2A3E13
 	SelfName = "Value";
 	Owner = "$3C9506CF";
 	ConnectedPins = {
-		"$487CD269",
 		"$3FB3BFE4",
 	};
 }
@@ -6949,7 +6928,7 @@ CParticleNodePartialDerivative	$6456DCD2
 	OutputPins = {
 		"$70FA5F04",
 	};
-	WorkspacePosition = int2(-2530, -484);
+	WorkspacePosition = int2(-2574, -484);
 }
 CParticleNodePinIn	$B44F72FD
 {
@@ -6976,7 +6955,7 @@ CParticleNodeMathFunction1	$40A52817
 	OutputPins = {
 		"$58EDBFE1",
 	};
-	WorkspacePosition = int2(-2288, -440);
+	WorkspacePosition = int2(-2332, -440);
 	Function = Length;
 }
 CParticleNodePinIn	$56CB4D26
@@ -7004,7 +6983,7 @@ CParticleNodeCompare	$6F327BB8
 	OutputPins = {
 		"$9DEBBD85",
 	};
-	WorkspacePosition = int2(-2068, -440);
+	WorkspacePosition = int2(-2112, -440);
 	Operation = Greater;
 }
 CParticleNodePinIn	$F62068DB
@@ -7038,7 +7017,7 @@ CParticleNodeTemplate	$2E4C9B0E
 	OutputPins = {
 		"$3BD8A860",
 	};
-	WorkspacePosition = int2(-2530, -682);
+	WorkspacePosition = int2(-2574, -682);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "effect.axisForward";
 }
@@ -7068,7 +7047,7 @@ CParticleNodeDiscretizationPoint	$13FE3EA3
 	OutputPins = {
 		"$DD369B0D",
 	};
-	WorkspacePosition = int2(-2090, -682);
+	WorkspacePosition = int2(-2134, -682);
 }
 CParticleNodePinIn	$B713A0A2
 {
@@ -7084,7 +7063,7 @@ CParticleNodePinOut	$DD369B0D
 	Owner = "$13FE3EA3";
 	ConnectedPins = {
 		"$56CCB63E",
-		"$E55C518D",
+		"$84DDDBA7",
 	};
 }
 CParticleNodeAssign	$D3ADA054
@@ -7103,7 +7082,7 @@ CParticleNodePinIn	$84DDDBA7
 	SelfName = "Value";
 	Owner = "$D3ADA054";
 	ConnectedPins = {
-		"$EF3B2737",
+		"$DD369B0D",
 	};
 }
 CParticleNodePinIn	$7CA13FF6
@@ -7150,6 +7129,7 @@ CParticleNodeGraph	$81F975B7
 	CustomName = "BillboardScreenControls";
 	Public = true;
 	ClassType = Math;
+	IconKey = "Renderer_Billboard";
 	Nodes = {
 		"$3E88DB46",
 		"$77FD347B",
@@ -7189,9 +7169,7 @@ CParticleNodeGraph	$81F975B7
 		"$2DA19198",
 		"$A9975600",
 	};
-	WorkspacePosition = int2(101, -168);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$3E88DB46
@@ -8221,7 +8199,7 @@ CParticleNodeGraph	$5ABFEA7A
 		"$584DD573",
 		"$76EF83EE",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$F8C93DC5
@@ -9169,7 +9147,7 @@ CParticleNodeGraph	$FB372932
 		"$46B97FCF",
 		"$6E8A5310",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeArithmetic	$E4229179
@@ -9555,7 +9533,7 @@ CParticleNodeGraph	$394193FD
 		"$A9299A26",
 		"$7270E0E9",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSamplerData_Curve	$AED69404
@@ -9693,7 +9671,7 @@ CParticleNodeGraph	$28D5A7A3
 		"$7A8DB4F0",
 		"$FEE6F85D",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$CC9ABDA2
@@ -10082,7 +10060,7 @@ CParticleNodeGraph	$5AC5AF06
 		"$4263E726",
 		"$5331C5B8",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSamplerData_Shape	$1DE20934
@@ -10296,7 +10274,7 @@ CParticleNodeGraph	$6550F65B
 		"$5DB578FF",
 		"$9C511789",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$D8818279
@@ -10491,7 +10469,7 @@ CParticleNodeGraph	$A0F286D0
 		"$6DBA1810",
 		"$41BD96D2",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeGraph	$4178ED14
@@ -10507,7 +10485,7 @@ CParticleNodeGraph	$4178ED14
 		"$781EF9C0",
 		"$0AB8D8ED",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$3C8A12F3
@@ -10871,7 +10849,7 @@ CParticleNodeGraph	$74BBF53A
 		"$29773258",
 		"$EE4DE7A5",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$82E764F1
@@ -11052,7 +11030,7 @@ CParticleNodeGraph	$7B9D557F
 		"$ABE6F3A0",
 		"$8F08F54D",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeSpatialLayer	$638AF70F
@@ -11248,7 +11226,7 @@ CParticleNodeGraph	$88D3BD36
 		"$734AB54F",
 		"$B7796D59",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$9CB42773
@@ -11472,7 +11450,7 @@ CParticleNodeGraph	$74AC6493
 		"$0A53587B",
 		"$B05C7AE9",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$1DD8C552
@@ -11714,7 +11692,7 @@ CParticleNodeGraph	$0B2DDD72
 		"$0C16B02D",
 		"$779E052F",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$709C301D
@@ -11895,9 +11873,7 @@ CParticleNodeGraph	$C4C54696
 		"$A6C7BA8F",
 		"$64C69F92",
 	};
-	WorkspacePosition = int2(-140, -44);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeLayer	$779E052F
 {
@@ -12490,7 +12466,7 @@ CParticleNodeGraph	$89E643D7
 		"$2A8484CD",
 		"$2B47A0B1",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$3310B3E6
@@ -12691,9 +12667,7 @@ CParticleNodeGraph	$08799F2B
 		"$F9FA54E4",
 		"$5A9DDB98",
 	};
-	WorkspacePosition = int2(-140, -44);
-	WorkspaceZoom = -4;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeSetLife	$2472C7CA
 {
@@ -13359,7 +13333,7 @@ CParticleNodeGraph	$E60EDDEE
 		"$462E6825",
 		"$7AAF7888",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$DA167351
@@ -13608,9 +13582,7 @@ CParticleNodeGraph	$7F6D4E35
 		"$A1D9C4CA",
 		"$A4CDA13C",
 	};
-	WorkspacePosition = int2(-38, 68);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$8B0B3E9C
@@ -15146,9 +15118,7 @@ CParticleNodeGraph	$9B00F0A6
 		"$917B2E03",
 		"$F512F8AC",
 	};
-	WorkspacePosition = int2(-103, 87);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeRendererBillboard	$711CECD8
@@ -15887,9 +15857,7 @@ CParticleNodeGraph	$61A1579A
 		"$47FC0670",
 		"$E11DBA70",
 	};
-	WorkspacePosition = int2(-15, 31);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$FDF26520
@@ -17108,6 +17076,7 @@ CParticleNodeGraph	$A201EB5B
 {
 	CustomName = "Spawn on Mesh";
 	Public = true;
+	ClassType = Sampler;
 	IconKey = "Resource_Mesh";
 	SearchKeywords = "sample shape";
 	Nodes = {
@@ -17123,15 +17092,14 @@ CParticleNodeGraph	$A201EB5B
 		"$5304A32A",
 		"$F804096C",
 	};
-	WorkspacePosition = int2(-183, 61);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeGraph	$CDDBD987
 {
 	CustomName = "Spawn on Texture";
 	Public = true;
+	ClassType = Sampler;
 	IconKey = "Sampler_Image";
 	SearchKeywords = "sample image";
 	Nodes = {
@@ -17194,9 +17162,7 @@ CParticleNodeGraph	$CDDBD987
 		"$B894BA66",
 		"$88DE40D0",
 	};
-	WorkspacePosition = int2(-187, -21);
-	WorkspaceZoom = -7;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$F76AA28A
@@ -17826,9 +17792,7 @@ CParticleNodeGraph	$5160662C
 		"$CBAF68CF",
 		"$37088BBE",
 	};
-	WorkspacePosition = int2(-153, 21);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeMathFunction3	$1C6A39A3
@@ -20350,7 +20314,7 @@ CParticleNodeGraph	$1B1B46CE
 		"$3B26541E",
 		"$00213B3C",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$536FF2D2
@@ -21127,7 +21091,6 @@ CParticleNodeTemplateExport	$FF4A57D3
 	ExportedType = float;
 	Type = Input;
 	Order = 11;
-	VisibleByDefault = true;
 	CategoryName = {
 		"@eng:Rotation",
 	};
@@ -21165,7 +21128,6 @@ CParticleNodeTemplateExport	$D80F3942
 	ExportedType = float;
 	Type = Input;
 	Order = 11;
-	VisibleByDefault = true;
 	CategoryName = {
 		"@eng:Rotation",
 	};
@@ -21674,7 +21636,7 @@ CParticleNodeTemplate	$FDA39E84
 	OutputPins = {
 		"$E586B725",
 	};
-	WorkspacePosition = int2(-1518, -110);
+	WorkspacePosition = int2(-1584, -528);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "safe normalize fast";
 }
@@ -21708,6 +21670,7 @@ CParticleNodePinOut	$E586B725
 	Owner = "$FDA39E84";
 	ConnectedPins = {
 		"$448E15F5",
+		"$487CD269",
 	};
 }
 CParticleNodePassThrough	$BD44147C
@@ -21803,7 +21766,7 @@ CParticleNodePinIn	$487CD269
 	SelfName = "Value";
 	Owner = "$F41DF916";
 	ConnectedPins = {
-		"$3F2A3E13",
+		"$E586B725",
 	};
 }
 CParticleNodePinOut	$6559DF99
@@ -21812,59 +21775,7 @@ CParticleNodePinOut	$6559DF99
 	Owner = "$F41DF916";
 	ConnectedPins = {
 		"$7CA13FF6",
-		"$99C56308",
-	};
-}
-CParticleNodePassThrough	$0DE24E9F
-{
-	InputPins = {
-		"$99C56308",
-	};
-	OutputPins = {
-		"$75EFC9F6",
-	};
-	WorkspacePosition = int2(220, -506);
-}
-CParticleNodePinIn	$99C56308
-{
-	SelfName = "Value";
-	Owner = "$0DE24E9F";
-	ConnectedPins = {
-		"$6559DF99",
-	};
-}
-CParticleNodePinOut	$75EFC9F6
-{
-	SelfName = "Value";
-	Owner = "$0DE24E9F";
-	ConnectedPins = {
-		"$0718CD70",
-	};
-}
-CParticleNodePassThrough	$C88BB5F0
-{
-	InputPins = {
-		"$E55C518D",
-	};
-	OutputPins = {
-		"$EF3B2737",
-	};
-	WorkspacePosition = int2(22, -660);
-}
-CParticleNodePinIn	$E55C518D
-{
-	SelfName = "Value";
-	Owner = "$C88BB5F0";
-	ConnectedPins = {
-		"$DD369B0D",
-	};
-}
-CParticleNodePinOut	$EF3B2737
-{
-	SelfName = "Value";
-	Owner = "$C88BB5F0";
-	ConnectedPins = {
-		"$84DDDBA7",
+		"$93476353",
 	};
 }
 CParticleNodeTemplate	$E759671D
@@ -21911,7 +21822,6 @@ CParticleNodeTemplateExport	$FAEA4BE0
 	ExportedType = float3;
 	Type = Input;
 	Order = 12;
-	VisibleByDefault = true;
 	CategoryName = {
 		"@eng:Rotation",
 	};
@@ -23212,6 +23122,7 @@ CParticleNodeGraph	$139D7539
 	};
 	Public = true;
 	ClassType = Math;
+	IconKey = "Toolbar_CameraVideo";
 	SearchKeywords = "localspace";
 	Nodes = {
 		"$67348F46",
@@ -23238,9 +23149,7 @@ CParticleNodeGraph	$139D7539
 		"$C0E9730F",
 		"$665D49D5",
 	};
-	WorkspacePosition = int2(19, 9);
-	WorkspaceZoom = -5;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$67348F46
@@ -24829,9 +24738,7 @@ CParticleNodeGraph	$3CFD32BF
 		"$5D061777",
 		"$32B6D413",
 	};
-	WorkspacePosition = int2(-21, 1);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodePassThrough	$13E1B430
@@ -25604,9 +25511,7 @@ CParticleNodeGraph	$D5BAD536
 		"$3A31E32B",
 		"$B7E4A4E5",
 	};
-	WorkspacePosition = int2(392, -53);
-	WorkspaceZoom = -6;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeEvaluateAtSpawn	$F1C33707
@@ -26298,7 +26203,7 @@ CParticleNodeGraph	$F8CCAF63
 		"$A679A612",
 		"$46F6E023",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$33D0C0AD
@@ -26487,7 +26392,7 @@ CParticleNodeGraph	$982B7931
 		"$32FB1378",
 		"$356B8E2B",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplate	$3A2E863F
@@ -27774,7 +27679,7 @@ CParticleNodeGraph	$A32F87E7
 		"$B2F89A0F",
 		"$6EF8EF36",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$0382EBE9
@@ -27872,9 +27777,7 @@ CParticleNodeGraph	$D781B046
 		"$A21EB3EB",
 		"$CC61046A",
 	};
-	WorkspacePosition = int2(434, -293);
-	WorkspaceZoom = -1;
-	HasExplicitWorkspaceCoords = true;
+	WorkspaceZoom = 0;
 }
 CParticleNodeTemplateExport	$2AF61072
 {
@@ -27971,7 +27874,7 @@ CParticleNodeGraph	$E6E68863
 		"$D890898A",
 		"$B0163ED3",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$28CA42DD
@@ -28069,7 +27972,7 @@ CParticleNodeGraph	$B43E3E6D
 		"$9F5AF4FC",
 		"$81CE7D5F",
 	};
-	WorkspaceZoom = -4;
+	WorkspaceZoom = 0;
 	Collapsed = true;
 }
 CParticleNodeTemplateExport	$3564B11A
@@ -28335,4 +28238,31 @@ CParticleNodePinOut	$D7F13F2D
 	Visible = false;
 	Owner = "$8E0E9FEF";
 	BaseType = int;
+}
+CParticleNodeMathFunction1	$41FACE50
+{
+	InputPins = {
+		"$93476353",
+	};
+	OutputPins = {
+		"$F2BC4B12",
+	};
+	WorkspacePosition = int2(1474, -528);
+	Function = Neg;
+}
+CParticleNodePinIn	$93476353
+{
+	SelfName = "Value";
+	Owner = "$41FACE50";
+	ConnectedPins = {
+		"$6559DF99",
+	};
+}
+CParticleNodePinOut	$F2BC4B12
+{
+	SelfName = "Value";
+	Owner = "$41FACE50";
+	ConnectedPins = {
+		"$0718CD70",
+	};
 }
