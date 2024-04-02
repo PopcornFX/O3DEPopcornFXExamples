@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -25736,7 +25736,6 @@ CParticleNodeTemplate	$B76AD561
 		"$7114168A",
 		"$7B4CD259",
 		"$4AFE027C",
-		"$8A7FE1D2",
 	};
 	WorkspacePosition = int2(352, -506);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Debug.pkfx";
@@ -27183,7 +27182,7 @@ CParticleNodeTemplate	$6A585521
 	};
 	WorkspacePosition = int2(4312, 44);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "CurveSample";
+	SubGraphName = "curve.sample";
 }
 CParticleNodePinIn	$BB63B8A6
 {
@@ -27613,7 +27612,7 @@ CParticleNodeTemplate	$B1ECAE1C
 	};
 	WorkspacePosition = int2(2464, 264);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "CurveSample";
+	SubGraphName = "curve.sample";
 }
 CParticleNodePinIn	$CCECC1DA
 {
@@ -27922,7 +27921,7 @@ CParticleNodeTemplate	$76C7809E
 	};
 	WorkspacePosition = int2(2002, 418);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "CurveSample";
+	SubGraphName = "curve.sample";
 }
 CParticleNodePinIn	$93358A80
 {
@@ -29187,7 +29186,7 @@ CParticleNodeTemplate	$F8FD2CF2
 	};
 	WorkspacePosition = int2(-726, -374);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinIn	$344C60B7
 {
@@ -29300,7 +29299,7 @@ CParticleNodeTemplate	$FDD10DE9
 	};
 	WorkspacePosition = int2(-726, -22);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinIn	$26233434
 {
@@ -30261,7 +30260,7 @@ CParticleNodeTemplate	$BD129DDD
 	};
 	WorkspacePosition = int2(-4356, -352);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureProperties";
+	SubGraphName = "texture.properties";
 }
 CParticleNodePinIn	$7692979B
 {
@@ -30430,7 +30429,7 @@ CParticleNodeTemplate	$76A00EBF
 	};
 	WorkspacePosition = int2(-726, 154);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinIn	$BDA2DA5F
 {
@@ -30615,7 +30614,7 @@ CParticleNodeTemplate	$4C21D09D
 	};
 	WorkspacePosition = int2(-726, -198);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinIn	$7AA4FE47
 {
@@ -33882,13 +33881,4 @@ CParticleNodePinIn	$7B4CD259
 	Owner = "$B76AD561";
 	BaseType = float3;
 	ValueF = float4(5.0000000e-01, 5.0000000e-01, 5.0000000e-01, 0.0000000e+00);
-}
-CParticleNodePinIn	$8A7FE1D2
-{
-	SelfName = "Size";
-	Type = float;
-	Visible = false;
-	Owner = "$B76AD561";
-	BaseType = float;
-	ValueF = float4(4.9999999e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -176,7 +176,7 @@ CParticleNodePinIn	$89BB54AC
 CParticleNodeTemplateExport	$3B3DDE67
 {
 	Description = {
-		"@eng:Input particle position",
+		"@eng:Input particle position. Usually, put the initial position.",
 	};
 	InputPins = {
 		"$9E526218",
@@ -212,7 +212,7 @@ CParticleNodePinOut	$0E4E8810
 CParticleNodeTemplateExport	$CE8CC02E
 {
 	Description = {
-		"@eng:Input particle velocity",
+		"@eng:Input particle velocity. Usually, put the initial velocity.",
 	};
 	InputPins = {
 		"$371F2116",
@@ -273,7 +273,7 @@ CParticleNodePinIn	$D10978FE
 CParticleNodeTemplateExport	$ECEE2C92
 {
 	Description = {
-		"@eng:Dynamic acceleration to apply to the particles. Usually, this will be gravity. Will be combined with the static \'Acceleration\' input pin.",
+		"@eng:Dynamic acceleration to apply to the particles. Usually, this will be gravity. Note that the mass does not affect the accelaration.",
 	};
 	InputPins = {
 		"$FF1A9FA2",
@@ -345,7 +345,7 @@ CParticleNodePinOut	$1EADE0D1
 CParticleNodeTemplateExport	$4703F6C7
 {
 	Description = {
-		"@eng:Dynamic velocity field to advect the particles against. Usually, this will be wind. Will be combined with the static \'Wind\' property",
+		"@eng:Static velocity to advect the particles against. Usually, this will be wind. Note that both \'Mass\' and \'Drag\' properties affect the strength of the advection phenomena, and a particle with a null drag won\'t be affected by this velocity.",
 	};
 	InputPins = {
 		"$B2CD145B",
@@ -457,7 +457,7 @@ CParticleNodePinOut	$616B6AF1
 CParticleNodeTemplateExport	$E2583104
 {
 	Description = {
-		"@eng:Amount of drag affecting the particles. This will allow the particles to be affected by external winds and turbulent flows.\\nThe higher the value, the stronger the drag.\\n0.0 means no drag.",
+		"@eng:Amount of drag affecting the particles. This will allow the particles to be affected by external winds and turbulent flows. 0.0 means no drag.\\nThe drag force is implemented with a linear-law in respect to the relative velocity (while a quadratic-law is often used in ballistics).\\nThe drag can be conformed to, either the limit velocity of a falling object subjected to the gravity: <c>Vlimit = mass * gravity / drag</c>, either the inverse of the characteristic time in which the body\'s velocity will tend to the wind\'s velocity.",
 	};
 	InputPins = {
 		"$6BF6C3A0",
@@ -12542,7 +12542,7 @@ CParticleNodePinOut	$773606CB
 CParticleNodeTemplateExport	$0755FA7C
 {
 	Description = {
-		"@eng:Dynamic velocity field to advect the particles against. Usually, this will be wind.\\nWill be combined with the static \'Wind\' property.\\n\\nIgnored if \'Drag\' is zero.",
+		"@eng:Dynamic velocity field to advect the particles against. Usually, this will be wind.\\nWill be combined with the \'Wind\' property.\\n\\nIgnored if \'Drag\' is zero.",
 	};
 	InputPins = {
 		"$9C203F9B",
@@ -12594,7 +12594,7 @@ CParticleNodeTemplate	$3FB45D67
 	};
 	WorkspacePosition = int2(1056, 220);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TurbulenceSample";
+	SubGraphName = "turbulence.sample";
 }
 CParticleNodePinIn	$64B644ED
 {
@@ -13395,7 +13395,7 @@ CParticleNodePinOut	$89E0DDB2
 CParticleNodeTemplateExport	$DBE780E4
 {
 	Description = {
-		"@eng:Mask telling the game-engine which parts of the scene should be tested for intersection.\\n\\nThe available values are setup in the project settings, in the project constants, prefixed by \'<c>physics.collisionFilters.</c>\'",
+		"@eng:Mask telling the game-engine which parts of the scene should be tested for intersection.\\n\\nThe available values are setup in `Project Settings > Project > Constants`, and are prefixed by `physics.collisionFilters.`",
 	};
 	InputPins = {
 		"$1A05FF77",
@@ -17872,6 +17872,9 @@ CParticleNodeTemplateExport	$781EF9C0
 	};
 	HasMin = true;
 	DefaultValueI4 = int4(1, 0, 0, 0);
+	PinRules = Rule1;
+	DependentProperty = "DieOnContact";
+	RuleFunction = NotEqual;
 }
 CParticleNodePinIn	$69903B83
 {
@@ -29799,6 +29802,9 @@ CParticleNodePinOut	$44E7794B
 }
 CParticleNodeTemplateExport	$5EC671CF
 {
+	Description = {
+		"@eng:Influence factor of the scene wind",
+	};
 	InputPins = {
 		"$91D4FD3E",
 	};
@@ -30293,6 +30299,9 @@ CParticleNodePinIn	$5886BA48
 CParticleNodeGraph	$1FA85806
 {
 	CustomName = "physics.surfaceType";
+	Description = {
+		"@eng:Scene physics surface type.\\nLists all the `physics.surfaceTypes.*` constants, under `Project Settings > Project > Constants`.\\nThe surface type is returned by some scene queries such as raycasts or sphere-sweeps when a collision occurs. It allows to change the behavior of the particle based on which surface was hit.",
+	};
 	Public = true;
 	Nodes = {
 		"$DDB07AEC",
@@ -30302,6 +30311,9 @@ CParticleNodeGraph	$1FA85806
 }
 CParticleNodeTemplateExport	$DDB07AEC
 {
+	Description = {
+		"@eng:One of the `physics.surfaceTypes.*` constants, under `Project Settings > Project > Constants`.",
+	};
 	InputPins = {
 		"$2E17665F",
 	};
@@ -30323,7 +30335,6 @@ CParticleNodeTemplateExport	$DDB07AEC
 CParticleNodePinIn	$2E17665F
 {
 	SelfName = "DefaultValue";
-	Visible = false;
 	Owner = "$DDB07AEC";
 }
 CParticleNodePinOut	$1FA9BC45
@@ -30356,6 +30367,9 @@ CParticleNodePinIn	$62E4C435
 CParticleNodeGraph	$B21CDF7D
 {
 	CustomName = "physics.collisionFilters";
+	Description = {
+		"@eng:Scene physics collision filter.\\nLists all the `physics.collisionFilters.*` constants, under `Project Settings > Project > Constants`.\\nThe collision filter is a mask passed to the scene collision query functions, such as raycasts or sphere sweeps, to filter out a certain type of geometry you want to collide with.",
+	};
 	Public = true;
 	Nodes = {
 		"$D91022C5",
@@ -30365,6 +30379,9 @@ CParticleNodeGraph	$B21CDF7D
 }
 CParticleNodeTemplateExport	$D91022C5
 {
+	Description = {
+		"@eng:Mask telling the game-engine which parts of the scene should be tested for intersection when using collision queries, such as raycasts or sphere-sweeps.\\n\\nThe available values are setup in `Project Settings > Project > Constants`, prefixed by `physics.collisionFilters.`",
+	};
 	InputPins = {
 		"$F7385EC6",
 	};
@@ -32769,11 +32786,11 @@ CParticleNodeTemplate	$1B18F726
 {
 	InputPins = {
 		"$717701CD",
-		"$44C84E1A",
 		"$90847F00",
 		"$EABE739E",
 		"$FEAE7A97",
 		"$C3496F77",
+		"$44C84E1A",
 	};
 	OutputPins = {
 		"$C07FD669",
@@ -32807,7 +32824,7 @@ CParticleNodeTemplate	$1B18F726
 	};
 	WorkspacePosition = int2(1562, 286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$717701CD
 {
@@ -33094,7 +33111,7 @@ CParticleNodeTemplate	$12A85A64
 	};
 	WorkspacePosition = int2(264, 1078);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeTypeTest";
+	SubGraphName = "shape.typeTest";
 }
 CParticleNodePinIn	$4236A4C5
 {
@@ -36734,6 +36751,7 @@ CParticleNodeGraph	$F711B7A2
 {
 	CustomName = "DistanceTravelled";
 	Public = true;
+	ClassType = Math;
 	Nodes = {
 		"$DEF79E1E",
 		"$407AC6AF",
@@ -44880,7 +44898,7 @@ CParticleNodePinOut	$24276CD0
 CParticleNodeTemplateExport	$89AA261F
 {
 	Description = {
-		"@eng:Type of the collision surface.\\nYou can compare this value to `physics.surfaceType`",
+		"@eng:Type of the collision surface.\\nYou can compare this value against the `physics.surfaceType` node, or any of the surface types setup in `Project Settings > Project > Constants`, prefixed by `physics.surfaceTypes.`",
 	};
 	InputPins = {
 		"$4998062F",

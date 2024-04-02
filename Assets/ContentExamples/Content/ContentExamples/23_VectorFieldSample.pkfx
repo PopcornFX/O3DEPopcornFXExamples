@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -439,11 +439,12 @@ CParticleNodeRendererBillboard	$60D3E5F1
 	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Diffuse",
 		"Opaque",
 		"EnableRendering",
 		"Lit",
-		"LegacyLit",
+		"LegacyLitOpaque",
 		"FlipUVs",
 		"AlphaRemap",
 		"Atlas",
@@ -563,7 +564,7 @@ CParticleNodePinIn	$F685E4EF
 }
 CParticleNodePinIn	$CB3334BE
 {
-	SelfName = "LegacyLit";
+	SelfName = "LegacyLitOpaque";
 	Type = bool;
 	Visible = false;
 	Owner = "$60D3E5F1";

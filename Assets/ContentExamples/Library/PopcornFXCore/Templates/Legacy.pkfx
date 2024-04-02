@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -20309,7 +20309,7 @@ CParticleNodeTemplate	$3FB45D67
 	};
 	WorkspacePosition = int2(550, 264);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TurbulenceSample";
+	SubGraphName = "turbulence.sample";
 }
 CParticleNodePinIn	$64B644ED
 {

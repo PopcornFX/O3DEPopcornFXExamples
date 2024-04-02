@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -76,6 +76,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -2296,6 +2297,7 @@ CParticleNodeRendererRibbon	$4876D098
 	Material = "Library/PopcornFXCore/Materials/Default_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -3804,6 +3806,7 @@ CParticleNodeRendererMesh	$F1C0A980
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
@@ -7549,6 +7552,7 @@ CParticleNodeRendererBillboard	$739F8516
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -8903,6 +8907,7 @@ CParticleNodeRendererDecal	$78370D3D
 	Material = "Library/PopcornFXCore/Materials/Default_Decal.pkma";
 	RendererFeatures = {
 		"GeometryDecal",
+		"ComputeVelocity",
 		"EnableRendering",
 		"Decal",
 		"Diffuse",

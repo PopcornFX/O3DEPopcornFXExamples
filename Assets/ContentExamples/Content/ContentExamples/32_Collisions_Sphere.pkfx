@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1253,7 +1253,6 @@ CParticleNodeTemplate	$8DAD8DF4
 		"$F0B0D8B8",
 		"$D3B7C8B3",
 		"$F671173E",
-		"$7E41F66B",
 	};
 	WorkspacePosition = int2(1672, -418);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Debug.pkfx";
@@ -2308,6 +2307,7 @@ CParticleNodeRendererMesh	$5718BBAF
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
@@ -2675,15 +2675,6 @@ CParticleNodePinIn	$D3B7C8B3
 	Owner = "$8DAD8DF4";
 	BaseType = float3;
 	ValueF = float4(5.0000000e-01, 5.0000000e-01, 5.0000000e-01, 0.0000000e+00);
-}
-CParticleNodePinIn	$7E41F66B
-{
-	SelfName = "Size";
-	Type = float;
-	Visible = false;
-	Owner = "$8DAD8DF4";
-	BaseType = float;
-	ValueF = float4(4.9999999e-03, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$16A992A0
 {
