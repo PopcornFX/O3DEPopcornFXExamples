@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -32,7 +32,7 @@ CParticleNodeGraph	$F415EE0A
 {
 	CustomName = "Trail";
 	Description = {
-		"@eng:The Trail node allows you to spawn child particles, when moving around, or when enough time has passed.\\nAllows to interpolate all inputs.",
+		"@eng:The Trail node allows you to spawn child particles, when moving around, or when enough time has passed.\\nAllows to interpolate all inputs.\\nIt can be seen as the `EventMultiplier` node of data graphs.",
 	};
 	Public = true;
 	ClassType = Event;
@@ -280,7 +280,7 @@ CParticleNodePinOut	$18F80D1A
 CParticleNodeTemplateExport	$8F3D1F59
 {
 	Description = {
-		"@eng:Interval between two consecutive spawns. if \'SpawnMetric\' is set to \'Distance\', this will be the distance in units the parent particle has to travel before it spawns another child particle, if set to \'Time\', it will be the time in seconds between two consecutive spawns.",
+		"@eng:Interval between two consecutive spawns.\\nIf `SpawnMetric` is set to `Distance`, this will be the distance in units the parent particle has to travel before it spawns another child particle, if set to `Time`, it will be the time in seconds between two consecutive spawns.",
 	};
 	InputPins = {
 		"$267FD248",
@@ -418,7 +418,7 @@ CParticleNodePinOut	$B4984B63
 CParticleNodeTemplateExport	$DCFD4187
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the velocity payload",
+		"@eng:If `true`, will interpolate the velocity payload",
 	};
 	InputPins = {
 		"$AF5EFB30",
@@ -544,7 +544,7 @@ CParticleNodePinOut	$EE30D057
 CParticleNodeTemplateExport	$892E9361
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the color payload",
+		"@eng:If `true`, will interpolate the color payload",
 	};
 	InputPins = {
 		"$2A3F028C",
@@ -701,7 +701,7 @@ CParticleNodePinOut	$C0F73CD3
 CParticleNodeTemplateExport	$C0310144
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the position payload",
+		"@eng:If `true`, will interpolate the position payload",
 	};
 	InputPins = {
 		"$74E7812D",
@@ -1120,7 +1120,7 @@ CParticleNodePinOut	$77335907
 CParticleNodeTemplateExport	$C21F30EC
 {
 	Description = {
-		"@eng:Time offset in the [0,1] range that controls when the child particles are spawned. A value of 0 will make the evolver spawn a child particle right when the source particle is born. A value of 1 will offset it forward in time to the next child spawn.\\nIf set to 0, the first particle is spawned at t=0, and the last at t=duration - duration/spawnCount.\\nIf set to 1, the first particle is spawned at t=duration/spawnCount, and the last at t=duration.\\nMore generally, t0 = spawnDelay * duration/spawnCount",
+		"@eng:Time offset within in the `[0,1]` range that controls when the child particles are spawned. A value of `0` will make the node spawn a child particle right when the source particle is born. A value of `1` will offset it forward in time to the next child spawn.\\nIf set to `0`, the first particle is spawned at `t=0`, and the last at `t=duration - duration/spawnCount`.\\nIf set to `1`, the first particle is spawned at `t=duration/spawnCount`, and the last at `t=duration`.\\nMore generally, `t0 = spawnDelay * duration/spawnCount`",
 	};
 	InputPins = {
 		"$5E33AF45",
@@ -1159,7 +1159,7 @@ CParticleNodePinOut	$D522ECB3
 CParticleNodeTemplateExport	$689E4961
 {
 	Description = {
-		"@eng:Dynamic multiplier to the spawn metric. Can be seen as a spawn-count multiplier. 0.0 produces no particles. One produces the normal amount of particles. 10.0 produces ten times more particles.",
+		"@eng:Dynamic multiplier to the spawn metric. Can be seen as a spawn-count multiplier.\\n`0.0` produces no particles. `1.0` produces the normal amount of particles. `10.0` produces ten times more particles.",
 	};
 	InputPins = {
 		"$2A7930EE",
@@ -1257,7 +1257,7 @@ CParticleNodePinOut	$823DCEFD
 CParticleNodeTemplateExport	$29636605
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the parent life-ratio payload",
+		"@eng:If `true`, will interpolate the life-ratio payload",
 	};
 	InputPins = {
 		"$9C5DA727",
@@ -1294,7 +1294,7 @@ CParticleNodePinOut	$3A46F931
 CParticleNodeTemplateExport	$47B11BDC
 {
 	Description = {
-		"@eng:Parent life-ratio payload",
+		"@eng:Life-ratio payload",
 	};
 	InputPins = {
 		"$457E445A",
@@ -1677,7 +1677,7 @@ CParticleNodePinOut	$3FCA7572
 CParticleNodeTemplateExport	$FE6E6754
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the orientation payload",
+		"@eng:If `true`, will interpolate the orientation payload using quaternion NLerp",
 	};
 	InputPins = {
 		"$BE68BAF6",
@@ -2102,7 +2102,7 @@ CParticleNodePinOut	$80B5187A
 CParticleNodeTemplateExport	$9F82AB31
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the size payload",
+		"@eng:If `true`, will interpolate the size payload",
 	};
 	InputPins = {
 		"$B50D12C7",
@@ -3586,7 +3586,7 @@ CParticleNodePinIn	$4F122387
 CParticleNodeTemplateExport	$7FE20390
 {
 	Description = {
-		"@eng:If \'true\', will interpolate the position payload",
+		"@eng:If `true`, will interpolate the position payload using cubic interpolation",
 	};
 	InputPins = {
 		"$833C07AA",
@@ -3675,7 +3675,7 @@ CParticleNodePinOut	$C724CCAA
 CParticleNodeTemplateExport	$B3F99351
 {
 	Description = {
-		"@eng:Velocity payload (optional, if not specified, the template will automatically compute it from the Position)",
+		"@eng:Velocity payload\\n(optional, if not specified, the template will automatically compute it from the Position)",
 	};
 	InputPins = {
 		"$499A5E26",
@@ -3710,7 +3710,7 @@ CParticleNodePinOut	$C8F6D5CC
 CParticleNodeTemplateExport	$D804B229
 {
 	Description = {
-		"@eng:Orientation  payload (optional, if not specified, the template will automatically compute it from the Velocity)",
+		"@eng:Orientation payload\\n(optional, if not specified, the template will automatically compute it from the Velocity)",
 	};
 	InputPins = {
 		"$880F4270",
@@ -5439,7 +5439,7 @@ CParticleNodePinOut	$3AA113D6
 CParticleNodeTemplateExport	$32F31C2D
 {
 	Description = {
-		"@eng:Dynamically turn emission on or off.\\nPassing <c>true</c> will enable event emission\\nPassing <c>false</c> will disable event emission.",
+		"@eng:Dynamically turn emission on or off.\\nPassing `true` will enable event emission\\nPassing `false` will disable event emission.",
 	};
 	InputPins = {
 		"$A9FB2F35",
@@ -5618,6 +5618,11 @@ CParticleNodeTemplateExport	$3E130D02
 	UseSlider = true;
 	DefaultValueF4 = float4(1.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	BaseVisibility = Disabled;
+	RuleResult = Visible;
+	DependentProperty = "SpawnMetric";
+	RuleValue = "2";
 }
 CParticleNodePinIn	$8774EF8A
 {
@@ -5784,7 +5789,7 @@ CParticleNodePinOut	$9C2CB749
 CParticleNodeTemplateExport	$F5EA07A0
 {
 	Description = {
-		"@eng:Controls what metric the evolver should look at to decide when to spawn a particle.\\nDistance : will spawn a child particle when the parent particle has travelled \'SpawnInterval\' world units\\nTime : will spawn a child particle every \'SpawnInterval\' seconds\\nCustom : will read the <float> value of the parent particle\'s \'CustomSpawnMetricField\' field, each frame, and spawn that number of child particles",
+		"@eng:Controls what metric the evolver should look at to decide when to spawn a particle.\\n<ul>\\n<li>`Distance`: will spawn a child particle when the parent particle has travelled `SpawnInterval` world units</li>\\n<li>`Time`: will spawn a child particle every `SpawnInterval` seconds</li>\\n<li>`Custom`: will read the <float> value of the parent particle\'s `CustomSpawnMetricField` field, each frame, and spawn that number of child particles</li>\\n</ul>",
 	};
 	InputPins = {
 		"$00389649",

@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20559;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -10,6 +10,7 @@ CProjectSettings	$D857A09F
 	Budgets = "$D279714D";
 	Baking = "$5F621394";
 	Editor = "$41E5AFE7";
+	Rendering = "$9D2B1A2F";
 	Documentation = "$2909A531";
 }
 CProjectSettingsGeneral	$35A36C4E
@@ -165,4 +166,7 @@ CProjectSettingsConstantItem	$507FD871
 {
 	Name = "physics.collisionFilters.Layer1";
 	Value = 1;
+}
+CProjectSettingsRendering	$9D2B1A2F
+{
 }

@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -81,6 +81,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -1493,11 +1494,11 @@ CParticleNodeTemplate	$6B48A472
 {
 	InputPins = {
 		"$A29870B4",
-		"$5724E0D2",
 		"$AF8DA1AB",
 		"$FDE125A3",
 		"$6DC34CFC",
 		"$F7B1BBE6",
+		"$5724E0D2",
 	};
 	OutputPins = {
 		"$294A407D",
@@ -1531,7 +1532,7 @@ CParticleNodeTemplate	$6B48A472
 	};
 	WorkspacePosition = int2(-1166, -110);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$A29870B4
 {
@@ -2294,6 +2295,7 @@ CParticleNodeRendererBillboard	$237957C1
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -3282,6 +3284,7 @@ CParticleNodeRendererRibbon	$0EAA4E45
 	Material = "Library/PopcornFXCore/Materials/Default_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",

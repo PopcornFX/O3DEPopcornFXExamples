@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -457,6 +457,7 @@ CParticleNodeRendererBillboard	$4E876109
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -791,7 +792,7 @@ CParticleNodeTemplate	$817C69AB
 	};
 	WorkspacePosition = int2(-1364, 110);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "CurveSample";
+	SubGraphName = "curve.sample";
 }
 CParticleNodePinIn	$3B0B5C6A
 {
@@ -1026,6 +1027,7 @@ CParticleNodeRendererBillboard	$6B62641B
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -1304,6 +1306,7 @@ CParticleNodeRendererBillboard	$F3802C6D
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -1582,6 +1585,7 @@ CParticleNodeRendererBillboard	$D023C399
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",

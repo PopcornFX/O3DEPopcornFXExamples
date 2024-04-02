@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -900,6 +900,7 @@ CParticleNodeRendererMesh	$63708AE0
 	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"EnableRendering",
@@ -1228,6 +1229,7 @@ CParticleNodeRendererMesh	$45BEAE72
 	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"EnableRendering",
@@ -1560,6 +1562,7 @@ CParticleNodeRendererMesh	$57333F65
 	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"EnableRendering",

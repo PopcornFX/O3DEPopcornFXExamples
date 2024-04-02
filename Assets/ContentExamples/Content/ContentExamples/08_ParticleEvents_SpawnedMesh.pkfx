@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -214,6 +214,7 @@ CParticleNodeRendererMesh	$3743FC5A
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
