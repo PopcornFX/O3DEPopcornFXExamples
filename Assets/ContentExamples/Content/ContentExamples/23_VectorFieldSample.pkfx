@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -6,7 +6,7 @@ CParticleEffect	$D857A09F
 }
 CParticleAttributeList	$35A36C4E
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$8CBF10EF",
 	};
 }
@@ -436,7 +436,7 @@ CParticleNodeRendererBillboard	$60D3E5F1
 		"$F96F0FC2",
 	};
 	WorkspacePosition = int2(1496, 220);
-	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -651,11 +651,13 @@ CParticleNodeTemplate	$63E41FAA
 		"$DDCD3689",
 		"$6EC6AB79",
 		"$5F08E4D0",
-		"$7BF2DE45",
+		"$34F28B81",
+		"$0DB0B58C",
 		"$9103D56E",
+		"$7BF2DE45",
+		"$7A390266",
 		"$D256F24B",
 		"$16B9252B",
-		"$7A390266",
 		"$E0222B40",
 		"$5CFFC368",
 		"$7E10B14B",
@@ -1095,8 +1097,8 @@ CParticleNodePinOut	$561C5644
 CParticleAttributeSamplerDeclaration	$8CBF10EF
 {
 	ExportedName = "VectorField";
-	ExportedType = VectorField;
 	Pinned = true;
+	ExportedType = VectorField;
 	AttribSamplerDefaultValue = "$DBFBECDA";
 }
 CResourceDescriptor_VectorField	$DBFBECDA
@@ -1339,7 +1341,9 @@ CParticleNodePinIn	$812ED586
 CParticleNodePinOut	$CAF155F4
 {
 	SelfName = "Value";
+	Type = float4;
 	Owner = "$4B252AF4";
+	BaseType = float4;
 	ConnectedPins = {
 		"$BB3868A3",
 	};
@@ -1464,4 +1468,20 @@ CParticleNodePinOut	$AD0FA3B8
 	Visible = false;
 	Owner = "$63E41FAA";
 	BaseType = int;
+}
+CParticleNodePinIn	$34F28B81
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$63E41FAA";
+	BaseType = float3;
+}
+CParticleNodePinIn	$0DB0B58C
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$63E41FAA";
+	BaseType = orientation;
 }

@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -35,6 +35,7 @@ CParticleNodeGraph	$F415EE0A
 		"@eng:The Trail node allows you to spawn child particles, when moving around, or when enough time has passed.\\nAllows to interpolate all inputs.\\nIt can be seen as the `EventMultiplier` node of data graphs.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	SearchKeywords = "Childs Events";

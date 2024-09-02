@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -17,7 +17,7 @@ CEditorAssetEffect	$41EED1A4
 }
 CParticleAttributeList	$B660FBF9
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$63B6C2B6",
 	};
 }
@@ -227,7 +227,7 @@ CParticleNodeRendererBillboard	$4E876109
 		"$C9C6A5CE",
 	};
 	WorkspacePosition = int2(-220, 484);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -564,8 +564,8 @@ CResourceDescriptor_AnimTrack	$59DC3B5A
 CParticleAttributeSamplerDeclaration	$63B6C2B6
 {
 	ExportedName = "AnimTrack";
-	ExportedType = Animtrack;
 	Pinned = true;
+	ExportedType = Animtrack;
 	AttribSamplerDefaultValue = "$59DC3B5A";
 }
 CParticleNodeTemplateExport	$4C41C522
@@ -1031,7 +1031,7 @@ CParticleNodeRendererBillboard	$4C1D9C2C
 		"$5B309B11",
 	};
 	WorkspacePosition = int2(484, 176);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",

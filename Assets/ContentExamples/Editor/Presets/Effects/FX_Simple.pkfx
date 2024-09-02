@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -50,47 +50,47 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$A9934228",
 		"$A2277B6B",
 		"$D834E0C1",
-		"$EABBAE94",
+		"$D6EEA348",
 		"$6128E19F",
 		"$673D414E",
 		"$89981C8B",
 		"$6DE0C42A",
-		"$0E3ACA6C",
-		"$61D82A82",
-		"$D6EEA348",
-		"$3B49B5AD",
-		"$D481D29F",
-		"$4B44F286",
-		"$E7A7BE8E",
-		"$D4EA65F0",
-		"$052CEED2",
-		"$00269EC3",
-		"$3E516D6B",
+		"$2B11E33B",
 		"$5F44DFAB",
+		"$3B49B5AD",
+		"$3E516D6B",
+		"$00269EC3",
 		"$D806D24A",
-		"$14978373",
+		"$CA82C414",
+		"$8F323B78",
 		"$A11F5972",
+		"$D4EA65F0",
+		"$4B44F286",
+		"$052CEED2",
+		"$09B4DA02",
+		"$14978373",
+		"$5CD8A819",
 	};
 	WorkspacePosition = int2(132, -22);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Billboard_Transparent.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
+		"EnableRendering",
 		"Transparent",
 		"Diffuse",
-		"EnableRendering",
-		"Lit",
-		"LegacyLit",
-		"SoftParticles",
-		"FlipUVs",
-		"AlphaRemap",
-		"Atlas",
-		"NormalBend",
-		"NormalWrap",
 		"DiffuseRamp",
+		"Lit",
+		"NormalWrap",
+		"NormalBend",
 		"Emissive",
-		"TransformUVs",
 		"EmissiveRamp",
+		"AlphaRemap",
+		"SoftParticles",
+		"Atlas",
+		"BasicTransformUVs",
+		"TransformUVs",
+		"FastLit",
 	};
 }
 CParticleNodePinIn	$62BCE275
@@ -111,17 +111,6 @@ CParticleNodePinIn	$0CD860BD
 	Owner = "$8F7A985A";
 	BaseType = float;
 	ValueF = float4(5.0000001e-02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$61D82A82
-{
-	SelfName = "Diffuse.Color";
-	Type = float4;
-	Owner = "$8F7A985A";
-	BaseType = float4;
-	ConnectedPins = {
-		"$B95AF449",
-	};
-	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
 CParticleNodeSetLife	$D734A95F
 {
@@ -153,11 +142,13 @@ CParticleNodeTemplate	$1838F4AE
 		"$B913798F",
 		"$16C3BE76",
 		"$92CF64EB",
-		"$A3E9EC7F",
+		"$3706DA93",
+		"$64362467",
 		"$4703F6C7",
+		"$A3E9EC7F",
+		"$B6F5CC16",
 		"$167D1A5B",
 		"$38A1274A",
-		"$B6F5CC16",
 		"$49145BE4",
 		"$8748BF80",
 		"$90F64453",
@@ -474,31 +465,6 @@ CParticleNodePinIn	$6887733F
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
-CParticleNodePinIn	$EABBAE94
-{
-	SelfName = "Transparent.Type";
-	Type = int;
-	Visible = false;
-	Owner = "$8F7A985A";
-	BaseType = int;
-}
-CParticleNodePinIn	$0E3ACA6C
-{
-	SelfName = "Diffuse.DiffuseMap";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$8F7A985A";
-	BaseType = dataImage;
-	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/Diffuse.dds";
-}
-CParticleNodePinIn	$D481D29F
-{
-	SelfName = "LegacyLit";
-	Type = bool;
-	Visible = false;
-	Owner = "$8F7A985A";
-	BaseType = bool;
-}
 CParticleNodePinIn	$4B44F286
 {
 	SelfName = "SoftParticles";
@@ -552,14 +518,6 @@ CParticleNodePinIn	$D834E0C1
 	Visible = false;
 	Owner = "$8F7A985A";
 	BaseType = int;
-}
-CParticleNodePinIn	$E7A7BE8E
-{
-	SelfName = "FlipUVs";
-	Type = bool;
-	Visible = false;
-	Owner = "$8F7A985A";
-	BaseType = bool;
 }
 CParticleNodePinIn	$6128E19F
 {
@@ -763,6 +721,7 @@ CParticleNodePinIn	$D806D24A
 	Visible = false;
 	Owner = "$8F7A985A";
 	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$D03359D5
 {
@@ -1519,7 +1478,7 @@ CParticleNodePinOut	$B95AF449
 	Owner = "$234680AC";
 	BaseType = float4;
 	ConnectedPins = {
-		"$61D82A82",
+		"$8F323B78",
 	};
 }
 CParticleNodePinOut	$8E5CAF4B
@@ -1700,8 +1659,10 @@ CParticleNodePinIn	$16C3BE76
 CParticleNodePinOut	$5F5304FA
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$8AB3F390";
+	BaseType = float;
 }
 CParticleNodePinIn	$9F6F6776
 {
@@ -1735,4 +1696,64 @@ CParticleNodePinOut	$552C5A6F
 	Visible = false;
 	Owner = "$1838F4AE";
 	BaseType = int;
+}
+CParticleNodePinIn	$3706DA93
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = float3;
+}
+CParticleNodePinIn	$64362467
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = orientation;
+}
+CParticleNodePinIn	$2B11E33B
+{
+	SelfName = "Diffuse";
+	Type = bool;
+	Visible = false;
+	Owner = "$8F7A985A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$09B4DA02
+{
+	SelfName = "BasicTransformUVs";
+	Type = bool;
+	Visible = false;
+	Owner = "$8F7A985A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$5CD8A819
+{
+	SelfName = "FastLit";
+	Type = bool;
+	Visible = false;
+	Owner = "$8F7A985A";
+	BaseType = bool;
+}
+CParticleNodePinIn	$CA82C414
+{
+	SelfName = "Emissive.EmissiveMap";
+	Type = dataImage;
+	Visible = false;
+	Owner = "$8F7A985A";
+	BaseType = dataImage;
+	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/Diffuse.dds";
+}
+CParticleNodePinIn	$8F323B78
+{
+	SelfName = "Emissive.EmissiveColor";
+	Type = float4;
+	Owner = "$8F7A985A";
+	BaseType = float4;
+	ConnectedPins = {
+		"$B95AF449",
+	};
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }

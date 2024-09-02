@@ -1,4 +1,4 @@
-Version = 2.19.0.20559;
+Version = 2.20.0.21900;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -131,6 +131,7 @@ CProjectSettingsEditor	$41E5AFE7
 }
 CProjectSettingsFeatures	$BEDF8936
 {
+	EnableLegacyMaterials = true;
 }
 CProjectSettingsDocumentation	$2909A531
 {

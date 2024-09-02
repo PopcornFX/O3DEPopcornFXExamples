@@ -1,0 +1,6 @@
+Version = 2.20.0.21900;
+COvenBakeConfig_Texture	$6B70D015
+{
+	BakeTarget = "Orbis";
+	CommandLine_Windows = "\"%SCE_ORBIS_SDK_DIR%\\host_tools\\bin\\orbis-image2gnf.exe\" -i \"$(InputPath)\" -f BC1Unorm -o \"$(TargetPath).gnf\"";
+}

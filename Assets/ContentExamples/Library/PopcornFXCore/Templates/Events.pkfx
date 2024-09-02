@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -46,6 +46,7 @@ CParticleNodeGraph	$B660FBF9
 		"@eng:Triggers an event when `Condition` is `true`.\\nEvents are used to spawn child particles.\\n\\nTriggers at most one event per frame. If you need to generate more events per frame, consider using the `Trail` node.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	SearchKeywords = "event trigger pulse";
@@ -340,6 +341,7 @@ CParticleNodeGraph	$42E16C02
 		"@eng:Triggers a single event.\\n\\nOnce the `Condition` has been `true` at least once and the event has been triggered, subsequent frames where `Condition` is true will be ignored, and no more events will be pulsed.\\n\\nBasic trigger, does not add any helper payloads.\\nSee `TriggerOnce` if you need some base payloads.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	Nodes = {
@@ -606,6 +608,7 @@ CParticleNodeGraph	$D734A95F
 		"@eng:Triggers a single event.\\n\\nOnce the `Condition` has been `true` at least once and the event has been triggered, subsequent frames where `Condition` is true will be ignored, and no more events will be pulsed.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	SearchKeywords = "event trigger pulse";
@@ -3456,6 +3459,7 @@ CParticleNodeGraph	$1838F4AE
 		"@eng:Triggers a single event when the particle spawns.\\nEvents are used to spawn child particles.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	SearchKeywords = "event trigger";
@@ -3474,6 +3478,7 @@ CParticleNodeGraph	$96CD1EC2
 		"@eng:Triggers a single event when the particle dies.\\nEvents are used to spawn child particles.\\n\\nDoes not trigger a death event if the effect has been stopped, unless `EvenWhenEffectStopped` is set to `true`.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	SearchKeywords = "event trigger";
@@ -6159,6 +6164,7 @@ CParticleNodeGraph	$22C50851
 		"@eng:Triggers a single event when the particle dies.\\nEvents are used to spawn child particles.\\n\\nDoes not trigger a death event if the effect has been stopped, unless `EvenWhenEffectStopped` is set to `true`.\\n\\nBasic trigger, does not add any helper payloads.\\nSee `OnDeath` if you need some base payloads.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Event;
 	IconKey = "Node_Event";
 	Nodes = {

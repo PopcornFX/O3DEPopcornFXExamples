@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -19209,8 +19209,8 @@ CParticleNodeTemplate	$6393F78E
 	InputPins = {
 		"$B6D38E91",
 		"$98ED67CD",
-		"$C4C1A222",
 		"$97E2B7A2",
+		"$C4C1A222",
 		"$AB62710B",
 		"$692D1CF8",
 		"$3A0AB5FA",
@@ -19408,8 +19408,8 @@ CParticleNodeTemplate	$7AFF71D7
 	InputPins = {
 		"$BA8ED2F8",
 		"$69CFAC33",
-		"$986CD3BB",
 		"$A9717B5A",
+		"$986CD3BB",
 		"$561811FA",
 		"$2A2D5949",
 		"$3810C8F7",
@@ -29171,14 +29171,14 @@ CParticleNodeTemplate	$F8FD2CF2
 {
 	InputPins = {
 		"$344C60B7",
-		"$2791B157",
-		"$770DFCC6",
 		"$5B40674C",
-		"$3FBAF202",
+		"$2791B157",
 		"$1A9F5EE0",
-		"$4438EF99",
+		"$3FBAF202",
 		"$FD0E3E38",
 		"$767334DB",
+		"$770DFCC6",
+		"$4438EF99",
 	};
 	OutputPins = {
 		"$A87EFDC1",
@@ -29284,14 +29284,14 @@ CParticleNodeTemplate	$FDD10DE9
 {
 	InputPins = {
 		"$26233434",
-		"$E8CD9554",
-		"$D522E525",
 		"$A6C46BD8",
-		"$0E9E2355",
+		"$E8CD9554",
 		"$6BCA824F",
-		"$B51454E0",
+		"$0E9E2355",
 		"$582EB9EF",
 		"$2782061E",
+		"$D522E525",
+		"$B51454E0",
 	};
 	OutputPins = {
 		"$42DC9157",
@@ -30414,14 +30414,14 @@ CParticleNodeTemplate	$76A00EBF
 {
 	InputPins = {
 		"$BDA2DA5F",
-		"$D9E25D54",
-		"$832E6806",
 		"$C7E1FF55",
-		"$5291692F",
+		"$D9E25D54",
 		"$F667FF7D",
-		"$617D2271",
+		"$5291692F",
 		"$503C9856",
 		"$F619A120",
+		"$832E6806",
+		"$617D2271",
 	};
 	OutputPins = {
 		"$86350B80",
@@ -30599,14 +30599,14 @@ CParticleNodeTemplate	$4C21D09D
 {
 	InputPins = {
 		"$7AA4FE47",
-		"$9A52D7B6",
-		"$F55EC668",
 		"$DBEF60BD",
-		"$8D109B9C",
+		"$9A52D7B6",
 		"$258EC2FD",
-		"$F317ED18",
+		"$8D109B9C",
 		"$DE29D1EA",
 		"$2F6B9B89",
+		"$F55EC668",
+		"$F317ED18",
 	};
 	OutputPins = {
 		"$69A7ABAA",

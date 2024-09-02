@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -11,19 +11,19 @@ CParticleRendererMaterial	$6B70D015
 }
 CParticleRendererFeatureDesc	$191F1761
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "GeometryBillboard";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$5F3F8D5F
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Transparent";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$D857A09F
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "EnableRendering";
 	Mandatory = true;
 }
@@ -39,6 +39,6 @@ CParticleRendererFeatureDesc	$759CCA87
 }
 CParticleRendererFeatureDesc	$CAD62F46
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Atlas";
 }

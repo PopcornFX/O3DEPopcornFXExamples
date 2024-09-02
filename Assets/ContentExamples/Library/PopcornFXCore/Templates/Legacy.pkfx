@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -461,6 +461,7 @@ CParticleNodeTemplateExport	$7CFB103C
 	};
 	WorkspacePosition = int2(-264, -132);
 	ExportedName = "Value";
+	ExportedTypeMask = 7680;
 	Type = Input;
 }
 CParticleNodePinIn	$C1777DC9
@@ -490,6 +491,7 @@ CParticleNodeTemplateExport	$6818E968
 	};
 	WorkspacePosition = int2(1298, -242);
 	ExportedName = "Value";
+	ExportedTypeMask = 7680;
 	Type = Output;
 }
 CParticleNodePinIn	$55D031E8
@@ -1498,6 +1500,7 @@ CParticleNodeTemplateExport	$B9B28BFD
 	};
 	WorkspacePosition = int2(242, 44);
 	ExportedName = "Value";
+	ExportedTypeMask = 7680;
 	Type = Output;
 }
 CParticleNodeGraph	$8F7A985A
@@ -7434,6 +7437,7 @@ CParticleNodeTemplateExport	$92E29D85
 	};
 	WorkspacePosition = int2(638, -132);
 	ExportedName = "Position";
+	ExportedType = float3;
 	Type = Output;
 	Order = 1;
 }
@@ -9767,14 +9771,12 @@ CParticleNodePinOut	$AE35AEE5
 }
 CParticleNodeTemplateExport	$F1DC6864
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	InputPins = {
 		"$B199705D",
 	};
 	WorkspacePosition = int2(-11704, -1826);
 	ExportedName = "Position";
+	ExportedType = float3;
 	Type = Output;
 }
 CParticleNodePinIn	$B199705D
@@ -9787,9 +9789,6 @@ CParticleNodePinIn	$B199705D
 }
 CParticleNodeTemplateExport	$DD84B954
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	InputPins = {
 		"$B36C80D8",
 	};
@@ -9818,9 +9817,6 @@ CParticleNodePinOut	$6D0AD45B
 }
 CParticleNodeTemplateExport	$81430DCC
 {
-	CustomName = {
-		"@eng:dT",
-	};
 	InputPins = {
 		"$92B8EF79",
 	};
@@ -9849,9 +9845,6 @@ CParticleNodePinOut	$6ACB2BBE
 }
 CParticleNodeTemplateExport	$A70A929C
 {
-	CustomName = {
-		"@eng:Sampler",
-	};
 	InputPins = {
 		"$B966C58F",
 	};
@@ -9880,9 +9873,6 @@ CParticleNodePinOut	$1CB8403A
 }
 CParticleNodeTemplateExport	$B767CF45
 {
-	CustomName = {
-		"@eng:DistancesSoftness",
-	};
 	Description = {
 		"@eng:Distance above \'MaxDistance\' or below \'MinDistance\' where the particles will start being gently pushed back towards the shape.",
 	};
@@ -9920,9 +9910,6 @@ CParticleNodePinOut	$50A5AB6D
 }
 CParticleNodeTemplateExport	$8BC20B9B
 {
-	CustomName = {
-		"@eng:MaxDistance",
-	};
 	Description = {
 		"@eng:Max distance outside the shape before the particles start getting pushed back towards its surface. ",
 	};
@@ -9959,9 +9946,6 @@ CParticleNodePinIn	$B4CA56A0
 }
 CParticleNodeTemplateExport	$4D71B356
 {
-	CustomName = {
-		"@eng:HardMaxDistance",
-	};
 	Description = {
 		"@eng:Particles outside the shape won\'t be able to go further than this distance from its surface. ",
 	};
@@ -9999,9 +9983,6 @@ CParticleNodePinIn	$6F780ADE
 }
 CParticleNodeTemplateExport	$089CE2C1
 {
-	CustomName = {
-		"@eng:MinDistance",
-	};
 	Description = {
 		"@eng:Min distance inside the shape before the particles start getting pushed back towards its surface.",
 	};
@@ -10039,9 +10020,6 @@ CParticleNodePinIn	$80BD4D52
 }
 CParticleNodeTemplateExport	$6A188D50
 {
-	CustomName = {
-		"@eng:HardMinDistance",
-	};
 	Description = {
 		"@eng:Particles inside the shape won\'t be able to go deeper than this distance from its surface. ",
 	};
@@ -10242,9 +10220,6 @@ CParticleNodePinOut	$0CFD84A6
 }
 CParticleNodeTemplateExport	$3C27A3BF
 {
-	CustomName = {
-		"@eng:Preset",
-	};
 	Description = {
 		"@eng:None : Leaves your own values.\\nSoftOnSurface : Particles get softly projected on the shape\'s surface.\\nLimitInsideShape : Keeps particles freely roaming inside the shape. Prevents them from going outside.\\nLimitOutsideShape : Keeps particles freely roaming outside the shape. Prevents them from going inside.",
 	};
@@ -10583,9 +10558,6 @@ CParticleNodePinOut	$54019F7F
 }
 CParticleNodeTemplateExport	$613A8B12
 {
-	CustomName = {
-		"@eng:HardMinDistance",
-	};
 	Description = {
 		"@eng:Particles inside the shape won\'t be able to go deeper than this distance from its surface. ",
 	};
@@ -10623,9 +10595,6 @@ CParticleNodePinOut	$C51DBC1F
 }
 CParticleNodeTemplateExport	$B6A3A13D
 {
-	CustomName = {
-		"@eng:DistanceSoftness",
-	};
 	Description = {
 		"@eng:Distance above \'MaxDistance\' or below \'MinDistance\' where the particles will start being gently pushed back towards the shape.",
 	};
@@ -10663,9 +10632,6 @@ CParticleNodePinOut	$6613BD8F
 }
 CParticleNodeTemplateExport	$666322FA
 {
-	CustomName = {
-		"@eng:MinDistance",
-	};
 	Description = {
 		"@eng:Min distance inside the shape before the particles start getting pushed back towards its surface.",
 	};
@@ -10703,9 +10669,6 @@ CParticleNodePinOut	$E447FB8A
 }
 CParticleNodeTemplateExport	$FF8E3F8E
 {
-	CustomName = {
-		"@eng:MaxDistance",
-	};
 	Description = {
 		"@eng:Max distance outside the shape before the particles start getting pushed back towards its surface. ",
 	};
@@ -10742,9 +10705,6 @@ CParticleNodePinOut	$AAB51170
 }
 CParticleNodeTemplateExport	$C0AE572B
 {
-	CustomName = {
-		"@eng:HardMaxDistance",
-	};
 	Description = {
 		"@eng:Particles outside the shape won\'t be able to go further than this distance from its surface. ",
 	};
@@ -10818,9 +10778,6 @@ CParticleNodePinOut	$65932BA2
 }
 CParticleNodeTemplateExport	$F248D8F3
 {
-	CustomName = {
-		"@eng:Sampler",
-	};
 	Description = {
 		"@eng:Shape sampler to be used for the distance computation",
 	};
@@ -10851,9 +10808,6 @@ CParticleNodePinOut	$9D6FA47E
 }
 CParticleNodeTemplateExport	$F321A9DD
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	Description = {
 		"@eng:Input position",
 	};
@@ -10886,9 +10840,6 @@ CParticleNodePinOut	$DFCA44A6
 }
 CParticleNodeTemplateExport	$88EAC6D9
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	Description = {
 		"@eng:Output position",
 	};
@@ -11319,9 +11270,6 @@ CParticleNodeGraph	$A9934228
 }
 CParticleNodeTemplateExport	$DCE268A8
 {
-	CustomName = {
-		"@eng:Sampler",
-	};
 	Description = {
 		"@eng:The shape which attracts or repels particles ",
 	};
@@ -11355,9 +11303,6 @@ CParticleNodePinOut	$0AB16209
 }
 CParticleNodeTemplateExport	$2CCDE422
 {
-	CustomName = {
-		"@eng:ForceAtSurface",
-	};
 	Description = {
 		"@eng:The force magnitude on the shape surface (decays as the square of the distance to the surface). Positive values attract particles, Negative values repel them. ",
 	};
@@ -11394,9 +11339,6 @@ CParticleNodePinOut	$0126853B
 }
 CParticleNodeTemplateExport	$BAFC6268
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	InputPins = {
 		"$B40543CA",
 	};
@@ -11425,9 +11367,6 @@ CParticleNodePinOut	$0F0BC928
 }
 CParticleNodeTemplateExport	$A60DDF1E
 {
-	CustomName = {
-		"@eng:FalloffType",
-	};
 	Description = {
 		"@eng:Type of influence falloff.
 
@@ -11470,9 +11409,6 @@ CParticleNodePinOut	$F8B572C9
 }
 CParticleNodeTemplateExport	$DABA8FA1
 {
-	CustomName = {
-		"@eng:InfluenceDistance",
-	};
 	Description = {
 		"@eng:Distance from the attractor\'s surface above which the attractor has no influence anymore. ",
 	};
@@ -11511,9 +11447,6 @@ CParticleNodePinOut	$2EE1C0DE
 }
 CParticleNodeTemplateExport	$1B36DFBC
 {
-	CustomName = {
-		"@eng:FalloffSteepness",
-	};
 	Description = {
 		"@eng:Controls the steepness of the influence falloff curve when \'FalloffType\' is set to \'Finite\' ",
 	};
@@ -11552,9 +11485,6 @@ CParticleNodePinOut	$DD799BE8
 }
 CParticleNodeTemplateExport	$C469D88C
 {
-	CustomName = {
-		"@eng:RepulseWhenInside",
-	};
 	Description = {
 		"@eng: 	Repulse when inside the \'Shape\'. In other words, particles are always atracted to the surface of the \'Shape\' even when they\'re inside it.",
 	};
@@ -11809,9 +11739,6 @@ CParticleNodePinOut	$7186EDBB
 }
 CParticleNodeTemplateExport	$1876EE98
 {
-	CustomName = {
-		"@eng:Force",
-	};
 	InputPins = {
 		"$CEBB64E4",
 	};
@@ -11832,14 +11759,12 @@ CParticleNodePinIn	$CEBB64E4
 }
 CParticleNodeTemplateExport	$550FEB5F
 {
-	CustomName = {
-		"@eng:Sampler",
-	};
 	InputPins = {
 		"$B4D6900B",
 	};
 	WorkspacePosition = int2(1914, 352);
 	ExportedName = "Sampler";
+	ExportedType = dataGeometry;
 	Type = Output;
 }
 CParticleNodePinIn	$B4D6900B
@@ -14265,9 +14190,6 @@ CParticleNodePinOut	$E68CBAC0
 }
 CParticleNodeTemplateExport	$2509A3FD
 {
-	CustomName = {
-		"@eng:TextureID",
-	};
 	InputPins = {
 		"$0FA4BDF0",
 	};
@@ -14287,9 +14209,6 @@ CParticleNodePinIn	$0FA4BDF0
 }
 CParticleNodeTemplateExport	$8F4222F5
 {
-	CustomName = {
-		"@eng:FirstFrameID",
-	};
 	InputPins = {
 		"$11330EEC",
 	};
@@ -14321,9 +14240,6 @@ CParticleNodePinOut	$8005D0F8
 }
 CParticleNodeTemplateExport	$912AF182
 {
-	CustomName = {
-		"@eng:LastFrameID",
-	};
 	InputPins = {
 		"$5161F6A4",
 	};
@@ -14356,9 +14272,6 @@ CParticleNodePinOut	$2C61443C
 }
 CParticleNodeTemplateExport	$AD87EBAB
 {
-	CustomName = {
-		"@eng:Cursor",
-	};
 	InputPins = {
 		"$469F8239",
 	};
@@ -14388,9 +14301,6 @@ CParticleNodePinOut	$AF9AB838
 }
 CParticleNodeTemplateExport	$33A1D04D
 {
-	CustomName = {
-		"@eng:LoopCount",
-	};
 	InputPins = {
 		"$69473B78",
 	};
@@ -15884,9 +15794,6 @@ CParticleNodePinOut	$406340FB
 }
 CParticleNodeTemplateExport	$AE83EC1C
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	ExecStage = Evolve;
 	InputPins = {
 		"$4D8C8E41",
@@ -15918,9 +15825,6 @@ CParticleNodePinOut	$F1182F9B
 }
 CParticleNodeTemplateExport	$24E8D2D4
 {
-	CustomName = {
-		"@eng:Velocity",
-	};
 	ExecStage = Evolve;
 	InputPins = {
 		"$46602C17",
@@ -15951,9 +15855,6 @@ CParticleNodePinOut	$DF790B40
 }
 CParticleNodeTemplateExport	$30086A7C
 {
-	CustomName = {
-		"@eng:Position",
-	};
 	InputPins = {
 		"$DC75BAB7",
 	};
@@ -15972,9 +15873,6 @@ CParticleNodePinIn	$DC75BAB7
 }
 CParticleNodeTemplateExport	$B81AF757
 {
-	CustomName = {
-		"@eng:dt",
-	};
 	InputPins = {
 		"$441DEB7C",
 	};
@@ -16005,9 +15903,6 @@ CParticleNodePinOut	$48C78A8F
 }
 CParticleNodeTemplateExport	$DC532F30
 {
-	CustomName = {
-		"@eng:Velocity",
-	};
 	InputPins = {
 		"$9EF1972D",
 	};
@@ -16099,13 +15994,10 @@ CParticleNodePinOut	$4BDD929D
 }
 CParticleNodeTemplateExport	$4A8B5EA9
 {
-	CustomName = {
-		"@eng:EventCollide",
-	};
 	InputPins = {
 		"$4001482D",
 	};
-	WorkspacePosition = int2(4092, -308);
+	WorkspacePosition = int2(4070, -308);
 	ExportedName = "EventCollide";
 	ExportedType = event;
 	Type = Output;
@@ -16690,9 +16582,6 @@ CParticleNodePinIn	$3007DAAB
 }
 CParticleNodeTemplateExport	$62813876
 {
-	CustomName = {
-		"@eng:HasCollided",
-	};
 	InputPins = {
 		"$C6161556",
 	};
@@ -16988,9 +16877,6 @@ CParticleNodePinOut	$FD16FD71
 }
 CParticleNodeTemplateExport	$9DFE8086
 {
-	CustomName = {
-		"@eng:DieOnContact",
-	};
 	InputPins = {
 		"$35444EE1",
 	};
@@ -17055,9 +16941,6 @@ CParticleNodePinOut	$27048F3B
 }
 CParticleNodeTemplateExport	$D4C46408
 {
-	CustomName = {
-		"@eng:BouncesBeforeDeath",
-	};
 	InputPins = {
 		"$A9D61ACE",
 	};
@@ -17090,9 +16973,6 @@ CParticleNodePinOut	$9A73E9A5
 }
 CParticleNodeTemplateExport	$40E4D2C6
 {
-	CustomName = {
-		"@eng:BounceRestitution",
-	};
 	InputPins = {
 		"$7C3022EA",
 	};
@@ -17129,9 +17009,6 @@ CParticleNodePinOut	$B1EFCB16
 }
 CParticleNodeTemplateExport	$43775A41
 {
-	CustomName = {
-		"@eng:ContactFrictionModel",
-	};
 	InputPins = {
 		"$D8683AC8",
 	};
@@ -17170,9 +17047,6 @@ CParticleNodePinOut	$D71D85D7
 }
 CParticleNodeTemplateExport	$C2E4C8C2
 {
-	CustomName = {
-		"@eng:ContactFriction",
-	};
 	InputPins = {
 		"$9FC15544",
 	};
@@ -18226,9 +18100,6 @@ CParticleNodePinOut	$77DB48CB
 }
 CParticleNodeTemplateExport	$1730EA4D
 {
-	CustomName = {
-		"@eng:WeightBounceWithNdotV",
-	};
 	InputPins = {
 		"$F6FA5C75",
 	};
@@ -20596,8 +20467,9 @@ CParticleNodeTemplateExport	$9DE14C68
 	OutputPins = {
 		"$FEAE73F4",
 	};
-	WorkspacePosition = int2(-242, 154);
+	WorkspacePosition = int2(-242, 242);
 	ExportedName = "Cursor";
+	ExportedType = float;
 	Type = Input;
 	Order = 1;
 }
@@ -20622,7 +20494,7 @@ CParticleNodeTemplate	$1933F5A2
 	OutputPins = {
 		"$70BF2F8B",
 	};
-	WorkspacePosition = int2(-484, 154);
+	WorkspacePosition = int2(-484, 242);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "self.lifeRatio";
 }
@@ -21690,6 +21562,7 @@ CParticleNodeTemplateExport	$CBD9C93E
 	};
 	WorkspacePosition = int2(638, 132);
 	ExportedName = "PCoords";
+	ExportedType = int3;
 	Type = Output;
 	Order = 3;
 }
@@ -21802,9 +21675,6 @@ CParticleNodePinIn	$06935C43
 }
 CParticleNodeTemplateExport	$71AE7F82
 {
-	CustomName = {
-		"@eng:CollisionMask",
-	};
 	InputPins = {
 		"$6F4980E2",
 	};
@@ -22411,6 +22281,7 @@ CParticleNodeGraph	$2909A531
 {
 	CustomName = "Legacy_EventMultiplier";
 	Public = true;
+	GraphUsage = EventGraph;
 	ClassType = Event;
 	Nodes = {
 		"$D6EEA348",
@@ -22431,9 +22302,6 @@ CParticleNodeGraph	$2909A531
 }
 CParticleNodeTemplateExport	$D6EEA348
 {
-	CustomName = {
-		"@eng:Spawn",
-	};
 	InputPins = {
 		"$5F44DFAB",
 	};
@@ -22462,9 +22330,6 @@ CParticleNodePinOut	$2FB70E0C
 }
 CParticleNodeTemplateExport	$36207FBF
 {
-	CustomName = {
-		"@eng:Infinite",
-	};
 	Description = {
 		"@eng:When enabled, will keep emitting indefinitely.\\n\\nSame as setting \'Duration\' to \'<c>inf</c>\' or \'<c>infinity</c>\'.\\n\\n<i>NOTE: infinite emission will stop when the effect instance is stopped in-engine, or when you click the \'Stop\' button in the editor.</i>",
 	};
@@ -22527,9 +22392,6 @@ CParticleNodePinOut	$ED80C982
 }
 CParticleNodeTemplateExport	$0384856D
 {
-	CustomName = {
-		"@eng:Duration",
-	};
 	Description = {
 		"@eng:Duration of emission.\\n\\nSet to <c><b>0.0</b></c> for an instantaneous burst.\\nSet to <c><b>inf</b></c> for an infinite emission duration.\\n\\n<i>NOTE: infinite emission will stop when the effect instance is stopped in-engine, or when you click the \'Stop\' button in the editor.</i>",
 	};
@@ -23650,9 +23512,6 @@ CParticleNodePinOut	$FDD3ABF7
 }
 CParticleNodeTemplateExport	$DEF82E86
 {
-	CustomName = {
-		"@eng:Spawn",
-	};
 	InputPins = {
 		"$AE218CC1",
 	};
@@ -23672,9 +23531,6 @@ CParticleNodePinIn	$AE218CC1
 }
 CParticleNodeTemplateExport	$76B9DA18
 {
-	CustomName = {
-		"@eng:OnDeath",
-	};
 	InputPins = {
 		"$1151F6BB",
 	};
@@ -27589,6 +27445,7 @@ CParticleNodeTemplateExport	$B0EFEA95
 	};
 	WorkspacePosition = int2(748, 616);
 	ExportedName = "Axis";
+	ExportedType = float3;
 	Type = Output;
 	Order = 2;
 	VisibleByDefault = true;
@@ -27608,6 +27465,7 @@ CParticleNodeTemplateExport	$17C8B4EF
 	};
 	WorkspacePosition = int2(748, 0);
 	ExportedName = "Position";
+	ExportedType = float3;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -27772,6 +27630,7 @@ CParticleNodeTemplateExport	$BE8ECBAE
 	};
 	WorkspacePosition = int2(748, 990);
 	ExportedName = "NormalAxis";
+	ExportedType = float3;
 	Type = Output;
 	Order = 3;
 	VisibleByDefault = true;
@@ -28422,6 +28281,7 @@ CParticleNodeTemplateExport	$D6511F34
 	};
 	WorkspacePosition = int2(748, 1210);
 	ExportedName = "Size";
+	ExportedType = float;
 	Type = Output;
 	Order = 1;
 	VisibleByDefault = true;

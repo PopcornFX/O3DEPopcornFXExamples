@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -17,7 +17,7 @@ CEditorAssetEffect	$41EED1A4
 }
 CParticleAttributeList	$B660FBF9
 {
-	AttributeList = {
+	AttributeAndSamplerList = {
 		"$E52EFBAE",
 	};
 }
@@ -211,7 +211,7 @@ CParticleNodeRendererMesh	$3743FC5A
 		"$ED8C30B0",
 	};
 	WorkspacePosition = int2(264, 308);
-	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -453,10 +453,10 @@ CParticleNodePinIn	$4DA03685
 CParticleAttributeDeclaration	$E52EFBAE
 {
 	ExportedName = "MeshColor";
+	Pinned = true;
 	ExportedType = float4;
 	Semantic = Color;
 	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
-	Pinned = true;
 }
 CParticleNodeTemplateExport	$B6ACCF93
 {

@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -459,11 +459,13 @@ CParticleNodeTemplate	$81AA2F2D
 		"$79B5F45B",
 		"$8585DCE4",
 		"$928F9351",
-		"$F1D45A84",
+		"$79BC0BED",
+		"$7EBBF8FD",
 		"$D025D965",
+		"$F1D45A84",
+		"$579B71EC",
 		"$986E40DF",
 		"$AB635420",
-		"$579B71EC",
 		"$5CF00B18",
 		"$3A66A2C2",
 		"$DF07DDD4",
@@ -1596,6 +1598,8 @@ CParticleNodeTemplate	$03E95363
 		"$D7D43EE4",
 		"$64ED38EB",
 		"$3C4DF703",
+		"$D5BE67F9",
+		"$3631AD7F",
 	};
 	OutputPins = {
 		"$BA9ED058",
@@ -2304,7 +2308,7 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$B827D5D1",
 	};
 	WorkspacePosition = int2(1914, -66);
-	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -2621,8 +2625,10 @@ CParticleNodePinIn	$64ED38EB
 CParticleNodePinOut	$2B51BF94
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$EFF3C641";
+	BaseType = float;
 }
 CParticleNodePinIn	$D4548A44
 {
@@ -2691,4 +2697,36 @@ CParticleNodePinOut	$3F8BC4C2
 	Visible = false;
 	Owner = "$81AA2F2D";
 	BaseType = int;
+}
+CParticleNodePinIn	$79BC0BED
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$81AA2F2D";
+	BaseType = float3;
+}
+CParticleNodePinIn	$7EBBF8FD
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$81AA2F2D";
+	BaseType = orientation;
+}
+CParticleNodePinIn	$D5BE67F9
+{
+	SelfName = "InitialValue";
+	Type = float;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = float;
+}
+CParticleNodePinIn	$3631AD7F
+{
+	SelfName = "ResetValue";
+	Type = float;
+	Visible = false;
+	Owner = "$03E95363";
+	BaseType = float;
 }

@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -53,6 +53,7 @@ CParticleNodeGraph	$D857A09F
 		"@eng:This node draws a line going from **`Start`** to **`End`** world space positions.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Renderer;
 	IconKey = "Toolbar_CurveDimension1";
 	Nodes = {
@@ -79,6 +80,7 @@ CParticleNodeGraph	$1A488438
 		"@eng:This node draws a ray starting at **`Position`**, and pointing along **`Vector`**.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Renderer;
 	IconKey = "Toolbar_CurveDimension1";
 	Nodes = {
@@ -1032,6 +1034,7 @@ CParticleNodeGraph	$476FE66D
 		"@eng:This node draws a box centered around **`Position`**, using **`Scale`** as the box dimensions, and oriented along each the **`AxisForward`** and **`AxisUp`** axes, and/or a specific **`Orientation`**.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Renderer;
 	IconKey = "Toolbar_Bounds";
 	Nodes = {
@@ -2592,6 +2595,7 @@ CParticleNodeGraph	$8F13B6C0
 		"@eng:This node draws **`Value`** at **`Position`**, offsetted by **`ScreenOffset`** world space units.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Renderer;
 	IconKey = "Node_Info";
 	SearchKeywords = "drawnumber";
@@ -3964,6 +3968,7 @@ CParticleNodeGraph	$008093E4
 		"@eng:This node draws basis vectors centered around **`Position`**, built from the **`AxisForward`** and **`AxisUp`** axes, and/or a specific **`Orientation`**.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
 	};
 	Public = true;
+	GraphUsage = SimulationGraph;
 	ClassType = Renderer;
 	IconKey = "Toolbar_XForm_None";
 	Nodes = {
@@ -5016,13 +5021,17 @@ CParticleNodePinIn	$304B7044
 CParticleNodePinOut	$BB7DA9EE
 {
 	SelfName = "RGB";
+	Type = float3;
 	Visible = false;
 	Owner = "$95BAE99C";
+	BaseType = float3;
 }
 CParticleNodePinOut	$E1E52A34
 {
 	SelfName = "A";
+	Type = float;
 	Owner = "$95BAE99C";
+	BaseType = float;
 	ConnectedPins = {
 		"$5502BFE0",
 	};

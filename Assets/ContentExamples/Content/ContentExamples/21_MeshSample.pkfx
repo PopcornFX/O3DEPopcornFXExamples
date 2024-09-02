@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -6,7 +6,7 @@ CParticleEffect	$D857A09F
 }
 CParticleAttributeList	$35A36C4E
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$AFA371FD",
 	};
 }
@@ -1082,7 +1082,7 @@ CParticleNodeRendererBillboard	$9629BEA2
 		"$558DB436",
 	};
 	WorkspacePosition = int2(1606, -418);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -1632,7 +1632,9 @@ CParticleNodePinIn	$07F03ECA
 CParticleNodePinOut	$A7C2AC41
 {
 	SelfName = "Value";
+	Type = float4;
 	Owner = "$7837793A";
+	BaseType = float4;
 	ConnectedPins = {
 		"$7AE0C9DE",
 		"$074DD736",

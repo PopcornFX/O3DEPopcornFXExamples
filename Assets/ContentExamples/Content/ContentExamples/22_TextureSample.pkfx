@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -6,7 +6,7 @@ CParticleEffect	$D857A09F
 }
 CParticleAttributeList	$35A36C4E
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$BA7438B4",
 	};
 }
@@ -419,7 +419,7 @@ CParticleNodeRendererBillboard	$9629BEA2
 		"$558DB436",
 	};
 	WorkspacePosition = int2(2816, -572);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -679,8 +679,8 @@ CEditorBackdropSpotLight	$F57D922D
 CParticleAttributeSamplerDeclaration	$BA7438B4
 {
 	ExportedName = "DiffuseTexture";
-	ExportedType = Image;
 	Pinned = true;
+	ExportedType = Image;
 	AttribSamplerDefaultValue = "$50E5DBAC";
 	UsageFlags = 4;
 }
@@ -764,14 +764,14 @@ CParticleNodeTemplate	$E621F2C1
 	ExecStage = Evolve;
 	InputPins = {
 		"$A40C42FF",
-		"$4B8ECBD0",
-		"$0A36A62E",
 		"$DD322448",
-		"$5557AC7B",
+		"$4B8ECBD0",
 		"$1ABBB3FB",
-		"$4B33B7D5",
+		"$5557AC7B",
 		"$46A92782",
 		"$EB2C59B9",
+		"$0A36A62E",
+		"$4B33B7D5",
 	};
 	OutputPins = {
 		"$82895C51",

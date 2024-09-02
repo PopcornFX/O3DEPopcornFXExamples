@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -645,6 +645,7 @@ CParticleNodeTemplateExport	$C01E62BC
 	};
 	WorkspacePosition = int2(836, -198);
 	ExportedName = "RGB";
+	ExportedType = float3;
 	Semantic = Color;
 	Type = Output;
 	VisibleByDefault = true;
@@ -664,6 +665,7 @@ CParticleNodeTemplateExport	$55289D1E
 	};
 	WorkspacePosition = int2(836, -66);
 	ExportedName = "A";
+	ExportedType = float;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -871,6 +873,7 @@ CParticleNodeTemplateExport	$ED80C982
 	};
 	WorkspacePosition = int2(682, -176);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -951,6 +954,7 @@ CParticleNodeTemplateExport	$F527E9EA
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -969,6 +973,7 @@ CParticleNodeTemplateExport	$C45BF55C
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1018,6 +1023,7 @@ CParticleNodeTemplateExport	$23F9C093
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1067,6 +1073,7 @@ CParticleNodeTemplateExport	$A11A59A6
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1116,6 +1123,7 @@ CParticleNodeTemplateExport	$C73E7C05
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1165,6 +1173,7 @@ CParticleNodeTemplateExport	$1BDBE0E0
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1214,6 +1223,7 @@ CParticleNodeTemplateExport	$52697627
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1263,6 +1273,7 @@ CParticleNodeTemplateExport	$033D718A
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1312,6 +1323,7 @@ CParticleNodeTemplateExport	$0208AF79
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1361,6 +1373,7 @@ CParticleNodeTemplateExport	$45F88E24
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1410,6 +1423,7 @@ CParticleNodeTemplateExport	$77FD347B
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1459,6 +1473,7 @@ CParticleNodeTemplateExport	$8139F52E
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1508,6 +1523,7 @@ CParticleNodeTemplateExport	$8D8C3DAD
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -1557,6 +1573,7 @@ CParticleNodeTemplateExport	$EED74128
 	};
 	WorkspacePosition = int2(220, -44);
 	ExportedName = "Value";
+	ExportedType = float4;
 	Type = Output;
 	VisibleByDefault = true;
 }
@@ -4596,7 +4613,9 @@ CParticleNodePinIn	$DDEFDBF6
 CParticleNodePinOut	$797194C8
 {
 	SelfName = "RGB";
+	Type = float3;
 	Owner = "$1DDF1DBC";
+	BaseType = float3;
 	ConnectedPins = {
 		"$627A7E84",
 	};
@@ -4604,7 +4623,9 @@ CParticleNodePinOut	$797194C8
 CParticleNodePinOut	$4B3AD634
 {
 	SelfName = "A";
+	Type = float;
 	Owner = "$1DDF1DBC";
+	BaseType = float;
 	ConnectedPins = {
 		"$4D875A4C",
 	};
@@ -5630,6 +5651,7 @@ CParticleNodeTemplateExport	$F2F443A6
 	};
 	WorkspacePosition = int2(1210, -66);
 	ExportedName = "ColorSRGB";
+	ExportedTypeMask = 6144;
 	Type = Output;
 	VisibleByDefault = true;
 	PassthroughInput = "ColorLinear";
@@ -6081,6 +6103,7 @@ CParticleNodeTemplateExport	$EC98D697
 	};
 	WorkspacePosition = int2(352, -88);
 	ExportedName = "ColorSRGB";
+	ExportedTypeMask = 6144;
 	Type = Output;
 	VisibleByDefault = true;
 	PassthroughInput = "ColorLinear";
@@ -6208,6 +6231,7 @@ CParticleNodeTemplateExport	$A8E21EA1
 	};
 	WorkspacePosition = int2(1298, -198);
 	ExportedName = "ColorLinear";
+	ExportedTypeMask = 6144;
 	Type = Output;
 	VisibleByDefault = true;
 	PassthroughInput = "ColorSRGB";
@@ -6632,6 +6656,7 @@ CParticleNodeTemplateExport	$720AC2AF
 	};
 	WorkspacePosition = int2(352, -88);
 	ExportedName = "ColorLinear";
+	ExportedTypeMask = 6144;
 	Type = Output;
 	VisibleByDefault = true;
 	PassthroughInput = "ColorSRGB";
@@ -6731,6 +6756,7 @@ CParticleNodeTemplateExport	$5DE7E091
 	};
 	WorkspacePosition = int2(352, 110);
 	ExportedName = "ColorHSV";
+	ExportedTypeMask = 6144;
 	Type = Output;
 	VisibleByDefault = true;
 	PassthroughInput = "ColorRGB";
@@ -6797,6 +6823,7 @@ CParticleNodeTemplateExport	$E5D366E2
 	};
 	WorkspacePosition = int2(352, -66);
 	ExportedName = "ColorRGB";
+	ExportedTypeMask = 6144;
 	Semantic = Color;
 	Type = Output;
 	VisibleByDefault = true;

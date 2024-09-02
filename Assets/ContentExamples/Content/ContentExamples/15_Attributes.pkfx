@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -78,7 +78,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$A11F5972",
 	};
 	WorkspacePosition = int2(946, -88);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -149,7 +149,7 @@ CParticleNodePinIn	$3B3DDE67
 }
 CParticleAttributeList	$B660FBF9
 {
-	AttributeList = {
+	AttributeAndSamplerList = {
 		"$A1CEB11C",
 		"$A7D44000",
 		"$08485A29",
@@ -166,11 +166,13 @@ CParticleNodeTemplate	$1838F4AE
 		"$B913798F",
 		"$09F57010",
 		"$92CF64EB",
-		"$A3E9EC7F",
+		"$536694C6",
+		"$EB7B8FBD",
 		"$4703F6C7",
+		"$A3E9EC7F",
+		"$B6F5CC16",
 		"$167D1A5B",
 		"$38A1274A",
-		"$B6F5CC16",
 		"$49145BE4",
 		"$8748BF80",
 		"$90F64453",
@@ -1177,14 +1179,18 @@ CParticleNodePinIn	$B070C245
 CParticleNodePinIn	$7E1025C8
 {
 	SelfName = "Velocity";
+	Type = float3;
 	Visible = false;
 	Owner = "$5179248F";
+	BaseType = float3;
 }
 CParticleNodePinIn	$ECF2DE91
 {
 	SelfName = "Center";
+	Type = float3;
 	Visible = false;
 	Owner = "$5179248F";
+	BaseType = float3;
 }
 CParticleNodePinIn	$0B716BFB
 {
@@ -1226,7 +1232,9 @@ CParticleNodePinIn	$44808788
 CParticleNodePinOut	$929C8C3D
 {
 	SelfName = "Position";
+	Type = float3;
 	Owner = "$5179248F";
+	BaseType = float3;
 	ConnectedPins = {
 		"$6AD0A593",
 	};
@@ -1234,7 +1242,9 @@ CParticleNodePinOut	$929C8C3D
 CParticleNodePinOut	$D8521D77
 {
 	SelfName = "Velocity";
+	Type = float3;
 	Owner = "$5179248F";
+	BaseType = float3;
 	ConnectedPins = {
 		"$125C39DB",
 	};
@@ -1463,13 +1473,13 @@ CParticleNodePinOut	$21B9E1D6
 CParticleAttributeDeclaration	$08485A29
 {
 	ExportedName = "Color";
-	ExportedType = float4;
 	CategoryName = {
 		"@eng:Diffuse",
 	};
 	Description = {
 		"@eng:Diffuse color, multiplied with the diffuse map color",
 	};
+	ExportedType = float4;
 	Semantic = Color;
 	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -2292,7 +2302,7 @@ CParticleNodeRendererBillboard	$237957C1
 		"$AC56E2DE",
 	};
 	WorkspacePosition = int2(726, -462);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -2711,11 +2721,13 @@ CParticleNodeTemplate	$B54B8ABE
 		"$DE99A3FA",
 		"$9909FB7E",
 		"$A77BF7CA",
-		"$D79F3A63",
+		"$67E78491",
+		"$7708A709",
 		"$B2346C5A",
+		"$D79F3A63",
+		"$DD9D7958",
 		"$23D9C3EC",
 		"$0FB7ED1F",
-		"$DD9D7958",
 		"$32F43965",
 		"$7F287129",
 		"$A9D74E1D",
@@ -3156,12 +3168,12 @@ CParticleNodePinOut	$C82F560B
 CParticleAttributeDeclaration	$0BE051AC
 {
 	ExportedName = "EnableTrail";
-	ExportedType = bool;
 	CategoryName = {
 		"@eng:Trail",
 	};
-	DefaultValueB4 = bool4(true, false, false, false);
 	Pinned = true;
+	ExportedType = bool;
+	DefaultValueB4 = bool4(true, false, false, false);
 }
 CParticleNodeTemplateExport	$1A5FCBB8
 {
@@ -3199,16 +3211,16 @@ CParticleNodePinOut	$830C4FAB
 CParticleAttributeDeclaration	$67045153
 {
 	ExportedName = "TrailType";
-	ExportedType = int;
 	CategoryName = {
 		"@eng:Trail",
 	};
+	Pinned = true;
+	ExportedType = int;
 	DropDownMode = SingleSelect;
 	EnumList = {
 		"Billboards",
 		"Ribbons",
 	};
-	Pinned = true;
 }
 CParticleNodeTemplateExport	$C4F1041B
 {
@@ -3281,7 +3293,7 @@ CParticleNodeRendererRibbon	$0EAA4E45
 		"$B2A9098D",
 	};
 	WorkspacePosition = int2(704, 66);
-	Material = "Library/PopcornFXCore/Materials/Default_Ribbon.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
 		"ComputeVelocity",
@@ -3777,4 +3789,36 @@ CParticleNodePinIn	$0BC1711D
 	Owner = "$0EAA4E45";
 	BaseType = int;
 	ValueI = int4(8, 0, 0, 0);
+}
+CParticleNodePinIn	$536694C6
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = float3;
+}
+CParticleNodePinIn	$EB7B8FBD
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = orientation;
+}
+CParticleNodePinIn	$67E78491
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$B54B8ABE";
+	BaseType = float3;
+}
+CParticleNodePinIn	$7708A709
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$B54B8ABE";
+	BaseType = orientation;
 }

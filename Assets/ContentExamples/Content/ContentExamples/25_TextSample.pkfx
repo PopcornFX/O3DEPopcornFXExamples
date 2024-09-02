@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -21,10 +21,8 @@ CEditorAssetEffect	$41EED1A4
 }
 CParticleAttributeList	$B660FBF9
 {
-	AttributeList = {
+	AttributeAndSamplerList = {
 		"$FBC9D87C",
-	};
-	SamplerList = {
 		"$5ED97256",
 	};
 }
@@ -1965,7 +1963,7 @@ CParticleNodeRendererBillboard	$3117DEDD
 		"$5A7768CD",
 	};
 	WorkspacePosition = int2(594, -308);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -2788,8 +2786,8 @@ CParticleNodePinIn	$9E99351C
 CParticleAttributeSamplerDeclaration	$5ED97256
 {
 	ExportedName = "Text";
-	ExportedType = Text;
 	Pinned = true;
+	ExportedType = Text;
 	AttribSamplerDefaultValue = "$64129A27";
 }
 CParticleNodeTemplateExport	$99369942
@@ -3616,8 +3614,10 @@ CParticleAttributeDeclaration	$FBC9D87C
 CParticleNodePinOut	$E3978BE1
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$0671FF2F";
+	BaseType = float;
 }
 CParticleNodePinIn	$BFFD8F05
 {

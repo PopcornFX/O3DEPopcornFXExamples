@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -55,7 +55,7 @@ CParticleNodePinIn	$3B3DDE67
 }
 CParticleAttributeList	$B660FBF9
 {
-	AttributeList = {
+	AttributeAndSamplerList = {
 		"$FBECCE42",
 	};
 }
@@ -68,11 +68,13 @@ CParticleNodeTemplate	$1838F4AE
 		"$B913798F",
 		"$56DF365E",
 		"$92CF64EB",
-		"$A3E9EC7F",
+		"$B6C9D899",
+		"$206F06E1",
 		"$4703F6C7",
+		"$A3E9EC7F",
+		"$B6F5CC16",
 		"$167D1A5B",
 		"$38A1274A",
-		"$B6F5CC16",
 		"$49145BE4",
 		"$8748BF80",
 		"$90F64453",
@@ -1433,11 +1435,13 @@ CParticleNodeTemplate	$4C834707
 		"$88C8393C",
 		"$2A2B6ACE",
 		"$801B664D",
-		"$BF2E11DF",
+		"$B15AA350",
+		"$2E9434D7",
 		"$CDA92CBF",
+		"$BF2E11DF",
+		"$2A3921F0",
 		"$A9C406FA",
 		"$23514990",
-		"$2A3921F0",
 		"$12C0F7BC",
 		"$74FA1BBB",
 		"$C5095E70",
@@ -2420,8 +2424,8 @@ CParticleNodePinOut	$1C4663B9
 CParticleAttributeDeclaration	$FBECCE42
 {
 	ExportedName = "Localspace";
-	ExportedType = bool;
 	Pinned = true;
+	ExportedType = bool;
 }
 CParticleNodeGraph	$E40C2780
 {
@@ -3026,7 +3030,7 @@ CParticleNodeRendererBillboard	$31210D41
 		"$351C76CD",
 	};
 	WorkspacePosition = int2(572, -22);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -3313,7 +3317,7 @@ CParticleNodeRendererBillboard	$10D68E9E
 		"$C913DCC2",
 	};
 	WorkspacePosition = int2(572, -22);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -3567,14 +3571,18 @@ CParticleNodePinIn	$C913DCC2
 CParticleNodePinOut	$7207F505
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$45677906";
+	BaseType = float;
 }
 CParticleNodePinOut	$87216026
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$7962E394";
+	BaseType = float;
 }
 CParticleNodePinIn	$31E02647
 {
@@ -3739,4 +3747,36 @@ CParticleNodePinOut	$7A7D2578
 	Visible = false;
 	Owner = "$4C834707";
 	BaseType = int;
+}
+CParticleNodePinIn	$B6C9D899
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = float3;
+}
+CParticleNodePinIn	$206F06E1
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$1838F4AE";
+	BaseType = orientation;
+}
+CParticleNodePinIn	$B15AA350
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$4C834707";
+	BaseType = float3;
+}
+CParticleNodePinIn	$2E9434D7
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$4C834707";
+	BaseType = orientation;
 }

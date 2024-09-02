@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -678,7 +678,9 @@ CParticleNodePinOut	$70BFF5A7
 CParticleNodePinOut	$01BF2649
 {
 	SelfName = "Cursor";
+	Type = float;
 	Owner = "$D0A3DA98";
+	BaseType = float;
 }
 CParticleNodeTemplate	$CDB70712
 {
@@ -897,7 +899,7 @@ CParticleNodeRendererMesh	$63708AE0
 		"$FEF953AE",
 	};
 	WorkspacePosition = int2(220, 440);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -1226,7 +1228,7 @@ CParticleNodeRendererMesh	$45BEAE72
 		"$14249D1D",
 	};
 	WorkspacePosition = int2(220, 44);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -1559,7 +1561,7 @@ CParticleNodeRendererMesh	$57333F65
 		"$AD2CC800",
 	};
 	WorkspacePosition = int2(220, -484);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -2215,7 +2217,9 @@ CParticleNodePinOut	$FA60BB45
 CParticleNodePinOut	$8C89E395
 {
 	SelfName = "Cursor";
+	Type = float;
 	Owner = "$CA31AFDE";
+	BaseType = float;
 }
 CParticleNodePassThrough	$6CE35E78
 {

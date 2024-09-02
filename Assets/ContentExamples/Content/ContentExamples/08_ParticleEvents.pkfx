@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.20.0.21900;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -415,11 +415,13 @@ CParticleNodeTemplate	$03050759
 		"$ED83FA19",
 		"$E26848F6",
 		"$88FAA69C",
-		"$8EE2954B",
+		"$E02BAECE",
+		"$6EBFAF35",
 		"$15EC4B53",
+		"$8EE2954B",
+		"$C9C63FDA",
 		"$A2EA9498",
 		"$FFBE11ED",
-		"$C9C63FDA",
 		"$583039D6",
 		"$FC342E11",
 		"$83404E68",
@@ -925,7 +927,7 @@ CParticleNodeRendererBillboard	$B298D1F0
 		"$0F6F5525",
 	};
 	WorkspacePosition = int2(242, -198);
-	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -1570,4 +1572,20 @@ CParticleNodePinOut	$CE3C824B
 	Visible = false;
 	Owner = "$03050759";
 	BaseType = int;
+}
+CParticleNodePinIn	$E02BAECE
+{
+	SelfName = "ShapePosition";
+	Type = float3;
+	Visible = false;
+	Owner = "$03050759";
+	BaseType = float3;
+}
+CParticleNodePinIn	$6EBFAF35
+{
+	SelfName = "ShapeOrientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$03050759";
+	BaseType = orientation;
 }
