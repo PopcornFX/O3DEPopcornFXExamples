@@ -3,6 +3,8 @@
 #include "PKSurface.h"
 #include "FeatureTransformUVs.h"
 
+#define SMOOTHSTEP_EPSILON 1.0e-7f
+
 #if defined(PK_FORWARD_COLOR_PASS) || defined(PK_DEFERRED_COLOR_PASS) || defined(PK_DEFERRED_DECAL_PASS)
 #   if defined(HAS_AlphaMasks) || defined(HAS_UVDistortions) 
 
@@ -81,7 +83,7 @@ void        ApplyFinalAlpha(IN(SFragmentInput)fInput, IN(SFragGeometry)fGeom, IN
 void         ApplyDissolve(IN(float)dissolveCursor, IN(SFragGeometry)fGeom, INOUT(SFragSurface) fSurf FS_PARAMS)
 {
     float dissolve = SAMPLE(Dissolve_DissolveMap, fGeom.m_RawUV0).r;
-    dissolve *= smoothstep(dissolve, dissolve + GET_CONSTANT(Material, Dissolve_DissolveSoftness), dissolveCursor);
+    dissolve = smoothstep(dissolve, dissolve + GET_CONSTANT(Material, Dissolve_DissolveSoftness) + SMOOTHSTEP_EPSILON, dissolveCursor * (1 + SMOOTHSTEP_EPSILON));
     fSurf.m_Emissive *= dissolve;
     fSurf.m_Diffuse.a *= dissolve;
 }

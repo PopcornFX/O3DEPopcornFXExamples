@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -33,7 +33,7 @@ CParticleRendererFeatureDesc	$8BF32864
 CRHIMaterialShaders	$35A36C4E
 {
 	VertexShader = "Library/Houdini/Materials/VAT_Fluid.vert";
-	FragmentShader = "Library/PopcornFXCore/Shaders/Default_Mesh.frag";
+	FragmentShader = "Library/PopcornFXCore/Shaders/Legacy/Default_Mesh.frag";
 }
 CParticleRendererFeatureDesc	$4B933A29
 {

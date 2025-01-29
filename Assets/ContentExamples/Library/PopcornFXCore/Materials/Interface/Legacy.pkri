@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Legacy default features";
@@ -149,7 +149,7 @@ CParticleNodeTemplateExport	$F02495CD
 	UseSlider = true;
 	MinValueF4 = float4(-1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 	MaxValueF4 = float4(1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-	PinRules = Rule1_AND_Rule2;
+	PinRules = Rule2;
 	RuleResult = Hidden;
 	DependentProperty = "General.BillboardingMode";
 	RuleFunction = Greater;
@@ -671,9 +671,10 @@ CParticleNodeTemplateExport	$9AA9404E
 	CategoryName = {
 		"@eng:Transparent",
 	};
-	PinRules = Rule1_OR_Rule2;
+	PinRules = Rule2;
 	RuleResult = Hidden;
 	DependentProperty = "Transparent.SortMode";
+	RuleCombine12 = OR;
 	DependentProperty2 = "Transparent.Type";
 	RuleFunction2 = Lower;
 	RuleValue2 = "2";

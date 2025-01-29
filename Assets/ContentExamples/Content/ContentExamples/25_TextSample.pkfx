@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -3429,6 +3429,7 @@ CParticleNodeTemplate	$0671FF2F
 		"$ECC5A593",
 		"$06BFD7AA",
 		"$F6F132D2",
+		"$2771BB61",
 	};
 	OutputPins = {
 		"$7E519172",
@@ -3671,4 +3672,12 @@ CParticleNodePinIn	$076089E5
 	Owner = "$3C490FFD";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$2771BB61
+{
+	SelfName = "ConstantSpeed";
+	Type = bool;
+	Visible = false;
+	Owner = "$0671FF2F";
+	BaseType = bool;
 }

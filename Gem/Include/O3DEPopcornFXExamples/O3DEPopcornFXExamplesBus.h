@@ -1,9 +1,7 @@
-//----------------------------------------------------------------------------
-// Copyright Persistant Studios, SARL. All Rights Reserved.
-// https://www.popcornfx.com/terms-and-conditions/
-//----------------------------------------------------------------------------
 
 #pragma once
+
+#include <O3DEPopcornFXExamples/O3DEPopcornFXExamplesTypeIds.h>
 
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Interface/Interface.h>
@@ -13,11 +11,11 @@ namespace O3DEPopcornFXExamples
     class O3DEPopcornFXExamplesRequests
     {
     public:
-        AZ_RTTI(O3DEPopcornFXExamplesRequests, "{d48856e6-7c7b-493d-bde4-9b624bdf444b}");
+        AZ_RTTI(O3DEPopcornFXExamplesRequests, O3DEPopcornFXExamplesRequestsTypeId);
         virtual ~O3DEPopcornFXExamplesRequests() = default;
         // Put your public methods here
     };
-    
+
     class O3DEPopcornFXExamplesBusTraits
         : public AZ::EBusTraits
     {

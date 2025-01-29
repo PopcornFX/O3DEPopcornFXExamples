@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -93,8 +93,6 @@ CParticleNodeGraph	$AEEAC0BC
 	Nodes = {
 		"$4EACBB2A",
 		"$B7D91404",
-		"$20907935",
-		"$A650CCAC",
 		"$E803212B",
 		"$3972C6F9",
 		"$ABF4F19C",
@@ -108,6 +106,8 @@ CParticleNodeGraph	$AEEAC0BC
 		"$AC5F2488",
 		"$76151B7F",
 		"$E89D2D19",
+		"$372F5415",
+		"$C23255FC",
 	};
 	WorkspacePosition = int2(-16, -155);
 	WorkspaceZoom = -6;
@@ -162,56 +162,6 @@ CParticleNodePinOut	$B2F5596D
 {
 	SelfName = "Value";
 	Owner = "$B7D91404";
-}
-CParticleNodeTemplateExport	$20907935
-{
-	InputPins = {
-		"$592C9A30",
-	};
-	OutputPins = {
-		"$401B94C5",
-	};
-	WorkspacePosition = int2(-572, 0);
-	ExportedName = "Dissolve.DissolveAnimationCursor";
-	ExportedType = float;
-	Type = Input;
-	CategoryName = {
-		"@eng:Dissolve",
-	};
-}
-CParticleNodePinIn	$592C9A30
-{
-	SelfName = "DefaultValue";
-	Owner = "$20907935";
-}
-CParticleNodePinOut	$401B94C5
-{
-	SelfName = "Value";
-	Owner = "$20907935";
-	ConnectedPins = {
-		"$ACE1F3E8",
-	};
-}
-CParticleNodeTemplateExport	$A650CCAC
-{
-	InputPins = {
-		"$ACE1F3E8",
-	};
-	WorkspacePosition = int2(396, 0);
-	ExportedName = "Dissolve.DissolveAnimationCursor";
-	ExportedType = float;
-	Type = Output;
-	CategoryName = {
-		"@eng:Dissolve",
-	};
-}
-CParticleNodePinIn	$ACE1F3E8
-{
-	SelfName = "Value";
-	Owner = "$A650CCAC";
-	ConnectedPins = {
-		"$401B94C5",
-	};
 }
 CParticleRendererFeatureDesc	$2B0AD5F2
 {
@@ -590,5 +540,64 @@ CParticleNodePinIn	$0C03EAB7
 	Owner = "$E89D2D19";
 	ConnectedPins = {
 		"$6CAF5EF1",
+	};
+}
+CParticleNodeTemplateExport	$372F5415
+{
+	Description = {
+		"@eng:[0, inf] value that acts as the alpha threshold value for the dissolve. With a dissolve softness of zero, every pixel that has an alpha value less than the animation cursor value will be discarded.",
+	};
+	InputPins = {
+		"$9ADE52A6",
+	};
+	OutputPins = {
+		"$EB33D373",
+	};
+	WorkspacePosition = int2(-572, -44);
+	ExportedName = "Dissolve.DissolveAnimationCursor";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:Dissolve",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$9ADE52A6
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$372F5415";
+}
+CParticleNodePinOut	$EB33D373
+{
+	SelfName = "Value";
+	Owner = "$372F5415";
+	ConnectedPins = {
+		"$008F7EB8",
+	};
+}
+CParticleNodeTemplateExport	$C23255FC
+{
+	Description = {
+		"@eng:[0, inf] value that acts as the alpha threshold value for the dissolve. With a dissolve softness of zero, every pixel that has an alpha value less than the animation cursor value will be discarded.",
+	};
+	InputPins = {
+		"$008F7EB8",
+	};
+	WorkspacePosition = int2(418, -44);
+	ExportedName = "Dissolve.DissolveAnimationCursor";
+	ExportedType = float;
+	Type = Output;
+	CategoryName = {
+		"@eng:Dissolve",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$008F7EB8
+{
+	SelfName = "Value";
+	Owner = "$C23255FC";
+	ConnectedPins = {
+		"$EB33D373",
 	};
 }

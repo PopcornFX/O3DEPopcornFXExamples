@@ -20,7 +20,7 @@ void	ApplyDithering(INOUT(SFragSurface) fSurf, IN(SFragGeometry) fGeom, IN(SFrag
 	screenUV = screenUV * viewportSize;
 	screenUV = mod(screenUV, cellDim);
 	screenUV = screenUV / cellDim;
-	screenUV = fract(screenUV + GET_CONSTANT(Material, Opaque_DitheringOffset));
+	screenUV = fract(screenUV + fInput.fragOpaque_DitheringOffset);
 
 	screenUV.x = (cellStart.x + screenUV.x * cellDim.x / texDim.x);
 

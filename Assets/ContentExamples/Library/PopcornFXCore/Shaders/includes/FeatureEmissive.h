@@ -30,14 +30,8 @@ void	ApplyEmissive(INOUT(SFragSurface) fSurf, IN(SFragGeometry) fGeom, vec4 emis
 #	if defined(HAS_EmissiveRamp)
 void	ApplyEmissiveRamp(IN(float) v, INOUT(SFragSurface) fSurf FS_ARGS)
 {
-		// Prevents from coloring on no emissive color
-	if (fSurf.m_Emissive.r != 0)
-	{
-		vec2 uv = vec2(fSurf.m_Emissive.r, v);
-		fSurf.m_Emissive = SAMPLE(EmissiveRamp_RampMap, uv).rgb;
-	}
-	else
-		fSurf.m_Emissive = VEC3_ZERO;
+	vec2 uv = vec2(fSurf.m_Emissive.r, v);
+	fSurf.m_Emissive = SAMPLE(EmissiveRamp_RampMap, uv).rgb;
 }
 #	endif
 #endif

@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -11,7 +11,9 @@ CParticleRendererMaterial	$6B70D015
 		"$3FD07EA7",
 		"$3576B2F9",
 		"$1CE37377",
+		"$BB348B08",
 		"$3AB53997",
+		"$A0540623",
 		"$41E01F70",
 		"$923923FE",
 		"$2B0AD5F2",
@@ -50,6 +52,7 @@ CParticleRendererFeatureDesc	$F3990E53
 {
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
 	RendererFeatureName = "Emissive";
+	EnabledByDefault = true;
 }
 CParticleRendererFeatureDesc	$3FD07EA7
 {
@@ -60,7 +63,6 @@ CParticleRendererFeatureDesc	$3576B2F9
 {
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
 	RendererFeatureName = "Diffuse";
-	EnabledByDefault = true;
 }
 CParticleRendererFeatureDesc	$1CE37377
 {
@@ -87,9 +89,6 @@ CParticleNodeGraph	$AEEAC0BC
 	CustomName = "Adapter";
 	Nodes = {
 		"$4EACBB2A",
-		"$B7D91404",
-		"$20907935",
-		"$A650CCAC",
 		"$3DD83F59",
 		"$97D3828B",
 		"$8C6E0B59",
@@ -103,6 +102,8 @@ CParticleNodeGraph	$AEEAC0BC
 		"$851A7529",
 		"$F06DBE83",
 		"$E9AA2DA5",
+		"$56D22DB2",
+		"$1A584F4A",
 	};
 	WorkspacePosition = int2(-14, -184);
 	WorkspaceZoom = -6;
@@ -132,81 +133,6 @@ CParticleNodePinOut	$8C1042AC
 {
 	SelfName = "Value";
 	Owner = "$4EACBB2A";
-}
-CParticleNodeTemplateExport	$B7D91404
-{
-	InputPins = {
-		"$EB6CD3B8",
-	};
-	OutputPins = {
-		"$B2F5596D",
-	};
-	WorkspacePosition = int2(-572, -176);
-	ExportedName = "Dissolve";
-	ExportedType = bool;
-	Type = Input;
-	InputType = Property;
-}
-CParticleNodePinIn	$EB6CD3B8
-{
-	SelfName = "DefaultValue";
-	Visible = false;
-	Owner = "$B7D91404";
-}
-CParticleNodePinOut	$B2F5596D
-{
-	SelfName = "Value";
-	Owner = "$B7D91404";
-}
-CParticleNodeTemplateExport	$20907935
-{
-	InputPins = {
-		"$592C9A30",
-	};
-	OutputPins = {
-		"$401B94C5",
-	};
-	WorkspacePosition = int2(-572, 0);
-	ExportedName = "Dissolve.DissolveAnimationCursor";
-	ExportedType = float;
-	Type = Input;
-	CategoryName = {
-		"@eng:Dissolve",
-	};
-}
-CParticleNodePinIn	$592C9A30
-{
-	SelfName = "DefaultValue";
-	Owner = "$20907935";
-}
-CParticleNodePinOut	$401B94C5
-{
-	SelfName = "Value";
-	Owner = "$20907935";
-	ConnectedPins = {
-		"$ACE1F3E8",
-	};
-}
-CParticleNodeTemplateExport	$A650CCAC
-{
-	InputPins = {
-		"$ACE1F3E8",
-	};
-	WorkspacePosition = int2(396, 0);
-	ExportedName = "Dissolve.DissolveAnimationCursor";
-	ExportedType = float;
-	Type = Output;
-	CategoryName = {
-		"@eng:Dissolve",
-	};
-}
-CParticleNodePinIn	$ACE1F3E8
-{
-	SelfName = "Value";
-	Owner = "$A650CCAC";
-	ConnectedPins = {
-		"$401B94C5",
-	};
 }
 CParticleRendererFeatureDesc	$2B0AD5F2
 {
@@ -591,4 +517,73 @@ CParticleNodePinIn	$0264551C
 	ConnectedPins = {
 		"$7B2868F7",
 	};
+}
+CParticleNodeTemplateExport	$56D22DB2
+{
+	Description = {
+		"@eng:[0, inf] value that acts as the alpha threshold value for the dissolve. With a dissolve softness of zero, every pixel that has an alpha value less than the animation cursor value will be discarded.",
+	};
+	InputPins = {
+		"$648457F2",
+	};
+	OutputPins = {
+		"$1A9EB007",
+	};
+	WorkspacePosition = int2(-572, -110);
+	ExportedName = "Dissolve.DissolveAnimationCursor";
+	ExportedType = float;
+	Type = Input;
+	CategoryName = {
+		"@eng:Dissolve",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$648457F2
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$56D22DB2";
+}
+CParticleNodePinOut	$1A9EB007
+{
+	SelfName = "Value";
+	Owner = "$56D22DB2";
+	ConnectedPins = {
+		"$5509C981",
+	};
+}
+CParticleNodeTemplateExport	$1A584F4A
+{
+	Description = {
+		"@eng:[0, inf] value that acts as the alpha threshold value for the dissolve. With a dissolve softness of zero, every pixel that has an alpha value less than the animation cursor value will be discarded.",
+	};
+	InputPins = {
+		"$5509C981",
+	};
+	WorkspacePosition = int2(418, -110);
+	ExportedName = "Dissolve.DissolveAnimationCursor";
+	ExportedType = float;
+	Type = Output;
+	CategoryName = {
+		"@eng:Dissolve",
+	};
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$5509C981
+{
+	SelfName = "Value";
+	Owner = "$1A584F4A";
+	ConnectedPins = {
+		"$1A9EB007",
+	};
+}
+CParticleRendererFeatureDesc	$A0540623
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "CustomTextureU";
+}
+CParticleRendererFeatureDesc	$BB348B08
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Atlas";
 }

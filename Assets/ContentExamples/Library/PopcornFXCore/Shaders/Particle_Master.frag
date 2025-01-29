@@ -31,8 +31,13 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 #endif
 
 #if defined(HAS_CorrectDeformation)
+#	if defined(HAS_Atlas)
+	ApplyRibbonCorrectDeformation(fGeom, fInput.fragUVFactors, fInput.fragUVScaleAndOffset, fInput.fragUV1ScaleAndOffset FS_PARAMS);
+#	else
 	ApplyRibbonCorrectDeformation(fGeom, fInput.fragUVFactors, fInput.fragUVScaleAndOffset FS_PARAMS);
+#	endif
 #endif
+
 
 #if defined(HAS_UVDistortions)
 	ApplyUVDistortion(fGeom, fInput.fragUVDistortions_Distortion1AnimationCursor, fInput.fragUVDistortions_Distortion2AnimationCursor, fMaskDist);
@@ -82,26 +87,38 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 #elif 	defined(PK_FORWARD_TINT_PASS)
 
 	// Tint render pass:
-	ApplyTint(fSurf, fGeom, fInput.fragTint_TintColor FS_PARAMS);
+	vec4	tintColor = fInput.fragTint_TintColor;
+#if	    defined(FINPUT_fragColor0)
+	tintColor *= fInput.fragColor0;
+#endif
+	ApplyTint(fSurf, fGeom, tintColor FS_PARAMS);
 
 #elif 	defined(PK_FORWARD_COLOR_PASS) || defined(PK_DEFERRED_COLOR_PASS) || defined(PK_DEFERRED_DECAL_PASS)
 
 	// Color render pass:
 #	if	defined(HAS_Diffuse)
+	vec4	diffuseColor = fInput.fragDiffuse_DiffuseColor;
+#if	    defined(FINPUT_fragColor0)
+	diffuseColor *= fInput.fragColor0;
+#endif
 #		if	defined(HAS_AlphaRemap)
-	ApplyDiffuse(fSurf, fGeom, fInput.fragDiffuse_DiffuseColor, fInput.fragAlphaRemap_AlphaRemapCursor FS_PARAMS);
+	ApplyDiffuse(fSurf, fGeom, diffuseColor, fInput.fragAlphaRemap_AlphaRemapCursor FS_PARAMS);
 #		elif defined(HAS_UVDistortions)
-	ApplyDiffuse(fSurf, fGeom, fMaskDist, fInput.fragDiffuse_DiffuseColor FS_PARAMS);
+	ApplyDiffuse(fSurf, fGeom, fMaskDist, diffuseColor FS_PARAMS);
 #		else
-	ApplyDiffuse(fSurf, fGeom, fInput.fragDiffuse_DiffuseColor FS_PARAMS);
+	ApplyDiffuse(fSurf, fGeom, diffuseColor FS_PARAMS);
 #		endif
 #	endif
 
 #	if	defined(HAS_Emissive)
+	vec4	emissiveColor = fInput.fragEmissive_EmissiveColor;
+#if	    defined(FINPUT_fragColor0) && !defined(HAS_Diffuse)
+	emissiveColor *= fInput.fragColor0;
+#endif
 #		if defined(HAS_UVDistortions)
-	ApplyEmissive(fSurf, fGeom, fMaskDist, fInput.fragEmissive_EmissiveColor FS_PARAMS);
+	ApplyEmissive(fSurf, fGeom, fMaskDist, emissiveColor FS_PARAMS);
 #		else
-	ApplyEmissive(fSurf, fGeom, fInput.fragEmissive_EmissiveColor FS_PARAMS);
+	ApplyEmissive(fSurf, fGeom, emissiveColor FS_PARAMS);
 #		endif
 #	endif
 

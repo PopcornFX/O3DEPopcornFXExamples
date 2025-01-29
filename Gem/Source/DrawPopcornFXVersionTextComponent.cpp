@@ -107,7 +107,7 @@ void DrawPopcornFXVersionTextComponent::OnTransformChanged([[maybe_unused]] cons
 
 AZStd::string   DrawPopcornFXVersionTextComponent::GetEngineVersion() const
 {
-    constexpr const char* EngineVersionJsonKey = "O3DEVersion";
+    constexpr const char* EngineVersionJsonKey = "display_version";
     auto engineVersionKey = AZ::SettingsRegistryInterface::FixedValueString(AZ::SettingsRegistryMergeUtils::EngineSettingsRootKey) + "/" + EngineVersionJsonKey;
     AZStd::string engineVersion;
     if (auto settingsRegistry = AZ::SettingsRegistry::Get(); settingsRegistry != nullptr && settingsRegistry->Get(engineVersion, engineVersionKey))

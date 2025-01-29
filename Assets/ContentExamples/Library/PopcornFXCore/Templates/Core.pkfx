@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -34,6 +34,7 @@ CParticleEffect	$6B70D015
 		"$946D7522",
 		"$3B3DDE67",
 		"$F02495CD",
+		"$C1BEABD0",
 		"$CE8CC02E",
 		"$6AD0A593",
 		"$125C39DB",
@@ -176,6 +177,7 @@ CParticleEffect	$6B70D015
 		"$85CFB238",
 		"$12D181D8",
 		"$28C33F18",
+		"$AAB94E83",
 		"$E7C91C42",
 		"$E54085D6",
 		"$42A3F180",
@@ -2209,6 +2211,7 @@ CParticleNodeGraph	$F20FBF14
 		"$6E883D0A",
 		"$B14AA654",
 		"$4FFC87C8",
+		"$EC8E4BAF",
 	};
 	WorkspaceZoom = 0;
 }
@@ -2245,7 +2248,7 @@ CParticleNodeTemplateExport	$C6FFEED9
 	InputPins = {
 		"$3CB0B5EB",
 	};
-	WorkspacePosition = int2(176, 0);
+	WorkspacePosition = int2(374, 0);
 	ExportedName = "Output";
 	ExportedTypeMask = 7680;
 	Type = Output;
@@ -2256,7 +2259,7 @@ CParticleNodePinIn	$3CB0B5EB
 	SelfName = "Value";
 	Owner = "$C6FFEED9";
 	ConnectedPins = {
-		"$12F633D9",
+		"$4CC2C940",
 	};
 }
 CParticleNodeScript	$69992C53
@@ -2299,11 +2302,9 @@ CParticleNodePinIn	$AB0A68AA
 CParticleNodePinOut	$12F633D9
 {
 	SelfName = "Output";
-	Type = float;
 	Owner = "$69992C53";
-	BaseType = float;
 	ConnectedPins = {
-		"$3CB0B5EB",
+		"$24029512",
 	};
 }
 CParticleNodeTemplateExport	$6E883D0A
@@ -7475,6 +7476,7 @@ CParticleNodeTemplateExport	$B966C58F
 	WorkspacePosition = int2(-440, 330);
 	ExportedName = "Vector";
 	ExportedType = float3;
+	Semantic = 3D_Coordinate;
 	Type = Input;
 	VisibleByDefault = true;
 }
@@ -7526,7 +7528,7 @@ CParticleNodePassThrough	$50A5AB6D
 	OutputPins = {
 		"$A9040659",
 	};
-	WorkspacePosition = int2(352, 352);
+	WorkspacePosition = int2(308, 352);
 }
 CParticleNodePinIn	$66A2ECEB
 {
@@ -7559,8 +7561,10 @@ CParticleNodeTemplateExport	$B4CA56A0
 	WorkspacePosition = int2(-22, 462);
 	ExportedName = "Normal";
 	ExportedType = float3;
+	Semantic = 3D_Coordinate;
 	Type = Input;
 	VisibleByDefault = true;
+	TransformMode = Direction;
 	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$AA59507D
@@ -16957,6 +16961,9 @@ CParticleNodePinOut	$E5DEBC46
 CParticleNodeGraph	$28C33F18
 {
 	CustomName = "IsInEditor";
+	Description = {
+		"@eng:Returns `true` if the current effect is being played back inside an editor.\\nUseful to switch off things used for debugging purposes.\\n\\nWill return `true` when the effect is played inside game engine editors.\\nWill return `false` when the effect is played inside packaged games or is compiled in \"shipping\" mode.\\n",
+	};
 	Public = true;
 	ClassType = Math;
 	IconKey = "Node_If";
@@ -17032,7 +17039,7 @@ CParticleNodeAnnotation	$AEB80CC3
 		"@eng:Is in editor ?",
 	};
 	Description = {
-		"@eng:Returns \'true\' if the current effect is being played back inside the editor.\\nUseful to switch off things used for debugging purposes.\\n\\n\\nWhen the effect is previewed in the editor, but in shipping mode, this will return \'false\'\\n",
+		"@eng:$(Graph.Description)",
 	};
 	WorkspacePosition = int2(-550, -550);
 	SelfSize = int2(990, 374);
@@ -19548,6 +19555,7 @@ CParticleNodeTemplateExport	$B930CE77
 	WorkspacePosition = int2(-440, 528);
 	ExportedName = "PointOnPlane";
 	ExportedType = float3;
+	Semantic = 3D_Coordinate;
 	Type = Input;
 }
 CParticleNodePinIn	$4283C923
@@ -39466,5 +39474,372 @@ CParticleNodePinOut	$A9414B51
 	Owner = "$93BC3FCC";
 	ConnectedPins = {
 		"$6301D63C",
+	};
+}
+CParticleNodeTemplate	$EC8E4BAF
+{
+	InputPins = {
+		"$24029512",
+	};
+	OutputPins = {
+		"$4CC2C940",
+	};
+	WorkspacePosition = int2(110, 0);
+	SubGraphName = "toFloat";
+}
+CParticleNodePinIn	$24029512
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$EC8E4BAF";
+	ConnectedPins = {
+		"$12F633D9",
+	};
+}
+CParticleNodePinOut	$4CC2C940
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$EC8E4BAF";
+	ConnectedPins = {
+		"$3CB0B5EB",
+	};
+}
+CParticleNodeGraph	$AAB94E83
+{
+	CustomName = "IsInPopcornFXEditor";
+	Description = {
+		"@eng:Returns `true` if the current effect is being played back **inside the PopcornFX editor**\\nUseful to switch off things used for debugging purposes.\\n\\nContrary to the `IsInEditor` node, will return `false` when the effect is played inside game engine editors.\\nWill also return `false` when the effect is played inside the PopcornFX editor but is compiled in \"shipping\" mode.\\n",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Node_If";
+	Nodes = {
+		"$5BC65082",
+		"$104F0140",
+		"$7D4D60FD",
+	};
+	WorkspaceZoom = 0;
+	Collapsed = true;
+}
+CParticleNodeGraph	$C1BEABD0
+{
+	CustomName = "orientation.fromForwardSide";
+	Public = true;
+	ClassType = Math;
+	IconKey = "Toolbar_XForm_Rotate";
+	Nodes = {
+		"$083FDB70",
+		"$2D27E15A",
+		"$45764115",
+		"$55C4AAE5",
+		"$A34FC451",
+		"$70F13E45",
+		"$F7D54A8F",
+	};
+	WorkspaceZoom = 0;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$5BC65082
+{
+	InputPins = {
+		"$7932B37B",
+	};
+	WorkspacePosition = int2(44, -44);
+	ExportedName = "IsInPopcornFXEditor";
+	ExportedType = bool;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$7932B37B
+{
+	SelfName = "Value";
+	Owner = "$5BC65082";
+	ConnectedPins = {
+		"$3C31B0AF",
+	};
+}
+CParticleNodeTemplate	$104F0140
+{
+	InputPins = {
+		"$FD7FC7FC",
+		"$AD243382",
+	};
+	OutputPins = {
+		"$3C31B0AF",
+	};
+	WorkspacePosition = int2(-330, -44);
+	SubGraphName = "BuildTagTest";
+}
+CParticleNodePinIn	$FD7FC7FC
+{
+	SelfName = "CompareOp";
+	Type = int;
+	Visible = false;
+	Owner = "$104F0140";
+	BaseType = int;
+}
+CParticleNodePinIn	$AD243382
+{
+	SelfName = "BuildTags";
+	Type = int;
+	Visible = false;
+	Owner = "$104F0140";
+	BaseType = int;
+	ValueI = int4(2, 0, 0, 0);
+}
+CParticleNodePinOut	$3C31B0AF
+{
+	SelfName = "Value";
+	Type = bool;
+	Owner = "$104F0140";
+	BaseType = bool;
+	ConnectedPins = {
+		"$7932B37B",
+	};
+}
+CParticleNodeAnnotation	$7D4D60FD
+{
+	CustomName = {
+		"@eng:Is in PopcornFX editor ?",
+	};
+	Description = {
+		"@eng:$(Graph.Description)",
+	};
+	WorkspacePosition = int2(-550, -550);
+	SelfSize = int2(990, 374);
+}
+CParticleNodeScript	$083FDB70
+{
+	CustomName = {
+		"@eng:Orientation",
+	};
+	InputPins = {
+		"$C0A5F15E",
+		"$D46F4A1B",
+	};
+	OutputPins = {
+		"$2801BF1D",
+	};
+	WorkspacePosition = int2(-44, -66);
+	Expression = "Orientation = scene.orientation_fs(Forward, Side);";
+}
+CParticleNodePinIn	$C0A5F15E
+{
+	SelfName = "Forward";
+	Type = float3;
+	Owner = "$083FDB70";
+	BaseType = float3;
+	ConnectedPins = {
+		"$3D5D40FF",
+	};
+}
+CParticleNodePinIn	$D46F4A1B
+{
+	SelfName = "Side";
+	Type = float3;
+	Owner = "$083FDB70";
+	BaseType = float3;
+	ConnectedPins = {
+		"$960777C2",
+	};
+}
+CParticleNodePinOut	$2801BF1D
+{
+	SelfName = "Orientation";
+	Type = orientation;
+	Owner = "$083FDB70";
+	BaseType = orientation;
+	ConnectedPins = {
+		"$035FE8DD",
+	};
+}
+CParticleNodeTemplateExport	$2D27E15A
+{
+	Description = {
+		"@eng:Forward axis",
+	};
+	InputPins = {
+		"$33AA13BF",
+	};
+	OutputPins = {
+		"$3D5D40FF",
+	};
+	WorkspacePosition = int2(-418, -66);
+	ExportedName = "Forward";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$33AA13BF
+{
+	SelfName = "DefaultValue";
+	Owner = "$2D27E15A";
+	ConnectedPins = {
+		"$2DE13FC1",
+	};
+}
+CParticleNodePinOut	$3D5D40FF
+{
+	SelfName = "Value";
+	Owner = "$2D27E15A";
+	ConnectedPins = {
+		"$C0A5F15E",
+	};
+}
+CParticleNodeTemplateExport	$45764115
+{
+	InputPins = {
+		"$4822CC4D",
+	};
+	WorkspacePosition = int2(682, -66);
+	ExportedName = "Orientation";
+	ExportedType = orientation;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$4822CC4D
+{
+	SelfName = "Value";
+	Owner = "$45764115";
+	ConnectedPins = {
+		"$22A7903A",
+	};
+}
+CParticleNodeTemplateExport	$55C4AAE5
+{
+	Description = {
+		"@eng:Side axis",
+	};
+	InputPins = {
+		"$CD596F3D",
+	};
+	OutputPins = {
+		"$960777C2",
+	};
+	WorkspacePosition = int2(-418, 44);
+	ExportedName = "Side";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	Order = 1;
+	VisibleByDefault = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$CD596F3D
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$55C4AAE5";
+}
+CParticleNodePinOut	$960777C2
+{
+	SelfName = "Value";
+	Owner = "$55C4AAE5";
+	ConnectedPins = {
+		"$D46F4A1B",
+	};
+}
+CParticleNodeTemplate	$A34FC451
+{
+	InputPins = {
+		"$C86044C0",
+	};
+	OutputPins = {
+		"$2DE13FC1",
+	};
+	WorkspacePosition = int2(-814, -66);
+	SubGraphName = "scene.axisForward";
+}
+CParticleNodePinIn	$C86044C0
+{
+	SelfName = "Scale";
+	Type = float;
+	Owner = "$A34FC451";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$2DE13FC1
+{
+	SelfName = "AxisForward";
+	Type = float3;
+	Owner = "$A34FC451";
+	BaseType = float3;
+	ConnectedPins = {
+		"$33AA13BF",
+	};
+}
+CParticleNodeTemplate	$70F13E45
+{
+	InputPins = {
+		"$035FE8DD",
+		"$38DF25F6",
+	};
+	OutputPins = {
+		"$22A7903A",
+	};
+	WorkspacePosition = int2(330, -66);
+	SubGraphName = "orientation.multiply";
+}
+CParticleNodePinIn	$035FE8DD
+{
+	SelfName = "OrientationA";
+	Type = orientation;
+	Owner = "$70F13E45";
+	BaseType = orientation;
+	ConnectedPins = {
+		"$2801BF1D",
+	};
+}
+CParticleNodePinIn	$38DF25F6
+{
+	SelfName = "OrientationB";
+	Type = orientation;
+	Owner = "$70F13E45";
+	BaseType = orientation;
+	ConnectedPins = {
+		"$25862FCA",
+	};
+}
+CParticleNodePinOut	$22A7903A
+{
+	SelfName = "Orientation";
+	Type = orientation;
+	Owner = "$70F13E45";
+	BaseType = orientation;
+	ConnectedPins = {
+		"$4822CC4D",
+	};
+}
+CParticleNodeTemplateExport	$F7D54A8F
+{
+	InputPins = {
+		"$0D242294",
+	};
+	OutputPins = {
+		"$25862FCA",
+	};
+	WorkspacePosition = int2(-44, 110);
+	ExportedName = "AngleOffset";
+	ExportedType = orientation;
+	Type = Input;
+	Order = 10;
+	CategoryName = {
+		"@eng:Rotation",
+	};
+}
+CParticleNodePinIn	$0D242294
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$F7D54A8F";
+}
+CParticleNodePinOut	$25862FCA
+{
+	SelfName = "Value";
+	Owner = "$F7D54A8F";
+	ConnectedPins = {
+		"$38DF25F6",
 	};
 }

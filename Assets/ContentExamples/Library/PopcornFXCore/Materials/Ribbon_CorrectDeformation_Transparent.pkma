@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -16,11 +16,11 @@ CParticleRendererMaterial	$6B70D015
 		"$7FB4AB5F",
 		"$1098ED35",
 		"$EA331F29",
+		"$A8D7A865",
 		"$1DB717AE",
 		"$EAC726E3",
 		"$DCD8B8C4",
 		"$860D8229",
-		"$FCA910FF",
 		"$A70CBFC8",
 	};
 	NodeGraph = "$B959BBF0";
@@ -118,11 +118,6 @@ CParticleRendererFeatureDesc	$860D8229
 {
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
 	RendererFeatureName = "TextureRepeat";
-}
-CParticleRendererFeatureDesc	$FCA910FF
-{
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
-	RendererFeatureName = "Atlas";
 }
 CParticleRendererFeatureDesc	$A70CBFC8
 {
@@ -230,4 +225,9 @@ CParticleNodePinIn	$32C74DF4
 	ConnectedPins = {
 		"$2B4EB242",
 	};
+}
+CParticleRendererFeatureDesc	$A8D7A865
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Atlas";
 }

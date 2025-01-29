@@ -16,7 +16,7 @@ namespace O3DEPopcornFXExamples
         , protected O3DEPopcornFXExamplesRequestBus::Handler
     {
     public:
-        AZ_COMPONENT(O3DEPopcornFXExamplesSystemComponent, "{f02103b6-ddfd-461c-8e37-4f1404192874}");
+        AZ_COMPONENT_DECL(O3DEPopcornFXExamplesSystemComponent);
 
         static void Reflect(AZ::ReflectContext* context);
 

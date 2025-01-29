@@ -1,5 +1,8 @@
 {
     "project_name": "O3DEPopcornFXExamples",
+    "version": "2.21.0",
+    "engine_version": "2.3.0",
+    "project_id": "{75205601-6533-42C2-9250-FAD1EED33145}",
     "origin": "Persistant Studios - popcornfx.com",
     "origin_uri": "https://github.com/PopcornFX/O3DEPopcornFXExamples.git",
     "license": "PopcornFX Community",
@@ -20,7 +23,31 @@
         "Gems/PopcornFX"
     ],
     "restricted": "O3DEPopcornFXExamples",
-    "project_id": "{7b0414a7-5b28-49f8-a9f6-ccf1e9c6b294}",
-    "engine_version": "2.2.1",
-    "version": ""
+    "gem_names": [
+        "O3DEPopcornFXExamples",
+        "Atom",
+        "AudioSystem",
+        "CameraFramework",
+        "DebugDraw",
+        "DiffuseProbeGrid",
+        "EditorPythonBindings",
+        "EMotionFX",
+        "GameState",
+        "ImGui",
+        "LandscapeCanvas",
+        "LyShine",
+        "MiniAudio",
+        "PhysX",
+        "PrimitiveAssets",
+        "PrefabBuilder",
+        "SaveData",
+        "ScriptCanvasPhysics",
+        "ScriptEvents",
+        "StartingPointInput",
+        "TextureAtlas",
+        "WhiteBox",
+        "RemoteTools",
+        "DemoRoom",
+        "PopcornFX"
+    ]
 }

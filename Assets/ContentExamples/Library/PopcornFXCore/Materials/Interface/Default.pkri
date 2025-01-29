@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Default features";
@@ -143,7 +143,7 @@ CParticleNodeTemplateExport	$F02495CD
 	UseSlider = true;
 	MinValueF4 = float4(-1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 	MaxValueF4 = float4(1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-	PinRules = Rule1_AND_Rule2;
+	PinRules = Rule2;
 	RuleResult = Hidden;
 	DependentProperty = "General.BillboardingMode";
 	RuleFunction = Greater;
@@ -629,10 +629,8 @@ CParticleNodeTemplateExport	$9AA9404E
 		"@eng:Transparent",
 	};
 	PinRules = Rule1;
-	BaseVisibility = Hidden;
-	RuleResult = Visible;
+	RuleResult = Hidden;
 	DependentProperty = "Transparent.SortMode";
-	RuleValue = "1";
 }
 CParticleNodePinIn	$9AA9404F
 {
@@ -2030,7 +2028,6 @@ CRHIRenderingFeature	$5DB3D227
 		"Type",
 		"MaskThreshold",
 		"DitheringMode",
-		"DitheringOffset",
 	};
 }
 CRHIRenderingFeature	$18A9F8AD
@@ -4335,7 +4332,6 @@ CParticleNodeTemplateExport	$CE2F5487
 	ExportedName = "Opaque.DitheringOffset";
 	ExportedType = float2;
 	Type = Input;
-	InputType = Property;
 	CategoryName = {
 		"@eng:Opaque",
 	};
@@ -4343,7 +4339,6 @@ CParticleNodeTemplateExport	$CE2F5487
 	HasMax = true;
 	UseSlider = true;
 	MaxValueF4 = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-	PinRules = Rule1;
 	BaseVisibility = Hidden;
 	RuleResult = Visible;
 	DependentProperty = "Opaque.Type";

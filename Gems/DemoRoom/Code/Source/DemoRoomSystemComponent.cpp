@@ -10,6 +10,7 @@
 #include <AzCore/Serialization/EditContextConstants.inl>
 #include <Atom/RPI.Public/FeatureProcessorFactory.h>
 #include <CryCommon/ISystem.h>
+#include <Atom/RHI/Factory.h>
 
 #include "TextRendering/Render3DTextRenderFeature.h"
 
@@ -50,8 +51,10 @@ namespace DemoRoom
     {
     }
 
-    void DemoRoomSystemComponent::GetDependentServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& dependent)
+    void DemoRoomSystemComponent::GetDependentServices(AZ::ComponentDescriptor::DependencyArrayType& dependent)
     {
+        dependent.push_back(AZ::RHI::Factory::GetComponentService());
+        dependent.push_back(AZ_CRC("RPISystem", 0xf2add773));
     }
 
     DemoRoomSystemComponent::DemoRoomSystemComponent()

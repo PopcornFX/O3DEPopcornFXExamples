@@ -45,6 +45,7 @@ namespace DemoRoom
     void DemoRoomEditorSystemComponent::GetDependentServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& dependent)
     {
         BaseSystemComponent::GetDependentServices(dependent);
+        DemoRoomSystemComponent::GetDependentServices(dependent);
     }
 
     void DemoRoomEditorSystemComponent::Activate()

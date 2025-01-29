@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -13,6 +13,7 @@ CParticleRendererMaterial	$6B70D015
 		"$35A36C4E",
 		"$7FB4AB5F",
 		"$1098ED35",
+		"$FD9AADA3",
 		"$1DB717AE",
 		"$D2F84E07",
 		"$DCD8B8C4",
@@ -217,4 +218,9 @@ CParticleRendererFeatureDesc	$008C17A8
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
 	RendererFeatureName = "ComputeVelocity";
 	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$FD9AADA3
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Atlas";
 }

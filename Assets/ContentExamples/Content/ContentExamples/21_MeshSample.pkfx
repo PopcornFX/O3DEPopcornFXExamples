@@ -1,4 +1,4 @@
-Version = 2.20.0.21900;
+Version = 2.21.0.22822;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -1423,6 +1423,11 @@ CParticleNodeTemplate	$FD306962
 {
 	InputPins = {
 		"$75F65085",
+		"$BC8E585C",
+		"$BF6C8362",
+		"$102FB181",
+		"$20E97DA1",
+		"$0ED6FEE5",
 		"$2D18B35A",
 		"$40621EB8",
 		"$C45AF658",
@@ -1678,4 +1683,44 @@ CParticleNodePinIn	$DC046A57
 	Owner = "$A4528282";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$BC8E585C
+{
+	SelfName = "Transparent.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$FD306962";
+	BaseType = int;
+}
+CParticleNodePinIn	$BF6C8362
+{
+	SelfName = "Transparent.SortMode";
+	Type = int;
+	Visible = false;
+	Owner = "$FD306962";
+	BaseType = int;
+}
+CParticleNodePinIn	$102FB181
+{
+	SelfName = "Transparent.GlobalSortOverride";
+	Type = int;
+	Visible = false;
+	Owner = "$FD306962";
+	BaseType = int;
+}
+CParticleNodePinIn	$20E97DA1
+{
+	SelfName = "Transparent.CameraSortOffset";
+	Type = float;
+	Visible = false;
+	Owner = "$FD306962";
+	BaseType = float;
+}
+CParticleNodePinIn	$0ED6FEE5
+{
+	SelfName = "SortKey";
+	Type = float;
+	Visible = false;
+	Owner = "$FD306962";
+	BaseType = float;
 }

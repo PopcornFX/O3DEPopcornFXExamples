@@ -10,7 +10,6 @@
 #include <AzToolsFramework/Entity/EditorEntityInfoBus.h>
 #include <AzToolsFramework/Entity/EditorEntityHelpers.h>
 #include <AzToolsFramework/ToolsComponents/EditorNonUniformScaleComponent.h>
-#include <AzToolsFramework/Commands/EntityStateCommand.h>
 
 #include <AzFramework/API/ApplicationAPI.h>
 
@@ -722,10 +721,6 @@ namespace DemoRoom
                 AZ_Error("DemoRoom", false, "Failed to find entity \"DemoRoom\"");
                 return;
             }
-            // Prepare undo command last so it captures the final state of the entity.
-            EntityCreateCommand* command = aznew EntityCreateCommand(static_cast<AZ::u64>(demoRoomEntity->GetId()));
-            command->Capture(demoRoomEntity);
-            command->SetParent(undo.GetUndoBatch());
         }
 
         AzToolsFramework::ToolsApplicationEvents::Bus::Handler::BusConnect();

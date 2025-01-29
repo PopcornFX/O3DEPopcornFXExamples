@@ -4,40 +4,34 @@
 //----------------------------------------------------------------------------
 
 #include <AzCore/Serialization/SerializeContext.h>
-#include <AzCore/Serialization/EditContext.h>
-#include <AzCore/Serialization/EditContextConstants.inl>
 
 #include "O3DEPopcornFXExamplesSystemComponent.h"
 
+#include <O3DEPopcornFXExamples/O3DEPopcornFXExamplesTypeIds.h>
+
 namespace O3DEPopcornFXExamples
 {
+    AZ_COMPONENT_IMPL(O3DEPopcornFXExamplesSystemComponent, "O3DEPopcornFXExamplesSystemComponent",
+        O3DEPopcornFXExamplesSystemComponentTypeId);
+
     void O3DEPopcornFXExamplesSystemComponent::Reflect(AZ::ReflectContext* context)
     {
-        if (AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context))
+        if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<O3DEPopcornFXExamplesSystemComponent, AZ::Component>()
+            serializeContext->Class<O3DEPopcornFXExamplesSystemComponent, AZ::Component>()
                 ->Version(0)
                 ;
-
-            if (AZ::EditContext* ec = serialize->GetEditContext())
-            {
-                ec->Class<O3DEPopcornFXExamplesSystemComponent>("O3DEPopcornFXExamples", "[Description of functionality provided by this System Component]")
-                    ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
-                        ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC("System"))
-                        ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
-                    ;
-            }
         }
     }
 
     void O3DEPopcornFXExamplesSystemComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
     {
-        provided.push_back(AZ_CRC("O3DEPopcornFXExamplesService"));
+        provided.push_back(AZ_CRC_CE("O3DEPopcornFXExamplesService"));
     }
 
     void O3DEPopcornFXExamplesSystemComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
     {
-        incompatible.push_back(AZ_CRC("O3DEPopcornFXExamplesService"));
+        incompatible.push_back(AZ_CRC_CE("O3DEPopcornFXExamplesService"));
     }
 
     void O3DEPopcornFXExamplesSystemComponent::GetRequiredServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& required)
@@ -47,7 +41,7 @@ namespace O3DEPopcornFXExamples
     void O3DEPopcornFXExamplesSystemComponent::GetDependentServices([[maybe_unused]] AZ::ComponentDescriptor::DependencyArrayType& dependent)
     {
     }
-    
+
     O3DEPopcornFXExamplesSystemComponent::O3DEPopcornFXExamplesSystemComponent()
     {
         if (O3DEPopcornFXExamplesInterface::Get() == nullptr)

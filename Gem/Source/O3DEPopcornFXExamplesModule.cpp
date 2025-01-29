@@ -9,14 +9,16 @@
 #include "O3DEPopcornFXExamplesSystemComponent.h"
 #include "DrawPopcornFXVersionTextComponent.h"
 
+#include <O3DEPopcornFXExamples/O3DEPopcornFXExamplesTypeIds.h>
+
 namespace O3DEPopcornFXExamples
 {
     class O3DEPopcornFXExamplesModule
         : public AZ::Module
     {
     public:
-        AZ_RTTI(O3DEPopcornFXExamplesModule, "{17025b09-f45e-42f2-890f-2663d0663fb8}", AZ::Module);
-        AZ_CLASS_ALLOCATOR(O3DEPopcornFXExamplesModule, AZ::SystemAllocator, 0);
+        AZ_RTTI(O3DEPopcornFXExamplesModule, O3DEPopcornFXExamplesModuleTypeId, AZ::Module);
+        AZ_CLASS_ALLOCATOR(O3DEPopcornFXExamplesModule, AZ::SystemAllocator);
 
         O3DEPopcornFXExamplesModule()
             : AZ::Module()
@@ -40,4 +42,8 @@ namespace O3DEPopcornFXExamples
     };
 }// namespace O3DEPopcornFXExamples
 
+#if defined(O3DE_GEM_NAME)
+AZ_DECLARE_MODULE_CLASS(AZ_JOIN(Gem_, O3DE_GEM_NAME), O3DEPopcornFXExamples::O3DEPopcornFXExamplesModule)
+#else
 AZ_DECLARE_MODULE_CLASS(Gem_O3DEPopcornFXExamples, O3DEPopcornFXExamples::O3DEPopcornFXExamplesModule)
+#endif
