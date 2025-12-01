@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -66,6 +66,13 @@ CEditorAssetEffect	$4ADE8DE2
 {
 	StartCameraPosition = float3(3.0000000e+00, 2.5000000e+00, 3.0000000e+00);
 	StartCameraOrientation = float3(5.2359885e-01, -7.8539824e-01, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D
@@ -26999,6 +27006,7 @@ CParticleNodeTemplate	$BED4F0DE
 	InputPins = {
 		"$28263D18",
 		"$13B26025",
+		"$40374E19",
 	};
 	OutputPins = {
 		"$B7F9E01F",
@@ -27175,7 +27183,6 @@ CParticleNodeTemplate	$6A585521
 		"$9A4D2D7A",
 	};
 	OutputPins = {
-		"$231243B2",
 		"$D0C58E01",
 		"$19ADD72C",
 		"$D730DD28",
@@ -27203,14 +27210,6 @@ CParticleNodePinIn	$9A4D2D7A
 	ConnectedPins = {
 		"$7BE80827",
 	};
-}
-CParticleNodePinOut	$231243B2
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$6A585521";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$D0C58E01
 {
@@ -27605,7 +27604,6 @@ CParticleNodeTemplate	$B1ECAE1C
 		"$67FAEF4B",
 	};
 	OutputPins = {
-		"$CA70582F",
 		"$817DAA08",
 		"$1A0C054B",
 		"$C138DDA4",
@@ -27633,14 +27631,6 @@ CParticleNodePinIn	$67FAEF4B
 	ConnectedPins = {
 		"$20B13915",
 	};
-}
-CParticleNodePinOut	$CA70582F
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$B1ECAE1C";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$817DAA08
 {
@@ -27914,7 +27904,6 @@ CParticleNodeTemplate	$76C7809E
 		"$AC81EFCC",
 	};
 	OutputPins = {
-		"$767C55D5",
 		"$71737BD1",
 		"$95256DD7",
 		"$891109E7",
@@ -27942,14 +27931,6 @@ CParticleNodePinIn	$AC81EFCC
 	ConnectedPins = {
 		"$819FF476",
 	};
-}
-CParticleNodePinOut	$767C55D5
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$76C7809E";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$71737BD1
 {
@@ -29176,12 +29157,15 @@ CParticleNodeTemplate	$F8FD2CF2
 		"$1A9F5EE0",
 		"$3FBAF202",
 		"$FD0E3E38",
+		"$3A14AAD4",
+		"$CEBE9C77",
+		"$CEB378E6",
+		"$964618A8",
 		"$767334DB",
 		"$770DFCC6",
 		"$4438EF99",
 	};
 	OutputPins = {
-		"$A87EFDC1",
 		"$D46A55A9",
 	};
 	WorkspacePosition = int2(-726, -374);
@@ -29264,14 +29248,6 @@ CParticleNodePinIn	$767334DB
 	Owner = "$F8FD2CF2";
 	BaseType = bool;
 }
-CParticleNodePinOut	$A87EFDC1
-{
-	SelfName = "Sampler";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$F8FD2CF2";
-	BaseType = dataImage;
-}
 CParticleNodePinOut	$D46A55A9
 {
 	SelfName = "Value";
@@ -29289,12 +29265,15 @@ CParticleNodeTemplate	$FDD10DE9
 		"$6BCA824F",
 		"$0E9E2355",
 		"$582EB9EF",
+		"$A800B4AE",
+		"$AEBC3E4D",
+		"$82878A4A",
+		"$B2C57258",
 		"$2782061E",
 		"$D522E525",
 		"$B51454E0",
 	};
 	OutputPins = {
-		"$42DC9157",
 		"$4A791952",
 	};
 	WorkspacePosition = int2(-726, -22);
@@ -29376,14 +29355,6 @@ CParticleNodePinIn	$2782061E
 	Visible = false;
 	Owner = "$FDD10DE9";
 	BaseType = bool;
-}
-CParticleNodePinOut	$42DC9157
-{
-	SelfName = "Sampler";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$FDD10DE9";
-	BaseType = dataImage;
 }
 CParticleNodePinOut	$4A791952
 {
@@ -30419,12 +30390,15 @@ CParticleNodeTemplate	$76A00EBF
 		"$F667FF7D",
 		"$5291692F",
 		"$503C9856",
+		"$B174FE20",
+		"$D01FADBC",
+		"$806C56B7",
+		"$35717AEB",
 		"$F619A120",
 		"$832E6806",
 		"$617D2271",
 	};
 	OutputPins = {
-		"$86350B80",
 		"$740CCEE3",
 	};
 	WorkspacePosition = int2(-726, 154);
@@ -30506,14 +30480,6 @@ CParticleNodePinIn	$F619A120
 	Visible = false;
 	Owner = "$76A00EBF";
 	BaseType = bool;
-}
-CParticleNodePinOut	$86350B80
-{
-	SelfName = "Sampler";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$76A00EBF";
-	BaseType = dataImage;
 }
 CParticleNodePinOut	$740CCEE3
 {
@@ -30604,12 +30570,15 @@ CParticleNodeTemplate	$4C21D09D
 		"$258EC2FD",
 		"$8D109B9C",
 		"$DE29D1EA",
+		"$147E7C68",
+		"$34D6C7D6",
+		"$836B2C3C",
+		"$EC7917FD",
 		"$2F6B9B89",
 		"$F55EC668",
 		"$F317ED18",
 	};
 	OutputPins = {
-		"$69A7ABAA",
 		"$0B78CFB7",
 	};
 	WorkspacePosition = int2(-726, -198);
@@ -30691,14 +30660,6 @@ CParticleNodePinIn	$2F6B9B89
 	Visible = false;
 	Owner = "$4C21D09D";
 	BaseType = bool;
-}
-CParticleNodePinOut	$69A7ABAA
-{
-	SelfName = "Sampler";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$4C21D09D";
-	BaseType = dataImage;
 }
 CParticleNodePinOut	$0B78CFB7
 {
@@ -33881,4 +33842,149 @@ CParticleNodePinIn	$7B4CD259
 	Owner = "$B76AD561";
 	BaseType = float3;
 	ValueF = float4(5.0000000e-01, 5.0000000e-01, 5.0000000e-01, 0.0000000e+00);
+}
+CParticleNodePinIn	$3A14AAD4
+{
+	SelfName = "Translate";
+	Type = float2;
+	Visible = false;
+	Owner = "$F8FD2CF2";
+	BaseType = float2;
+}
+CParticleNodePinIn	$CEBE9C77
+{
+	SelfName = "Rotate";
+	Type = float;
+	Visible = false;
+	Owner = "$F8FD2CF2";
+	BaseType = float;
+}
+CParticleNodePinIn	$CEB378E6
+{
+	SelfName = "Scale";
+	Type = float2;
+	Visible = false;
+	Owner = "$F8FD2CF2";
+	BaseType = float2;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$964618A8
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$F8FD2CF2";
+	BaseType = float2;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$A800B4AE
+{
+	SelfName = "Translate";
+	Type = float2;
+	Visible = false;
+	Owner = "$FDD10DE9";
+	BaseType = float2;
+}
+CParticleNodePinIn	$AEBC3E4D
+{
+	SelfName = "Rotate";
+	Type = float;
+	Visible = false;
+	Owner = "$FDD10DE9";
+	BaseType = float;
+}
+CParticleNodePinIn	$82878A4A
+{
+	SelfName = "Scale";
+	Type = float2;
+	Visible = false;
+	Owner = "$FDD10DE9";
+	BaseType = float2;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$B2C57258
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$FDD10DE9";
+	BaseType = float2;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$B174FE20
+{
+	SelfName = "Translate";
+	Type = float2;
+	Visible = false;
+	Owner = "$76A00EBF";
+	BaseType = float2;
+}
+CParticleNodePinIn	$D01FADBC
+{
+	SelfName = "Rotate";
+	Type = float;
+	Visible = false;
+	Owner = "$76A00EBF";
+	BaseType = float;
+}
+CParticleNodePinIn	$806C56B7
+{
+	SelfName = "Scale";
+	Type = float2;
+	Visible = false;
+	Owner = "$76A00EBF";
+	BaseType = float2;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$35717AEB
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$76A00EBF";
+	BaseType = float2;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$147E7C68
+{
+	SelfName = "Translate";
+	Type = float2;
+	Visible = false;
+	Owner = "$4C21D09D";
+	BaseType = float2;
+}
+CParticleNodePinIn	$34D6C7D6
+{
+	SelfName = "Rotate";
+	Type = float;
+	Visible = false;
+	Owner = "$4C21D09D";
+	BaseType = float;
+}
+CParticleNodePinIn	$836B2C3C
+{
+	SelfName = "Scale";
+	Type = float2;
+	Visible = false;
+	Owner = "$4C21D09D";
+	BaseType = float2;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$EC7917FD
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$4C21D09D";
+	BaseType = float2;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$40374E19
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$BED4F0DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

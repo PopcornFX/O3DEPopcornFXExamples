@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -70,6 +70,13 @@ CEditorAssetEffect	$F20FBF14
 {
 	StartCameraPosition = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
 	StartCameraOrientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$B660FBF9
@@ -20175,7 +20182,6 @@ CParticleNodeTemplate	$3FB45D67
 		"$F42781BB",
 	};
 	OutputPins = {
-		"$FBEC3284",
 		"$890CDF67",
 	};
 	WorkspacePosition = int2(550, 264);
@@ -22056,14 +22062,6 @@ CParticleNodePinOut	$2D14F426
 	ConnectedPins = {
 		"$AE0C1166",
 	};
-}
-CParticleNodePinOut	$FBEC3284
-{
-	SelfName = "Sampler";
-	Type = dataVectorField;
-	Visible = false;
-	Owner = "$3FB45D67";
-	BaseType = dataVectorField;
 }
 CParticleNodePinIn	$B1F27048
 {
@@ -27480,6 +27478,7 @@ CParticleNodeTemplate	$B6BAA7F9
 {
 	ExecStage = Evolve;
 	InputPins = {
+		"$53CD5C26",
 		"$D246F9B0",
 	};
 	OutputPins = {
@@ -46207,6 +46206,7 @@ CParticleNodeTemplate	$8B6B7EC1
 	InputPins = {
 		"$BE972DAE",
 		"$93291202",
+		"$390C36AB",
 	};
 	OutputPins = {
 		"$4051272F",
@@ -46248,6 +46248,7 @@ CParticleNodeTemplate	$E11F1454
 	InputPins = {
 		"$A60A62DF",
 		"$8CD4C4C7",
+		"$FB39428B",
 	};
 	OutputPins = {
 		"$E9233A63",
@@ -50154,4 +50155,31 @@ CParticleNodePinOut	$2C35F52F
 	Visible = false;
 	Owner = "$9A71BB57";
 	BaseType = bool;
+}
+CParticleNodePinIn	$390C36AB
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$8B6B7EC1";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$FB39428B
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$E11F1454";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$53CD5C26
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$B6BAA7F9";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

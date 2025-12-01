@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Default features";
@@ -1111,7 +1111,9 @@ CParticleNodeTemplateExport	$F580CA43
 	CategoryName = {
 		"@eng:Atlas",
 	};
+	HasMin = true;
 	DefaultValueI4 = int4(1, 1, 1, 1);
+	MinValueI4 = int4(1, 1, 0, 0);
 	PinRules = Rule1;
 	RuleResult = Hidden;
 	DependentProperty = "Atlas.Source";
@@ -1698,7 +1700,7 @@ CParticleNodePinIn	$88F8E01F
 }
 CParticleRendererFeature	$E7A7BE8E
 {
-	FeatureName = "TextureRepeat";
+	FeatureName = "TextureClamp";
 	Feature = "$FC4DE60A";
 }
 CParticleNodeTemplateExport	$FC4DE60A
@@ -1709,7 +1711,7 @@ CParticleNodeTemplateExport	$FC4DE60A
 	OutputPins = {
 		"$EA4B8892",
 	};
-	ExportedName = "TextureRepeat";
+	ExportedName = "TextureClamp";
 	ExportedType = bool;
 	Type = Input;
 	InputType = Property;
@@ -2551,7 +2553,7 @@ CRHIRenderingFeature	$029B091C
 }
 CRHIRenderingFeature	$F551587E
 {
-	FeatureName = "TextureRepeat";
+	FeatureName = "TextureClamp";
 }
 CRHIRenderingFeature	$200E5E3D
 {
@@ -5707,6 +5709,7 @@ CParticleRendererFeature	$AC4D205A
 	FeatureName = "ComputeVelocity";
 	Feature = "$671FAA75";
 	Properties = {
+		"$A2B15E3D",
 		"$0AA1B94C",
 	};
 }
@@ -5748,7 +5751,7 @@ CParticleNodeTemplateExport	$0AA1B94C
 	OutputPins = {
 		"$B7700A6D",
 	};
-	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedName = "ComputeVelocity.MoveVector";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
 	Type = Input;
@@ -5767,4 +5770,35 @@ CParticleNodePinOut	$B7700A6D
 {
 	SelfName = "Value";
 	Owner = "$0AA1B94C";
+}
+CParticleNodeTemplateExport	$A2B15E3D
+{
+	Description = {
+		"@dan:Previous frame position of the particle.",
+	};
+	InputPins = {
+		"$8B05C673",
+	};
+	OutputPins = {
+		"$1E9A3E0D",
+	};
+	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	TransformSpace = World;
+	TransformMode = Position;
+	CategoryName = {
+		"@eng:ComputeVelocity",
+	};
+}
+CParticleNodePinIn	$8B05C673
+{
+	SelfName = "DefaultValue";
+	Owner = "$A2B15E3D";
+}
+CParticleNodePinOut	$1E9A3E0D
+{
+	SelfName = "Value";
+	Owner = "$A2B15E3D";
 }

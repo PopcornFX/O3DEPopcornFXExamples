@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -45,6 +45,13 @@ CEditorAssetEffect	$4ADE8DE2
 {
 	StartCameraPosition = float3(3.0000000e+00, 2.5000000e+00, 3.0000000e+00);
 	StartCameraOrientation = float3(5.2359885e-01, -7.8539824e-01, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D

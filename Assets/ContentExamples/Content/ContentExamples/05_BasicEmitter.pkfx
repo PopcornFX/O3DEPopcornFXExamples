@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -27,6 +27,13 @@ CEditorAssetEffect	$41EED1A4
 	LoopDelay = 1.0000000e+01;
 	StartCameraPosition = float3(0.0000000e+00, 2.6500001e+00, 5.5000000e+00);
 	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeSetLife	$D734A95F
@@ -418,6 +425,7 @@ CParticleNodeTemplate	$4ADE8DE2
 	InputPins = {
 		"$D279714D",
 		"$D03359D5",
+		"$5E50C49D",
 	};
 	OutputPins = {
 		"$5F621394",
@@ -448,6 +456,7 @@ CParticleNodeTemplate	$41E5AFE7
 	InputPins = {
 		"$BEDF8936",
 		"$C01E62BC",
+		"$4AD1A5CF",
 	};
 	OutputPins = {
 		"$2909A531",
@@ -914,7 +923,6 @@ CParticleNodeTemplate	$33C09A0A
 		"$291666A1",
 	};
 	OutputPins = {
-		"$A25E0FD9",
 		"$315F1E81",
 		"$692D1A2B",
 		"$C16BFE8E",
@@ -997,14 +1005,6 @@ CParticleNodePinIn	$A7BB8F45
 	Owner = "$33C09A0A";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$A25E0FD9
-{
-	SelfName = "Sampler";
-	Type = dataGeometry;
-	Visible = false;
-	Owner = "$33C09A0A";
-	BaseType = dataGeometry;
 }
 CParticleNodePinOut	$315F1E81
 {
@@ -1710,4 +1710,22 @@ CParticleNodePinOut	$F06EC1AF
 	Visible = false;
 	Owner = "$1838F4AE";
 	BaseType = bool;
+}
+CParticleNodePinIn	$5E50C49D
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$4ADE8DE2";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$4AD1A5CF
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$41E5AFE7";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

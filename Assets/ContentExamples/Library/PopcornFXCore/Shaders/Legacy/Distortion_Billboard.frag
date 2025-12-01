@@ -68,7 +68,7 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 		if (blendingType == 1)
 		{
 			// Linear
-			vec4    textureColor2 = SAMPLE(Distortion_DistortionMap, fInput.fragUV1);
+			vec4	textureColor2 = SAMPLE(Distortion_DistortionMap, fInput.fragUV1);
 			textureColor = mix(textureColor, textureColor2, fract(fInput.fragAtlas_TextureID));
 		}
 	}

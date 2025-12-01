@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -13,6 +13,13 @@ CEditorAssetEffect	$41EED1A4
 	LoopDelay = 1.0000000e+01;
 	StartCameraPosition = float3(0.0000000e+00, 1.0500000e+00, 6.5000000e+00);
 	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -838,6 +845,7 @@ CParticleNodeTemplate	$6B6CDC81
 	InputPins = {
 		"$A208616B",
 		"$052051A8",
+		"$9B3F8BA8",
 	};
 	OutputPins = {
 		"$CF4822CD",
@@ -876,6 +884,7 @@ CParticleNodeTemplate	$1855078B
 	InputPins = {
 		"$F239E864",
 		"$4047CD9F",
+		"$35553844",
 	};
 	OutputPins = {
 		"$AC2CC63D",
@@ -1718,4 +1727,22 @@ CParticleNodePinOut	$06D93DA7
 	Visible = false;
 	Owner = "$03050759";
 	BaseType = bool;
+}
+CParticleNodePinIn	$9B3F8BA8
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$6B6CDC81";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$35553844
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$1855078B";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

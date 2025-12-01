@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -138,39 +138,13 @@ CParticleNodeGraph	$E43066A5
 {
 	CustomName = "Adapter";
 	Nodes = {
-		"$D12EF51E",
 		"$C88B0B46",
 		"$23B61487",
+		"$95D630B5",
+		"$2EAE40A3",
+		"$A1AF680F",
 	};
 	WorkspaceZoom = -4;
-}
-CParticleNodeTemplate	$D12EF51E
-{
-	InputPins = {
-		"$B9810B46",
-	};
-	OutputPins = {
-		"$2AB3821E",
-	};
-	WorkspacePosition = int2(-176, 0);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
-	SubGraphName = "PreviousFrameValue";
-}
-CParticleNodePinIn	$B9810B46
-{
-	SelfName = "Value";
-	Owner = "$D12EF51E";
-	ConnectedPins = {
-		"$B74E1DB8",
-	};
-}
-CParticleNodePinOut	$2AB3821E
-{
-	SelfName = "Value";
-	Owner = "$D12EF51E";
-	ConnectedPins = {
-		"$EEDDB046",
-	};
 }
 CParticleNodeTemplateExport	$C88B0B46
 {
@@ -206,7 +180,8 @@ CParticleNodePinOut	$B74E1DB8
 	SelfName = "Value";
 	Owner = "$C88B0B46";
 	ConnectedPins = {
-		"$B9810B46",
+		"$B26C0EEA",
+		"$C3720DB5",
 	};
 }
 CParticleNodeTemplateExport	$23B61487
@@ -215,7 +190,7 @@ CParticleNodeTemplateExport	$23B61487
 		"$EEDDB046",
 	};
 	WorkspacePosition = int2(330, 0);
-	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedName = "ComputeVelocity.MoveVector";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
 	Type = Output;
@@ -227,6 +202,83 @@ CParticleNodePinIn	$EEDDB046
 	SelfName = "Value";
 	Owner = "$23B61487";
 	ConnectedPins = {
-		"$2AB3821E",
+		"$6FC9E748",
+	};
+}
+CParticleNodePartialDerivative	$95D630B5
+{
+	InputPins = {
+		"$B26C0EEA",
+	};
+	OutputPins = {
+		"$6FC9E748",
+	};
+	WorkspacePosition = int2(-176, 0);
+}
+CParticleNodePinIn	$B26C0EEA
+{
+	SelfName = "Function";
+	Owner = "$95D630B5";
+	ConnectedPins = {
+		"$B74E1DB8",
+	};
+}
+CParticleNodePinOut	$6FC9E748
+{
+	SelfName = "Derivative";
+	Owner = "$95D630B5";
+	ConnectedPins = {
+		"$EEDDB046",
+	};
+}
+CParticleNodeTemplate	$2EAE40A3
+{
+	InputPins = {
+		"$C3720DB5",
+	};
+	OutputPins = {
+		"$2E41C1D1",
+	};
+	WorkspacePosition = int2(-176, 154);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "PreviousFrameValue";
+}
+CParticleNodePinIn	$C3720DB5
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$2EAE40A3";
+	ConnectedPins = {
+		"$B74E1DB8",
+	};
+}
+CParticleNodePinOut	$2E41C1D1
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$2EAE40A3";
+	ConnectedPins = {
+		"$58A0D271",
+	};
+}
+CParticleNodeTemplateExport	$A1AF680F
+{
+	InputPins = {
+		"$58A0D271",
+	};
+	WorkspacePosition = int2(330, 154);
+	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+	TransformSpace = World;
+	TransformMode = Position;
+}
+CParticleNodePinIn	$58A0D271
+{
+	SelfName = "Value";
+	Owner = "$A1AF680F";
+	ConnectedPins = {
+		"$2E41C1D1",
 	};
 }

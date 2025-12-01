@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -32,6 +32,13 @@ CEditorAssetEffect	$96CD1EC2
 	LoopDelay = 2.0000000e+00;
 	StartCameraPosition = float3(3.0000000e+00, 2.5000000e+00, 3.0000000e+00);
 	StartCameraOrientation = float3(5.2359885e-01, -7.8539824e-01, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeSetLife	$D734A95F
@@ -316,6 +323,7 @@ CParticleNodeTemplate	$5F621394
 	InputPins = {
 		"$41E5AFE7",
 		"$D279714D",
+		"$27DBC284",
 	};
 	OutputPins = {
 		"$BEDF8936",
@@ -929,6 +937,7 @@ CParticleNodeTemplate	$974B106D
 	InputPins = {
 		"$D365D9B5",
 		"$61399563",
+		"$D5F7BA02",
 	};
 	OutputPins = {
 		"$995BC5AD",
@@ -1448,6 +1457,7 @@ CParticleNodeRendererBillboard	$62683ED1
 		"$70E2995F",
 		"$39330E54",
 		"$8D1B6696",
+		"$BF707310",
 	};
 	WorkspacePosition = int2(352, 110);
 	Material = "Library/PopcornFXCore/Materials/Billboard_Transparent.pkma";
@@ -1825,4 +1835,30 @@ CParticleNodePinIn	$6BFE1FCA
 	Visible = false;
 	Owner = "$03C3CD47";
 	BaseType = bool;
+}
+CParticleNodePinIn	$27DBC284
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$5F621394";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$D5F7BA02
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$974B106D";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$BF707310
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$62683ED1";
+	BaseType = float2;
 }

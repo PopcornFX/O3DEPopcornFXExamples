@@ -2,12 +2,32 @@
 
 #include "PKSurface.h"
 
+#if	defined(HAS_TransformUVs) || defined(HAS_UVDistortions) || defined(HAS_AlphaMasks)
+
 vec2	TransformUV(vec2 UV, vec2 scale, mat2 rotation, vec2 offset)
 {
 	return mul(rotation, UV * scale) + offset;
 }
 
 #if	defined(HAS_TransformUVs)
+
+vec2	WrapUV(vec2 UV)
+{
+#	if defined(HAS_TextureClamp)
+	return SATURATE(UV);
+#	else
+	return fract(UV);
+#	endif
+}
+
+vec2	WrapUVStable(vec2 UV)
+{
+#	if defined(HAS_TextureClamp)
+	return SATURATE(UV);
+#	else
+	return UV;
+#	endif
+}
 
 #	if defined(HAS_Atlas)
 void	ApplyTransformUVs(INOUT(SFragGeometry) fGeom, vec4 rect0, vec4 rect1, float angle, vec2 scale, vec2 offset FS_ARGS)
@@ -24,7 +44,8 @@ void	ApplyTransformUVs(INOUT(SFragGeometry) fGeom, float angle, vec2 scale, vec2
 	fGeom.m_AlphaUV1 = fGeom.m_UV1;
 	fGeom.m_UV1 = ((fGeom.m_UV1 - rect1.zw) / rect1.xy); // normalize (if atlas)
 	fGeom.m_UV1 = TransformUV(fGeom.m_UV1 - rotationCenter, scale, UVRotation, offset + scale*rotationCenter); // scale then rotate then translate UV
-	fGeom.m_UV1 = fract(fGeom.m_UV1) * rect1.xy + rect1.zw; // undo normalize
+	fGeom.m_UV1 = WrapUV(fGeom.m_UV1) * rect1.xy + rect1.zw; // undo normalize
+
 #	else
 	vec4	rect0 = vec4(1.0f, 1.0f, 0.0f, 0.0f);
 #	endif
@@ -33,10 +54,10 @@ void	ApplyTransformUVs(INOUT(SFragGeometry) fGeom, float angle, vec2 scale, vec2
 	fGeom.m_UV0 = ((fGeom.m_UV0 - rect0.zw) / rect0.xy); // normalize (if atlas)
 	fGeom.m_UV0 = TransformUV(fGeom.m_UV0 - rotationCenter, scale, UVRotation, offset + scale*rotationCenter); // scale then rotate then translate UV
 	// Compute clean derivatives
-	vec2	_uv = fGeom.m_UV0 * rect0.xy + rect0.zw;
+	vec2	_uv = WrapUVStable(fGeom.m_UV0) * rect0.xy + rect0.zw;
 	fGeom.m_dUVdx = dFdx(_uv);
 	fGeom.m_dUVdy = dFdy(_uv);
-	fGeom.m_UV0 = fract(fGeom.m_UV0) * rect0.xy + rect0.zw; // undo normalize
+	fGeom.m_UV0 = WrapUV(fGeom.m_UV0) * rect0.xy + rect0.zw; // undo normalize
 
 	fGeom.m_UseAlphaUVs = GET_CONSTANT(Material, TransformUVs_RGBOnly) != 0;
 
@@ -45,7 +66,9 @@ void	ApplyTransformUVs(INOUT(SFragGeometry) fGeom, float angle, vec2 scale, vec2
 	fGeom.m_TangentRotation = mat2(cosMR, sinMR, -sinMR, cosMR);
 }
 
-#endif
+#endif // defined (HAS_TransformUV)
+
+#endif // defined(HAS_TransformUV) || defined(HAS_UVDistortions) || defined(HAS_AlphaMasks)
 
 #if	defined(HAS_BasicTransformUVs)
 
@@ -83,4 +106,4 @@ void	ApplyBasicTransformUVs(INOUT(SFragGeometry) fGeom FS_ARGS)
 #	endif // !defined(HAS_GeometryRibbon)
 }
 
-#endif
+#endif // defined (HAS_BasicTransformUV)

@@ -185,7 +185,7 @@ void	FragmentInputToFragGeometry(IN(SFragmentInput) fInput, OUT(SFragGeometry) f
 	fGeom.m_Tangent = VEC4_ZERO;
 #	endif
 #	if defined(FINPUT_fragAtlas_TextureID) // Particle has atlas
-	fGeom.m_BlendMix = fract(fInput.fragAtlas_TextureID);
+	fGeom.m_BlendMix = fract(fInput.fragAtlas_TextureID + 1e-6f);
 #	else
 	fGeom.m_BlendMix = 0.0f;
 #	endif

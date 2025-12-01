@@ -1,0 +1,351 @@
+Version = 2.23.0.25073;
+CAssetGeneratorVectorField_Graph	$D857A040
+{
+	Description = {
+		"@eng:Empty vectorField graph",
+	};
+	Dimensions = uint3(256, 256, 1);
+	GeneratorGraph = "$A55AEFC6";
+	Effect = "$D857A09F";
+}
+CParticleEffect	$D857A09F
+{
+	LayerGraph = "$4B933A29";
+	Templates = {
+		"$A55AEFC6",
+	};
+	AttributeFlatList = "$35A36C4E";
+}
+CParticleAttributeList	$35A36C4E
+{
+	AttributeAndSamplerList = {
+		"$A84CAB09",
+		"$16969E52",
+		"$008F85F3",
+		"$8DF46C17",
+		"$8FEE0FE5",
+		"$E1203E84",
+		"$6D99593C",
+	};
+}
+CParticleNodeGraph	$4B933A29
+{
+	CustomName = "Root";
+	Nodes = {
+		"$2BBAE5F0",
+		"$7A74D809",
+		"$C6154727",
+	};
+	Timeline = "$9154DFA0";
+	WorkspaceZoom = 0;
+	GraphType = Event;
+}
+CParticleTimeline	$9154DFA0
+{
+	Tracks = {
+		"$EAC726E3",
+	};
+}
+CParticleTimelineTrack	$EAC726E3
+{
+	CustomName = "Root";
+	EventStream = "$EC84D339";
+}
+CResourceDescriptor_EventStream	$EC84D339
+{
+	Times = {
+		0.0000000e+00,
+	};
+}
+CParticleNodeEventStart	$2BBAE5F0
+{
+	OutputPins = {
+		"$14978373",
+	};
+	WorkspacePosition = int2(-88, -44);
+	EventName = "Root";
+}
+CParticleNodePinOut	$14978373
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$2BBAE5F0";
+	BaseType = event;
+	ConnectedPins = {
+		"$907529E0",
+	};
+}
+CParticleNodeGraph	$37C09855
+{
+	ClassType = Event;
+	Nodes = {
+		"$0923C3E9",
+		"$6341C728",
+	};
+	WorkspacePosition = int2(-138, -23);
+	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
+}
+CParticleNodeLayer	$7A74D809
+{
+	InputPins = {
+		"$D5EB0BEB",
+	};
+	WorkspacePosition = int2(704, -44);
+	NodeGraph = "$37C09855";
+}
+CParticleNodePinIn	$D5EB0BEB
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$7A74D809";
+	BaseType = event;
+	ConnectedPins = {
+		"$71DD4721",
+	};
+}
+CParticleNodeTemplate	$C6154727
+{
+	InputPins = {
+		"$907529E0",
+	};
+	OutputPins = {
+		"$71DD4721",
+	};
+	WorkspacePosition = int2(308, -44);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "VectorFieldGeneratorSpawn";
+}
+CParticleNodePinIn	$907529E0
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$C6154727";
+	BaseType = event;
+	ConnectedPins = {
+		"$14978373",
+	};
+}
+CParticleNodePinOut	$71DD4721
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$C6154727";
+	BaseType = event;
+	ConnectedPins = {
+		"$D5EB0BEB",
+	};
+}
+CParticleAttributeDeclaration	$A84CAB09
+{
+	ExportedName = "FrameID";
+	ExportedType = int;
+	HasMin = true;
+}
+CParticleAttributeDeclaration	$16969E52
+{
+	ExportedName = "FrameRatio";
+	HasMin = true;
+}
+CParticleNodeGraph	$A55AEFC6
+{
+	CustomName = "Generator";
+	Nodes = {
+		"$8BF8261C",
+		"$1E6CE6C4",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplate	$8BF8261C
+{
+	OutputPins = {
+		"$E733D78F",
+		"$17FAD532",
+		"$EAE92E20",
+		"$A55AFFA0",
+		"$8CD35D40",
+		"$CE6BE758",
+		"$694DF1C0",
+		"$8DA0E283",
+		"$6F72F200",
+		"$56B4B2EA",
+		"$81C18954",
+		"$E77B4787",
+		"$7479F5E5",
+	};
+	WorkspacePosition = int2(-704, -44);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "VectorFieldGeneratorArgs";
+}
+CParticleNodePinOut	$E733D78F
+{
+	SelfName = "UVW";
+	Type = float3;
+	Owner = "$8BF8261C";
+	BaseType = float3;
+}
+CParticleNodePinOut	$17FAD532
+{
+	SelfName = "Coords";
+	Type = int3;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = int3;
+}
+CParticleNodePinOut	$A55AFFA0
+{
+	SelfName = "Resolution";
+	Type = int3;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = int3;
+}
+CParticleNodePinOut	$8CD35D40
+{
+	SelfName = "CellSize";
+	Type = float3;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = float3;
+}
+CParticleNodePinOut	$8DA0E283
+{
+	SelfName = "FrameID";
+	Type = int;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = int;
+}
+CParticleNodePinOut	$694DF1C0
+{
+	SelfName = "FrameRatio";
+	Type = float;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = float;
+}
+CParticleNodePinOut	$CE6BE758
+{
+	SelfName = "AnimationCursor";
+	Type = float;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = float;
+}
+CParticleNodeTemplate	$1E6CE6C4
+{
+	InputPins = {
+		"$F8E877EA",
+		"$E25FEDA1",
+	};
+	WorkspacePosition = int2(506, -44);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "VectorFieldGeneratorOutputs";
+}
+CParticleNodePinIn	$F8E877EA
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$1E6CE6C4";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeTemplate	$0923C3E9
+{
+	WorkspacePosition = int2(330, -44);
+	SubGraphName = "Generator";
+}
+CParticleNodeSetLife	$6341C728
+{
+	InputPins = {
+		"$4528B861",
+	};
+	WorkspacePosition = int2(330, -220);
+	InfiniteLifeCheck = false;
+}
+CParticleNodePinIn	$4528B861
+{
+	SelfName = "Life";
+	Type = float;
+	Owner = "$6341C728";
+	BaseType = float;
+	ValueF = float4(inf, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleAttributeDeclaration	$008F85F3
+{
+	ExportedName = "DispatchDimensions";
+	ExportedType = int3;
+	HasMin = true;
+}
+CParticleAttributeDeclaration	$8DF46C17
+{
+	ExportedName = "TileSubCoord";
+	ExportedType = int3;
+	HasMin = true;
+}
+CParticleNodePinOut	$EAE92E20
+{
+	SelfName = "VoxelID";
+	Type = int;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = int;
+}
+CParticleNodePinOut	$6F72F200
+{
+	SelfName = "FrameCount";
+	Type = int;
+	Visible = false;
+	Owner = "$8BF8261C";
+	BaseType = int;
+}
+CParticleNodePinOut	$56B4B2EA
+{
+	SelfName = "BoundsMin";
+	Visible = false;
+	Owner = "$8BF8261C";
+}
+CParticleNodePinOut	$81C18954
+{
+	SelfName = "BoundsMax";
+	Visible = false;
+	Owner = "$8BF8261C";
+}
+CParticleNodePinOut	$E77B4787
+{
+	SelfName = "BBoxCenter";
+	Visible = false;
+	Owner = "$8BF8261C";
+}
+CParticleNodePinOut	$7479F5E5
+{
+	SelfName = "BBoxSize";
+	Visible = false;
+	Owner = "$8BF8261C";
+}
+CParticleNodePinIn	$E25FEDA1
+{
+	SelfName = "Vector";
+	Type = float3;
+	Owner = "$1E6CE6C4";
+	BaseType = float3;
+}
+CParticleAttributeDeclaration	$8FEE0FE5
+{
+	ExportedName = "GridDimensions";
+	ExportedType = int4;
+	HasMin = true;
+}
+CParticleAttributeDeclaration	$E1203E84
+{
+	ExportedName = "BoundsMin";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+}
+CParticleAttributeDeclaration	$6D99593C
+{
+	ExportedName = "BoundsMax";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+}

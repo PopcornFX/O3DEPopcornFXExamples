@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Legacy default features";
@@ -1177,7 +1177,9 @@ CParticleNodeTemplateExport	$F580CA43
 	CategoryName = {
 		"@eng:Atlas",
 	};
+	HasMin = true;
 	DefaultValueI4 = int4(1, 1, 1, 1);
+	MinValueI4 = int4(1, 1, 0, 0);
 	PinRules = Rule1;
 	RuleResult = Hidden;
 	DependentProperty = "Atlas.Source";
@@ -5163,6 +5165,7 @@ CParticleRendererFeature	$14F128A7
 	FeatureName = "ComputeVelocity";
 	Feature = "$FD60B428";
 	Properties = {
+		"$2626D67A",
 		"$1FD66E5F",
 	};
 }
@@ -5204,7 +5207,7 @@ CParticleNodeTemplateExport	$1FD66E5F
 	OutputPins = {
 		"$DE6E30A8",
 	};
-	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedName = "ComputeVelocity.MoveVector";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
 	Type = Input;
@@ -5358,4 +5361,35 @@ CParticleNodePinIn	$A0C8ADF0
 {
 	SelfName = "DefaultValue";
 	Owner = "$AE28F402";
+}
+CParticleNodeTemplateExport	$2626D67A
+{
+	Description = {
+		"@dan:Previous frame position of the particle.",
+	};
+	InputPins = {
+		"$9CA8C8B0",
+	};
+	OutputPins = {
+		"$9498D110",
+	};
+	ExportedName = "ComputeVelocity.PreviousPosition";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	TransformSpace = World;
+	TransformMode = Position;
+	CategoryName = {
+		"@eng:ComputeVelocity",
+	};
+}
+CParticleNodePinIn	$9CA8C8B0
+{
+	SelfName = "DefaultValue";
+	Owner = "$2626D67A";
+}
+CParticleNodePinOut	$9498D110
+{
+	SelfName = "Value";
+	Owner = "$2626D67A";
 }

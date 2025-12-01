@@ -1,0 +1,345 @@
+Version = 2.23.0.25073;
+CAssetGeneratorGeometry_Graph	$D857A040
+{
+	Description = {
+		"@eng:Empty texture graph",
+	};
+	VertexGraph = "$A55AEFC6";
+	Effect = "$D857A09F";
+}
+CParticleEffect	$D857A09F
+{
+	LayerGraph = "$4B933A29";
+	Templates = {
+		"$A55AEFC6",
+	};
+	AttributeFlatList = "$35A36C4E";
+}
+CParticleAttributeList	$35A36C4E
+{
+	AttributeAndSamplerList = {
+		"$4CD3AF4D",
+		"$EDAA1F9B",
+		"$4B35807C",
+	};
+}
+CParticleNodeGraph	$4B933A29
+{
+	CustomName = "Root";
+	Nodes = {
+		"$2BBAE5F0",
+		"$7A74D809",
+		"$C6154727",
+	};
+	Timeline = "$9154DFA0";
+	WorkspaceZoom = 0;
+	GraphType = Event;
+}
+CParticleTimeline	$9154DFA0
+{
+	Tracks = {
+		"$EAC726E3",
+	};
+}
+CParticleTimelineTrack	$EAC726E3
+{
+	CustomName = "Root";
+	EventStream = "$EC84D339";
+}
+CResourceDescriptor_EventStream	$EC84D339
+{
+	Times = {
+		0.0000000e+00,
+	};
+}
+CParticleNodeEventStart	$2BBAE5F0
+{
+	OutputPins = {
+		"$14978373",
+	};
+	WorkspacePosition = int2(-88, -44);
+	EventName = "Root";
+}
+CParticleNodePinOut	$14978373
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$2BBAE5F0";
+	BaseType = event;
+	ConnectedPins = {
+		"$907529E0",
+	};
+}
+CParticleNodeGraph	$37C09855
+{
+	ClassType = Event;
+	Nodes = {
+		"$0923C3E9",
+		"$6341C728",
+	};
+	WorkspacePosition = int2(-138, -23);
+	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
+}
+CParticleNodeLayer	$7A74D809
+{
+	InputPins = {
+		"$D5EB0BEB",
+	};
+	WorkspacePosition = int2(704, -44);
+	NodeGraph = "$37C09855";
+}
+CParticleNodePinIn	$D5EB0BEB
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$7A74D809";
+	BaseType = event;
+	ConnectedPins = {
+		"$71DD4721",
+	};
+}
+CParticleNodeTemplate	$C6154727
+{
+	InputPins = {
+		"$907529E0",
+	};
+	OutputPins = {
+		"$71DD4721",
+	};
+	WorkspacePosition = int2(308, -44);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "MeshGeneratorSpawn";
+}
+CParticleNodePinIn	$907529E0
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$C6154727";
+	BaseType = event;
+	ConnectedPins = {
+		"$14978373",
+	};
+}
+CParticleNodePinOut	$71DD4721
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$C6154727";
+	BaseType = event;
+	ConnectedPins = {
+		"$D5EB0BEB",
+	};
+}
+CParticleNodeGraph	$A55AEFC6
+{
+	CustomName = "Generator";
+	Nodes = {
+		"$446CE544",
+		"$21B8D679",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplate	$0923C3E9
+{
+	WorkspacePosition = int2(330, -44);
+	SubGraphName = "Generator";
+}
+CParticleNodeSetLife	$6341C728
+{
+	InputPins = {
+		"$4528B861",
+	};
+	WorkspacePosition = int2(330, -220);
+	InfiniteLifeCheck = false;
+}
+CParticleNodePinIn	$4528B861
+{
+	SelfName = "Life";
+	Type = float;
+	Owner = "$6341C728";
+	BaseType = float;
+	ValueF = float4(inf, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodeTemplate	$446CE544
+{
+	OutputPins = {
+		"$47A6E16C",
+		"$AE3D1CCB",
+		"$AE180AAE",
+		"$9F29F75E",
+		"$338D3DCB",
+		"$FDC5B5FF",
+		"$1CEAE9DA",
+	};
+	WorkspacePosition = int2(-726, -88);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "MeshGeneratorArgs";
+}
+CParticleNodePinOut	$47A6E16C
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$446CE544";
+	BaseType = float3;
+}
+CParticleNodePinOut	$AE3D1CCB
+{
+	SelfName = "Normal";
+	Type = float3;
+	Owner = "$446CE544";
+	BaseType = float3;
+}
+CParticleNodePinOut	$AE180AAE
+{
+	SelfName = "Tangent";
+	Type = float4;
+	Owner = "$446CE544";
+	BaseType = float4;
+}
+CParticleNodePinOut	$FDC5B5FF
+{
+	SelfName = "LODLevel";
+	Type = int;
+	Visible = false;
+	Owner = "$446CE544";
+	BaseType = int;
+}
+CParticleNodePinOut	$1CEAE9DA
+{
+	SelfName = "SubmeshID";
+	Type = int;
+	Visible = false;
+	Owner = "$446CE544";
+	BaseType = int;
+}
+CParticleNodeTemplate	$21B8D679
+{
+	InputPins = {
+		"$20192861",
+		"$4EC93F15",
+		"$10FD30A5",
+		"$AC08894F",
+		"$BD9B4271",
+		"$FBA62E30",
+		"$F443C23A",
+		"$9E77A92A",
+		"$64CA3B77",
+		"$9E55A933",
+	};
+	WorkspacePosition = int2(550, -88);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/AssetGenerators.pkfx";
+	SubGraphName = "MeshGeneratorOutputs";
+}
+CParticleNodePinIn	$20192861
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$21B8D679";
+	BaseType = float3;
+}
+CParticleNodePinIn	$4EC93F15
+{
+	SelfName = "PositionEnabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21B8D679";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$10FD30A5
+{
+	SelfName = "Normal";
+	Type = float3;
+	Owner = "$21B8D679";
+	BaseType = float3;
+}
+CParticleNodePinIn	$AC08894F
+{
+	SelfName = "NormalEnabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21B8D679";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$BD9B4271
+{
+	SelfName = "Tangent";
+	Type = float4;
+	Owner = "$21B8D679";
+	BaseType = float4;
+}
+CParticleNodePinIn	$FBA62E30
+{
+	SelfName = "TangentEnabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21B8D679";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleAttributeDeclaration	$4CD3AF4D
+{
+	ExportedName = "VertexCount";
+	ExportedType = int;
+	HasMin = true;
+}
+CParticleAttributeDeclaration	$EDAA1F9B
+{
+	ExportedName = "LodLevel";
+	ExportedType = int;
+	HasMin = true;
+}
+CParticleAttributeDeclaration	$4B35807C
+{
+	ExportedName = "SubmeshID";
+	ExportedType = int;
+	HasMin = true;
+}
+CParticleNodePinOut	$9F29F75E
+{
+	SelfName = "UV";
+	Type = float2;
+	Owner = "$446CE544";
+	BaseType = float2;
+}
+CParticleNodePinOut	$338D3DCB
+{
+	SelfName = "Color";
+	Type = float4;
+	Owner = "$446CE544";
+	BaseType = float4;
+}
+CParticleNodePinIn	$F443C23A
+{
+	SelfName = "UV";
+	Type = float2;
+	Owner = "$21B8D679";
+	BaseType = float2;
+}
+CParticleNodePinIn	$9E77A92A
+{
+	SelfName = "UVEnabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21B8D679";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$64CA3B77
+{
+	SelfName = "Color";
+	Type = float4;
+	Owner = "$21B8D679";
+	BaseType = float4;
+}
+CParticleNodePinIn	$9E55A933
+{
+	SelfName = "ColorEnabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21B8D679";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}

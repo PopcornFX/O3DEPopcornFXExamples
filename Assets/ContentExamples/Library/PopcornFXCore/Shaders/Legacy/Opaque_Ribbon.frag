@@ -13,21 +13,32 @@ vec2 transformUV(vec2 UV, vec2 scale, mat2 rotation, vec2 offset)
 }
 #endif
 
-vec2    applyCorrectDeformation(IN(SFragmentInput) fInput, in vec2 fragUVin)
+#if	defined(HAS_Atlas)
+void    applyCorrectDeformation(IN(SFragmentInput) fInput, OUT(vec2) fragUV0out, OUT(vec2) fragUV1out FS_ARGS)
+#else
+void    applyCorrectDeformation(IN(SFragmentInput) fInput, OUT(vec2) fragUV0out FS_ARGS)
+#endif
 {
-#if     defined(HAS_CorrectDeformation)
-	vec2 fragUVout;
+#if		defined(HAS_CorrectDeformation)
+	const vec2	fragUVin = fInput.fragUV0;
+	vec2		fragUVout;
 	if (fragUVin.x + fragUVin.y < 1)
 		fragUVout = fragUVin.xy / fInput.fragUVFactors.xy;
 	else
 		fragUVout = 1.0 - ((1.0 - fragUVin.xy) / fInput.fragUVFactors.zw);
-#if     defined(HAS_TextureUVs)
+#if		defined(HAS_TextureUVs)
 	if (GET_CONSTANT(Material, TextureUVs_RotateTexture) != 0)
 		fragUVout = fragUVout.yx;
 #endif
-	return fragUVout * fInput.fragUVScaleAndOffset.xy + fInput.fragUVScaleAndOffset.zw;
+	fragUV0out = fragUVout * fInput.fragUVScaleAndOffset.xy + fInput.fragUVScaleAndOffset.zw;
+#if		defined(HAS_Atlas)
+	fragUV1out = fragUVout * fInput.fragUV1ScaleAndOffset.xy + fInput.fragUV1ScaleAndOffset.zw;
+#endif
 #else
-	return fragUVin;
+	fragUV0out = fInput.fragUV0;
+#if		defined(HAS_Atlas)
+	fragUV1out = fInput.fragUV1;
+#endif
 #endif
 }
 
@@ -46,13 +57,13 @@ void     FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS
 #endif
 
 #if     defined(HAS_Diffuse) || defined(HAS_Lit) || defined(HAS_LegacyLitOpaque) || defined(HAS_Emissive) // has texture sampling
-
-	vec2    fragUV0 = applyCorrectDeformation(fInput, fInput.fragUV0);
-
-#if		defined(HAS_Atlas)
+	vec2    fragUV0;
+#if			!defined(HAS_Atlas)
+	applyCorrectDeformation(fInput, fragUV0 FS_PARAMS);
+#else
+	vec2    fragUV1;
+	applyCorrectDeformation(fInput, fragUV0, fragUV1 FS_PARAMS);
 	int		blendingType = GET_CONSTANT(Material, Atlas_Blending);
-	vec2    fragUV1 = applyCorrectDeformation(fInput, fInput.fragUV1);
-
 	float	blendMix = 0.f;
 
 	if (blendingType == 2)
@@ -61,7 +72,7 @@ void     FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS
 		vec2	scale = GET_CONSTANT(Material, Atlas_DistortionStrength);
 		vec2	curVectors = ((SAMPLE(Atlas_MotionVectorsMap, fragUV0).rg * 2.0f) - 1.0f) * scale;
 		vec2	nextVectors = ((SAMPLE(Atlas_MotionVectorsMap, fragUV1).rg * 2.0f) - 1.0f) * scale;
-		float	cursor = fract(fInput.fragAtlas_TextureID);
+		float	cursor = fract(fInput.fragAtlas_TextureID + 1e-6f);
 
 		curVectors *= cursor;
 		nextVectors *= (1.0f - cursor);
@@ -73,7 +84,7 @@ void     FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS
 	else if (blendingType == 1)
 	{
 		// Linear
-		blendMix = fract(fInput.fragAtlas_TextureID);
+		blendMix = fract(fInput.fragAtlas_TextureID + 1e-6f);
 	}
 #endif // defined(HAS_Atlas)
 
@@ -304,7 +315,7 @@ void     FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS
 #endif
 
 	vec4    normalSpec;
-	normalSpec = vec4(PackNormalSpheremap(normal), roughness, metalness);
+	normalSpec = vec4(PackNormalSpheremap(normal FS_PARAMS), roughness, metalness);
 
     fOutput.Output0 = color;
     fOutput.Output1 = fInput.fragViewProjPosition.z / fInput.fragViewProjPosition.w;

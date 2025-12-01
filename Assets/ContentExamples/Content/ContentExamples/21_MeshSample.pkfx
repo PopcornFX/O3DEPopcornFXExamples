@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -39,6 +39,13 @@ CEditorAssetEffect	$4ADE8DE2
 {
 	StartCameraPosition = float3(0.0000000e+00, 1.3500000e+00, 6.0000000e+00);
 	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D
@@ -408,7 +415,6 @@ CParticleNodeTemplate	$C2504CCF
 		"$66ADAA63",
 	};
 	OutputPins = {
-		"$E0724316",
 		"$65B196A2",
 		"$C53BD122",
 		"$498187A9",
@@ -491,16 +497,6 @@ CParticleNodePinIn	$B85D67B3
 	Owner = "$C2504CCF";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$E0724316
-{
-	SelfName = "Sampler";
-	Type = dataGeometry;
-	Owner = "$C2504CCF";
-	BaseType = dataGeometry;
-	ConnectedPins = {
-		"$3D586F75",
-	};
 }
 CParticleNodePinOut	$65B196A2
 {
@@ -735,7 +731,6 @@ CParticleNodeTemplate	$F31FA66B
 		"$A8A34BD7",
 	};
 	OutputPins = {
-		"$15924EAC",
 		"$549A7A8A",
 		"$6DF6E029",
 		"$286B8471",
@@ -775,7 +770,7 @@ CParticleNodePinIn	$3D586F75
 	Owner = "$F31FA66B";
 	BaseType = dataGeometry;
 	ConnectedPins = {
-		"$E0724316",
+		"$102202E7",
 	};
 }
 CParticleNodePinIn	$A8A34BD7
@@ -820,14 +815,6 @@ CParticleNodePinIn	$9894D438
 	Owner = "$F31FA66B";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinOut	$15924EAC
-{
-	SelfName = "Sampler";
-	Type = dataGeometry;
-	Visible = false;
-	Owner = "$F31FA66B";
-	BaseType = dataGeometry;
 }
 CParticleNodePinOut	$549A7A8A
 {
@@ -1417,6 +1404,7 @@ CParticleNodePinOut	$102202E7
 	Owner = "$E3E64D10";
 	ConnectedPins = {
 		"$697C24AB",
+		"$3D586F75",
 	};
 }
 CParticleNodeTemplate	$FD306962

@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -64,6 +64,13 @@ CEditorAssetEffect	$96CD1EC2
 {
 	StartCameraPosition = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
 	StartCameraOrientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$15C7A33A
@@ -4667,7 +4674,6 @@ CParticleNodeTemplateExport	$6CD66C3E
 	};
 	WorkspacePosition = int2(-594, -176);
 	ExportedName = "ColorA";
-	ExportedType = float4;
 	ExportedTypeMask = 6144;
 	Semantic = Color;
 	Type = Input;
@@ -4702,7 +4708,6 @@ CParticleNodeTemplateExport	$5AF6490E
 	};
 	WorkspacePosition = int2(682, -176);
 	ExportedName = "Color";
-	ExportedType = float4;
 	ExportedTypeMask = 6144;
 	Semantic = Color;
 	Type = Output;
@@ -4832,7 +4837,6 @@ CParticleNodeTemplateExport	$E7BA871E
 	};
 	WorkspacePosition = int2(-594, -44);
 	ExportedName = "ColorB";
-	ExportedType = float4;
 	ExportedTypeMask = 6144;
 	Semantic = Color;
 	Type = Input;

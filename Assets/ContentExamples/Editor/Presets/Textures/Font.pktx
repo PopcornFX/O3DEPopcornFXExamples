@@ -1,0 +1,8 @@
+Version = 2.23.0.25073;
+CAssetGeneratorTexture_Font	$D857A09F
+{
+	Description = {
+		"@eng:A texture atlas generated from a font file and a list of characters",
+	};
+	Dimensions = uint3(256, 256, 1);
+}

@@ -80,7 +80,7 @@ void        ApplyFinalAlpha(IN(SFragmentInput)fInput, IN(SFragGeometry)fGeom, IN
 }
 
 #if defined(HAS_Dissolve)
-void         ApplyDissolve(IN(float)dissolveCursor, IN(SFragGeometry)fGeom, INOUT(SFragSurface) fSurf FS_PARAMS)
+void         ApplyDissolve(IN(float)dissolveCursor, IN(SFragGeometry)fGeom, INOUT(SFragSurface) fSurf FS_ARGS)
 {
     float dissolve = SAMPLE(Dissolve_DissolveMap, fGeom.m_RawUV0).r;
     dissolve = smoothstep(dissolve, dissolve + GET_CONSTANT(Material, Dissolve_DissolveSoftness) + SMOOTHSTEP_EPSILON, dissolveCursor * (1 + SMOOTHSTEP_EPSILON));

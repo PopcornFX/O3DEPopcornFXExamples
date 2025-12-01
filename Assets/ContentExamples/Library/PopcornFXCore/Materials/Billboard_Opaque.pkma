@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -97,11 +97,41 @@ CParticleNodeGraph	$09FB01D9
 {
 	CustomName = "Adapter";
 	Nodes = {
-		"$E77669E8",
-		"$C4E4E48D",
-		"$DAB8D703",
+		"$EFF6E1FF",
+		"$93B15EC6",
+		"$5784F61F",
+		"$72E3E03C",
+		"$7C6B8079",
+		"$5C171B80",
+		"$3E1C0268",
+		"$2A3528BA",
+		"$080367B2",
+		"$9B1D2EFF",
+		"$59E6202C",
+		"$24B1B760",
+		"$98761980",
+		"$0D747C19",
+		"$90A81725",
+		"$A25537DE",
+		"$20015DFF",
+		"$B143DEF5",
+		"$E1E3809D",
+		"$8C53EF06",
+		"$E3F49D81",
+		"$861072BC",
+		"$3BD2422F",
+		"$F9FFEC8D",
+		"$B9FCC694",
+		"$0B8A1E18",
+		"$ECB50860",
+		"$616C80EC",
+		"$9997FE09",
+		"$6FBB559A",
+		"$5A517B9D",
 	};
+	WorkspacePosition = int2(-134, -317);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodePinOut	$33311BAE
 {
@@ -118,22 +148,96 @@ CParticleRendererFeatureDesc	$1965E97D
 	RendererFeatureName = "ComputeVelocity";
 	Mandatory = true;
 }
-CParticleNodeTemplateExport	$E77669E8
+CParticleNodeTemplateExport	$EFF6E1FF
+{
+	InputPins = {
+		"$48A0F56E",
+	};
+	OutputPins = {
+		"$25781303",
+	};
+	WorkspacePosition = int2(-572, 396);
+	ExportedName = "General.BillboardingMode";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	Order = 1;
+	CategoryName = {
+		"@eng:General",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"ScreenAligned",
+		"ViewposAligned",
+		"AxisAligned",
+		"AxisAlignedSpheroid",
+		"AxisAlignedCapsule",
+		"PlaneAligned",
+	};
+}
+CParticleNodePinIn	$48A0F56E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$EFF6E1FF";
+}
+CParticleNodePinOut	$25781303
+{
+	SelfName = "Value";
+	Owner = "$EFF6E1FF";
+	ConnectedPins = {
+		"$DD9C72F1",
+	};
+}
+CParticleNodeTemplateExport	$93B15EC6
+{
+	InputPins = {
+		"$AD083A4C",
+	};
+	OutputPins = {
+		"$E7B40696",
+	};
+	WorkspacePosition = int2(-572, 506);
+	ExportedName = "General.EnableSize2D";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	Order = 3;
+	CategoryName = {
+		"@eng:General",
+	};
+}
+CParticleNodePinIn	$AD083A4C
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$93B15EC6";
+}
+CParticleNodePinOut	$E7B40696
+{
+	SelfName = "Value";
+	Owner = "$93B15EC6";
+	ConnectedPins = {
+		"$F6FCBA81",
+	};
+}
+CParticleNodeTemplateExport	$5784F61F
 {
 	Description = {
 		"@eng:Billboard center in world coordinates",
 	};
 	InputPins = {
-		"$5CBFAD42",
+		"$47B1F69F",
 	};
 	OutputPins = {
-		"$31142BCB",
+		"$3DFFD99E",
 	};
-	WorkspacePosition = int2(-572, -44);
+	WorkspacePosition = int2(-572, -88);
 	ExportedName = "General.Position";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
 	Type = Input;
+	Order = 2;
 	VisibleByDefault = true;
 	TransformSpace = World;
 	TransformMode = Position;
@@ -141,54 +245,865 @@ CParticleNodeTemplateExport	$E77669E8
 		"@eng:General",
 	};
 }
-CParticleNodePinIn	$5CBFAD42
+CParticleNodePinIn	$47B1F69F
 {
 	SelfName = "DefaultValue";
 	Visible = false;
-	Owner = "$E77669E8";
+	Owner = "$5784F61F";
 }
-CParticleNodePinOut	$31142BCB
+CParticleNodePinOut	$3DFFD99E
 {
 	SelfName = "Value";
-	Owner = "$E77669E8";
+	Owner = "$5784F61F";
 	ConnectedPins = {
-		"$4FEBCE12",
+		"$18FD29DB",
+		"$7B3821E0",
 	};
 }
-CParticleNodeTemplate	$C4E4E48D
+CParticleNodeTemplateExport	$72E3E03C
 {
+	Description = {
+		"@eng:Radius of the billboard in world units",
+	};
 	InputPins = {
-		"$4FEBCE12",
+		"$9C080A65",
 	};
 	OutputPins = {
-		"$D2D64555",
+		"$3143CD7A",
 	};
-	WorkspacePosition = int2(-88, -44);
+	WorkspacePosition = int2(-572, 616);
+	ExportedName = "General.Size";
+	ExportedType = float;
+	Type = Input;
+	Order = 3;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:General",
+	};
+	DefaultValueF4 = float4(5.0000001e-02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.EnableSize2D";
+	RuleFunction = NotEqual;
+}
+CParticleNodePinIn	$9C080A65
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$72E3E03C";
+}
+CParticleNodePinOut	$3143CD7A
+{
+	SelfName = "Value";
+	Owner = "$72E3E03C";
+	ConnectedPins = {
+		"$DD067D70",
+		"$D93844BB",
+	};
+}
+CParticleNodeTemplateExport	$7C6B8079
+{
+	Description = {
+		"@eng:2D side/up radius of the billboard in world units.\\nOnly available when <c>EnableSize2D</c> is enabled.",
+	};
+	InputPins = {
+		"$B6788366",
+	};
+	OutputPins = {
+		"$8C65DF66",
+	};
+	WorkspacePosition = int2(-572, 726);
+	ExportedName = "General.Size2";
+	ExportedType = float2;
+	Type = Input;
+	Order = 3;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:General",
+	};
+	DefaultValueF4 = float4(5.0000001e-02, 5.0000001e-02, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "General.EnableSize2D";
+	RuleFunction = NotEqual;
+}
+CParticleNodePinIn	$B6788366
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$7C6B8079";
+}
+CParticleNodePinOut	$8C65DF66
+{
+	SelfName = "Value";
+	Owner = "$7C6B8079";
+	ConnectedPins = {
+		"$ED43DFDF",
+		"$64952F38",
+	};
+}
+CParticleNodeTemplateExport	$5C171B80
+{
+	Description = {
+		"@eng:Billboard rotation angle in degrees",
+	};
+	InputPins = {
+		"$14128192",
+	};
+	OutputPins = {
+		"$10FD8997",
+	};
+	WorkspacePosition = int2(-572, 836);
+	ExportedName = "General.Rotation";
+	ExportedType = float;
+	Semantic = Angle;
+	Type = Input;
+	Order = 3;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:General",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MinValueF4 = float4(-1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	MaxValueF4 = float4(1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule2;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = Greater;
+	RuleValue = "1";
+	DependentProperty2 = "General.BillboardingMode";
+	RuleFunction2 = Lower;
+	RuleValue2 = "5";
+}
+CParticleNodePinIn	$14128192
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$5C171B80";
+}
+CParticleNodePinOut	$10FD8997
+{
+	SelfName = "Value";
+	Owner = "$5C171B80";
+	ConnectedPins = {
+		"$B912F892",
+		"$31CBB6E8",
+	};
+}
+CParticleNodePassThrough	$3E1C0268
+{
+	InputPins = {
+		"$ED43DFDF",
+	};
+	OutputPins = {
+		"$CDE90081",
+	};
+	WorkspacePosition = int2(-66, 594);
+}
+CParticleNodePinIn	$ED43DFDF
+{
+	SelfName = "Value";
+	Owner = "$3E1C0268";
+	ConnectedPins = {
+		"$8C65DF66",
+	};
+}
+CParticleNodePinOut	$CDE90081
+{
+	SelfName = "Value";
+	Owner = "$3E1C0268";
+	ConnectedPins = {
+		"$C093B469",
+	};
+}
+CParticleNodePassThrough	$2A3528BA
+{
+	InputPins = {
+		"$DD067D70",
+	};
+	OutputPins = {
+		"$56515757",
+	};
+	WorkspacePosition = int2(-66, 550);
+}
+CParticleNodePinIn	$DD067D70
+{
+	SelfName = "Value";
+	Owner = "$2A3528BA";
+	ConnectedPins = {
+		"$3143CD7A",
+	};
+}
+CParticleNodePinOut	$56515757
+{
+	SelfName = "Value";
+	Owner = "$2A3528BA";
+	ConnectedPins = {
+		"$D6D747B2",
+	};
+}
+CParticleNodePassThrough	$080367B2
+{
+	InputPins = {
+		"$B912F892",
+	};
+	OutputPins = {
+		"$D09C7A4F",
+	};
+	WorkspacePosition = int2(-44, 638);
+}
+CParticleNodePinIn	$B912F892
+{
+	SelfName = "Value";
+	Owner = "$080367B2";
+	ConnectedPins = {
+		"$10FD8997",
+	};
+}
+CParticleNodePinOut	$D09C7A4F
+{
+	SelfName = "Value";
+	Owner = "$080367B2";
+	ConnectedPins = {
+		"$1C527B2E",
+	};
+}
+CParticleNodePassThrough	$9B1D2EFF
+{
+	InputPins = {
+		"$EA1B4D5E",
+	};
+	OutputPins = {
+		"$021FA8A9",
+	};
+	WorkspacePosition = int2(-22, 682);
+}
+CParticleNodePinIn	$EA1B4D5E
+{
+	SelfName = "Value";
+	Owner = "$9B1D2EFF";
+	ConnectedPins = {
+		"$3B7A716D",
+	};
+}
+CParticleNodePinOut	$021FA8A9
+{
+	SelfName = "Value";
+	Owner = "$9B1D2EFF";
+	ConnectedPins = {
+		"$1EC85E4D",
+	};
+}
+CParticleNodePassThrough	$59E6202C
+{
+	InputPins = {
+		"$F6FCBA81",
+	};
+	OutputPins = {
+		"$C93662F4",
+	};
+	WorkspacePosition = int2(-44, 506);
+}
+CParticleNodePinIn	$F6FCBA81
+{
+	SelfName = "Value";
+	Owner = "$59E6202C";
+	ConnectedPins = {
+		"$E7B40696",
+	};
+}
+CParticleNodePinOut	$C93662F4
+{
+	SelfName = "Value";
+	Owner = "$59E6202C";
+	ConnectedPins = {
+		"$3E569119",
+	};
+}
+CParticleNodePassThrough	$24B1B760
+{
+	InputPins = {
+		"$EB35E7A5",
+	};
+	OutputPins = {
+		"$781A26F3",
+	};
+	WorkspacePosition = int2(0, 726);
+}
+CParticleNodePinIn	$EB35E7A5
+{
+	SelfName = "Value";
+	Owner = "$24B1B760";
+	ConnectedPins = {
+		"$5D35133D",
+	};
+}
+CParticleNodePinOut	$781A26F3
+{
+	SelfName = "Value";
+	Owner = "$24B1B760";
+	ConnectedPins = {
+		"$874DC0F5",
+	};
+}
+CParticleNodePassThrough	$98761980
+{
+	InputPins = {
+		"$DD9C72F1",
+	};
+	OutputPins = {
+		"$4AC82757",
+	};
+	WorkspacePosition = int2(-22, 462);
+}
+CParticleNodePinIn	$DD9C72F1
+{
+	SelfName = "Value";
+	Owner = "$98761980";
+	ConnectedPins = {
+		"$25781303",
+	};
+}
+CParticleNodePinOut	$4AC82757
+{
+	SelfName = "Value";
+	Owner = "$98761980";
+	ConnectedPins = {
+		"$48AF7D73",
+	};
+}
+CParticleNodePassThrough	$0D747C19
+{
+	InputPins = {
+		"$D93844BB",
+	};
+	OutputPins = {
+		"$71A01C5B",
+	};
+	WorkspacePosition = int2(-44, 858);
+}
+CParticleNodePinIn	$D93844BB
+{
+	SelfName = "Value";
+	Owner = "$0D747C19";
+	ConnectedPins = {
+		"$3143CD7A",
+	};
+}
+CParticleNodePinOut	$71A01C5B
+{
+	SelfName = "Value";
+	Owner = "$0D747C19";
+	ConnectedPins = {
+		"$A69D68B0",
+	};
+}
+CParticleNodePassThrough	$90A81725
+{
+	InputPins = {
+		"$18FD29DB",
+	};
+	OutputPins = {
+		"$3CF441F8",
+	};
+	WorkspacePosition = int2(0, 418);
+}
+CParticleNodePinIn	$18FD29DB
+{
+	SelfName = "Value";
+	Owner = "$90A81725";
+	ConnectedPins = {
+		"$3DFFD99E",
+	};
+}
+CParticleNodePinOut	$3CF441F8
+{
+	SelfName = "Value";
+	Owner = "$90A81725";
+	ConnectedPins = {
+		"$9815833E",
+	};
+}
+CParticleNodePassThrough	$A25537DE
+{
+	InputPins = {
+		"$64952F38",
+	};
+	OutputPins = {
+		"$35B39CC6",
+	};
+	WorkspacePosition = int2(-44, 968);
+}
+CParticleNodePinIn	$64952F38
+{
+	SelfName = "Value";
+	Owner = "$A25537DE";
+	ConnectedPins = {
+		"$8C65DF66",
+	};
+}
+CParticleNodePinOut	$35B39CC6
+{
+	SelfName = "Value";
+	Owner = "$A25537DE";
+	ConnectedPins = {
+		"$B8ED635B",
+	};
+}
+CParticleNodePassThrough	$20015DFF
+{
+	InputPins = {
+		"$31CBB6E8",
+	};
+	OutputPins = {
+		"$02FD678B",
+	};
+	WorkspacePosition = int2(-44, 1078);
+}
+CParticleNodePinIn	$31CBB6E8
+{
+	SelfName = "Value";
+	Owner = "$20015DFF";
+	ConnectedPins = {
+		"$10FD8997",
+	};
+}
+CParticleNodePinOut	$02FD678B
+{
+	SelfName = "Value";
+	Owner = "$20015DFF";
+	ConnectedPins = {
+		"$09E47126",
+	};
+}
+CParticleNodeTemplate	$B143DEF5
+{
+	InputPins = {
+		"$9815833E",
+		"$48AF7D73",
+		"$3E569119",
+		"$D6D747B2",
+		"$C093B469",
+		"$1C3041FC",
+		"$1C527B2E",
+		"$1EC85E4D",
+		"$874DC0F5",
+	};
+	OutputPins = {
+		"$1F9DC7DA",
+	};
+	WorkspacePosition = int2(154, 396);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
+	SubGraphName = "MaterialGraphBillboardPivot";
+}
+CParticleNodePinIn	$9815833E
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$B143DEF5";
+	BaseType = float3;
+	ConnectedPins = {
+		"$3CF441F8",
+	};
+}
+CParticleNodePinIn	$48AF7D73
+{
+	SelfName = "BillboardingMode";
+	Type = int;
+	Owner = "$B143DEF5";
+	BaseType = int;
+	ConnectedPins = {
+		"$4AC82757",
+	};
+}
+CParticleNodePinIn	$3E569119
+{
+	SelfName = "EnableSize2D";
+	Type = bool;
+	Owner = "$B143DEF5";
+	BaseType = bool;
+	ConnectedPins = {
+		"$C93662F4",
+	};
+}
+CParticleNodePinIn	$D6D747B2
+{
+	SelfName = "Size";
+	Type = float;
+	Owner = "$B143DEF5";
+	BaseType = float;
+	ConnectedPins = {
+		"$56515757",
+	};
+	ValueF = float4(5.0000001e-02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$C093B469
+{
+	SelfName = "Size2";
+	Type = float2;
+	Owner = "$B143DEF5";
+	BaseType = float2;
+	ConnectedPins = {
+		"$CDE90081",
+	};
+	ValueF = float4(5.0000001e-02, 5.0000001e-02, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$1C3041FC
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$B143DEF5";
+	BaseType = float2;
+}
+CParticleNodePinIn	$1C527B2E
+{
+	SelfName = "Rotation";
+	Type = float;
+	Owner = "$B143DEF5";
+	BaseType = float;
+	ConnectedPins = {
+		"$D09C7A4F",
+	};
+}
+CParticleNodePinIn	$1EC85E4D
+{
+	SelfName = "Axis";
+	Type = float3;
+	Owner = "$B143DEF5";
+	BaseType = float3;
+	ConnectedPins = {
+		"$021FA8A9",
+	};
+}
+CParticleNodePinIn	$874DC0F5
+{
+	SelfName = "NormalAxis";
+	Type = float3;
+	Owner = "$B143DEF5";
+	BaseType = float3;
+	ConnectedPins = {
+		"$781A26F3",
+	};
+}
+CParticleNodePinOut	$1F9DC7DA
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$B143DEF5";
+	BaseType = float3;
+	ConnectedPins = {
+		"$A37860C0",
+	};
+}
+CParticleNodeTemplateExport	$E1E3809D
+{
+	Description = {
+		"@eng:Principal axis of the billboard when <c>BillboardingMode</c> is set to <c>AxisAligned*</c>\\nSide axis of the billboard when <c>BillboardingMode</c> is set to <c>PlaneAligned</c>",
+	};
+	InputPins = {
+		"$40894A60",
+	};
+	OutputPins = {
+		"$3B7A716D",
+	};
+	WorkspacePosition = int2(-572, 1386);
+	ExportedName = "General.Axis";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	Order = 2;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:General",
+	};
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = Lower;
+	RuleValue = "2";
+}
+CParticleNodePinIn	$40894A60
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$E1E3809D";
+}
+CParticleNodePinOut	$3B7A716D
+{
+	SelfName = "Value";
+	Owner = "$E1E3809D";
+	ConnectedPins = {
+		"$EA1B4D5E",
+		"$9D85FE77",
+	};
+}
+CParticleNodePassThrough	$8C53EF06
+{
+	InputPins = {
+		"$7B3821E0",
+	};
+	OutputPins = {
+		"$5B0CC6B6",
+	};
+	WorkspacePosition = int2(-44, -66);
+}
+CParticleNodePinIn	$7B3821E0
+{
+	SelfName = "Value";
+	Owner = "$8C53EF06";
+	ConnectedPins = {
+		"$3DFFD99E",
+	};
+}
+CParticleNodePinOut	$5B0CC6B6
+{
+	SelfName = "Value";
+	Owner = "$8C53EF06";
+	ConnectedPins = {
+		"$41D929D0",
+		"$9D7A520E",
+	};
+}
+CParticleNodeTemplate	$E3F49D81
+{
+	InputPins = {
+		"$9D7A520E",
+	};
+	OutputPins = {
+		"$0A313CB4",
+	};
+	WorkspacePosition = int2(154, 88);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "PreviousFrameValue";
 }
-CParticleNodePinIn	$4FEBCE12
+CParticleNodePinIn	$9D7A520E
 {
 	SelfName = "Value";
-	Owner = "$C4E4E48D";
+	Type = float;
+	Owner = "$E3F49D81";
 	ConnectedPins = {
-		"$31142BCB",
+		"$5B0CC6B6",
 	};
 }
-CParticleNodePinOut	$D2D64555
+CParticleNodePinOut	$0A313CB4
 {
 	SelfName = "Value";
-	Owner = "$C4E4E48D";
+	Type = float;
+	Owner = "$E3F49D81";
 	ConnectedPins = {
-		"$B3E0C62C",
+		"$E3A766E0",
 	};
 }
-CParticleNodeTemplateExport	$DAB8D703
+CParticleNodePartialDerivative	$861072BC
 {
 	InputPins = {
-		"$B3E0C62C",
+		"$41D929D0",
 	};
-	WorkspacePosition = int2(396, -44);
+	OutputPins = {
+		"$D0BD36E7",
+	};
+	WorkspacePosition = int2(154, -88);
+}
+CParticleNodePinIn	$41D929D0
+{
+	SelfName = "Function";
+	Owner = "$861072BC";
+	ConnectedPins = {
+		"$5B0CC6B6",
+	};
+}
+CParticleNodePinOut	$D0BD36E7
+{
+	SelfName = "Derivative";
+	Owner = "$861072BC";
+	ConnectedPins = {
+		"$5801BFDD",
+	};
+}
+CParticleNodeTemplateExport	$3BD2422F
+{
+	Description = {
+		"@eng:Normal of the billboard when <c>BillboardingMode</c> is set to <c>PlaneAligned</c>",
+	};
+	InputPins = {
+		"$45AC9F94",
+	};
+	OutputPins = {
+		"$5D35133D",
+	};
+	WorkspacePosition = int2(-572, 1496);
+	ExportedName = "General.NormalAxis";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	Order = 2;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:General",
+	};
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = NotEqual;
+	RuleValue = "5";
+}
+CParticleNodePinIn	$45AC9F94
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$3BD2422F";
+}
+CParticleNodePinOut	$5D35133D
+{
+	SelfName = "Value";
+	Owner = "$3BD2422F";
+	ConnectedPins = {
+		"$EB35E7A5",
+		"$34BB416B",
+	};
+}
+CParticleNodeTemplateExport	$F9FFEC8D
+{
+	Description = {
+		"@eng:Radius of the billboard in world units",
+	};
+	InputPins = {
+		"$A69D68B0",
+	};
+	WorkspacePosition = int2(1012, 836);
+	ExportedName = "General.Size";
+	ExportedType = float;
+	Type = Output;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:General",
+	};
+	DefaultValueF4 = float4(5.0000001e-02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.EnableSize2D";
+	RuleFunction = NotEqual;
+}
+CParticleNodePinIn	$A69D68B0
+{
+	SelfName = "Value";
+	Owner = "$F9FFEC8D";
+	ConnectedPins = {
+		"$71A01C5B",
+	};
+}
+CParticleNodeTemplateExport	$B9FCC694
+{
+	Description = {
+		"@eng:Billboard center in world coordinates",
+	};
+	InputPins = {
+		"$A37860C0",
+	};
+	WorkspacePosition = int2(1012, 396);
+	ExportedName = "General.Position";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Position;
+	CategoryName = {
+		"@eng:General",
+	};
+}
+CParticleNodePinIn	$A37860C0
+{
+	SelfName = "Value";
+	Owner = "$B9FCC694";
+	ConnectedPins = {
+		"$1F9DC7DA",
+	};
+}
+CParticleNodeTemplateExport	$0B8A1E18
+{
+	Description = {
+		"@eng:2D side/up radius of the billboard in world units.\\nOnly available when <c>EnableSize2D</c> is enabled.",
+	};
+	InputPins = {
+		"$B8ED635B",
+	};
+	WorkspacePosition = int2(1012, 946);
+	ExportedName = "General.Size2";
+	ExportedType = float2;
+	Type = Output;
+	CategoryName = {
+		"@eng:General",
+	};
+	DefaultValueF4 = float4(5.0000001e-02, 5.0000001e-02, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "General.EnableSize2D";
+	RuleFunction = NotEqual;
+}
+CParticleNodePinIn	$B8ED635B
+{
+	SelfName = "Value";
+	Owner = "$0B8A1E18";
+	ConnectedPins = {
+		"$35B39CC6",
+	};
+}
+CParticleNodeTemplateExport	$ECB50860
+{
+	Description = {
+		"@eng:Billboard rotation angle in degrees",
+	};
+	InputPins = {
+		"$09E47126",
+	};
+	WorkspacePosition = int2(1012, 1056);
+	ExportedName = "General.Rotation";
+	ExportedType = float;
+	Semantic = Angle;
+	Type = Output;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:General",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MinValueF4 = float4(-1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	MaxValueF4 = float4(1.8000000e+02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule2;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = Greater;
+	RuleValue = "1";
+	DependentProperty2 = "General.BillboardingMode";
+	RuleFunction2 = Lower;
+	RuleValue2 = "5";
+}
+CParticleNodePinIn	$09E47126
+{
+	SelfName = "Value";
+	Owner = "$ECB50860";
+	ConnectedPins = {
+		"$02FD678B",
+	};
+}
+CParticleNodeTemplateExport	$616C80EC
+{
+	InputPins = {
+		"$E3A766E0",
+	};
+	WorkspacePosition = int2(1012, 88);
 	ExportedName = "ComputeVelocity.PreviousPosition";
 	ExportedType = float3;
 	Semantic = 3D_Coordinate;
@@ -196,11 +1111,98 @@ CParticleNodeTemplateExport	$DAB8D703
 	TransformSpace = World;
 	TransformMode = Position;
 }
-CParticleNodePinIn	$B3E0C62C
+CParticleNodePinIn	$E3A766E0
 {
 	SelfName = "Value";
-	Owner = "$DAB8D703";
+	Owner = "$616C80EC";
 	ConnectedPins = {
-		"$D2D64555",
+		"$0A313CB4",
+	};
+}
+CParticleNodeTemplateExport	$9997FE09
+{
+	InputPins = {
+		"$5801BFDD",
+	};
+	WorkspacePosition = int2(1012, -88);
+	ExportedName = "ComputeVelocity.MoveVector";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+	TransformSpace = World;
+	TransformMode = Position;
+}
+CParticleNodePinIn	$5801BFDD
+{
+	SelfName = "Value";
+	Owner = "$9997FE09";
+	ConnectedPins = {
+		"$D0BD36E7",
+	};
+}
+CParticleNodeTemplateExport	$6FBB559A
+{
+	Description = {
+		"@eng:Principal axis of the billboard when <c>BillboardingMode</c> is set to <c>AxisAligned*</c>\\nSide axis of the billboard when <c>BillboardingMode</c> is set to <c>PlaneAligned</c>",
+	};
+	InputPins = {
+		"$9D85FE77",
+	};
+	WorkspacePosition = int2(1012, 1386);
+	ExportedName = "General.Axis";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:General",
+	};
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = Lower;
+	RuleValue = "2";
+}
+CParticleNodePinIn	$9D85FE77
+{
+	SelfName = "Value";
+	Owner = "$6FBB559A";
+	ConnectedPins = {
+		"$3B7A716D",
+	};
+}
+CParticleNodeTemplateExport	$5A517B9D
+{
+	Description = {
+		"@eng:Normal of the billboard when <c>BillboardingMode</c> is set to <c>PlaneAligned</c>",
+	};
+	InputPins = {
+		"$34BB416B",
+	};
+	WorkspacePosition = int2(1012, 1496);
+	ExportedName = "General.NormalAxis";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Direction;
+	CategoryName = {
+		"@eng:General",
+	};
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "General.BillboardingMode";
+	RuleFunction = NotEqual;
+	RuleValue = "5";
+}
+CParticleNodePinIn	$34BB416B
+{
+	SelfName = "Value";
+	Owner = "$5A517B9D";
+	ConnectedPins = {
+		"$5D35133D",
 	};
 }

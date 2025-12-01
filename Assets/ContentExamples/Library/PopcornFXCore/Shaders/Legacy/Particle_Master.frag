@@ -163,7 +163,7 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 		vec2	scale = GET_CONSTANT(Material, Atlas_DistortionStrength);
 		vec2	curVectors = ((SAMPLE(Atlas_MotionVectorsMap, fragUV0).rg * 2.0f) - 1.0f) * scale;
 		vec2	nextVectors = ((SAMPLE(Atlas_MotionVectorsMap, fragUV1).rg * 2.0f) - 1.0f) * scale;
-		float	cursor = fract(fInput.fragAtlas_TextureID);
+		float	cursor = fract(fInput.fragAtlas_TextureID + 1e-6f);
 
 		curVectors *= cursor;
 		nextVectors *= (1.0f - cursor);
@@ -175,7 +175,7 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 	else if (blendingType == 1)
 	{
 		// Linear
-		blendMix = fract(fInput.fragAtlas_TextureID);
+		blendMix = fract(fInput.fragAtlas_TextureID + 1e-6f); // Fix float imprecision artifacts on ribbons
 	}
 #	endif // defined(HAS_Atlas)
 #endif // defined(FINPUT_fragUV0)

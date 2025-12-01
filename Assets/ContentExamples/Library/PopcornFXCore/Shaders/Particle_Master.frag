@@ -27,7 +27,7 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 
 #if defined(HAS_AlphaMasks) || defined(HAS_UVDistortions)
 	SMaskDistortion fMaskDist;
-	InitializeMaskDistortion(fMaskDist);
+	InitializeMaskDistortion(fMaskDist FS_PARAMS);
 #endif
 
 #if defined(HAS_CorrectDeformation)
@@ -40,7 +40,7 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 
 
 #if defined(HAS_UVDistortions)
-	ApplyUVDistortion(fGeom, fInput.fragUVDistortions_Distortion1AnimationCursor, fInput.fragUVDistortions_Distortion2AnimationCursor, fMaskDist);
+	ApplyUVDistortion(fGeom, fInput.fragUVDistortions_Distortion1AnimationCursor, fInput.fragUVDistortions_Distortion2AnimationCursor, fMaskDist FS_PARAMS);
 #endif
 
 #if defined(HAS_AlphaMasks)

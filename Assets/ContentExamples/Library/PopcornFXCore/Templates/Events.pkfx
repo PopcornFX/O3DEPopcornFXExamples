@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -38,6 +38,13 @@ CEditorAssetEffect	$0CD860BD
 {
 	StartCameraPosition = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
 	StartCameraOrientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$B660FBF9
@@ -3581,6 +3588,8 @@ CParticleNodeGraph	$E191BFCB
 		"$73ED24E6",
 		"$4E8787A1",
 		"$DCC373DA",
+		"$6FC3969C",
+		"$A318B1FA",
 	};
 	WorkspaceZoom = 0;
 	Collapsed = true;
@@ -6393,6 +6402,7 @@ CParticleNodeTemplate	$D857A09F
 	InputPins = {
 		"$35A36C4E",
 		"$41590894",
+		"$93C0042F",
 	};
 	OutputPins = {
 		"$4B933A29",
@@ -17440,10 +17450,11 @@ CParticleNodePinIn	$EF636E89
 {
 	SelfName = "SpawnCountDeviation";
 	Type = float;
-	Visible = false;
-	ExportInParent = true;
 	Owner = "$916AD6EF";
 	BaseType = float;
+	ConnectedPins = {
+		"$232F327D",
+	};
 }
 CParticleNodePinIn	$949C880F
 {
@@ -17810,10 +17821,11 @@ CParticleNodePinIn	$C4287E28
 {
 	SelfName = "SpawnCountMax";
 	Type = float;
-	Visible = false;
-	ExportInParent = true;
 	Owner = "$916AD6EF";
 	BaseType = float;
+	ConnectedPins = {
+		"$AC75AFE2",
+	};
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodeCompare	$DAA17DBB
@@ -18958,7 +18970,6 @@ CParticleNodeTemplate	$8FD20F2E
 		"$F5B6F370",
 	};
 	OutputPins = {
-		"$161352C4",
 		"$80216368",
 		"$D77B42B6",
 		"$26EC59AB",
@@ -18986,14 +18997,6 @@ CParticleNodePinIn	$F5B6F370
 	ConnectedPins = {
 		"$45EF9AD9",
 	};
-}
-CParticleNodePinOut	$161352C4
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$8FD20F2E";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$80216368
 {
@@ -19619,6 +19622,7 @@ CParticleNodeTemplate	$56B12476
 	InputPins = {
 		"$DC4988E3",
 		"$A9517B8E",
+		"$F3D60D28",
 	};
 	OutputPins = {
 		"$D4F7F43F",
@@ -24618,5 +24622,107 @@ CParticleNodePinOut	$7A1A7795
 	Owner = "$56C21F2D";
 	ConnectedPins = {
 		"$C17B11B6",
+	};
+}
+CParticleNodePinIn	$93C0042F
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$D857A09F";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$F3D60D28
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$56B12476";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeTemplateExport	$6FC3969C
+{
+	Description = {
+		"@eng:Relative random deviation of <c>SpawnCount</c> when <c>SpawnCountRandom</c> is set to <c>Deviation</c>\\n\\nSetting to 1.0 will spawn between <c>0</c> and <c>SpawnCount*2</c> events.\\nSetting to 0.0 will spawn <c>SpawnCount</c> events.\\nSetting to 0.5 will spawn between <c>SpawnCount*0.5</c> and <c>SpawnCount*1.5</c> events.\\netc...\\n",
+	};
+	InputPins = {
+		"$3B7D3678",
+	};
+	OutputPins = {
+		"$232F327D",
+	};
+	WorkspacePosition = int2(-858, 330);
+	ExportedName = "SpawnCountDeviation";
+	ExportedType = float;
+	Type = Input;
+	Order = 32;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "SpawnCountRandom";
+	RuleValue = "1";
+}
+CParticleNodePinIn	$3B7D3678
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$6FC3969C";
+}
+CParticleNodePinOut	$232F327D
+{
+	SelfName = "Value";
+	Owner = "$6FC3969C";
+	ConnectedPins = {
+		"$EF636E89",
+	};
+}
+CParticleNodeTemplateExport	$A318B1FA
+{
+	Description = {
+		"@eng:2nd bound for random spawn count, when <c>SpawnCountRandom</c> is set to <c>MinMax</c>.",
+	};
+	InputPins = {
+		"$0C482E9F",
+	};
+	OutputPins = {
+		"$AC75AFE2",
+	};
+	WorkspacePosition = int2(-858, 198);
+	ExportedName = "SpawnCountMax";
+	ExportedType = float;
+	Type = Input;
+	Order = 31;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "SpawnCountRandom";
+	RuleValue = "2";
+}
+CParticleNodePinIn	$0C482E9F
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$A318B1FA";
+}
+CParticleNodePinOut	$AC75AFE2
+{
+	SelfName = "Value";
+	Owner = "$A318B1FA";
+	ConnectedPins = {
+		"$C4287E28",
 	};
 }

@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -13,6 +13,13 @@ CEditorAssetEffect	$4B933A29
 	LoopDelay = 2.0000000e+00;
 	StartCameraPosition = float3(0.0000000e+00, 2.6500001e+00, 5.5000000e+00);
 	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$9154DFA0
@@ -194,6 +201,7 @@ CParticleNodeTemplate	$591511AD
 	InputPins = {
 		"$6A402A37",
 		"$00791CC6",
+		"$97D45884",
 	};
 	OutputPins = {
 		"$F7B6F8AD",
@@ -285,6 +293,7 @@ CParticleNodeTemplate	$62F4224C
 	InputPins = {
 		"$B2167C92",
 		"$487B49E7",
+		"$43DA7951",
 	};
 	OutputPins = {
 		"$3A7F3823",
@@ -391,6 +400,7 @@ CParticleNodeTemplate	$9B02AAA6
 	InputPins = {
 		"$EC12BCB6",
 		"$BB7CB899",
+		"$613FF148",
 	};
 	OutputPins = {
 		"$3A8C1DDB",
@@ -2128,4 +2138,31 @@ CParticleNodePinIn	$30830759
 	Owner = "$013F7404";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$97D45884
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$591511AD";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$43DA7951
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$62F4224C";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$613FF148
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$9B02AAA6";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

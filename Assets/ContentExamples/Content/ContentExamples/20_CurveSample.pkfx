@@ -1,4 +1,4 @@
-Version = 2.21.0.22822;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -16,6 +16,13 @@ CEditorAssetEffect	$41EED1A4
 	LoopDelay = 1.0000000e+01;
 	StartCameraPosition = float3(0.0000000e+00, 2.4500000e+00, 5.5000000e+00);
 	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -785,7 +792,6 @@ CParticleNodeTemplate	$817C69AB
 		"$D07E079C",
 	};
 	OutputPins = {
-		"$E160C918",
 		"$C24121B6",
 		"$0E3C6205",
 		"$C0835E41",
@@ -814,14 +820,6 @@ CParticleNodePinIn	$D07E079C
 		"$65EBD2FA",
 	};
 }
-CParticleNodePinOut	$E160C918
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$817C69AB";
-	BaseType = dataCurve;
-}
 CParticleNodePinOut	$C24121B6
 {
 	SelfName = "Value";
@@ -847,6 +845,7 @@ CParticleNodeTemplate	$9E40E306
 	InputPins = {
 		"$AF5ADB5B",
 		"$E1241163",
+		"$7D63B602",
 	};
 	OutputPins = {
 		"$C51EFF20",
@@ -2381,4 +2380,13 @@ CParticleNodePinOut	$B425BE6A
 	ConnectedPins = {
 		"$5AA1D217",
 	};
+}
+CParticleNodePinIn	$7D63B602
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$9E40E306";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

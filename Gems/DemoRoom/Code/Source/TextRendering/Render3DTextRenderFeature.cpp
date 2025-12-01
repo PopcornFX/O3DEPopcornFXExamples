@@ -45,17 +45,17 @@ CDemoRoomTextFeatureProcessor::CDemoRoomTextFeatureProcessor()
 void	CDemoRoomTextFeatureProcessor::Activate()
 {
     // Create a buffer pool:
-    AZ::RHI::RHISystemInterface     *rhiSystem = AZ::RHI::RHISystemInterface::Get();
     AZ::RHI::BufferPoolDescriptor   dynamicPoolDescriptor;
     dynamicPoolDescriptor.m_heapMemoryLevel = AZ::RHI::HeapMemoryLevel::Device;
     dynamicPoolDescriptor.m_hostMemoryAccess = AZ::RHI::HostMemoryAccess::Write;
     dynamicPoolDescriptor.m_bindFlags = AZ::RHI::BufferBindFlags::InputAssembly | AZ::RHI::BufferBindFlags::ShaderRead;
     dynamicPoolDescriptor.m_largestPooledAllocationSizeInBytes = 0x100000;
+    dynamicPoolDescriptor.m_deviceMask = AZ::RHI::MultiDevice::DefaultDevice;
 
-    m_BufferPool = AZ::RHI::Factory::Get().CreateBufferPool();
+    m_BufferPool = aznew AZ::RHI::BufferPool;
     m_BufferPool->SetName(AZ::Name("DemoRoom DrawText Pool"));
-    AZ::RHI::ResultCode resultCode = m_BufferPool->Init(*rhiSystem->GetDevice(), dynamicPoolDescriptor);
 
+    AZ::RHI::ResultCode resultCode = m_BufferPool->Init(dynamicPoolDescriptor);
     if (resultCode != AZ::RHI::ResultCode::Success)
     {
         AZ_Error("CDemoRoomTextFeatureProcessor", false, "Failed to create GPU buffer pool");
@@ -89,6 +89,7 @@ void	CDemoRoomTextFeatureProcessor::Deactivate()
 void	CDemoRoomTextFeatureProcessor::Simulate(const SimulatePacket& packet)
 {
     AZ_UNUSED(packet);
+
     IFFont  *pFont = NULL;
     const AZStd::string     pkfxFontName = "default-pkfx";
     if (gEnv != NULL && gEnv->pCryFont != NULL)
@@ -162,12 +163,7 @@ void	CDemoRoomTextFeatureProcessor::Simulate(const SimulatePacket& packet)
 
         if (characCount == 0)
         {
-            // Fill the draw arguments:
-            m_DrawIndexed.m_indexCount = 0;
-            m_DrawIndexed.m_indexOffset = 0;
-            m_DrawIndexed.m_instanceCount = 1;
-            m_DrawIndexed.m_instanceOffset = 0;
-            m_DrawIndexed.m_vertexOffset = 0;
+            m_IndexCount = 0;
             m_TextWasModified = false;
             return;
         }
@@ -180,9 +176,6 @@ void	CDemoRoomTextFeatureProcessor::Simulate(const SimulatePacket& packet)
         m_Positions = AZ::RHI::StreamBufferView(*m_PositionsData, 0U, posByteCount, sizeof(AZ::Vector3));
         m_UVs = AZ::RHI::StreamBufferView(*m_UVsData, 0U, uvByteCount, sizeof(AZ::Vector2));
         m_Colors = AZ::RHI::StreamBufferView(*m_ColorsData, 0U, uvByteCount, sizeof(AZ::Vector3));
-        m_VtxStreams[0] = m_Positions;
-        m_VtxStreams[1] = m_UVs;
-        m_VtxStreams[2] = m_Colors;
 
         SVF_P2F_C4B_T2F_F4B *srcQuads = m_QuadsVtx;
         AZ::u16             *srcIdx = m_QuadsIdx;
@@ -240,12 +233,7 @@ void	CDemoRoomTextFeatureProcessor::Simulate(const SimulatePacket& packet)
         m_UVs = AZ::RHI::StreamBufferView(*m_UVsData, 0U, actualUvByteCount, sizeof(AZ::Vector2));
         m_Colors = AZ::RHI::StreamBufferView(*m_ColorsData, 0U, actualColorsByteCount, sizeof(AZ::Vector3));
 
-        // Fill the draw arguments:
-        m_DrawIndexed.m_indexCount = static_cast<uint32_t>(quadCount * 6);
-        m_DrawIndexed.m_indexOffset = 0;
-        m_DrawIndexed.m_instanceCount = 1;
-        m_DrawIndexed.m_instanceOffset = 0;
-        m_DrawIndexed.m_vertexOffset = 0;
+        m_IndexCount = static_cast<uint32_t>(quadCount * 6);
 
         m_TextWasModified = false;
     }
@@ -307,23 +295,29 @@ void	CDemoRoomTextFeatureProcessor::Render(const RenderPacket& packet)
     AZ::Data::Instance<AZ::RPI::Shader>             shader = m_FontAssetLoader.GetShader();
     AZ::Data::Instance<AZ::RPI::StreamingImage>     texture = m_FontAssetLoader.GetTexture();
 
+    m_GeometryView.ClearStreamBufferViews();
+    m_GeometryView.SetIndexBufferView(m_Indices);
+    m_GeometryView.AddStreamBufferView(m_Positions);
+    m_GeometryView.AddStreamBufferView(m_UVs);
+    m_GeometryView.AddStreamBufferView(m_Colors);
+    m_GeometryView.SetDrawArguments(AZ::RHI::DrawIndexed(0, m_IndexCount, 0));
+
+    AZ::RHI::DrawPacketBuilder	dpBuilder(AZ::RHI::MultiDevice::DefaultDevice);
+    dpBuilder.Begin(NULL);
+    dpBuilder.SetGeometryView(&m_GeometryView);
+    dpBuilder.SetDrawInstanceArguments(AZ::RHI::DrawInstanceArguments(1, 0));
+    dpBuilder.AddShaderResourceGroup(m_MaterialSrg->GetRHIShaderResourceGroup());
+    AZ::RHI::DrawPacketBuilder::DrawRequest	materialDr;
+    materialDr.m_listTag = shader->GetDrawListTag();
+    materialDr.m_pipelineState = m_PipelineState.get();
+    materialDr.m_streamIndices = m_GeometryView.GetFullStreamBufferIndices();
+    dpBuilder.AddDrawItem(materialDr);
+
+    m_DrawPacket = dpBuilder.End();
+
     for (const AZ::RPI::ViewPtr& view : packet.m_views)
     {
-        AZ::RHI::DrawPacketBuilder	dpBuilder;
-        dpBuilder.Begin(NULL);
-        dpBuilder.SetDrawArguments(m_DrawIndexed);
-        dpBuilder.SetIndexBufferView(m_Indices);
-        dpBuilder.AddShaderResourceGroup(m_MaterialSrg->GetRHIShaderResourceGroup());
-        AZ::RHI::DrawPacketBuilder::DrawRequest	materialDr;
-        materialDr.m_listTag = shader->GetDrawListTag();
-        materialDr.m_pipelineState = m_PipelineState.get();
-#if defined(O3DE_DEV)
-        materialDr.m_streamBufferViews = AZStd::span<AZ::RHI::StreamBufferView>(m_VtxStreams, 3);
-#else
-        materialDr.m_streamBufferViews = AZStd::array_view<AZ::RHI::StreamBufferView>(m_VtxStreams, 3);
-#endif
-        dpBuilder.AddDrawItem(materialDr);
-        view->AddDrawPacket(dpBuilder.End(), 10000.0f);
+        view->AddDrawPacket(m_DrawPacket.get(), 10000.0f);
     }
 }
 
@@ -376,7 +370,7 @@ bool        CDemoRoomTextFeatureProcessor::_AllocateBuffer( AZ::RHI::Ptr<AZ::RHI
 {
     const size_t     alignOn = 0x1000;
     const size_t     alignedBufferSize = _Align(elemCount * elemSize, alignOn);
-    AZ::RHI::Ptr<AZ::RHI::Buffer> tmpBuffer = AZ::RHI::Factory::Get().CreateBuffer();
+    AZ::RHI::Ptr<AZ::RHI::Buffer> tmpBuffer = aznew AZ::RHI::Buffer;
     AZ::RHI::BufferInitRequest bufferRequest;
     bufferRequest.m_descriptor = AZ::RHI::BufferDescriptor
     {
@@ -408,7 +402,7 @@ void    *CDemoRoomTextFeatureProcessor::_MapBuffer(AZ::RHI::Ptr<AZ::RHI::Buffer>
     mapRequest.m_byteCount = sizeToMap;
     AZ::RHI::BufferMapResponse	mapResponse;
     m_BufferPool->MapBuffer(mapRequest, mapResponse);
-    return mapResponse.m_data;
+    return mapResponse.m_data.begin()->second;;
 }
 
 //----------------------------------------------------------------------------

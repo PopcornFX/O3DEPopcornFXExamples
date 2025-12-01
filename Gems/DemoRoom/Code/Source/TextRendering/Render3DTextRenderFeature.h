@@ -88,9 +88,6 @@ private:
     AZ::RHI::StreamBufferView           m_Positions;
     AZ::RHI::StreamBufferView           m_UVs;
     AZ::RHI::StreamBufferView           m_Colors;
-    AZ::RHI::StreamBufferView           m_VtxStreams[3];
-
-    AZ::RHI::DrawIndexed                m_DrawIndexed;
 
     AZ::RHI::ConstPtr<AZ::RHI::PipelineState>           m_MaterialPipelineState = NULL;
     AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>    m_MaterialSrg = NULL;
@@ -100,6 +97,10 @@ private:
 
     SVF_P2F_C4B_T2F_F4B                                 *m_QuadsVtx = NULL;
     AZ::u16                                             *m_QuadsIdx = NULL;
+
+    AZ::RHI::Ptr<AZ::RHI::DrawPacket> m_DrawPacket;
+    AZ::RHI::GeometryView m_GeometryView{ AZ::RHI::MultiDevice::AllDevices };
+    uint32_t m_IndexCount = 0;
 };
 
 //----------------------------------------------------------------------------
